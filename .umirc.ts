@@ -8,7 +8,7 @@ export default defineConfig({
   navs: [
     {
       title: '教程',
-      path: '/tutorials',
+      path: '/guide',
     },
     {
       title: 'API 文档',
@@ -32,10 +32,52 @@ export default defineConfig({
     },
   ],
   menus: {
-    '/tutorials': [
+    '/guide': [
       {
         title: '快速起步',
-        path: 'quickstart',
+        path: '/guide',
+      },
+      {
+        title: '接入与使用',
+        path: '/guide/use',
+        children: [
+          {
+            title: '用 Rax 开发一个 Kraken 应用',
+            path: '/guide/use/rax',
+          },
+          {
+            title: '用 Vue 开发一个 Kraken 应用',
+            path: '/guide/use/vue',
+          },
+          {
+            title: '客户端接入 Kraken',
+            path: '/guide/use/native',
+          },
+        ],
+      },
+      {
+        title: '调试',
+        path: '/guide/debug',
+        children: [
+          {
+            title: '集成',
+            path: '/guide/debug/integrate',
+          },
+          {
+            title: '调试',
+            path: '/guide/debug/debug',
+          },
+        ],
+      },
+      {
+        title: '扩展能力',
+        path: '/guide/extends',
+        children: [
+          {
+            title: '插件开发',
+            path: '/guide/extends/plugin',
+          },
+        ],
       },
     ],
     '/api': [
@@ -72,14 +114,32 @@ export default defineConfig({
       {
         title: '事件',
         path: '/api/event',
-      },
-      {
-        title: '能力扩展',
-        path: '/api/extend',
         children: [
           {
-            title: '插件开发',
-            path: '/api/extend/plugin',
+            title: '通用事件',
+            path: '/api/event/common',
+          },
+          {
+            title: '事件冒泡',
+            path: '/api/event/bubbling',
+          },
+          {
+            title: '手势',
+            path: '/api/event/gesture',
+          },
+        ],
+      },
+      {
+        titile: 'Kraken API',
+        path: '/api/krakenapi',
+      },
+      {
+        title: '扩展 API',
+        path: '/api/extends',
+        children: [
+          {
+            title: '插件 API',
+            path: '/api/extends/plugin',
           },
         ],
       },
