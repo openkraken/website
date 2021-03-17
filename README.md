@@ -1,4 +1,4 @@
-# Rax WebSite
+# Kraken WebSite
 
 Install dependencies,
 
