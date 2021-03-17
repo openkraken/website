@@ -232,7 +232,7 @@ void initBridge() {
 
 class MyKrakenPlugin {
   static void initialize() {
-		initBridge();
+    initBridge();
     ModuleManager.defineModule((moduleNamager) => AlarmClockModule(moduleNamager));
   }
 }
