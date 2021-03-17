@@ -4,7 +4,7 @@ hero:
   desc: 一款基于 Flutter 的高性能 Web 渲染引擎
   actions:
     - text: 快速开始
-      link: /tutorials
+      link: /guide
 features:
   - icon: https://gw.alicdn.com/tfs/TB1eI3jshD1gK0jSZFyXXciOVXa-160-160.png
     title: 标准 DOM API
@@ -22,7 +22,7 @@ features:
     title: I/O 能力
     desc: 丰富的 I/O 能力支持
   - desc: ........
-footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
+footer: Open-source MIT Licensed | Copyright © 2021<br />
 ---
 
 <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative">
