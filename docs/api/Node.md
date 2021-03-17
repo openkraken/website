@@ -74,7 +74,7 @@ const parentNode = elementNodeReference.parentNode;
 
 `Element` 只读
 
-返回当前节点的父节点 [`Element`](https://yuque.antfin-inc.com/multix/iucykq/cr5pmp)，如果该节点不存在则返回 `null`。
+返回当前节点的父节点 Element，如果该节点不存在则返回 `null`。
 
 ```javascript
 const parentElement = elementNodeReference.parentElement;
@@ -84,7 +84,7 @@ const parentElement = elementNodeReference.parentElement;
 
 `String` 只读
 
-返回当前节点的名称。如果节点是 [`Element`](https://yuque.antfin-inc.com/multix/iucykq/cr5pmp)，则等同于 [`Element.tagName`](https://yuque.antfin-inc.com/multix/iucykq/cr5pmp#0Inox) 属性的值；
+返回当前节点的名称。如果节点是 Element，则等同于 Element.tagName 属性的值；
 
 ```javascript
 const nodeName = elementNodeReference.nodeName;
@@ -222,7 +222,7 @@ const insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 **返回值**
 `val` Node
-被插入的新节点。如果新节点是 [`DocumentFragment`](https://yuque.antfin-inc.com/multix/iucykq/gg1lgp)，则返回一个空的 [`DocumentFragment`](https://yuque.antfin-inc.com/multix/iucykq/gg1lgp)。
+被插入的新节点。如果新节点是 DocumentFragment，则返回一个空的 DocumentFragment。
 
 ### **appendChild**
 
@@ -238,7 +238,7 @@ const appendedNode = parentNode.appendChild(newNode);
 
 **返回值**
 `val` Node
-被插入的新节点。如果新节点是 [`DocumentFragment`](https://yuque.antfin-inc.com/multix/iucykq/gg1lgp)，则返回一个空的 [`DocumentFragment`](https://yuque.antfin-inc.com/multix/iucykq/gg1lgp)。
+被插入的新节点。如果新节点是 DocumentFragment，则返回一个空的 DocumentFragment。
 
 ### **removeChild**
 

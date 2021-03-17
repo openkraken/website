@@ -84,7 +84,7 @@ const cancelled = !target.dispatchEvent(event);
 
 **入参**
 `event` Event
-要被派发的事件对象 [`Event`](https://yuque.antfin-inc.com/multix/iucykq/dkg187)。
+要被派发的事件对象 Event。
 
 **返回值**
 `val` Boolean
