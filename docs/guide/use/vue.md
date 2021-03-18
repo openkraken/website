@@ -30,7 +30,7 @@ $ kraken ./dist/js/app.js
 
 Vue 提供了一个官方的 [Vue CLI](https://github.com/vuejs/vue-cli)，我们可以直接用 [Vue CLI](https://github.com/vuejs/vue-cli) 来初始化一个 Vue 项目，然后对项目做一些工程上的改造即可使 Vue 项目在 Kraken 上顺利运行起来。
 
-由于 Kraken 没有 HTML，所以我们的 root 节点必须是 `document.body`，所以需要在入口文件中，将 mount 的入参改为 `document.body`。
+由于 Kraken 没有 HTML，所以我们的 root 节点必须是 `document.body`。因此，开发者需要在入口文件中，将 mount 的入参改为 `document.body`。
 
 ```js
 // src/main.js
@@ -40,7 +40,7 @@ import App from './App.vue';
 createApp(App).mount(document.body);
 ```
 
-由于 [createEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createEvent) 已废弃，但是 Vue 在 web 的 platform 中还是用到了该方法，所以需要通过 polyfill 来支持一下该特性。
+由于 [createEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createEvent) 已废弃，但目前 Vue 在 web 的 platform 中还是用到了该方法，所以需要通过 polyfill 来支持一下该特性。
 
 ```js
 // src/polyfill.js

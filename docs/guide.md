@@ -37,7 +37,7 @@ Kraken 不限制上层开发者使用的框架是什么，无论你是 React 开
 
 ### 如果你是 Vue 开发者
 
-你可以直接用我们构建出来的 Vue bundle 来运行一个 Kraken 应用。
+你可以直接用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
 
 ```shell
 kraken https://raw.githubusercontent.com/openkraken/vue_examples/main/dist/js/app.js
