@@ -5,6 +5,8 @@ export default defineConfig({
   title: 'Kraken',
   logo:
     'https://img.alicdn.com/imgextra/i4/O1CN01vfjZK31uFiEAKOl8g_!!6000000006008-2-tps-200-200.png',
+  favicon:
+    'https://img.alicdn.com/imgextra/i4/O1CN01vfjZK31uFiEAKOl8g_!!6000000006008-2-tps-200-200.png',
   navs: [
     {
       title: '教程',
