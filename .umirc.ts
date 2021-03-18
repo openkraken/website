@@ -48,22 +48,12 @@ export default defineConfig({
             path: '/guide/use/vue',
           },
           {
-            title: '客户端接入 Kraken',
-            path: '/guide/use/native',
-            children: [
-              {
-                title: '使用 Kraken Widget 嵌入在现有 Flutter 页面中',
-                path: '/guide/use/native/widget-interpolation',
-              },
-              {
-                title: '使用预构建的 Android AAR/iOS Framework 进行集成',
-                path: '/guide/use/native/pre-compiled-interpolation',
-              },
-              {
-                title: '如何集成预构建的产物到 App 内',
-                path: '/guide/use/native/interpolation-app',
-              },
-            ],
+            title: '在 Flutter 应用中集成 Kraken',
+            path: '/guide/use/interpolation-flutter',
+          },
+          {
+            title: '在原生 App 中集成 Kraken',
+            path: '/guide/use/interpolation-app',
           },
         ],
       },
