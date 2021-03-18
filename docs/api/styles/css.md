@@ -1,4 +1,7 @@
+# CSS 属性支持列表
+
 Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能力，都可以使用 Kraken 开发原生应用。
+
 > Kraken 支持的通用样式已在本文档中全部列出，一些组件可能有自定义样式，请参考组件文档。除此之外的属性，均不被支持。
 
 ## 属性
@@ -12,10 +15,10 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 默认值：根据 element 类型不一样有不同的默认值
 
 #### height、min-height、max-height
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 
 #### width、min-width、max-width
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 
 #### margin
 - 属性值：<±number>[ px | rpx | vw | vh | % ]
@@ -33,18 +36,15 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 属性值：<±number>[ px | rpx | vw | vh | % ]
 
 #### padding-top、padding-right、padding-bottom、padding-left
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 
-#### overflow
-- 属性值：[ visible | hidden | scroll | auto ]
-- 默认值：visible
 
 #### border-radius 
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 - 默认值：0
 
 #### border-top-left-radius、border-top-right-radius、border-bottom-left-radius、border-bottom-right-radius
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 - 默认值：0
 
 #### border
@@ -59,7 +59,7 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
    - 四个值：分别代表上、右、下、左四个方向的边框值；
 
 #### border-*-width
-- 属性值：<number>[ px | rpx | vw | vh ]
+- 属性值：\<number>[ px | rpx | vw | vh ]
 
 #### border-color
 - 属性值： `border-top-color` | `border-right-color` | `border-bottom-color` | `border-left-color`
@@ -101,12 +101,11 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 属性值：<±number>[ px | rpx | vw | vh | % ]
 - 默认值：
 
-#### z-index `P`
+#### z-index
 
 - 属性值：<±number>
 - 默认值：
 - 说明：在某些元素深度嵌套情况下 `z-index` 的表现与 web 中会有差异
-
 
 ### Flexbox
 
@@ -127,15 +126,15 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 默认值：initial
 
 #### flex-grow
-- 属性值：<number>
+- 属性值：\<number>
 - 默认值：0
 
 #### flex-shrink
-- 属性值：<number>
+- 属性值：\<number>
 - 默认值：1
 
 #### flex-basis 
-- 属性值：[ auto | <number>[ px | rpx | vw | vh ] ]
+- 属性值：[ auto | \<number>[ px | rpx | vw | vh ] ]
 - 默认值：auto
 
 #### flex-wrap
@@ -181,10 +180,10 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 属性值：[ all | transform | opacity | background-color ]
 
 #### transition-duration
-- 属性值：<number>[ ms | s ]
+- 属性值：\<number>[ ms | s ]
 
 #### transition-delay
-- 属性值：<number>[ ms | s ]
+- 属性值：\<number>[ ms | s ]
 
 #### transition-timing-function
 - 属性值：[ ease | ease-in | ease-out | ease-in-out | linear | cubic-bezier() ]
@@ -211,7 +210,7 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 - 默认值：repeat
 
 #### background-position
-- 属性值：[ <number>[ px | rpx | vw | vh ] | top | bottom | left | right | center ]
+- 属性值：[ \<number>[ px | rpx | vw | vh ] | top | bottom | left | right | center ]
 - 说明：
    - 默认为元素的左上角，即坐标 0 0；
    - 可以为一个值，第一个值为水平方向，第二值默认为 `center`
@@ -220,7 +219,7 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
       - 如果第二个值为数值，第一个值不能是 `top` 或者 `bottom` ，因为坐标是 x y；
 
 #### background-size
-- 属性值：[ cover | contain | auto | <number>[ px | rpx | vw | vh ] ]
+- 属性值：[ cover | contain | auto | \<number>[ px | rpx | vw | vh ] ]
 - 默认值：auto
 - 说明：
    - 可以为双值的写法，第一个值代表背景图的宽度，第二个值代表高度；
@@ -234,7 +233,7 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 ### 文本
 
 #### font-size
-- 属性值：<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | % ]
 - 默认值：
 
 #### text-align
@@ -290,6 +289,10 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 
 ### 其他属性
 
+#### overflow
+- 属性值：[ visible | hidden | scroll | auto ]
+- 默认值：visible
+
 #### opacity
 - 属性值：大于等于 0 且小于等于 1 的数
 - 默认值：0
@@ -325,7 +328,7 @@ Kraken 使用 W3C 标准定义样式，只要你具有一定的前端开发能�
 
 
 ## 颜色值
-- W3C 定义的颜色关键字: 参考 [https://www.w3.org/wiki/CSS/Properties/color/keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords)
+- W3C定义的颜色关键字: 参考 [https://www.w3.org/wiki/CSS/Properties/color/keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords)
 - RGB: eg. `rgb(0, 0, 0)`
 - RGBA: eg. `rgba(0, 0, 0, 0.1)`
 - HEX: 支持 3 位或 6 位的 16 进制值, eg: #fff, #000000

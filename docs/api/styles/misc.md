@@ -1,30 +1,28 @@
 # 其他样式
 
-### opacity
-指定了一个元素后面的背景的被覆盖程度。
+#### overflow
+- 定义：定义当一个元素的内容太大而无法适应其包含容器时候的裁剪效果。
+- 属性值：[ visible | hidden | scroll | auto ]
+- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow)。
 
+### opacity
+- 定义：指定了一个元素后面的背景的被覆盖程度。
 - 属性值：大于等于 0 且小于等于 1 的数
-- 默认值：0
+- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity)。
 
 ### box-shadow
-用于在元素的框架上添加阴影效果。
-
-- 属性值：[ none | $x $y $blur-radius $color ]
-- 相关说明：
-   - `$x` 是指 x 坐标的偏移量；
-   - `$y` 是指 y 坐标的偏移量；
-   - `$blur-radius` 阴影的模糊扩散量；
-   - `$color` 阴影的颜色值；
+- 定义：用于在元素的框架上添加阴影效果。
+- 属性值：[ none | $x $y $blur-radius $spread-radius $color ]
+- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)。
+- 说明：暂不支持 inset
 
 ### visibility
-用于显示或隐藏元素而不更改文档的布局。
-
+- 定义：用于显示或隐藏元素而不更改文档的布局。
 - 属性值：[ visible | hidden ]
-- 默认值：visible
+- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/visibility)。
 
 ### vertical-align
-用来指定行内元素元素的垂直对齐方式。
-
+- 定义：用来指定行内元素元素的垂直对齐方式。
 - 属性值：[ baseline | top | bottom ]
-- 默认值：baseline
-- 说明：不支持 middle
+- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align)。
+- 说明：暂不支持 middle
