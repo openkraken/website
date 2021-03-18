@@ -11,24 +11,20 @@ export default defineConfig({
       path: '/guide',
     },
     {
-      title: 'API 文档',
+      title: 'API',
       path: '/api',
     },
-    // {
-    //   title: '常用插件',
-    //   path: '/extends',
-    // },
     {
-      title: '版本',
-      path: '/version',
+      title: '常用插件',
+      path: '/extends',
+    },
+    {
+      title: 'CHANGELOG',
+      path: '/changelog',
     },
     {
       title: 'Github',
       path: 'https://github.com/openkraken/kraken',
-    },
-    {
-      title: '加入我们',
-      path: '/joinus',
     },
   ],
   menus: {
@@ -50,32 +46,66 @@ export default defineConfig({
             path: '/guide/use/vue',
           },
           {
-            title: '客户端接入 Kraken',
-            path: '/guide/use/native',
+            title: '在 Flutter 应用中集成 Kraken',
+            path: '/guide/use/interpolation-flutter',
+          },
+          {
+            title: '在原生 App 中集成 Kraken',
+            path: '/guide/use/interpolation-app',
           },
         ],
       },
       {
         title: '调试',
         path: '/guide/debug',
+      },
+      {
+        title: '进阶',
+        path: '/guide/advanced',
         children: [
           {
-            title: '集成',
-            path: '/guide/debug/integrate',
+            title: '如何实现一个高性能长列表',
+            path: '/guide/advanced/sliver',
           },
           {
-            title: '调试',
-            path: '/guide/debug/debug',
+            title: '如何使用增强的手势能力',
+            path: '/guide/advanced/gesture',
           },
         ],
       },
       {
-        title: '扩展能力',
-        path: '/guide/extends',
+        title: '插件',
+        path: '/guide/plugin',
         children: [
           {
-            title: '插件开发',
-            path: '/guide/extends/plugin',
+            title: '什么是插件',
+            path: '/guide/plugin/introduction',
+          },
+          {
+            title: '开发插件',
+            path: '/guide/plugin/development',
+          },
+        ],
+      },
+      {
+        title: '贡献代码',
+        path: '/guide/contribute',
+        children: [
+          {
+            title: '准备开发环境',
+            path: '/guide/contribute/environment',
+          },
+          {
+            title: '开发与调试',
+            path: '/guide/contribute/development',
+          },
+          {
+            title: '编写测试用例',
+            path: '/guide/contribute/test',
+          },
+          {
+            title: '贡献规范',
+            path: '/guide/contribute/spec',
           },
         ],
       },
