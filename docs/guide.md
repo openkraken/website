@@ -19,6 +19,8 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 
 Kraken 不限制上层开发者使用的框架是什么，无论你是 React 开发者、Rax 开发者还是 Vue 开发者，都可以快速使用你最熟悉的框架来开发一个 Kraken 应用。
 
+![](https://img.alicdn.com/imgextra/i1/O1CN018a3mFu28GXZC6hTVQ_!!6000000007905-2-tps-1080-418.png)
+
 ### 如果你是一位 Rax 开发者
 
 你可以直接用我们构建出来的 Rax bundle 来运行一个 Kraken 应用。
