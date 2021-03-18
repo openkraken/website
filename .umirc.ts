@@ -114,7 +114,7 @@ export default defineConfig({
     ],
     '/api': [
       {
-        title: '内置标签',
+        title: '标签',
         path: '/api/tags',
       },
       {
@@ -140,40 +140,44 @@ export default defineConfig({
         ],
       },
       {
-        title: 'DOM API',
+        title: 'DOM',
         path: '/api/dom',
-      },
-      {
-        title: '事件',
-        path: '/api/event',
         children: [
           {
-            title: '通用事件',
-            path: '/api/event/common',
+            title: '事件',
+            path: '/api/dom/event',
           },
           {
-            title: '事件冒泡',
-            path: '/api/event/bubbling',
+            title: '节点',
+            path: '/api/dom/node',
           },
+          {
+            title: '文档',
+            path: '/api/dom/document',
+          },
+        ],
+      },
+      {
+        title: '全局变量与方法',
+        path: '/api/global',
+      },
+      {
+        title: '扩展能力',
+        path: '/api/extension',
+        children: [
           {
             title: '手势',
-            path: '/api/event/gesture',
+            path: '/api/extension/gesture',
           },
-        ],
-      },
-      {
-        titile: 'Kraken API',
-        path: '/api/krakenapi',
-      },
-      {
-        title: '扩展 API',
-        path: '/api/extends',
-        children: [
           {
-            title: '插件 API',
-            path: '/api/extends/plugin',
+            title: 'Sliver',
+            path: '/api/extension/sliver',
           },
         ],
+      },
+      {
+        title: '插件',
+        path: '/api/plugin',
       },
     ],
   },
