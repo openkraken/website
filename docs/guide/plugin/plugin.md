@@ -4,7 +4,6 @@ Kraken 插件是一个可以用于扩展 Kraken 能力的 Flutter 插件，可�
 
 Kraken 插件的开发需要具备一定的客户端开发能力。开发者需要对 Android/iOS 开发具备一定的基础，同时也需要掌握 Flutter 应用开发。当然，如果你的目标是给 Kraken 添加一些自定义的 API，或者是新增一个标签的话，掌握一定的 JavaScript 能力和 C/C++ 能力也是必须的。
 
-
 ## 一个简单的闹钟 API
 
 查看项目源代码：https://github.com/openkraken/kraken_plugin_examples/tree/main/my_kraken_plugin
@@ -41,7 +40,7 @@ kraken-npbt configure
 
 然后在 bridge 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
 
-**my_plugin.js** 
+**my_plugin.js**
 
 ```javascript
 kraken.addKrakenModuleListener(function(moduleName, event, data) {
@@ -65,14 +64,14 @@ const alarmClock = {
 
   onTime(fn) {
     this.onTimeListener = fn;
-  }
-}
+  },
+};
 
 Object.defineProperty(globalThis, 'alarmClock', {
   value: alarmClock,
   enumerable: true,
   writable: false,
-  configurable: false
+  configurable: false,
 });
 ```
 
@@ -92,7 +91,7 @@ kraken.addKrakenModuleListener: (fn: (moduleName: string, event: Event, extra: s
 
 上面的 JavaScript 实现将调用转发到了 Dart 层，接下来就是要在 Dart 层实现闹钟的业务逻辑。
 
-**alarm_clock_module.dart** 
+**alarm_clock_module.dart**
 
 ```dart
 import 'package:kraken/module.dart';
@@ -133,19 +132,15 @@ class AlarmClockModule extends BaseModule {
 
 Kraken 提供了基础了 BaseModule 抽象类，实现 BaseModule 所定义的方法就可以实现一个 Kraken 的 Module 模块。
 
-Kraken 在设计上使用 Module 模块来处理来自 JavaScript API 的调用。因此对于 AlarmClock 这个 JS API，这个module 命名是 AlarmClockModule 。
+Kraken 在设计上使用 Module 模块来处理来自 JavaScript API 的调用。因此对于 AlarmClock 这个 JS API，这个 module 命名是 AlarmClockModule 。
 
 在 Module 内向 JavaScript 返回数据有 2 种方式，第一种是通过 `InvokeModuleCallback callback` 来进行返回。只要 JavaScript 的代码在调用的时候，在最后了一个参数传入了一个函数作为回调的话，就可以在 Dart 层调用 `InvokeModuleCallback callback` 来直接进行回调。回调参数可以传递 errmsg 或 data，用于处理异常和正常的两种情况。
 
 第二种方式是直接在 Module 内的任何函数内调用 `moduleManager.emitModuleEvent(name, event: alarmEvent, data: 'Wake Up!');` 来触发一个 Module 事件。通过在 JavaScript 上调用 `kraken.addKrakenModuleListener` 就可以监听到这个事件。不过值得注意的是，任何一个 Module 所触发的事件都会执行 `kraken.addKrakenModuleListener` 所注册的回调，因此还需要判断回调执行时，调用的模块名称。
 
-
-
 ### 完成插件的注册
 
 现在我们已经完成了大部分的功能的实现，接下来就是把代码注册到 Kraken 中，就大功告成了。
-
-
 
 **构建 bridge**
 
@@ -159,11 +154,9 @@ kraken-npbt build
 
 - **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib`
 - **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib`
-- **android:** 
+- **android:**
   - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so`
   - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
-
-
 
 **将 bridge 构建产物注册到插件**
 
