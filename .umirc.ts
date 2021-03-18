@@ -11,7 +11,7 @@ export default defineConfig({
       path: '/guide',
     },
     {
-      title: 'API 文档',
+      title: 'API',
       path: '/api',
     },
     {
@@ -19,16 +19,12 @@ export default defineConfig({
       path: '/extends',
     },
     {
-      title: '版本',
-      path: '/version',
+      title: 'CHANGELOG',
+      path: '/changelog',
     },
     {
       title: 'Github',
       path: 'https://github.com/openkraken/kraken',
-    },
-    {
-      title: '参与贡献',
-      path: '/joinus',
     },
   ],
   menus: {
