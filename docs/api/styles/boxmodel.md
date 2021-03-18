@@ -7,12 +7,6 @@ Kraken 的盒模型基于 CSS 的[盒模型](https://developer.mozilla.org/zh-CN
 
 ## 属性
 
-### display
-- 简介：设置元素的显示类型。
-- 属性值：[ block | inline-block | flex | inline-flex | none ]
-- 标准：参考[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display)。
-- 说明：Kraken 目前只支持 block | inline-block | flex | inline-flex | none 这几种类型。
-
 ### height
 - 简介：指定元素的高度。
 - 属性值：<number>[ px | rpx | vw | vh | % ]
