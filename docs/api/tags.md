@@ -1,66 +1,62 @@
-# 内置标签
+# 标签
 
-## W3C 标准标签
 Kraken 支持以下 W3C 定义的标准标签。
 
-- div
-- span
-- a
-- audio
-- body
-- canvas
-- iframe
-- img
-- input
-- object
-- p
-- pre
-- strong
-- video
+### body
+- 简介：表示文档的内容。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 。
+
+### div
+- 简介：通用块级容器。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 。
+
+### span
+- 简介：通用行内容器。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span) 。
+
+### p
+- 简介：表示文本的一个段落。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p) 。
+
+### pre
+- 简介：表示预定义格式的文本。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre) 。
+
+### a
+- 简介：用于实现页面间跳转的标签。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 。
+
+### img
+- 简介：用于在界面中显示图片。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
+
+### input
+- 简介：用于创建接收用户输入字符的输入框。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
+
+### strong
+- 简介：表示文本十分重要，一般用粗体显示。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/strong) 。
+
+### object
+- 简介：表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object) 。
+
+### canvas
+- 简介：用来通过 [Canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API) API 绘制图形及动画。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas) 。
+
+### iframe
+- 简介：用来将另一个页面嵌入到当前页面中。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe) 。
+
+### video
+- 简介：用来在页面中嵌入视频内容。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video) 。
+
+### audio
+- 简介：用来在页面中嵌入音频内容。
+- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio) 。
 
 
-## 扩展标签
-除了 W3C 中标准的标签外，Kraken 提供了一系列增强能力的内置标签。
-
-- animation-player
-- camera-preview
-
-### animation-player
-animation-player 提供了带交互动画的抽象，目前支持 flare 渲染类型。
-
-#### 属性
-- type:  动画类型，目前仅支持 `flare`
-- src:  指定动画数据源地址
-
-#### 示例
-
-```
-const FLARE_ASSET_URL = 'https://kraken.oss-cn-hangzhou.aliyuncs.com/data/Teddy.flr';
-const animationPlayer = document.createElement('animation-player');
-animationPlayer.setAttribute('type', 'flare');
-animationPlayer.setAttribute('src', FLARE_ASSET_URL);
-
-Object.assign(animationPlayer.style, {
-  width: '100vw',
-  height: '100vh',
-  objectFit: 'contain',
-});
-
-document.body.appendChild(animationPlayer);
-
-let state = 'hands_down';
-animationPlayer.addEventListener('click', () => {
-  if (state === 'hands_down') {
-    state = 'hands_up';
-    animationPlayer.play('hands_up', { mix: 2.0 });
-  } else {
-    state = 'hands_down';
-    animationPlayer.play('hands_down', { mix: 2.0 });
-  }
-});
-```
-
-
-### camera-preview
-camera-preview 提供了调用并展示摄像头的能力。
 
