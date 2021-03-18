@@ -17,3 +17,25 @@ $ cd <YourProjectName>
 $ npm install
 $ npm start
 ```
+
+将得到以下输出
+
+```shell
+Rax development server has been started:
+
+[Web] Development server at:
+    http://your.ip:9999/
+
+[Kraken] Development server at:
+    http://your.ip:9999/kraken/index.js
+[Kraken] Run Kraken Playground App:
+    kraken http://your.ip:9999/kraken/index.js
+```
+
+执行上述命令，就可以用 Kraken 打开该 Rax 应用。
+
+```shell
+kraken http://your.ip:9999/kraken/index.js
+```
+
+<img src="https://img.alicdn.com/imgextra/i2/O1CN01bOOIzk1X42yn7HYIV_!!6000000002869-2-tps-828-1518.png" width="300px"></img>

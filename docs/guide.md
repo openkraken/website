@@ -31,17 +31,11 @@ Kraken 不限制上层开发者使用的框架是什么，无论你是 React 开
 
 ![](https://img.alicdn.com/imgextra/i1/O1CN018a3mFu28GXZC6hTVQ_!!6000000007905-2-tps-1080-418.png)
 
-### 如果你是一位 Rax 开发者
+### 如果你是 Rax 开发者
 
-你可以直接用我们构建出来的 Rax bundle 来运行一个 Kraken 应用。
+那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/use/rax)。
 
-```shell
-kraken https://raw.githubusercontent.com/openkraken/rax_examples/main/build/kraken/index.js
-```
-
-当然，如果你期望了解更多如何使用 Rax 来开发一个 Kraken 应用，可以访问[用 Rax 开发一个 Kraken 应用](/guide/use/rax)。
-
-### 如果你是一位 Vue 开发者
+### 如果你是 Vue 开发者
 
 你可以直接用我们构建出来的 Vue bundle 来运行一个 Kraken 应用。
 
