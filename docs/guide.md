@@ -6,6 +6,8 @@ xxx
 
 ## 快速体验 Kraken
 
+**macOS 用户**
+
 Kraken Cli 是面向前端开发者的桌面端 Kraken 应用，提供调试和预览能力。
 
 使用以下命令安装 Kraken Cli：
@@ -24,6 +26,13 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 ```
 
 如果你想要调试，直接在 Chrome 中打开一个新的 Tab 页，然后直接粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
+
+**Windows 用户**
+Kraken 目前暂时没有提供可供运行在 Windows 平台的 Cli 程序。
+
+使用一个 Android 手机扫描下面的二维码体验：
+
+TODO: Gallary 二维码图片
 
 ## 创建一个 Kraken 应用
 
