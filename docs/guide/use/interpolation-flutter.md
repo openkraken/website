@@ -1,41 +1,76 @@
 # 在 Flutter 应用中集成 Kraken
 
-在 [pub.dev](https://pub.dev/packages/kraken) 上获取 Kraken 的最新版本，然后添加到 `pubspec.yaml` 中。
+在这里，我们设定环境中已经完全安装 flutter，并且 `flutter doctor` 检测全部通过。
+
+使用下面的命令创建一个新的 Flutter App
+
+```shell script
+flutter create myapp
+cd myapp
+```
+
+连接 Android 或者 iOS 手机，确保使用 `flutter devices` 可以看到已经连接的设备：
+
+```
+$ flutter devices
+1 connected devices:
+
+HWI TL00 (mobile) • 77P5T18126000120 • android-arm64 • Android 9 (API 28)
+```
+
+打开 `pubspec.yaml` 文件，然后在 `dependencies` 下面添加 `kraken` 的依赖。
 
 ```yaml
 dependencies:
-  kraken: latest
+  kraken: '>= 0.0.1' # 会安装最新的 kraken 依赖
 ```
 
-**Example**
+然后执行下面的命令自动安装依赖：
+
+```shell script
+flutter pub get
+```
+
+> 在国内可能会出现安装失败的情况，如果安装失败，可以参考链接内容使用国内镜像：https://flutter.cn/community/china
+
+打开 `lib/main.dart`，然后粘贴如下代码：
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:kraken/kraken.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    String jsCode = """
-var text = document.createTextNode('Hello World!');
-var p = document.createElement('p');
-p.style.textAlign = 'center';
-p.appendChild(text);
-document.body.appendChild(p);
-    """;
-
-    Kraken kraken = Kraken(
-      viewportWidth: window.physicalSize.width / window.devicePixelRatio,
-      viewportHeight: window.physicalSize.height / window.devicePixelRatio,
-      bundleContent: jsCode,
-    );
+    Kraken kraken = Kraken(bundleURL: 'https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js');
 
     return MaterialApp(
-      title: 'Kraken Browser',
-      // theme: ThemeData.dark(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+        // This makes the visual density adapt to the platform that you run
+        // the app on. For desktop platforms, the controls will be smaller and
+        // closer together (more dense) than on mobile platforms.
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: kraken
     );
   }
 }
 ```
+
+然后再执行 `flutter run` 就可以运行了。
