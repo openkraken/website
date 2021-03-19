@@ -21,7 +21,9 @@ features:
   - icon: https://img.alicdn.com/imgextra/i1/O1CN01bL1bUW1oVO5k7Sp9m_!!6000000005230-2-tps-54-55.png
     title: 扩展能力
     desc: 灵活的扩展能力
-  - title: ........
+  - icon: https://img.alicdn.com/imgextra/i3/O1CN01mx2JdY1pW8Lv73Q8h_!!6000000005367-2-tps-55-61.png
+    title: 高性能
+    desc: 高性能渲染能力
 footer: Open-source MIT Licensed | Copyright © 2021<br />
 ---
 

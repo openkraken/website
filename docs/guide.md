@@ -2,8 +2,6 @@
 
 ## Kraken 是什么
 
-xxx
-
 ## 快速体验 Kraken
 
 Kraken Cli 是面向前端开发者的桌面端 Kraken 应用，提供调试和预览能力。
