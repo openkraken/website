@@ -76,29 +76,6 @@ fetch('http://example.com/post', {
   });
 ```
 
-## WebSocket
-
-Kraken 的 WebSocket API 提供了创建和管理 WebSocket 连接，并可以通过改连接发送和接收数据，该 API 的用法兼容 [W3C 规范](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)。
-
-创建 WebSockets，并连接服务器。
-
-`WebSocket(url, protocol)`
-
-- **@url**, string, 表示要连接的 URL
-- **@protocol**, string, WebSockets 协议名字字符串
-
-```javascript
-// Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
-```
-
-- `send(data: string | ArrayBuffer)`
-  调用此方法来发送数据
-
-- `close(code: number, reason: string)`
-  - code： 一个数字状态码，它解释了连接关闭的原因。如果没有传这个参数，默认使用 1005。[CloseEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/CloseEvent)的允许的状态码见 [状态码列表](https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent#Status_codes) 。
-  - reason：可选一个人类可读的字符串，它解释了连接关闭的原因。这个 UTF-8 编码的字符串不能超过 123 个字节。
-
 ### Events
 
 使用 `addEventListener` 来绑定事件，使用 `removeEventListener` 来取消事件绑定
