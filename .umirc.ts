@@ -15,6 +15,7 @@ export default defineConfig({
     '.__dumi-default-menu { width: 350px !important }',
     '.__dumi-default-layout{ padding-left: 450px !important }',
     '.__dumi-default-layout-toc{ width: 220px !important }',
+    '.__dumi-default-layout{ margin-right: 200px }',
   ],
   navs: [
     {
