@@ -8,13 +8,12 @@ export default defineConfig({
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
-    '.__dumi-default-menu-inner a.active {color: #F6AF1F !important}',
-    '.__dumi-default-navbar a.active {color: #F6AF1F !important}',
-    '.__dumi-default-menu-inner ul li a::before, .__dumi-default-menu-inner ul li > span::before {background-color: #F6AF1F !important}',
-    '.__dumi-default-navbar nav > span > a.active::after {background-color: #F6AF1F !important }',
-    '.__dumi-default-menu-inner > span > a.active::after {background-color: #F6AF1F !important }',
+    'a.active { color: #F6AF1F !important }',
+    'ul li > span::before { background-color: #F6AF1F !important }',
+    'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
     '.__dumi-default-layout{ padding-left: 450px !important }',
+    '.__dumi-default-layout-toc{ width: 220px !important }',
   ],
   navs: [
     {
