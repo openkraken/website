@@ -1,7 +1,7 @@
 ---
 hero:
   title: Kraken
-  desc: 高性能 Web 渲染引擎，基于 Flutter 构建
+  desc: 基于 W3C 标准的高性能 Web 渲染引擎
   actions:
     - text: 快速开始
       link: /guide
