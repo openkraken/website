@@ -2,6 +2,8 @@
 
 ## Kraken 是什么
 
+Kraken 是一款基于 W3C 标准高性能渲染引擎。Kraken 的底层基于 Flutter 进行渲染，通过其自绘渲染的特性，保证多端一致性。而上层基于 W3C 标准来实现，拥有非常庞大的前端开发者生态。
+
 ## 快速体验 Kraken
 
 **macOS 用户**
@@ -26,6 +28,7 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 如果你想要调试，直接在 Chrome 中打开一个新的 Tab 页，然后直接粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
 
 **Windows 用户**
+
 Kraken 目前暂时没有提供可供运行在 Windows 平台的 Cli 程序。
 
 使用一个 Android 手机扫描下面的二维码体验：
