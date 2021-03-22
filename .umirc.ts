@@ -58,8 +58,16 @@ export default defineConfig({
         ],
       },
       {
+        title: '网络请求',
+        path: '/guide/network',
+      },
+      {
         title: '调试',
         path: '/guide/debug',
+      },
+      {
+        title: 'Kraken 与 Web 的差异',
+        path: '',
       },
       {
         title: '进阶',

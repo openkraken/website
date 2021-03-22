@@ -27,6 +27,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
+    "dumi-theme-default": "^1.0.9",
     "prism-react-renderer": "^1.2.0"
   }
 }
