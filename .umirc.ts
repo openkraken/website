@@ -67,7 +67,7 @@ export default defineConfig({
       },
       {
         title: 'Kraken 与 Web 的差异',
-        path: '',
+        path: '/guide/difference',
       },
       {
         title: '进阶',
@@ -80,6 +80,18 @@ export default defineConfig({
           {
             title: '如何使用增强的手势能力',
             path: '/guide/advanced/gesture',
+          },
+          {
+            title: '如何在 Flutter 应用中处理页面跳转',
+            path: '',
+          },
+          {
+            title: 'JS 如何与 Native 通信',
+            path: '',
+          },
+          {
+            title: 'Native 如何与 Kraken 进行手势传递',
+            path: '',
           },
         ],
       },
@@ -192,6 +204,10 @@ export default defineConfig({
       {
         title: '全局变量与方法',
         path: '/api/global',
+      },
+      {
+        title: 'Kraken Widget',
+        path: '/api/widget',
       },
       {
         title: '扩展能力',
