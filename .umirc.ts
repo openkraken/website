@@ -4,9 +4,9 @@ export default defineConfig({
   mode: 'site',
   title: 'Kraken',
   logo:
-    'https://img.alicdn.com/imgextra/i4/O1CN01vfjZK31uFiEAKOl8g_!!6000000006008-2-tps-200-200.png',
+    'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   favicon:
-    'https://img.alicdn.com/imgextra/i4/O1CN01vfjZK31uFiEAKOl8g_!!6000000006008-2-tps-200-200.png',
+    'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   navs: [
     {
       title: '教程',
@@ -58,8 +58,16 @@ export default defineConfig({
         ],
       },
       {
+        title: '网络请求',
+        path: '/guide/network',
+      },
+      {
         title: '调试',
         path: '/guide/debug',
+      },
+      {
+        title: 'Kraken 与 Web 的差异',
+        path: '',
       },
       {
         title: '进阶',
