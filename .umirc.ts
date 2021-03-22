@@ -18,7 +18,7 @@ export default defineConfig({
     },
     {
       title: '常用插件',
-      path: '/extends',
+      path: '/plugins',
     },
     {
       title: 'CHANGELOG',
