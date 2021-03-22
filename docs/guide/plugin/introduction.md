@@ -17,9 +17,9 @@ Kraken 在设计上给插件提供了两种能力的扩展：
 
 渲染能力扩展是指开发者可以在插件中自定义一个新的 Element 类型，并且通过自定义的 RenderObject 来实现自定义的渲染能力。
 
-例如：想要实现一个播放器插件的话，就需要给 Kraken 扩展一个 type 为 video 的 Element，并且通过 RenderTexture 来对接到原生客户端的实现。相关的源码可以参考：[kraken_video_player](https://github.com/openkraken/plugins/tree/main/packages/kraken_video_player)
+例如：想要实现一个播放器插件的话，就需要给 Kraken 扩展一个 type 为 video 的 Element，并且通过 RenderTexture 来对接到原生客户端的实现。相关的源码可以 参考：[kraken_video_player](https://github.com/openkraken/plugins/tree/main/packages/kraken_video_player)
 
-API 能力扩展是指开发者可以在插件中给 Kraken 的 JavaScript 环境新增一些新的 API，然后再通过 Dart 语言去完成这些 JS API 内部的工作细节。相关的源码可以参考：[kraken_websocket](https://github.com/openkraken/plugins/tree/main/packages/kraken_websocket)
+API 能力扩展是指开发者可以在插件中给 Kraken 的 JavaScript 环境新增一些新的 API，然后再通过 Dart 语言去完成这些 JS API 内部的工作细节。相关的源码可以 参考：[kraken_websocket](https://github.com/openkraken/plugins/tree/main/packages/kraken_websocket)
 
 ## 插件开发完成如何发布
 

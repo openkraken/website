@@ -1,62 +1,73 @@
 # 标签
 
-Kraken 支持以下 W3C定义的标准标签。
+Kraken 支持以下 W3C 定义的标准标签。
 
 ### body
+
 - 定义：表示文档的内容。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) 。
 
 ### div
+
 - 定义：通用块级容器。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div) 。
 
 ### span
+
 - 定义：通用行内容器。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span) 。
 
 ### p
+
 - 定义：表示文本的一个段落。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p) 。
 
 ### pre
+
 - 定义：表示预定义格式的文本。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre) 。
 
 ### a
+
 - 定义：用于实现页面间跳转的标签。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 。
 
 ### img
+
 - 定义：用于在界面中显示图片。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
 
 ### input
+
 - 定义：用于创建接收用户输入字符的输入框。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
 
 ### strong
+
 - 定义：表示文本十分重要，一般用粗体显示。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/strong) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/strong) 。
 
 ### object
+
 - 定义：表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object) 。
 
 ### canvas
+
 - 定义：用来通过 [Canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API) API 绘制图形及动画。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas) 。
 
 ### iframe
+
 - 定义：用来将另一个页面嵌入到当前页面中。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe) 。
 
 ### video
+
 - 定义：用来在页面中嵌入视频内容。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video) 。
 
 ### audio
+
 - 定义：用来在页面中嵌入音频内容。
-- 标准：参考 [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio) 。
-
-
-
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio) 。

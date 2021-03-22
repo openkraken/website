@@ -122,10 +122,6 @@ export default defineConfig({
         path: '/api/styles',
         children: [
           {
-            title: 'CSS 属性支持列表',
-            path: '/api/styles/css',
-          },
-          {
             title: '盒模型',
             path: '/api/styles/boxmodel',
           },
@@ -136,6 +132,34 @@ export default defineConfig({
           {
             title: '布局',
             path: '/api/styles/layout',
+          },
+          {
+            title: '字体与文本',
+            path: '/api/styles/text',
+          },
+          {
+            title: '边框与圆角',
+            path: '/api/styles/text',
+          },
+          {
+            title: '颜色与背景',
+            path: '/api/styles/background',
+          },
+          {
+            title: '变形与过渡',
+            path: '/api/styles/transform',
+          },
+          {
+            title: '单位',
+            path: '/api/styles/unit',
+          },
+          {
+            title: '其它',
+            path: '/api/styles/misc',
+          },
+          {
+            title: '与浏览器差异',
+            path: '/api/styles/difference',
           },
         ],
       },
