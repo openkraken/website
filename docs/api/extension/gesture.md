@@ -6,14 +6,14 @@
 
 Kraken 在 [GestureEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/GestureEvent) 上进行扩展，增加不同手势的一些参数：
 
-- state： 连续手势的一些状态，down、move、up。
-- direction：方向，left、right、up、down。
+- state: 连续手势的一些状态，down、move、up。
+- direction: 方向，left、right、up、down。
 - deltaX: X 轴移动的坐标。
-- deltaY：Y 轴移动的坐标。
-- velocityX：X 轴移动速度。
-- velocityY：Y 轴移动速度。
+- deltaY: Y 轴移动的坐标。
+- velocityX: X 轴移动速度。
+- velocityY: Y 轴移动速度。
 - scale: 放大或缩小的比例。
-- rotation：角度。
+- rotation: 角度。
 
 ## swipe
 

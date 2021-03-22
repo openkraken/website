@@ -31,14 +31,14 @@ element.addEventLisenter('swipe', gestureEvent => {
 
 Kraken 在 [GestureEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/GestureEvent) 上进行扩展，增加不同手势的一些参数：
 
-- state： 连续手势的一些状态，down、move、up。
-- direction：方向，left、right、up、down。
+- state: 连续手势的一些状态，down、move、up。
+- direction: 方向，left、right、up、down。
 - deltaX: X 轴移动的坐标。
-- deltaY：Y 轴移动的坐标。
-- velocityX：X 轴移动速度。
-- velocityY：Y 轴移动速度。
+- deltaY: Y 轴移动的坐标。
+- velocityX: X 轴移动速度。
+- velocityY: Y 轴移动速度。
 - scale: 放大或缩小的比例。
-- rotation：角度。
+- rotation: 角度。
 
 通过这些 GestureEvent 的参数，我们可以在应用程序中非常方便的监听某个具体元素上的手势事件，来根据参数得知目前手势的一些状态，从而快速开发一个拥有复杂手势交互的应用。
 
