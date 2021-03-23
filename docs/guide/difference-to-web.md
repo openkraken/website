@@ -4,7 +4,11 @@
 
 ## 使用 JS 而不是 HTML
 
-Web 的入口文件是一个 `.html` 或 `.htm` 等为扩展名的 HTML 文档。而 Kraken 更类似 React Native 和 Weex，它接受一个 `.js` 的 JSBundle，使用 DOM API 构建视图和样式。
+Web 的入口文件是一个 `.html` 或 `.htm` 等为扩展名的 HTML 文档。
+
+而 Kraken 更类似 React Native 和 Weex，它接受一个 `.js` 的 JSBundle，使用 DOM API 构建视图和样式。
+
+这样的选择是出于性能的考虑，现代的前端框架通常使用 JS 逻辑操作 DOM 生成 UI，直接下载 JS 可以减少下载解析 HTML 文档所花费的时间。
 
 Web 下的 HTML 文档：
 
@@ -18,7 +22,7 @@ Web 下的 HTML 文档：
 </html>
 ```
 
-使用 JSBundle：
+使用 JS Bundle：
 
 ```js
 const root = document.createElement('div');
