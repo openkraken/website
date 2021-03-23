@@ -3,7 +3,7 @@ title: Kraken - 基于 W3C 标准的高性能 Web 渲染引擎
 
 hero:
   title: Kraken
-  desc: 基于 W3C 标准的高性能 Web 渲染引擎
+  desc: 高性能 Web 渲染引擎，基于 Flutter 构建
   actions:
     - text: 快速开始
       link: /guide
@@ -28,8 +28,6 @@ features:
     desc: 高性能渲染能力
 footer: Open-source MIT Licensed | Copyright © 2021<br />
 ---
-
-<!-- <div style="display:none"># 首页</div> -->
 
 <div>
   <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative">
