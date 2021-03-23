@@ -2,11 +2,23 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   mode: 'site',
+  locales: [['zh-CN', '中文']],
   title: 'Kraken',
   logo:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
+  styles: [
+    'a:hover { color: #F6AF1F !important }',
+    'a.active { color: #F6AF1F !important }',
+    'ul li > span::before { background-color: #F6AF1F !important }',
+    'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
+    '.__dumi-default-menu { width: 350px !important }',
+    '.__dumi-default-layout-toc{ width: 220px !important }',
+    '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
+    '.__dumi-default-layout-features{ max-width: none !important }',
+    '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
+  ],
   navs: [
     {
       title: '教程',
@@ -25,7 +37,7 @@ export default defineConfig({
       path: '/changelog',
     },
     {
-      title: 'Github',
+      title: 'GitHub',
       path: 'https://github.com/openkraken/kraken',
     },
   ],
@@ -87,11 +99,15 @@ export default defineConfig({
           },
           {
             title: 'JS 如何与 Native 通信',
-            path: '',
+            path: '/guide/advanced/communicate-with-native',
           },
           {
             title: 'Native 如何与 Kraken 进行手势传递',
-            path: '',
+            path: '/guide/advanced/gesture-to-native',
+          },
+          {
+            title: '如何测算 Kraken 的运行性能',
+            path: '/guide/advanced/measure-performance',
           },
         ],
       },
