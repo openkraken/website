@@ -1,4 +1,4 @@
-## 如何调试前端代码
+# 前端代码调试
 
 Kraken 支持通过 Chrome DevTools 进行调试。
 
