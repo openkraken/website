@@ -13,9 +13,11 @@ export default defineConfig({
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    '.__dumi-default-layout{ padding-left: 450px !important }',
+    // '.__dumi-default-layout{ padding-left: 450px !important }',
     '.__dumi-default-layout-toc{ width: 220px !important }',
-    '.__dumi-default-layout{ margin-right: 200px }',
+    '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
+    '.__dumi-default-layout-features{ max-width: none !important }',
+    // '.__dumi-default-layout{ margin-right: 200px }',
   ],
   navs: [
     {
@@ -35,7 +37,7 @@ export default defineConfig({
       path: '/changelog',
     },
     {
-      title: 'GITHUB',
+      title: 'GitHub',
       path: 'https://github.com/openkraken/kraken',
     },
   ],
