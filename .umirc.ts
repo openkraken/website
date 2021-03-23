@@ -2,6 +2,7 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   mode: 'site',
+  locales: [['zh-CN', '中文']],
   title: 'Kraken',
   logo:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
@@ -13,11 +14,10 @@ export default defineConfig({
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    // '.__dumi-default-layout{ padding-left: 450px !important }',
     '.__dumi-default-layout-toc{ width: 220px !important }',
     '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
-    // '.__dumi-default-layout{ margin-right: 200px }',
+    '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
   ],
   navs: [
     {
@@ -103,7 +103,7 @@ export default defineConfig({
           },
           {
             title: 'Native 如何与 Kraken 进行手势传递',
-            path: '',
+            path: '/guide/advanced/gesture-to-native',
           },
         ],
       },
