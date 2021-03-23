@@ -87,7 +87,7 @@ export default defineConfig({
           },
           {
             title: 'JS 如何与 Native 通信',
-            path: '',
+            path: '/guide/advanced/communicate-with-native',
           },
           {
             title: 'Native 如何与 Kraken 进行手势传递',
