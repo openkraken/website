@@ -30,7 +30,7 @@ document.body.appendChild(root);
 
 ## 有限的 CSS 支持
 
-到目前为止，Kraken 还不支持使用层叠样式表(CSS)，也就是说你无法使用 `.css` 文件或者 `<style>` 标签。修改节点样式的方式是使用内联的 CSS 或者节点的 `style` 属性。
+到目前为止，Kraken 还不支持使用[层叠样式表(CSS)](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，也就是说你无法使用 `.css` 文件或者 `<style>` 标签。修改节点样式的方式是使用[内联的 CSS](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F) 或者节点的 `style` 属性。
 
 ```js
 const div = document.createElement('div');
