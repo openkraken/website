@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "dumi": "^1.0.12",
-    "dumi-theme-default": "^1.0.9",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
