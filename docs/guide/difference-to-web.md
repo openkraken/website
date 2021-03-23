@@ -26,7 +26,7 @@ root.appendChild(document.createTextNode('Hello World!'));
 document.body.appendChild(root);
 ```
 
-相比 HTML，JS 具有更灵活的特性。由于实现了标准的 DOM API，你可以使用前端社区中大多数优秀的前端框架，如 React、Vue、Rax 等等，具体可以参考[介绍](/guide/guide)。
+相比 HTML，JS 具有更灵活的特性。由于实现了标准的 DOM API，你可以使用前端社区中大多数优秀的前端框架，如 React、Vue、Rax 等等，具体可以参考[介绍](/guide)。
 
 ## 有限的 CSS 支持
 
@@ -47,7 +47,7 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 
 网络请求中，我们建议使用 Fetch API 而不是 `XMLHttpRequest`。
 
-更多详细的支持列表，可以参考站点的 API 文档。
+更多详细的支持列表，可以参考站点的 [API 文档](/api/tags)。
 
 ## 样式能力差异
 
