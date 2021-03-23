@@ -49,16 +49,16 @@
 
    ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
 
-7) 安装 Flutter
+7. 安装 Flutter
 
    ```bash
    git clone https://github.com/flutter/flutter
    ```
 
-8) 切换到 1.22.6 版本
+8. 切换到 1.22.6 版本
 
    ```bash
    git checkout 1.22.6
    ```
 
-9) 按照 [Flutter 官方文档](https://flutter.dev/docs/get-started/install/windows#update-your-path) 的步骤安装 Flutter 的相关依赖, 确保执行 `flutter doctor` 不再有任何警告。
+9. 按照 [Flutter 官方文档](https://flutter.dev/docs/get-started/install/windows#update-your-path) 的步骤安装 Flutter 的相关依赖, 确保执行 `flutter doctor` 不再有任何警告。
