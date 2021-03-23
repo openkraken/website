@@ -62,7 +62,7 @@ export default defineConfig({
         path: '/guide/network',
       },
       {
-        title: '调试',
+        title: '如何调试前端代码',
         path: '/guide/debug',
       },
       {
