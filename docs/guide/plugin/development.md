@@ -34,7 +34,7 @@ kraken-npbt configure
 
 ### 添加 JavaScript 层的实现
 
-然后在 bridge 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
+在 bridge 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
 
 **my_plugin.js**
 
@@ -126,21 +126,21 @@ class AlarmClockModule extends BaseModule {
 }
 ```
 
-Kraken 提供了基础了 BaseModule 抽象类，实现 BaseModule 所定义的方法就可以实现一个 Kraken 的 Module 模块。
+Kraken 提供了基础的 BaseModule 抽象类，实现 BaseModule 所定义的方法就可以实现一个 Kraken 的 Module。
 
-Kraken 在设计上使用 Module 模块来处理来自 JavaScript API 的调用。因此对于 AlarmClock 这个 JS API，这个 module 命名是 AlarmClockModule 。
+Kraken 在设计上使用 Module 来处理来自 JavaScript API 的调用。因此对于 AlarmClock 这个 JS API，这个 Module 命名是 AlarmClockModule 。
 
-在 Module 内向 JavaScript 返回数据有 2 种方式，第一种是通过 `InvokeModuleCallback callback` 来进行返回。只要 JavaScript 的代码在调用的时候，在最后了一个参数传入了一个函数作为回调的话，就可以在 Dart 层调用 `InvokeModuleCallback callback` 来直接进行回调。回调参数可以传递 errmsg 或 data，用于处理异常和正常的两种情况。
+在 Module 内向 JavaScript 返回数据有 2 种方式，第一种是通过 `InvokeModuleCallback callback` 来进行返回。只要 JavaScript 的代码在调用的时候，在最后了一个参数传入了一个函数作为回调的话，就可以在 Dart 层调用 `InvokeModuleCallback callback` 来直接进行回调。回调参数可以传递 `errmsg` 或 `data`，用于处理异常和正常的两种情况。
 
-第二种方式是直接在 Module 内的任何函数内调用 `moduleManager.emitModuleEvent(name, event: alarmEvent, data: 'Wake Up!');` 来触发一个 Module 事件。通过在 JavaScript 上调用 `kraken.addKrakenModuleListener` 就可以监听到这个事件。不过值得注意的是，任何一个 Module 所触发的事件都会执行 `kraken.addKrakenModuleListener` 所注册的回调，因此还需要判断回调执行时，调用的模块名称。
+第二种方式是直接在 Module 内的任何函数内调用 `moduleManager.emitModuleEvent(name, event: alarmEvent, data: 'Wake Up!');` 来触发一个 Module 事件。通过在 JavaScript 上调用 `kraken.addKrakenModuleListener` 就可以监听到这个事件。不过值得注意的是，任何一个 Module 所触发的事件都会执行 `kraken.addKrakenModuleListener` 所注册的回调，因此还需要判断回调执行时调用的 Module 名称。
 
 ### 完成插件的注册
 
-现在我们已经完成了大部分的功能的实现，接下来就是把代码注册到 Kraken 中，就大功告成了。
+现在我们已经完成了大部分功能的实现，接下来只需把代码注册到 Kraken 中，就大功告成了。
 
 **构建 bridge**
 
-`kraken-npbt` 工具可以把 bridge 目录下的 C++ 和 JavaScript 文件都构建成一个动态链接库产物。只需要使用下面的命令就可以一键构建 macOS/iOS/Android 平台的产物。
+`kraken-npbt` 工具可以把 bridge 目录下的 C++ 和 JavaScript 文件都构建成一个动态链接库产物。只需要使用下面的命令就可以一键构建 macOS / iOS / Android 平台的产物。
 
 ```bash
 kraken-npbt build

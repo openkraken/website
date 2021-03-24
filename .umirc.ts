@@ -37,7 +37,7 @@ export default defineConfig({
       path: '/changelog',
     },
     {
-      title: 'GitHub',
+      title: 'GITHUB',
       path: 'https://github.com/openkraken/kraken',
     },
   ],
@@ -78,35 +78,35 @@ export default defineConfig({
         path: '/guide/debug',
       },
       {
-        title: 'Kraken 与 Web 的差异',
-        path: '/guide/difference',
+        title: 'Kraken 与浏览器的差异',
+        path: '/guide/difference-to-web',
       },
       {
         title: '进阶',
         path: '/guide/advanced',
         children: [
           {
-            title: '如何实现一个高性能长列表',
+            title: '实现一个高性能长列表',
             path: '/guide/advanced/sliver',
           },
           {
-            title: '如何使用增强的手势能力',
+            title: '使用增强的手势能力',
             path: '/guide/advanced/gesture',
           },
           {
-            title: '如何处理页面跳转',
+            title: '处理页面跳转',
             path: '/guide/advanced/handle-page-jump',
           },
           {
-            title: 'JS 如何与 Native 通信',
+            title: 'JS 与 Native 通信',
             path: '/guide/advanced/communicate-with-native',
           },
           {
-            title: 'Native 如何与 Kraken 进行手势传递',
+            title: 'Native 与 Kraken 进行手势传递',
             path: '/guide/advanced/gesture-to-native',
           },
           {
-            title: '如何测算 Kraken 的运行性能',
+            title: '测算 Kraken 的运行性能',
             path: '/guide/advanced/measure-performance',
           },
         ],

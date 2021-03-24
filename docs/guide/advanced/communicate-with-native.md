@@ -39,6 +39,7 @@ kraken.methodChannel.setMethodCallHandler((method, args) => {
       break;
     case 'bar':
       handleBar(args);
+      break;
   }
 });
 ```
@@ -133,7 +134,7 @@ kraken.invokeMethod(call.method, arguments: call.arguments)
 引入 KrakenSDK
 
 ```
-import com.taobao.kraken.Kraken;
+import com.openkraken.kraken.Kraken;
 ```
 
 #### 处理 JS 的函数调用
