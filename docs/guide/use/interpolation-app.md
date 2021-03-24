@@ -85,6 +85,7 @@ public class MainActivity extends FlutterActivity {
 ### 6. 构建运行即可看到效果
 
 Android 示例应用
+
 <img src="https://gw.alicdn.com/tfs/TB1Xih8AND1gK0jSZFsXXbldVXa-1080-1920.png" width="350" />
 
 ## 集成到现有 iOS 应用
