@@ -17,7 +17,7 @@ Kraken 提供了相关的设计可以让用户自定义跳转逻辑。
 例如，在 Kraken 中运行下面的 JavaScript 代码
 
 ```javascript
-const text = document.createTextNode('Click Me and jump to b!');
+const text = document.createTextNode('Click me and navigate to b.');
 const a = document.createElement('a');
 a.href = 'b.js';
 a.style.display = 'block';
@@ -25,7 +25,7 @@ a.style.display = 'block';
 const c = document.createElement('a');
 c.href = 'c.js';
 c.style.display = 'block';
-c.appendChild(document.createTextNode('Click me and nothing happened'));
+c.appendChild(document.createTextNode('Click me and nothing happened.'));
 const p = document.createElement('p');
 p.style.textAlign = 'center';
 a.appendChild(text);

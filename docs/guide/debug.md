@@ -2,11 +2,11 @@
 
 Kraken 支持通过 Chrome DevTools 进行调试。
 
-注：目前 DevTools 目前仅支持 Element 调试，NetWork 调试，JS debugger 调试目前还在开发中。
+注：目前 DevTools 目前仅支持 Element 调试，Network 调试，JS 调试目前还在开发中。
 
-## 如何打开 Debugger
+## 如何打开调试工具
 
-Kraken 在启动之后，会在控制台内显示调试服务的访问地址，
+Kraken 在启动之后，会在控制台内显示调试服务的访问地址。
 
 ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323142503.jpg)
 
@@ -14,10 +14,10 @@ Kraken 在启动之后，会在控制台内显示调试服务的访问地址，
 
 ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323143003.jpg)
 
-## 在 Android / iOS 设备上打开 Debugger
+## 在 Android / iOS 设备上打开调试工具
 
-在手机上打开 Debugger 相比 PC 上不太一样的是，如果是直接通过 APK 安装到手机的方式来运行 Kraken 的话，是很难直接看到 Kraken 在控制台内的输出。
+在 Android / iOS 设备上打开调试工具与 PC 有些差异，如果使用在手机上安装 APK 的方式来运行 Kraken 的话，很难在控制台内看到 Kraken 的输出。
 
-除了在控制台的输出，Kraken 也将 `devtools://` 的调试地址自动复制到了粘贴板，这个时候只需要在手机上将粘贴板里面到调试链接地址发送到 PC 上就可以进行调试。
+除了在控制台的输出，Kraken 也将 `devtools://` 的调试地址自动复制到了粘贴板，只需在手机上将粘贴板里面的内容发送到 PC 上就可以进行调试。
 
-注：请确保手机和 PC 是在同一个局域网内，否则可能会出现连接不上到情况。
+注：请确保手机和 PC 在同一个局域网内，否则可能会出现连接不上的情况。

@@ -32,14 +32,14 @@ http://[your.ip]:3333/home.html
 http://[your.ip]:3333/kraken/home.js
 
 [Kraken] Run Kraken Playground App:
-kraken -u http://[your.ip]:3333/kraken/home.js
+kraken http://[your.ip]:3333/kraken/home.js
 
 ```
 
 执行上述命令，就可以用 Kraken 打开该 Rax 应用。
 
 ```shell
-kraken -u http://[your.ip]:3333/kraken/home.js
+kraken http://[your.ip]:3333/kraken/home.js
 ```
 
 <img src="https://img.alicdn.com/imgextra/i2/O1CN01bOOIzk1X42yn7HYIV_!!6000000002869-2-tps-828-1518.png" width="300px"></img>

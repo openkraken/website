@@ -6,9 +6,9 @@ Kraken 采用的是 [BDD](https://en.wikipedia.org/wiki/Behavior-driven_developm
 
 测试代码在运行过程中，测试框架会创建一个专用的 JS 运行环境，所有的测试用例会共享这个测试用例。
 
-## 如何编写测试用例
+## 编写测试用例
 
-Kraken 在测试环境中，内置了一个 [jasmine.js](https://jasmine.github.io/) 作为测试框架。因此任何 Jasmine.js 所提供的功能都可以在环境中进行使用，例如 describe，it，expect 等常用的函数。
+Kraken 在测试环境中，内置了一个 [jasmine.js](https://jasmine.github.io/) 作为测试框架。因此任何 Jasmine.js 所提供的功能都可以在环境中进行使用，例如 `describe`，`it`，`expect` 等常用的函数。
 
 除了 Jasmine 所提供的 API 之外，Kraken 还额外在测试环境内注册了一些简便的工具 API。
 
@@ -41,22 +41,21 @@ describe('block-in', () => {
 });
 ```
 
-## 如何验证渲染效果是否正确
+## 验证渲染效果
 
 Kraken 中提供了 `matchViewportSnapshot()` 函数可以将当前的渲染结果截屏并保存成 PNG 图片，图片的命名取决于测试用例中 `describe` 和 `it` 的值。
 
-当生成的图片名称在本地已经存在的时候，测试框架就会对两张图片的内存进行像素对比，如果发现两张图片的渲染结果存在差异，就会报错，最终直接导致 `matchViewportSnapshot()` 抛出一个 Async JS Error，从而使得测试失败。
+当生成的图片名称在本地已经存在的时候，测试框架就会对两张图片的内存进行像素对比，如果发现两张图片的渲染结果存在差异，就会导致 `matchViewportSnapshot()` 抛出异常，使得测试失败。
 
 生成的图片文件都会存放在 `integration_tests/snapshots`。
 
-## 如何运行测试
+## 运行测试
 
-运行测试需要在 macOS 平台下运行。
+测试需要在 macOS 平台下运行。
 
 在 Kraken 项目下执行 `npm test` 即可运行测试。
 
-注：不同的 macOS 机型可能会出现一些快照测试不一致的情况，这取决于当前运行机器的 GPU 型号和设备驱动。
+> 注：不同的 macOS 机型可能会出现一些快照测试不一致的情况，这取决于当前运行机器的 GPU 型号和设备驱动。  
+> 目前已知为 Intel GPU 和 NVIDIA，AMD GPU 快照结果存在一点点细微的差异，但是这样依然会造成集成测试快照对比失败。
 
-目前已知为 Intel GPU 和 NVIDIA，AMD GPU 快照结果存在一点点细微的差异，但是这样依然会造成集成测试快照对比失败。
-
-为了保证快照验证一致性，建议直接提交 Github Pull Request 到 openkraken/kraken，然后使用 Kraken 团队官方的 CI 执行测试。
+为了保证快照验证一致性，建议提交 `Pull Request` 到 [openkraken/kraken](https://github.com/openkraken/kraken)，然后使用 Kraken 团队官方的 CI 执行测试。
