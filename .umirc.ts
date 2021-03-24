@@ -93,6 +93,10 @@ export default defineConfig({
             title: 'Native 如何与 Kraken 进行手势传递',
             path: '',
           },
+          {
+            title: '如何测算 Kraken 的运行性能',
+            path: '/guide/advanced/measure-performance',
+          },
         ],
       },
       {
