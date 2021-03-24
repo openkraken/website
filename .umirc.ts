@@ -30,7 +30,7 @@ export default defineConfig({
     },
     {
       title: '常用插件',
-      path: '/extends',
+      path: '/plugins',
     },
     {
       title: 'CHANGELOG',
@@ -74,7 +74,7 @@ export default defineConfig({
         path: '/guide/network',
       },
       {
-        title: '调试',
+        title: '前端代码调试',
         path: '/guide/debug',
       },
       {
@@ -94,8 +94,8 @@ export default defineConfig({
             path: '/guide/advanced/gesture',
           },
           {
-            title: '如何在 Flutter 应用中处理页面跳转',
-            path: '',
+            title: '如何处理页面跳转',
+            path: '/guide/advanced/handle-page-jump',
           },
           {
             title: 'JS 如何与 Native 通信',
