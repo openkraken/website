@@ -94,8 +94,8 @@ export default defineConfig({
             path: '/guide/advanced/gesture',
           },
           {
-            title: '如何在 Flutter 应用中处理页面跳转',
-            path: '',
+            title: '如何处理页面跳转',
+            path: '/guide/advanced/handle-page-jump',
           },
           {
             title: 'JS 如何与 Native 通信',
