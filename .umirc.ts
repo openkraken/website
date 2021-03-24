@@ -10,14 +10,16 @@ export default defineConfig({
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
     'a:hover { color: #F6AF1F !important }',
+    '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    '.__dumi-default-layout-toc{ width: 220px !important }',
     '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
+    '::-webkit-scrollbar{display:none}',
+    '.__dumi-default-layout-footer-meta { display: none }',
   ],
   navs: [
     {
