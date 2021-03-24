@@ -53,7 +53,7 @@ navigationDelegate.setDecisionHandler((KrakenNavigationAction action) async {
 Kraken kraken = Kraken(
   bundlePath: 'assets/bundle.js',
   navigationDelegate: navigationDelegate,
-),
+);
 
 ```
 
