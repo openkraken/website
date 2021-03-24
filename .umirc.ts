@@ -141,10 +141,6 @@ export default defineConfig({
             title: '编写测试用例',
             path: '/guide/contribute/test',
           },
-          {
-            title: '贡献规范',
-            path: '/guide/contribute/spec',
-          },
         ],
       },
     ],
