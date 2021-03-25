@@ -11,7 +11,7 @@ hero:
 footer: Open-source MIT Licensed | Copyright © 2021<br />
 ---
 
-<div style="max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:500px">
+<div style="max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:470px">
   <div>
     <img style="width: 50%;position: absolute;right: 0;z-index: 1" src="//img.alicdn.com/imgextra/i2/O1CN01Ptcvye1RVAkCRf4gN_!!6000000002116-2-tps-1717-1452.png" />
   </div>
@@ -24,16 +24,17 @@ font-family: PingFangSC-Semibold;letter-spacing: 0">
 ">
       高性能 Web 渲染引擎，基于 Flutter 构建
     </div>
-    <div>
+    <div style="margin-top:50px">
       <a href="/guide" >
         <button style="width: 150px;margin-right: 0;color: #fff;background: #F6AF1F;height: 44px;font-size: 16px;border: 1px solid #F6AF1F;border-radius: 22px;box-sizing: border-box;cursor: pointer;outline: none;" >快速开始</button>
       </a>
+      <iframe style="border-top-width: 0px;vertical-align: bottom;margin-left:30px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;width: 160px;height: 36px;" src="https://ghbtns.com/github-btn.html?user=openkraken&repo=kraken&type=star&count=true&size=large" ></iframe>
     </div>
   </div>
 </div>
 
 <div style="background-color: #121212">
-  <div class="__dumi-default-layout-features"><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN012OrzRG1pPioDlcQaW_!!6000000005353-2-tps-56-50.png&quot;);"><dt style="color: #FFF">W3C 标准</dt><dd><div class="markdown"><p style="color: #FFF">拥抱前端生态</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i3/O1CN01mx2JdY1pW8Lv73Q8h_!!6000000005367-2-tps-55-61.png&quot;);"><dt style="color: #FFF">高性能</dt><dd><div class="markdown"><p style="color: #FFF">轻量且快速</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01H91jck262DxHKaNiT_!!6000000007603-2-tps-60-48.png&quot;);"><dt style="color: #FFF">跨平台</dt><dd><div class="markdown"><p style="color: #FFF">自绘保证多端一致性</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01iAlAFw1SBJBEjn328_!!6000000002208-2-tps-56-56.png&quot;);"><dt style="color: #FFF">调试工具</dt><dd><div class="markdown"><p>支持 Chrome 调试协议</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i3/O1CN01VbINwS1v3B0Sh9J1L_!!6000000006116-2-tps-52-52.png&quot;);"><dt>富文本</dt><dd><div class="markdown"><p>原生支持图文混排</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01bL1bUW1oVO5k7Sp9m_!!6000000005230-2-tps-54-55.png&quot;);"><dt style="color: #FFF">插件化</dt><dd><div class="markdown"><p style="color: #FFF">灵活的扩展能力</p></div></dd></dl></div>
+  <div class="__dumi-default-layout-features"><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN012OrzRG1pPioDlcQaW_!!6000000005353-2-tps-56-50.png&quot;);"><dt style="color: #FFF">W3C 标准</dt><dd><div class="markdown"><p style="color: #FFF">拥抱前端生态</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i3/O1CN01mx2JdY1pW8Lv73Q8h_!!6000000005367-2-tps-55-61.png&quot;);"><dt style="color: #FFF">高性能</dt><dd><div class="markdown"><p style="color: #FFF">轻量且快速</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01H91jck262DxHKaNiT_!!6000000007603-2-tps-60-48.png&quot;);"><dt style="color: #FFF">跨平台</dt><dd><div class="markdown"><p style="color: #FFF">自绘保证多端一致性</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01iAlAFw1SBJBEjn328_!!6000000002208-2-tps-56-56.png&quot;);"><dt style="color: #FFF">调试工具</dt><dd><div class="markdown"><p style="color: #FFF">支持 Chrome 调试协议</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i3/O1CN01VbINwS1v3B0Sh9J1L_!!6000000006116-2-tps-52-52.png&quot;);"><dt style="color: #FFF">富文本</dt><dd><div class="markdown"><p style="color: #FFF">原生支持图文混排</p></div></dd></dl><dl style="background-image: url(&quot;https://img.alicdn.com/imgextra/i1/O1CN01bL1bUW1oVO5k7Sp9m_!!6000000005230-2-tps-54-55.png&quot;);"><dt style="color: #FFF">插件化</dt><dd><div class="markdown"><p style="color: #FFF">灵活的扩展能力</p></div></dd></dl></div>
 </div>
 
 <div>
