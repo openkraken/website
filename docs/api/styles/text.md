@@ -7,7 +7,7 @@ Kraken 支持以下字体与文本相关样式。
 ### font-size
 
 - 定义：用于指定字体大小。
-- 属性值：\<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size)。
 
 ### font-weight
@@ -51,7 +51,7 @@ Kraken 支持以下字体与文本相关样式。
 ### line-height
 
 - 定义：指定多行元素之间的间距，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 inline 元素，它用于计算行盒（line box）的高度。
-- 属性值：[ normal | <±number>[ 无单位 | px | rpx | vw | vh | % ]
+- 属性值：[ normal | <±number>[ 无单位 | px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height)。
 
 ### text-shadow

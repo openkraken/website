@@ -30,23 +30,23 @@ Kraken 支持 CSS 规范中定义的所有类型 [position 定位](https://devel
 ### top
 
 - 定义：定义了定位元素的上外边距边界与其包含块上边界之间的偏移，非定位元素设置此属性无效。
-- 属性值：<±number>[ px | rpx | vw | vh | % ]
+- 属性值：<±number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/top)。
 
 ### right
 
 - 定义：定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。
-- 属性值：<±number>[ px | rpx | vw | vh | % ]
+- 属性值：<±number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/right)。
 
 ### bottom
 
 - 定义：定义了定位元素下外边距边界与其包含块下边界之间的偏移，非定位元素设置此属性无效。
-- 属性值：<±number>[ px | rpx | vw | vh | % ]
+- 属性值：<±number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom)。
 
 ### left
 
 - 定义：定义了定位元素的左外边距边界与其包含块左边界之间的偏移，非定位元素设置此属性无效。
-- 属性值：<±number>[ px | rpx | vw | vh | % ]
+- 属性值：<±number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/left)。

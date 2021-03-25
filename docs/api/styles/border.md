@@ -58,5 +58,5 @@ Kraken 支持以下边框与圆角相关样式。
 ### border-\*-radius
 
 - 定义：设定元素的单个方向的边框圆角。
-- 属性值：\<number>[ px | rpx | vw | vh | % ]
+- 属性值：\<number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)。

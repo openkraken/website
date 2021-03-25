@@ -1,6 +1,6 @@
 # 布局
 
-在布局方式上 Kraken 目前支持 W3C 标准的流式布局与 Flexbox 布局。
+在布局方式上 Kraken 目前支持 W3C 标准的[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)与 [Flexbox 布局](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
 
 ## 布局方式
 
@@ -17,7 +17,7 @@ display 属性定义了元素的显示类型，通过指定不同的值来控制
 
 ## 流式布局
 
-Kraken 支持 CSS 的[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)，即在文档流中通过内联与块的方式排列元素，同时可以通过 [display 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display) 改变元素的默认排列方式。
+Kraken 支持 CSS 的流式布局，即在文档流中通过内联与块的方式排列元素，同时可以通过 [display 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display) 改变元素的默认排列方式。
 
 ### 内联元素
 
@@ -79,7 +79,7 @@ Kraken 的 Flexbox 布局基于 CSS 的 [flexbox 模型](https://developer.mozil
 ### flex
 
 - 定义：定义了 flex 成员项可以占用容器中剩余空间的大小。
-- 属性值：[ auto | initial | none | `flex-grow/flex-shrink/flex-basis 组合` ]
+- 属性值：[ auto | `flex-grow/flex-shrink/flex-basis 组合` ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)。
 
 ### flex-grow
