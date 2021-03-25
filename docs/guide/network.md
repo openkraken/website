@@ -16,13 +16,6 @@
 fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(json => console.log(json));
-
-// -> {
-//      "userId": 1,
-//      "id": 1,
-//      "title": "delectus aut autem",
-//      "completed": false
-//    }
 ```
 
 有时候你需要使用 POST 方式向 HTTP URL 发起请求，可以在 fetch 方法添加第二个可选参数：

@@ -10,14 +10,20 @@ export default defineConfig({
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
     'a:hover { color: #F6AF1F !important }',
+    '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    '.__dumi-default-layout-toc{ width: 220px !important }',
-    '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
+    '.__dumi-default-layout-content{ max-width: none !important }',
+    '.__dumi-default-layout[data-route="/"] .markdown{ padding-left: 0px !important }',
+    '.markdown{ padding-left: 380px !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
+    '::-webkit-scrollbar{display:none}',
+    '.__dumi-default-layout-footer-meta { display: none !important }',
+    '.__dumi-default-layout-hero{ display: none !important }',
+    '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; }',
   ],
   navs: [
     {
@@ -33,11 +39,7 @@ export default defineConfig({
       path: '/plugins',
     },
     {
-      title: 'CHANGELOG',
-      path: '/changelog',
-    },
-    {
-      title: 'GitHub',
+      title: 'GITHUB',
       path: 'https://github.com/openkraken/kraken',
     },
   ],
@@ -78,35 +80,35 @@ export default defineConfig({
         path: '/guide/debug',
       },
       {
-        title: 'Kraken 与 Web 的差异',
-        path: '/guide/difference',
+        title: 'Kraken 与浏览器的差异',
+        path: '/guide/difference-to-web',
       },
       {
         title: '进阶',
         path: '/guide/advanced',
         children: [
           {
-            title: '如何实现一个高性能长列表',
-            path: '/guide/advanced/sliver',
+            title: '实现一个高性能长列表',
+            path: '/guide/advanced/high-performance-list',
           },
           {
-            title: '如何使用增强的手势能力',
+            title: '使用增强的手势能力',
             path: '/guide/advanced/gesture',
           },
           {
-            title: '如何处理页面跳转',
-            path: '/guide/advanced/handle-page-jump',
+            title: '处理页面跳转',
+            path: '/guide/advanced/handle-navigation',
           },
           {
-            title: 'JS 如何与 Native 通信',
+            title: 'JS 与 Native 通信',
             path: '/guide/advanced/communicate-with-native',
           },
           {
-            title: 'Native 如何与 Kraken 进行手势传递',
+            title: 'Native 与 Kraken 进行手势传递',
             path: '/guide/advanced/gesture-to-native',
           },
           {
-            title: '如何测算 Kraken 的运行性能',
+            title: '测算 Kraken 的运行性能',
             path: '/guide/advanced/measure-performance',
           },
         ],
@@ -141,10 +143,6 @@ export default defineConfig({
             title: '编写测试用例',
             path: '/guide/contribute/test',
           },
-          {
-            title: '贡献规范',
-            path: '/guide/contribute/spec',
-          },
         ],
       },
     ],
@@ -175,7 +173,7 @@ export default defineConfig({
           },
           {
             title: '边框与圆角',
-            path: '/api/styles/text',
+            path: '/api/styles/border',
           },
           {
             title: '颜色与背景',

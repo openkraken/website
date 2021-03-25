@@ -2,7 +2,7 @@
 
 ## Kraken 是什么
 
-Kraken 是一款基于 W3C 标准高性能渲染引擎。Kraken 的底层基于 Flutter 进行渲染，通过其自绘渲染的特性，保证多端一致性。而上层基于 W3C 标准来实现，拥有非常庞大的前端开发者生态。
+Kraken 是一款基于 W3C 标准的高性能渲染引擎。Kraken 底层基于 Flutter 进行渲染，通过其自绘渲染的特性，保证多端一致性。上层基于 W3C 标准实现，拥有非常庞大的前端开发者生态。
 
 ## 快速体验 Kraken
 
@@ -18,18 +18,18 @@ $ npm install -g @openkraken/cli
 
 安装完成之后你将得到一个 `kraken` 的全局命令行，你可以使用 `kraken --help` 查看使用方式和参数。
 
-你可以直接使用下面的命令启动一个调试应用：
+你可以使用下面的命令启动一个调试应用：
 
 ```shell
 # kraken [localfile|URL]
 $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js
 ```
 
-如果你想要调试，直接在 Chrome 中打开一个新的 Tab 页，然后直接粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
+如果你想要调试，可以在 Chrome 中打开一个新的 Tab 页，然后粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
 
 **Windows 用户**
 
-Kraken 目前暂时没有提供可供运行在 Windows 平台的 Cli 程序。
+Kraken 目前暂时没有提供可运行在 Windows 平台的 Cli 程序。
 
 使用一个 Android 手机扫描下面的二维码体验：
 
@@ -37,7 +37,7 @@ TODO: Gallary 二维码图片
 
 ## 创建一个 Kraken 应用
 
-Kraken 不限制上层开发者使用的框架是什么，无论你是 React 开发者、Rax 开发者还是 Vue 开发者，都可以快速使用你最熟悉的框架来开发一个 Kraken 应用。
+Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Rax 开发者还是 React 开发者，都可以使用你最熟悉的框架来开发一个 Kraken 应用。
 
 ![](https://img.alicdn.com/imgextra/i1/O1CN018a3mFu28GXZC6hTVQ_!!6000000007905-2-tps-1080-418.png)
 
@@ -47,10 +47,10 @@ Kraken 不限制上层开发者使用的框架是什么，无论你是 React 开
 
 ### 如果你是 Vue 开发者
 
-你可以直接用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
+你可以使用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
 
 ```shell
 kraken https://raw.githubusercontent.com/openkraken/samples/main/demos/hello-vue/dist/js/app.js
 ```
 
-当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使他能够在 Kraken 上面运行，可以访问[用 Vue 开发一个 Kraken 应用](/guide/use/vue)。
+当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 Vue 开发一个 Kraken 应用](/guide/use/vue)。

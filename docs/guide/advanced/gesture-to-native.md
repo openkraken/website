@@ -41,10 +41,8 @@ class NativeGestureClient implements GestureClient {
 
 ```dart
 Kraken kraken = Kraken(
-  viewportWidth: window.physicalSize.width / window.devicePixelRatio,
-  viewportHeight: window.physicalSize.height / window.devicePixelRatio,
   gestureClient: NativeGestureClient(),
- );
+);
 ```
 
 详细的 API 调用见 [Kraken Widget](/api/widget)。
