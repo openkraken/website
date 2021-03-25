@@ -1,12 +1,12 @@
 # Sliver
 
-Kraken 在 W3C 标准的 `display` 类型外扩展了 `sliver` 类型，目的是解决 Web 标准下滚动视图的复用回收问题，类似客户端开发中的 RecyclerView/UITableView 实现滚动回收的布局容器，Display Sliver 定义了容器的布局方式以及当子元素滚动出 viewport 后的回收特性。
+Kraken 在 W3C 标准的 `display` 类型外扩展了 `sliver` 类型，目的是解决 Web 标准下滚动视图的复用回收问题，类似客户端开发中的 RecyclerView/UITableView 实现滚动回收的布局容器，Display Sliver 定义了容器的布局方式以及当子元素滚动出 Viewport 后的回收特性。
 
 ## 属性
 
 **display: sliver**
 
-sliver 属于 W3C Box Layout Modes 中定义的 Inner Display Layout Models 类型，详见 https://www.w3.org/TR/css-display-3/#inner-model
+sliver 属于 W3C Box Layout Modes 中定义的 Inner Display Layout Models 类型，详见 [CSS Display 3](https://www.w3.org/TR/css-display-3/#inner-model).
 
 当 display 为 `sliver` 时，该元素的主轴方向表现为可滚动，超出视口的内容不会被绘制，直到区域滚动到视口内。
 
