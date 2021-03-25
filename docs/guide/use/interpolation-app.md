@@ -14,7 +14,7 @@
 
 访问 [Kraken Github Release](https://github.com/openkraken/kraken/releases) 获取预构建的 Android SDK。
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210319181610.jpg)
+下载 `com.openkraken.kraken.sdk.<kraken_version>.zip`。
 
 ### 3. 配置 maven 仓库地址：
 
@@ -24,7 +24,7 @@
 
 repositories {
   maven {
-      url "some/path/com.openkraken.kraken.sdk.0.7.0/outputs/repo"
+      url "some/path/com.openkraken.kraken.sdk.<kraken_version>/outputs/repo"
   }
   maven {
       // libflutter.so 和 libflutter.jar 仓库地址
@@ -39,9 +39,9 @@ repositories {
 
 ```
 dependencies {
-  debugImplementation 'com.openkraken.kraken.sdk:flutter_debug:0.7.0'
-  profileImplementation 'com.openkraken.kraken.sdk:flutter_profile:0.7.0'
-  releaseImplementation 'com.openkraken.kraken.sdk:flutter_release:0.7.0'
+  debugImplementation 'com.openkraken.kraken.sdk:flutter_debug:<kraken_version>'
+  profileImplementation 'com.openkraken.kraken.sdk:flutter_profile:<kraken_version>'
+  releaseImplementation 'com.openkraken.kraken.sdk:flutter_release:<kraken_version>'
 }
 ```
 
@@ -76,17 +76,13 @@ public class MainActivity extends FlutterActivity {
         FlutterEngine engine = getFlutterEngine();
         if (engine == null) return;
         Kraken kraken = new Kraken(engine);
-        String url = "https://dev.g.alicdn.com/kraken/kraken-demos/richtext/build/kraken/index.js";
+        String url = "https://raw.githubusercontent.com/openkraken/kraken/main/kraken/example/assets/bundle.js";
         kraken.loadUrl(url);
     }
 }
 ```
 
-### 6. 构建运行即可看到效果
-
-Android 示例应用
-
-<img src="https://gw.alicdn.com/tfs/TB1Xih8AND1gK0jSZFsXXbldVXa-1080-1920.png" width="350" />
+构建运行即可看到效果
 
 ## 集成到现有 iOS 应用
 
@@ -100,7 +96,7 @@ Android 示例应用
 
 访问 [Kraken Github Release](https://github.com/openkraken/kraken/releases) 获取预构建的 iOS SDK。
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210319181816.jpg)
+下载 `ios.sdk.<kraken_version>.zip`。
 
 ### 3. 配置 Cocoapods
 
@@ -187,14 +183,10 @@ pod update
   [[FlutterViewController alloc] initWithEngine:flutterEngine nibName:nil bundle:nil];
 
   Kraken* kraken = [[Kraken alloc] initWithFlutterEngine:flutterEngine];
-  [kraken loadUrl:@"https://dev.g.alicdn.com/kraken/kraken-demos/richtext/build/kraken/index.js"];
+  [kraken loadUrl:@"https://raw.githubusercontent.com/openkraken/kraken/main/kraken/example/assets/bundle.js"];
 
   [self presentViewController:flutterViewController animated:YES completion:nil];
 }
 ```
 
-### 6. 构建运行即可看到效果
-
-iOS 示例应用
-
-<img src="https://gw.alicdn.com/tfs/TB1P0bocsKfxu4jSZPfXXb3dXXa-684-1356.png" width="350" />
+构建运行即可看到效果
