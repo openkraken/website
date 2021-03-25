@@ -25,7 +25,7 @@ Kraken 支持 CSS 规范中定义的所有类型 [position 定位](https://devel
 - 定义：定义了一个定位元素及其后代元素或 flex 成员项的 z-order。 当元素之间重叠的时候， z-index 较大的元素会覆盖较小的元素在上层进行显示。
 - 属性值：<±number>
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index)。
-- 说明：Kraken 未完整支持 W3C 的 [stacking context](https://www.w3.org/TR/CSS2/zindex.html)，导致在某些元素深度嵌套情况下 `z-index` 的表现与 web 相比有差异，见 [issue](https://github.com/openkraken/kraken/issues/55)。
+- 说明：Kraken 未完整支持 W3C 的 [stacking context](https://www.w3.org/TR/CSS2/zindex.html)，导致在某些元素深度嵌套情况下 z-index 的表现与 Web 相比有差异，见 [issue](https://github.com/openkraken/kraken/issues/55)。
 
 ### top
 

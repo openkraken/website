@@ -9,8 +9,10 @@
 示例：
 
 ```dart
+Color color = const Color(0x000000);
+
 Kraken kraken = Kraken(
-  background: '#000000',
+  background: color,
 );
 ```
 
@@ -34,7 +36,7 @@ Kraken kraken = Kraken(
 
 ```dart
 Kraken kraken = Kraken(
-  viewportWidth: window.physicalSize.height / window.devicePixelRatio,
+  viewportHeight: window.physicalSize.height / window.devicePixelRatio,
 );
 ```
 
@@ -54,25 +56,71 @@ Kraken kraken = Kraken(
 
 需加载执行的 JavaScript 脚本本地路径。
 
+示例：
+
+```dart
+Kraken kraken = Kraken(
+  bundlePath: 'assets/bundle.js',
+);
+```
+
 ## bundleContent
 
 需加载执行的 JavaScript 脚本的内容。
+
+示例：
+
+```dart
+Kraken kraken = Kraken(
+  bundleContent: 'console.log(1)',
+);
+```
 
 ## onLoad
 
 在文档装载完成后会触发 onLoad 事件。
 
+示例：
+
+```dart
+Kraken kraken = Kraken(
+  onLoad: (KrakenController controller) {
+    // ...
+  },
+);
+```
+
 ## onLoadError
 
 在文档装载异常的回调函数。
+
+示例：
+
+```dart
+Kraken kraken = Kraken(
+  onLoadError: (FlutterError error, StackTrace stackTrace) {
+    // ...
+  },
+);
+```
 
 ## onJSError
 
 JavaScript 执行异常时通过该回调抛出异常。
 
+示例：
+
+```dart
+Kraken kraken = Kraken(
+  onJSError: (String message) {
+    // ...
+  },
+);
+```
+
 ## debugEnableInspector
 
-开启调试模式。
+强制开启调试模式，默认为 true。
 
 ## gestureClient
 
@@ -114,10 +162,43 @@ Kraken kraken = Kraken(
 
 ## animationController
 
+Widget 动画控制器。
+
 ## navigationDelegate
 
 实现在 Kraken 视图的加载以及完成导航请求过程中触发的自定义行为。
 
+示例：
+
+```dart
+KrakenNavigationDelegate navigationDelegate = KrakenNavigationDelegate();
+navigationDelegate.errorHandler = (Object error, Object stack) {};
+navigationDelegate.setDecisionHandler((KrakenNavigationAction action) async {
+  // ...
+  return KrakenNavigationActionPolicy.cancel;
+});
+
+Kraken kraken = Kraken(
+  navigationDelegate: navigationDelegate,
+);
+```
+
 ## javaScriptChannel
 
 与 JavaScript 交换信息的通道。
+
+示例：
+
+```dart
+KrakenJavaScriptChannel javaScriptChannel = KrakenJavaScriptChannel();
+javaScriptChannel.onMethodCall = (String method, dynamic arguments) async {
+  Completer completer = Completer<String>();
+  Timer(Duration(seconds: 1), () {
+    completer.complete('helloworld');
+  });
+  return completer.future;
+};
+Krake kraken = Kraken(
+  javaScriptChannel: javaScriptChannel,
+),
+```

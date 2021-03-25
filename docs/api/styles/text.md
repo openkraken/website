@@ -1,6 +1,6 @@
 # 字体与文本
 
-Kraken 支持以下字体与文本相关样式。
+Kraken 支持以下字体与文本的相关样式。
 
 ## 字体
 
@@ -24,7 +24,7 @@ Kraken 支持以下字体与文本相关样式。
 
 ### font-style
 
-- 定义：选择  [`font-family`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family)  字体下的  `italic`  或  `oblique`  样式。
+- 定义：选择  [font-family](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family)  字体下的  `italic`  或  `oblique`  样式。
 - 属性值：[normal | italic]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style)。
 
@@ -44,7 +44,7 @@ Kraken 支持以下字体与文本相关样式。
 
 ### text-decoration
 
-- 定义：指定文本的修饰线外观的（下划线、上划线、贯穿线/删除线   或 闪烁）它是  [`text-decoration-line`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line), [`text-decoration-color`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color), [`text-decoration-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style), 和新出现的  [`text-decoration-thickness`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness)  属性的缩写。
+- 定义：指定文本的修饰线外观的（下划线、上划线、贯穿线/删除线   或 闪烁）它是  [text-decoration-line](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line), [text-decoration-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color), [text-decoration-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style), 和新出现的  [text-decoration-thickness](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness)  属性的缩写。
 - 属性值：[ underline | overline | line-through | none ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)。
 
@@ -56,8 +56,8 @@ Kraken 支持以下字体与文本相关样式。
 
 ### text-shadow
 
-- 定义：为文字添加阴影。可以为文字与   [`text-decorations`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)  添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
-- 属性值：[ none | $x $y $blur-radius $color ]
+- 定义：为文字添加阴影。可以为文字与   [text-decorations](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)  添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
+- 属性值：[ none | \$x \$y \$blur-radius \$color ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)。
 
 ### letter-spacing

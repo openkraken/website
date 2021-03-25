@@ -1,6 +1,6 @@
 # 颜色与背景
 
-Kraken 支持以下边框与圆角相关样式。
+Kraken 支持以下颜色与背景的相关样式。
 
 ## 颜色
 
@@ -15,7 +15,7 @@ Kraken 支持以下边框与圆角相关样式。
 #### background
 
 - 定义：指定元素的背景，为 `background-color`,`background-image`, `background-repeat`, `backgrond-position` 和 `background-size` 的简写属性。
-- 属性值： `background-color` | `background-image` | `background-repeat` | `backgrond-position`  | (/ `background-size` )
+- 属性值： `background-color` | `background-image` | `background-repeat` | `backgrond-position`  | `background-size`
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background)。
 
 #### background-color

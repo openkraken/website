@@ -19,7 +19,7 @@ Kraken 在 [GestureEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/Gestu
 
 当用户在某个元素上触发轻扫操作时会触发。
 
-### 示例
+示例：
 
 ```js
 const element = document.createElement('div');
@@ -32,7 +32,7 @@ element.addEventListener('swipe', function(event) {
 
 当用户在某个元素上触发滑动操作时会触发。
 
-### 示例
+示例：
 
 ```js
 const element = document.createElement('div');
@@ -45,7 +45,7 @@ element.addEventListener('pan', function(event) {
 
 当用户在某个元素上触发长按操作时会触发。
 
-### 示例
+示例：
 
 ```js
 const element = document.createElement('div');
@@ -58,7 +58,7 @@ element.addEventListener('longpress', function(event) {
 
 当用户在某个元素上触发缩放操作时会触发。
 
-### 示例
+示例：
 
 ```js
 const element = document.createElement('div');

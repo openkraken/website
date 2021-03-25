@@ -39,10 +39,6 @@ export default defineConfig({
       path: '/plugins',
     },
     {
-      title: 'CHANGELOG',
-      path: '/changelog',
-    },
-    {
       title: 'GITHUB',
       path: 'https://github.com/openkraken/kraken',
     },
@@ -93,7 +89,7 @@ export default defineConfig({
         children: [
           {
             title: '实现一个高性能长列表',
-            path: '/guide/advanced/sliver',
+            path: '/guide/advanced/high-performance-list',
           },
           {
             title: '使用增强的手势能力',
@@ -101,7 +97,7 @@ export default defineConfig({
           },
           {
             title: '处理页面跳转',
-            path: '/guide/advanced/handle-page-jump',
+            path: '/guide/advanced/handle-navigation',
           },
           {
             title: 'JS 与 Native 通信',
