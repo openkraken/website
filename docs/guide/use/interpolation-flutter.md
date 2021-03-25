@@ -12,7 +12,7 @@ cd myapp
 连接 Android 或者 iOS 手机，确保使用 `flutter devices` 可以看到已经连接的设备：
 
 ```
-$ flutter devices
+flutter devices
 1 connected devices:
 
 HWI TL00 (mobile) • 77P5T18126000120 • android-arm64 • Android 9 (API 28)
