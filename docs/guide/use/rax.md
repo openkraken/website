@@ -36,10 +36,12 @@ kraken http://[your.ip]:3333/kraken/home.js
 
 ```
 
+## 运行
+
 执行上述命令，就可以用 Kraken 打开该 Rax 应用。
 
 ```shell
 kraken http://[your.ip]:3333/kraken/home.js
 ```
 
-<img src="https://img.alicdn.com/imgextra/i2/O1CN01bOOIzk1X42yn7HYIV_!!6000000002869-2-tps-828-1518.png" width="300px"></img>
+<img src="https://gw.alicdn.com/imgextra/i3/O1CN01qoxT0P1m07pG7S2BY_!!6000000004891-2-tps-944-1560.png" width="300px"></img>

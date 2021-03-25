@@ -15,11 +15,15 @@ export default defineConfig({
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
+    '.__dumi-default-layout-content{ max-width: none !important }',
+    '.__dumi-default-layout[data-route="/"] .markdown{ padding-left: 0px !important }',
+    '.markdown{ padding-left: 380px !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
     '::-webkit-scrollbar{display:none}',
-    '.__dumi-default-layout-footer-meta { display: none }',
+    '.__dumi-default-layout-footer-meta { display: none !important }',
+    '.__dumi-default-layout-hero{ display: none !important }',
+    '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; }',
   ],
   navs: [
     {
@@ -173,7 +177,7 @@ export default defineConfig({
           },
           {
             title: '边框与圆角',
-            path: '/api/styles/text',
+            path: '/api/styles/border',
           },
           {
             title: '颜色与背景',
