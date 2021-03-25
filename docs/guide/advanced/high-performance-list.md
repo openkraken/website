@@ -27,7 +27,7 @@ document.body.appendChild(container);
 
 <img alt="preview sliver" src="https://gw.alicdn.com/imgextra/i4/O1CN014V4OnE1opzuqrz8cy_!!6000000005275-2-tps-974-1904.png" width=400 />
 
-这样一个简单的 Sliver 滚动列表就可以工作了，当你向下滚动的时候，Kraken 会动态生成对应的 RenderObject 并同时释放已经移出可视区域(Viewport)的节点对应的 RenderObject。
+这样一个简单的 Sliver 滚动列表就可以工作了，当你向下滚动的时候，Kraken 会动态生成对应的 RenderObject 并同时释放已经移出可视区域（Viewport）的节点对应的 RenderObject。
 
 ## 渐进式支持
 
@@ -35,7 +35,7 @@ document.body.appendChild(container);
 
 > 以下代码仅作参考。
 
-```jsx
+```js
 // ScrollView 组件的部分实现
 const isKraken = typeof kraken !== 'undefined';
 // ...
@@ -60,10 +60,10 @@ export default function ScrollView(props) {
 
 ## 与流式布局的差异与常见问题
 
-1. Sliver 容器默认滚动方向为垂直方向 (column)，如果希望实现水平的 Sliver 容器，可以通过更改 `sliver-direction` CSS 属性来实现。
-2. 渲染容器节点滚动方向(主轴)的尺寸(width / height)必须指定，因为 Sliver 容器内部的元素并不会将主轴空间撑开，这也是与流式布局的盒子有差异的地方。
-3. Sliver 容器的子元素在滚动方向垂直的方向(交叉轴方向)上的尺寸会被自动拉伸为 Sliver 容器的尺寸。
+1. Sliver 容器默认滚动方向为垂直方向 (column)，如果希望实现水平的 Sliver 容器，可以通过增加 `sliver-direction: row` 来实现。
+2. 渲染容器节点滚动方向（主轴）的尺寸（width / height）必须指定，因为 Sliver 容器内部的元素并不会将主轴空间撑开，这也是与流式布局的盒子有差异的地方。
+3. Sliver 容器的子元素在滚动方向垂直的方向（交叉轴方向）上的尺寸会被自动拉伸为 Sliver 容器的尺寸。
 
 ## API 参考
 
-更多细节请跳转到 [Sliver API](/api/sliver) 文档查看。
+更多细节请跳转到 [Sliver API](/api/extension/sliver) 文档查看。

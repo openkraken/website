@@ -10,14 +10,20 @@ export default defineConfig({
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
     'a:hover { color: #F6AF1F !important }',
+    '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
     'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
     '.__dumi-default-menu { width: 350px !important }',
-    '.__dumi-default-layout-toc{ width: 220px !important }',
-    '.__dumi-default-layout-content{ padding-left: 30px !important; max-width: none !important }',
+    '.__dumi-default-layout-content{ max-width: none !important }',
+    '.__dumi-default-layout[data-route="/"] .markdown{ padding-left: 0px !important }',
+    '.markdown{ padding-left: 380px !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
+    '::-webkit-scrollbar{display:none}',
+    '.__dumi-default-layout-footer-meta { display: none !important }',
+    '.__dumi-default-layout-hero{ display: none !important }',
+    '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; }',
   ],
   navs: [
     {
@@ -31,10 +37,6 @@ export default defineConfig({
     {
       title: '常用插件',
       path: '/plugins',
-    },
-    {
-      title: 'CHANGELOG',
-      path: '/changelog',
     },
     {
       title: 'GITHUB',
@@ -87,7 +89,7 @@ export default defineConfig({
         children: [
           {
             title: '实现一个高性能长列表',
-            path: '/guide/advanced/sliver',
+            path: '/guide/advanced/high-performance-list',
           },
           {
             title: '使用增强的手势能力',
@@ -95,7 +97,7 @@ export default defineConfig({
           },
           {
             title: '处理页面跳转',
-            path: '/guide/advanced/handle-page-jump',
+            path: '/guide/advanced/handle-navigation',
           },
           {
             title: 'JS 与 Native 通信',
@@ -171,7 +173,7 @@ export default defineConfig({
           },
           {
             title: '边框与圆角',
-            path: '/api/styles/text',
+            path: '/api/styles/border',
           },
           {
             title: '颜色与背景',

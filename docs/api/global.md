@@ -113,11 +113,11 @@ socket.addEventListener('message', function(event) {
 
 ## URL
 
-**`URL` **可以作为一个构造函数被调用来构造 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象。
+`URL` 可以作为一个构造函数被调用来构造 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象。
 
 ### 构造器
 
-`**URL()**` 构造函数返回一个新创建的 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象，表示由一组参数定义的 URL。
+`URL()` 构造函数返回一个新创建的 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象，表示由一组参数定义的 URL。
 如果给定的基本 URL 或生成的 URL 不是有效的 URL 链接，则会抛出一个异常。
 
 ```javascript
@@ -178,36 +178,37 @@ var l = new URL('http://www.example.com', b); // Creates a URL pointing to 'http
 
 ## URLSearchParams
 
-**`URLSearchParams`** 接口定义了一些实用的方法来处理 URL 的查询字符串。
+`URLSearchParams` 接口定义了一些实用的方法来处理 URL 的查询字符串。
 
 ### 构造函数
 
-`**URLSearchParams()**` 构造器创建并返回一个新的[URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams) 对象。 开头的`'?'` 字符会被忽略。
+`URLSearchParams()` 构造器创建并返回一个新的 [URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams) 对象。 开头的`"?"` 字符会被忽略。
 
 ```js
-var _URLSearchParams_ = new URLSearchParams(_init_);
+const paramsString = 'q=URLUtils.searchParams&topic=api';
+const searchParams = new URLSearchParams(paramsString);
 ```
 
-_`init`_ (可选)可以是一个 String、Object 或 Array。
+`paramsString` （可选）可以是一个 String、Object 或 Array。
 
 ```javascript
 // Pass in a string literal
-var url = new URL('https://example.com?foo=1&bar=2');
+const url = new URL('https://example.com?foo=1&bar=2');
 // Retrieve from window.location
-var url2 = new URL(window.location);
+const url2 = new URL(window.location);
 
 // Retrieve params via url.search, passed into ctor
-var params = new URLSearchParams(url.search);
-var params2 = new URLSearchParams(url2.search);
+const params = new URLSearchParams(url.search);
+const params2 = new URLSearchParams(url2.search);
 
 // Pass in a sequence
-var params3 = new URLSearchParams([
+const params3 = new URLSearchParams([
   ['foo', 1],
   ['bar', 2],
 ]);
 
 // Pass in a record
-var params4 = new URLSearchParams({ foo: 1, bar: 2 });
+const params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
 ### 方法
@@ -230,7 +231,7 @@ var params4 = new URLSearchParams({ foo: 1, bar: 2 });
 
 ## Console
 
-Kraken 实现了标准的 Console API：
+Kraken 实现了标准的 [Console API](https://developer.mozilla.org/zh-CN/docs/Web/API/Console)：
 
 - `assert()`
   判断第一个参数是否为真，`false` 的话抛出异常并且在控制台输出相应信息。
@@ -247,9 +248,9 @@ Kraken 实现了标准的 Console API：
 - `group()`
   创建一个新的内联 group, 后续所有打印内容将会以子层级的形式展示。调用 `groupEnd()`来闭合组。
 - `groupCollapsed`
-  创建一个新的内联 group。使用方法和 `group()` 相同，不同的是，`groupCollapsed()` 方法打印出来的内容默认是折叠的。To move back out a level, call `groupEnd()`.
+  创建一个新的内联 group。使用方法和 `group()` 相同，不同的是，`groupCollapsed()` 方法打印出来的内容默认是折叠的。To move back out a level, call `groupEnd()`。
 - `groupEnd()`
-  闭合当前内联 group.
+  闭合当前内联 group。
 - `info()`
   打印资讯类说明信息。
 - `log()`
@@ -257,7 +258,7 @@ Kraken 实现了标准的 Console API：
 - `table()`
   将列表型的数据打印成表格。
 - `time()`
-  启动一个以入参作为特定名称的计时器，在显示页面中可同时运行的计时器上限为 10,000.
+  启动一个以入参作为特定名称的计时器，在显示页面中可同时运行的计时器上限为 10,000。
 - `timeEnd()`
   结束特定的计时器，并以豪秒打印其从开始到结束所用的时间。
 - `timeLog()`

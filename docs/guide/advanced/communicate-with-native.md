@@ -4,7 +4,7 @@
 
 Kraken 在 JS 环境中添加了 `kraken` 的全局对象，在这个全局对象上有 `kraken.methodChannel` 对象，用于实现和 Native 的消息通信。
 
-在 JS 中直接调用 `kraken.methodChannel.invokeMethod` 就可以调用客户端实现的函数，其中第一个参数为函数名，剩下的其余参数都是传递到客户端的调用参数。
+在 JS 中调用 `kraken.methodChannel.invokeMethod` 就可以调用客户端实现的函数，其中第一个参数为函数名，剩下的其余参数都是传递到客户端的调用参数。
 
 **调用客户端实现某个方法**
 

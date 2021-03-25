@@ -18,14 +18,14 @@ $ npm install -g @openkraken/cli
 
 安装完成之后你将得到一个 `kraken` 的全局命令行，你可以使用 `kraken --help` 查看使用方式和参数。
 
-你可以直接使用下面的命令启动一个调试应用：
+你可以使用下面的命令启动一个调试应用：
 
 ```shell
 # kraken [localfile|URL]
 $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js
 ```
 
-如果你想要调试，直接在 Chrome 中打开一个新的 Tab 页，然后直接粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
+如果你想要调试，可以在 Chrome 中打开一个新的 Tab 页，然后粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
 
 **Windows 用户**
 
@@ -47,7 +47,7 @@ Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Ra
 
 ### 如果你是 Vue 开发者
 
-你可以直接用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
+你可以使用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
 
 ```shell
 kraken https://raw.githubusercontent.com/openkraken/samples/main/demos/hello-vue/dist/js/app.js

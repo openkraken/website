@@ -22,12 +22,12 @@ Kraken 支持 CSS 的流式布局，即在文档流中通过内联与块的方�
 ### 内联元素
 
 在文档流中，内联元素按内联方向显示，即词语在依据文件写作模式的句子中表示的方向，从左边开始一个接一个地显示。
-kraken 中的默认内联显示的标签有 `<span>` `<img>` `input` 。
+Kraken 中的默认内联显示的标签有 `<span>` `<img>` `input` 。
 
 ### 块元素
 
 在文档流中，块元素一个接一个地显示，就像该文档的写作模式中的段落一样，从顶部开始向下显示并移动页面。
-kraken 中的默认块级展示的标签有 `<div>` `<p>` 。
+Kraken 中的默认块级展示的标签有 `<div>` `<p>` 。
 
 ## Flexbox 布局
 
@@ -79,7 +79,7 @@ Kraken 的 Flexbox 布局基于 CSS 的 [flexbox 模型](https://developer.mozil
 ### flex
 
 - 定义：定义了 flex 成员项可以占用容器中剩余空间的大小。
-- 属性值：[ auto | `flex-grow/flex-shrink/flex-basis 组合` ]
+- 属性值：[ auto | \<flex-grow> \<flex-shrink>? || \<flex-basis> ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)。
 
 ### flex-grow
