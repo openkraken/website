@@ -8,7 +8,7 @@ Kraken 在 W3C 标准的 `display` 类型外扩展了 `sliver` 类型，目的�
 
 sliver 属于 W3C Box Layout Modes 中定义的 Inner Display Layout Models 类型，详见 https://www.w3.org/TR/css-display-3/#inner-model
 
-当 display 为 `sliver` 时，该元素的 `overflow` 表现为 `auto`，越界的内容会被裁减，容器可滚动并显示滚动条。
+当 display 为 `sliver` 时，该元素的主轴方向表现为可滚动，超出视口的内容不会被绘制，直到区域滚动到视口内。
 
 **sliver-direction**
 
