@@ -20,10 +20,12 @@ export default defineConfig({
     '.markdown{ padding-left: 380px !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
-    '::-webkit-scrollbar{display:none}',
+    '::-webkit-scrollbar{ display:none }',
     '.__dumi-default-layout-footer-meta { display: none !important }',
     '.__dumi-default-layout-hero{ display: none !important }',
-    '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; }',
+    '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; padding-bottom: 0px !important }',
+    '.footer-container a { color: #FFFFFF !important }',
+    '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
   ],
   navs: [
     {
