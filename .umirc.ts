@@ -27,6 +27,13 @@ export default defineConfig({
     '.footer-container a { color: #FFFFFF !important }',
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
   ],
+  scripts: [
+    // 数据统计
+    {
+      src: 'https://s9.cnzz.com/z_stat.php?id=1279786237&web_id=1279786237',
+      defer: true,
+    },
+  ],
   navs: [
     {
       title: '教程',
