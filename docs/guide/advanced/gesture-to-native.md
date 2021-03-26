@@ -1,4 +1,4 @@
-# Native 如何与 Kraken 进行手势传递
+# Native 与 Kraken 进行手势传递
 
 当 Kraken 与 Native 结合使用时，往往会遇到手势冲突的问题，比如说同一个横滑手势在 Kraken 内部消费产生了一个滚动容器的滚动动作，同样在 Native 也会产生一个横滑动作，使得整个 Native 容器被横滑关闭。
 

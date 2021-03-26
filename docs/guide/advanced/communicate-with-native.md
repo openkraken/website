@@ -1,4 +1,4 @@
-# JS 如何与 Native 通信
+# JS 与 Native 通信
 
 ## 在 JS 环境中与 Native 通信
 
