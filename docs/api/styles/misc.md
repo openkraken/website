@@ -17,7 +17,7 @@
 - 定义：用于在元素的框架上添加阴影效果。
 - 属性值：[ none | \$x \$y \$blur-radius \$spread-radius \$color ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)。
-- 说明：暂不支持 inset
+- 说明：暂不支持 inset。
 
 ### visibility
 
@@ -30,4 +30,4 @@
 - 定义：用来指定行内元素元素的垂直对齐方式。
 - 属性值：[ baseline | top | bottom ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align)。
-- 说明：暂不支持 middle
+- 说明：暂不支持 middle。

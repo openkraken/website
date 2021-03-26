@@ -47,4 +47,4 @@ const myDocument = new Document();
 
 ### 说明
 
-`querySelector`, `querySelectorAll` API 目前暂未支持。
+`querySelector`, `querySelectorAll`, `getElementsByClassName` API 目前暂未支持。
