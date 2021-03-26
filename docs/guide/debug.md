@@ -12,7 +12,7 @@ Kraken 在启动之后，会在控制台内显示调试服务的访问地址。
 
 将 `devtools://` 前缀到地址复制粘贴到 Chrome 浏览器内就可以进行调试。
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323143003.jpg)
+![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323143003.jpeg)
 
 ## 在 Android / iOS 设备上打开调试工具
 
