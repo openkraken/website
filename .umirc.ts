@@ -242,5 +242,19 @@ export default defineConfig({
         path: '/api/plugin',
       },
     ],
+    '/plugins': [
+      {
+        title: 'WebSocket',
+        path: '/plugins/kraken_websocket',
+      },
+      {
+        title: 'AnimationPlayer',
+        path: '/plugins/kraken_animation_player',
+      },
+      {
+        title: 'WebView',
+        path: '/plugins/kraken_webview',
+      },
+    ],
   },
 });
