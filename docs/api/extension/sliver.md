@@ -10,6 +10,14 @@ Kraken 在 W3C 标准的 `display` 类型外扩展了 `sliver` 类型，目的�
 
 当 display 为 `sliver` 时，该元素的主轴方向表现为可滚动，超出视口的内容不会被绘制，直到区域滚动到视口内。
 
+示例：
+
+```js
+const div = document.createElement('div');
+div.style.display = 'sliver';
+document.body.appendChild(div);
+```
+
 **sliver-direction**
 
 CSS 属性 `sliver-direction` 指定了 Sliver 容器的主轴方向 (Main Axis)。
@@ -20,6 +28,16 @@ CSS 属性 `sliver-direction` 指定了 Sliver 容器的主轴方向 (Main Axis)
 - row: 可滚动方向为水平方向
 
 Sliver 容器的主轴方向即滚动方向；Sliver 容器的交叉轴 (Cross Axis) 方向与主轴方向交叉，Sliver 容器在交叉轴方向不可滚动。
+
+示例：
+
+```js
+const div = document.createElement('div');
+div.style.display = 'sliver';
+div.style.sliverDirection = 'row';
+
+document.body.appendChild(div);
+```
 
 ## 布局特性
 
