@@ -5,7 +5,7 @@ export default defineConfig({
   locales: [['zh-CN', '中文']],
   title: ' ',
   logo:
-    'https://img.alicdn.com/imgextra/i4/O1CN013FoRUs1ZVBgTuMYhE_!!6000000003199-2-tps-442-156.png',
+    'https://img.alicdn.com/imgextra/i1/O1CN01Fch4UU1W9Fs6HYq8G_!!6000000002745-2-tps-490-190.png',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
