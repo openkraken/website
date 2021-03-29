@@ -255,6 +255,10 @@ export default defineConfig({
         title: 'WebView',
         path: '/plugins/kraken_webview',
       },
+      {
+        title: 'Video',
+        path: '/plugins/kraken_video_player',
+      },
     ],
   },
 });

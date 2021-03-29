@@ -22,7 +22,7 @@ void main() {
 const iframe = document.createElement('iframe');
 iframe.setAttribute(
   'src',
-  'https://dev.g.alicdn.com/kraken/kraken-demos/todomvc/build/web/index.html',
+  'https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js',
 );
 iframe.style.width = '360px';
 iframe.style.height = '375px';

@@ -183,7 +183,6 @@ class FirstRoute extends StatelessWidget {
               return SecondRoute(route.controller);
             }
 
-            ;
             route = MaterialPageRoute(builder: routeBuilder);
             Navigator.push(
               context,
