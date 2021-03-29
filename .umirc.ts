@@ -237,7 +237,7 @@ export default defineConfig({
             path: '/api/styles/unit',
           },
           {
-            title: '其它',
+            title: '其它样式',
             path: '/api/styles/misc',
           },
           {
