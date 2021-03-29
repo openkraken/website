@@ -46,7 +46,7 @@ export default defineConfig({
     }',
     '@media only screen and (max-width: 767px) {\
       .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
-      .homepage-subtitle { padding:0 16px;text-align: center, font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
+      .homepage-subtitle { margin:0 auto;text-align: center;display:table font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
       .homepage-img { display: none }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
       .quick-start-btn{ display: block; margin: 0 auto; }\
@@ -70,7 +70,7 @@ export default defineConfig({
     },
     {
       content:
-        "window.onload=()=>document.getElementById('sayKraken-img').onclick=()=>sayKraken.play()",
+        "window.addEventListener('click', function(e){if(e.target.id === 'sayKraken-img'){sayKraken.play()}},false)",
       charset: 'utf-8',
     },
   ],
