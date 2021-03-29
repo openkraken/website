@@ -8,9 +8,9 @@ Kraken 是一款基于 W3C 标准的高性能渲染引擎。Kraken 底层基于 
 
 **macOS 用户**
 
-Kraken Cli 是面向前端开发者的桌面端 Kraken 应用，提供调试和预览能力。
+Kraken CLI 是面向前端开发者的桌面端 Kraken 应用，提供调试和预览能力。
 
-使用以下命令安装 Kraken Cli：
+使用以下命令安装 Kraken CLI：
 
 ```shell
 $ npm install -g @openkraken/cli
@@ -29,7 +29,7 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 
 **Windows 用户**
 
-Kraken 目前暂时没有提供可运行在 Windows 平台的 Cli 程序。
+Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序。
 
 使用一个 Android 手机扫描下面的二维码体验：
 
