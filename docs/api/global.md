@@ -15,13 +15,13 @@ Kraken 支持与浏览器相同的用于定时的 API，包含：
 
 ## requestAnimationFrame
 
-Kraken 支持 [W3C requestAnimationFrame API](https://www.w3.org/TR/animation-timing/#dom-windowanimationtiming-requestanimationframe)，用于在渲染引擎下一帧绘制前调用指定的回调函数。使用方法参考 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)。
+Kraken 支持 W3C [requestAnimationFrame API](https://www.w3.org/TR/animation-timing/#dom-windowanimationtiming-requestanimationframe)，用于在渲染引擎下一帧绘制前调用指定的回调函数。使用方法参考 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)。
 
 ---
 
 ## Screen
 
-获取屏幕的宽高，兼容 [W3C Screen API](https://developer.mozilla.org/en-US/docs/Web/API/Screen) 。
+获取屏幕的宽高，兼容 W3C [Screen API](https://developer.mozilla.org/en-US/docs/Web/API/Screen)。
 
 - availWidth：获取当前屏幕可用的宽
 - availHeight：获取当面屏幕可用的高

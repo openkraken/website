@@ -1,6 +1,6 @@
 # 在 Flutter 应用中集成 Kraken
 
-在这里，我们设定环境中已经完全安装 flutter 1.22.6 版本，并且 `flutter doctor` 检测全部通过。
+在这里，我们设定环境中已经完全安装 [Kraken 指定的 Flutter 版本](https://github.com/openkraken/kraken/blob/main/kraken/pubspec.yaml#L8)，并且 `flutter doctor` 检测全部通过。
 
 使用下面的命令创建一个新的 Flutter App
 
@@ -12,7 +12,7 @@ cd myapp
 连接 Android 或者 iOS 手机，确保使用 `flutter devices` 可以看到已经连接的设备：
 
 ```
-$ flutter devices
+flutter devices
 1 connected devices:
 
 HWI TL00 (mobile) • 77P5T18126000120 • android-arm64 • Android 9 (API 28)

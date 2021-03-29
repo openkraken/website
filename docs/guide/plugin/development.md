@@ -2,7 +2,7 @@
 
 ## 一个简单的闹钟 API
 
-查看项目源代码：https://github.com/openkraken/kraken_plugin_examples/tree/main/my_kraken_plugin
+查看项目源代码：https://github.com/openkraken/kraken_plugin_examples/tree/main/plugins/my_kraken_plugin
 
 接下来通过一个简单的例子来演示如何给 Kraken 的 JS 环境中添加一个自定义的 API。
 
@@ -156,19 +156,19 @@ kraken-npbt build
 
 **将 bridge 构建产物注册到插件**
 
-**macOS: [my_kraken_plugin/macos/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/my_kraken_plugin/macos/my_kraken_plugin.podspec#L18)**
+**macOS: [my_kraken_plugin/macos/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/macos/my_kraken_plugin.podspec#L18)**
 
 ```
 s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
 ```
 
-**iOS:** **[my_kraken_plugin/ios/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/my_kraken_plugin/ios/my_kraken_plugin.podspec#L20)**
+**iOS:** **[my_kraken_plugin/ios/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/ios/my_kraken_plugin.podspec#L20)**
 
 ```
 s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
 ```
 
-**Android:** **[my_kraken_plugin/android/build.gradle](https://github.com/openkraken/plugin_examples/blob/main/my_kraken_plugin/android/build.gradle#L33)**
+**Android:** **[my_kraken_plugin/android/build.gradle](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/android/build.gradle#L33)**
 
 ```
 android {
@@ -182,7 +182,7 @@ android {
 
 **在插件初始化阶段初始化 bridge**
 
-**[platform.dart](https://github.com/openkraken/plugin_examples/blob/main/my_kraken_plugin/lib/platform.dart)**
+**[platform.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/platform.dart)**
 
 ```dart
 // ignore_for_file: unused_import, undefined_function
@@ -203,7 +203,7 @@ DynamicLibrary nativeDynamicLibrary =
     DynamicLibrary.open(nativeDynamicLibraryName);
 ```
 
-**[my_kraken_plugin.dart](https://github.com/openkraken/plugin_examples/blob/main/my_kraken_plugin/lib/my_kraken_plugin.dart)**
+**[my_kraken_plugin.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/my_kraken_plugin.dart)**
 
 ```dart
 import 'platform.dart';

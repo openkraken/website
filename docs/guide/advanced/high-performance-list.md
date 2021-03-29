@@ -14,18 +14,28 @@ container.style.height = '300px';
 // 创建 100 个子节点.
 for (let i = 0; i < 100; i++) {
   const ele = document.createElement('div');
-  ele.style.background = i % 2 ? 'red' : 'green';
+  ele.style.background = i % 2 ? '#fff' : '#e6e6e6';
   // Sliver 元素默认滚动方向为垂直方向
   // 它的子元素在水平方向上的尺寸(width)会被自动撑满.
-  ele.style.width = ele.style.height = '100px';
-  ele.appendChild(document.createTextNode(`Child ${i}`));
+  ele.style.padding = '35rpx 60rpx';
+  ele.appendChild(document.createTextNode(`第 ${i + 1} 个元素`));
+
+  // 模拟内部元素高度不定场景
+  if (i % 3 === 0) {
+    const img = new Image();
+    img.src =
+      'https://gw.alicdn.com/tfs/TB1.A6OslBh1e4jSZFhXXcC9VXa-229-255.png';
+    img.width = '50px';
+    ele.appendChild(img);
+  }
+
   container.appendChild(ele);
 }
 
 document.body.appendChild(container);
 ```
 
-<img alt="preview sliver" src="https://gw.alicdn.com/imgextra/i4/O1CN014V4OnE1opzuqrz8cy_!!6000000005275-2-tps-974-1904.png" width=400 />
+<img alt="preview sliver" src="https://gw.alicdn.com/imgextra/i4/O1CN01Amsvbd1cMQxd7yay2_!!6000000003586-2-tps-886-1816.png" width=400 />
 
 这样一个简单的 Sliver 滚动列表就可以工作了，当你向下滚动的时候，Kraken 会动态生成对应的 RenderObject 并同时释放已经移出可视区域（Viewport）的节点对应的 RenderObject。
 

@@ -6,7 +6,7 @@ Kraken 支持以下颜色与背景的相关样式。
 
 #### color
 
-- 定义：设置一个元素的文本和文本装饰的前景色，同时也设置 `currentcolor`，`currentcolor` 用于其他颜色属性如 `border-color`、`background-color` 在未设置指定颜色时的默认取值。
+- 定义：设置一个元素的文本和文本装饰的前景色，同时也设置 currentcolor，currentcolor 用于其他颜色属性如 border-color, background-color 在未设置指定颜色时的默认取值。
 - 属性值：[ 颜色值 | transparent | 颜色关键词 ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color)。
 
@@ -14,8 +14,8 @@ Kraken 支持以下颜色与背景的相关样式。
 
 #### background
 
-- 定义：指定元素的背景，为 `background-color`,`background-image`, `background-repeat`, `backgrond-position` 和 `background-size` 的简写属性。
-- 属性值： `background-color` | `background-image` | `background-repeat` | `backgrond-position`  | `background-size`
+- 定义：指定元素的背景，为 background-color, background-image, background-repeat, backgrond-position 和 background-size 的简写属性。
+- 属性值： background-color | background-image | background-repeat | backgrond-position  | background-size
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background)。
 
 #### background-color

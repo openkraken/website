@@ -14,15 +14,15 @@ Kraken 支持以下变形与过渡的相关样式。
 ### transform-origin
 
 - 定义：指定元素变形的原点。
-- 属性值：<[ left | center | right | (top | bottom)] | [number[ px | rpx | vw | vh ]]> | 属性值：<[ top | center | bottom] | [number[ px | rpx | vw | vh ]]>
+- 属性值：<[ left | center | right | (top | bottom)] | [number[ px | rpx | vw | vh ]]>
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)。
 
 ## 过渡
 
 #### transition
 
-- 定义：为一个元素在不同状态之间切换的时候定义不同的过渡效果。 为 `transition-property`, `transition-duration`, `transition-delay` 和 `transition-timing-function` 的简写属性。
-- 属性值： `transition-property` | `transition-duration` | `transition-delay` | `transition-timing-function`
+- 定义：为一个元素在不同状态之间切换的时候定义不同的过渡效果。 为 transition-property, transition-duration, transition-delay 和 transition-timing-function 的简写属性。
+- 属性值： transition-property | transition-duration | transition-delay | transition-timing-function
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion)。
 - 说明： 目前只支持设置一组属性。
 
@@ -46,6 +46,6 @@ Kraken 支持以下变形与过渡的相关样式。
 
 #### transition-timing-function
 
-- 定义：为 `transition` 中过渡的 CSS 属性产生不断变化的中间值的函数，用来描述这个中间值是怎样计算的。
+- 定义：为 transition 中过渡的 CSS 属性产生不断变化的中间值的函数，用来描述这个中间值是怎样计算的。
 - 属性值：[ ease | ease-in | ease-out | ease-in-out | linear | cubic-bezier() ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion-timing-function)。

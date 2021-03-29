@@ -7,21 +7,21 @@
 首先，将代码 clone 下来，并进入 `./demos/hello-vue` 目录。
 
 ```shell
-$ git clone https://github.com/openkraken/samples.git
-$ cd ./demos/hello-vue
+git clone https://github.com/openkraken/samples.git
+cd ./demos/hello-vue
 ```
 
 安装依赖并打包。
 
 ```shell
-$ npm i
-$ npm run build
+npm i
+npm run build
 ```
 
 通过 [Kraken Cli](https://www.npmjs.com/package/@openkraken/cli) 将打包好的 bundle 运行起来。
 
 ```shell
-$ kraken ./dist/js/app.js
+kraken ./dist/js/app.js
 ```
 
 <img src="https://gw.alicdn.com/imgextra/i3/O1CN01LiZmbF1acLUTDzWzF_!!6000000003350-2-tps-944-1560.png" width="300px"></img>
