@@ -9,7 +9,7 @@ export default defineConfig({
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
-    '.markdown{ padding-bottom: 200px; padding-right: 200px }',
+    '.markdown{ padding-bottom: 200px }',
     'code[class*="language-"], pre[class*="language-"]{ color: #333 }',
     '.markdown :not(pre) code { font-size: 14px }',
     '.markdown pre { font-size: 13px }',
@@ -42,6 +42,7 @@ export default defineConfig({
       .introduction-infos{ width:50%; padding:120px 25px }\
       .footer-block-content{ flex-grow: 1; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
+      .markdown{ padding-right: 200px },\
     }',
     '@media only screen and (max-width: 767px) {\
       .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\

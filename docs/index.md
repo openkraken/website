@@ -85,7 +85,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       <div style="margin-top: 30px;">
         <ul style="list-style-type: none;padding: 0;margin:0;">
           <li style="width: 200px;margin-bottom: 15px;">
-            <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken/issues?q=is%3Aissue+label%3Abug"> 反馈问题 </a>
+            <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken/issues/new?assignees=&labels=bug&template=bug_report.md"> 反馈问题 </a>
           </li>
         </ul>
       </div>
