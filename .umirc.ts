@@ -3,21 +3,23 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   mode: 'site',
   locales: [['zh-CN', '中文']],
-  title: 'Kraken',
+  title: ' ',
   logo:
-    'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
+    'https://img.alicdn.com/imgextra/i1/O1CN01Fch4UU1W9Fs6HYq8G_!!6000000002745-2-tps-490-190.png',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
+    '.markdown{ padding-bottom: 200px }',
+    'code[class*="language-"], pre[class*="language-"]{ color: #333 }',
+    '.markdown :not(pre) code { font-size: 14px }',
+    '.markdown pre { font-size: 13px }',
     'a:hover { color: #F6AF1F !important }',
     '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
-    'ul li a::before, nav > span > a.active::after { background-color: #F6AF1F !important }',
-    '.__dumi-default-menu { width: 350px !important }',
+    'ul li a::before, nav > span > a.active::after { opacity: 0 !important; background-color: #F6AF1F !important }',
     '.__dumi-default-layout-content{ max-width: none !important }',
-    '.__dumi-default-layout[data-route="/"] .markdown{ padding-left: 0px !important }',
-    '.markdown{ padding-left: 380px !important }',
+    '.__dumi-default-layout[data-route="/"] .markdown{ padding-bottom: 0px !important;padding-left: 0px !important; padding-right: 0px !important }',
     '.__dumi-default-layout-features{ max-width: none !important }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
     '::-webkit-scrollbar{ display:none }',
@@ -26,12 +28,50 @@ export default defineConfig({
     '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; padding-bottom: 0px !important }',
     '.footer-container a { color: #FFFFFF !important }',
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
+    '.__dumi-default-navbar-logo{ width: 100px }',
+    '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
+    '@media only screen and (min-width: 767px) {\
+      .__dumi-default-menu { width: 350px !important }\
+      .markdown{ padding-left: 380px !important }\
+      .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
+      .homepage-subtitle { font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em; width: 47% }\
+      .homepage-img { width: 50%;position: absolute;right: 0;z-index: 1 } \
+      .quick-start-github{ line-height: 42px; }\
+      .quick-start{ margin-top: 50px; display: flex;flex-direction:row; }\
+      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:470px }\
+      .introduction-infos{ width:50%; padding:120px 25px }\
+      .footer-block-content{ flex-grow: 1; }\
+      .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
+      .markdown{ padding-right: 200px },\
+    }',
+    '@media only screen and (max-width: 767px) {\
+      .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
+      .homepage-subtitle { padding:0 16px;text-align: center, font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
+      .homepage-img { display: none }\
+      .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
+      .quick-start-btn{ display: block; margin: 0 auto; }\
+      iframe.quick-start-btn{ display: none; }\
+      .quick-start-github{ text-align: center;margin-top: 20px;margin-left: 0; position: relative;top: 10px; }\
+      .__dumi-default-layout[data-route="/"]{ padding-left: 0 !important; padding-right: 0 !important }\
+      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 20px;position: relative;padding-top: 30px;height:470px }\
+      .__dumi-default-layout-features dl { padding-left: 80px !important;width: 170px;margin: 30px auto !important; display: table; }\
+      .introduction-img{ display: none !important; }\
+      .introduction-infos{ width:100%; padding:120px 25px }\
+      .footer-container div ul li { width: 100% !important }\
+      .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center }\
+      .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
+    }',
   ],
   scripts: [
     // 数据统计
     {
       src: 'https://s9.cnzz.com/z_stat.php?id=1279786237&web_id=1279786237',
       defer: true,
+    },
+    {
+      content:
+        "window.onload=()=>document.getElementById('sayKraken-img').onclick=()=>sayKraken.play()",
+      charset: 'utf-8',
     },
   ],
   navs: [
