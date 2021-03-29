@@ -74,10 +74,6 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       <div style="margin-top: 30px;">
         <ul style="list-style-type: none;padding: 0;margin:0;">
           <li style="width: 200px;margin-bottom: 15px;">
-            <img src="//gw.alicdn.com/tfs/TB1H_16eeH2gK0jSZFEXXcqMpXa-60-60.png" style="vertical-align: middle; margin-right: 5px; max-width: 16px; max-height: 16px;">
-            <a style="color:#ffffff;" target="_blank" href="//zhuanlan.zhihu.com/raxjs"> 知乎 </a>
-          </li>
-          <li style="width: 200px;margin-bottom: 15px;">
             <img src="//gw.alicdn.com/tfs/TB1H5bLeaL7gK0jSZFBXXXZZpXa-78-78.jpg" style="vertical-align: middle; margin-right: 5px; max-width: 16px; max-height: 16px;">
             <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken"> GitHub </a>
           </li>
@@ -91,9 +87,6 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
           <li style="width: 200px;margin-bottom: 15px;">
             <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken/issues?q=is%3Aissue+label%3Abug"> 反馈问题 </a>
           </li>
-          <li style="width: 200px;margin-bottom: 15px;">
-            <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken/issues?q=is%3Aissue+is%3Aopen+label%3Afeature"> 提交需求 </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -103,7 +96,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
           <ul style="list-style-type: none;padding: 0;margin:0;">
             <li style="width: 200px;margin-bottom: 15px;">
               <img src="//gw.alicdn.com/tfs/TB1H5bLeaL7gK0jSZFBXXXZZpXa-78-78.jpg" style="vertical-align: middle; margin-right: 5px; max-width: 16px; max-height: 16px;">
-              <a style="color:#ffffff;" target="_blank" href="//github.com/openkraken/kraken/blob/main/GOVERNANCE.zh-CN.md">  TSC </a>
+              <a style="color:#ffffff;" href="/guide/contribute/environment">  贡献代码 </a>
             </li>
           </ul>
         </div>
@@ -134,7 +127,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       </div>
     </div>
     <div style="display:flex;margin-top: 18px">
-      <div style="margin: 0px auto;">Open-source MIT Licensed | Copyright © 2021</div>
+      <div style="margin: 0px auto;">Apache License 2.0 | Copyright © 2019-present</div>
     </div>
   </div>
 </div>
