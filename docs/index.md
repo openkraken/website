@@ -2,7 +2,7 @@
 title: Kraken - 基于 W3C 标准的高性能 Web 渲染引擎
 
 hero:
-  title: Kraken（夸肯）
+  title: Kraken
   desc: 高性能 Web 渲染引擎，基于 Flutter 构建
   actions:
     - text: 快速开始
@@ -18,6 +18,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
       Kraken（夸肯）
+      <img style="cursor: pointer" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=20 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
       高性能 Web 渲染引擎，基于 Flutter 构建

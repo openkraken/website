@@ -68,6 +68,11 @@ export default defineConfig({
       src: 'https://s9.cnzz.com/z_stat.php?id=1279786237&web_id=1279786237',
       defer: true,
     },
+    {
+      content:
+        "window.onload=()=>document.getElementById('sayKraken-img').onclick=()=>sayKraken.play()",
+      charset: 'utf-8',
+    },
   ],
   navs: [
     {
