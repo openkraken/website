@@ -80,6 +80,10 @@ export default defineConfig({
       path: '/guide',
     },
     {
+      title: '开发',
+      path: '/develop',
+    },
+    {
       title: 'API',
       path: '/api',
     },
@@ -125,7 +129,7 @@ export default defineConfig({
         path: '/guide/network',
       },
       {
-        title: '前端代码调试',
+        title: '调试代码',
         path: '/guide/debug',
       },
       {
@@ -195,96 +199,98 @@ export default defineConfig({
         ],
       },
     ],
-    '/api': [
+    '/develop': [
       {
         title: '标签',
-        path: '/api/tags',
+        path: '/develop/tags',
       },
       {
         title: '样式',
-        path: '/api/styles',
+        path: '/develop/styles',
         children: [
           {
             title: '盒模型',
-            path: '/api/styles/boxmodel',
+            path: '/develop/styles/boxmodel',
           },
           {
             title: '定位',
-            path: '/api/styles/position',
+            path: '/develop/styles/position',
           },
           {
             title: '布局',
-            path: '/api/styles/layout',
+            path: '/develop/styles/layout',
           },
           {
             title: '字体与文本',
-            path: '/api/styles/text',
+            path: '/develop/styles/text',
           },
           {
             title: '边框与圆角',
-            path: '/api/styles/border',
+            path: '/develop/styles/border',
           },
           {
             title: '颜色与背景',
-            path: '/api/styles/background',
+            path: '/develop/styles/background',
           },
           {
             title: '变形与过渡',
-            path: '/api/styles/transform',
+            path: '/develop/styles/transform',
           },
           {
             title: '单位',
-            path: '/api/styles/unit',
+            path: '/develop/styles/unit',
           },
           {
             title: '其它',
-            path: '/api/styles/misc',
+            path: '/develop/styles/misc',
           },
           {
             title: '与浏览器差异',
-            path: '/api/styles/difference',
+            path: '/develop/styles/difference',
           },
         ],
       },
       {
         title: 'DOM',
-        path: '/api/dom',
+        path: '/develop/dom',
         children: [
           {
             title: '事件',
-            path: '/api/dom/event',
+            path: '/develop/dom/event',
           },
           {
             title: '节点',
-            path: '/api/dom/node',
+            path: '/develop/dom/node',
           },
           {
             title: '文档',
-            path: '/api/dom/document',
+            path: '/develop/dom/document',
+          },
+        ],
+      },
+      {
+        title: '扩展能力',
+        path: '/develop/extension',
+        children: [
+          {
+            title: '手势',
+            path: '/develop/extension/gesture',
+          },
+          {
+            title: 'Sliver',
+            path: '/develop/extension/sliver',
           },
         ],
       },
       {
         title: '全局变量与方法',
-        path: '/api/global',
+        path: '/develop/global',
       },
+    ],
+    '/api': [
       {
         title: 'Kraken Widget',
         path: '/api/widget',
-      },
-      {
-        title: '扩展能力',
-        path: '/api/extension',
-        children: [
-          {
-            title: '手势',
-            path: '/api/extension/gesture',
-          },
-          {
-            title: 'Sliver',
-            path: '/api/extension/sliver',
-          },
-        ],
       },
       {
         title: '插件',
