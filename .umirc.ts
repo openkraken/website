@@ -45,8 +45,8 @@ export default defineConfig({
       .markdown{ padding-right: 200px },\
     }',
     '@media only screen and (max-width: 767px) {\
-      .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
-      .homepage-subtitle { margin:0 auto;text-align: center;display:table font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
+      .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0;display: table;margin: 0 auto }\
+      .homepage-subtitle { margin:0 auto;text-align: center;display:table;font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
       .homepage-img { display: none }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
       .quick-start-btn{ display: block; margin: 0 auto; }\
