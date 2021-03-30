@@ -127,6 +127,10 @@ export default defineConfig({
             path: '',
           },
           {
+            title: '文本输入',
+            path: '',
+          },
+          {
             title: '多媒体',
             path: '',
           },
