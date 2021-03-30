@@ -107,38 +107,84 @@ export default defineConfig({
         path: '/guide',
       },
       {
-        title: '接入与使用',
-        path: '/guide/use',
+        title: '基础',
+        path: '/basic',
         children: [
           {
-            title: '用 Rax 开发一个 Kraken 应用',
-            path: '/guide/use/rax',
+            title: '结构与样式',
+            path: '',
           },
           {
-            title: '用 Vue 开发一个 Kraken 应用',
-            path: '/guide/use/vue',
+            title: '尺寸',
+            path: '',
           },
           {
-            title: '在 Flutter 应用中集成 Kraken',
-            path: '/guide/use/interpolation-flutter',
+            title: '颜色',
+            path: '',
           },
           {
-            title: '在原生 App 中集成 Kraken',
-            path: '/guide/use/interpolation-app',
+            title: '布局',
+            path: '',
+          },
+          {
+            title: '多媒体',
+            path: '',
+          },
+          {
+            title: '滚动容器',
+            path: '',
+          },
+          {
+            title: '触摸事件',
+            path: '',
+          },
+          {
+            title: '定时器',
+            path: '',
+          },
+          {
+            title: '网络请求',
+            path: '/guide/basic/network',
+          },
+          {
+            title: '页面跳转',
+            path: '',
+          },
+          {
+            title: '动画',
+            path: '',
           },
         ],
       },
       {
-        title: '网络请求',
-        path: '/guide/network',
-      },
-      {
-        title: '调试代码',
-        path: '/guide/debug',
-      },
-      {
-        title: 'Kraken 与浏览器的差异',
-        path: '/guide/difference-to-web',
+        title: '开发',
+        path: 'development',
+        children: [
+          {
+            title: '准备环境',
+            path: '',
+          },
+          {
+            title: '用 Rax 开发一个 Kraken 应用',
+            path: '/guide/development/rax',
+          },
+          {
+            title: '用 Vue 开发一个 Kraken 应用',
+            path: '/guide/development/vue',
+          },
+          {
+            title: '状态管理',
+            path: '',
+          },
+          {
+            title: '前端调试',
+            path: '/guide/development/debug',
+          },
+          {
+            title: '与浏览器的差异',
+            path: '/guide/development/difference-to-web',
+          },
+        ],
       },
       {
         title: '进阶',
@@ -153,11 +199,11 @@ export default defineConfig({
             path: '/guide/advanced/gesture',
           },
           {
-            title: '处理页面跳转',
+            title: 'Native 控制页面跳转',
             path: '/guide/advanced/handle-navigation',
           },
           {
-            title: 'JS 与 Native 通信',
+            title: 'JavaScript 与 Native 通信',
             path: '/guide/advanced/communicate-with-native',
           },
           {
@@ -167,6 +213,20 @@ export default defineConfig({
           {
             title: '测算 Kraken 的运行性能',
             path: '/guide/advanced/measure-performance',
+          },
+        ],
+      },
+      {
+        title: '客户端接入',
+        path: '/guide/native',
+        children: [
+          {
+            title: '在 Flutter 应用中集成 Kraken',
+            path: '/guide/native/interpolation-flutter',
+          },
+          {
+            title: '在原生 App 中集成 Kraken',
+            path: '/guide/native/interpolation-app',
           },
         ],
       },
@@ -284,6 +344,10 @@ export default defineConfig({
             title: 'Sliver',
             path: '/development/extension/sliver',
           },
+          {
+            title: '本地存储',
+            path: '',
+          },
         ],
       },
       {
@@ -293,11 +357,45 @@ export default defineConfig({
     ],
     '/api': [
       {
-        title: 'Kraken Widget',
+        title: 'Widget API',
         path: '/api/widget',
+        children: [
+          {
+            title: '容器配置',
+            path: '',
+          },
+          {
+            title: '加载资源',
+            path: '',
+          },
+          {
+            title: '事件',
+            path: '',
+          },
+          {
+            title: '开启调试',
+            path: '',
+          },
+          {
+            title: '手势捕获',
+            path: '',
+          },
+          {
+            title: '动画控制',
+            path: '',
+          },
+          {
+            title: '页面跳转',
+            path: '',
+          },
+          {
+            title: '与 JS 通信',
+            path: '',
+          },
+        ],
       },
       {
-        title: '插件',
+        title: '插件 API',
         path: '/api/plugin',
       },
     ],
