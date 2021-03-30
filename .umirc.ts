@@ -70,7 +70,11 @@ export default defineConfig({
     },
     {
       content:
-        "window.addEventListener('click', function(e){if(e.target.id === 'sayKraken-img'){sayKraken.play()}},false)",
+        "window.addEventListener('click', function(e){\
+          if(e.target.id === 'sayKraken-img'){\
+            sayKraken.play()\
+          }\
+        },false)",
       charset: 'utf-8',
     },
   ],
@@ -81,7 +85,7 @@ export default defineConfig({
     },
     {
       title: '开发',
-      path: '/develop',
+      path: '/development',
     },
     {
       title: 'API',
@@ -199,92 +203,92 @@ export default defineConfig({
         ],
       },
     ],
-    '/develop': [
+    '/development': [
       {
         title: '标签',
-        path: '/develop/tags',
+        path: '/development/tags',
       },
       {
         title: '样式',
-        path: '/develop/styles',
+        path: '/development/styles',
         children: [
           {
             title: '盒模型',
-            path: '/develop/styles/boxmodel',
+            path: '/development/styles/boxmodel',
           },
           {
             title: '定位',
-            path: '/develop/styles/position',
+            path: '/development/styles/position',
           },
           {
             title: '布局',
-            path: '/develop/styles/layout',
+            path: '/development/styles/layout',
           },
           {
             title: '字体与文本',
-            path: '/develop/styles/text',
+            path: '/development/styles/text',
           },
           {
             title: '边框与圆角',
-            path: '/develop/styles/border',
+            path: '/development/styles/border',
           },
           {
             title: '颜色与背景',
-            path: '/develop/styles/background',
+            path: '/development/styles/background',
           },
           {
             title: '变形与过渡',
-            path: '/develop/styles/transform',
+            path: '/development/styles/transform',
           },
           {
             title: '单位',
-            path: '/develop/styles/unit',
+            path: '/development/styles/unit',
           },
           {
             title: '其它',
-            path: '/develop/styles/misc',
+            path: '/development/styles/misc',
           },
           {
             title: '与浏览器差异',
-            path: '/develop/styles/difference',
+            path: '/development/styles/difference',
           },
         ],
       },
       {
         title: 'DOM',
-        path: '/develop/dom',
+        path: '/development/dom',
         children: [
           {
             title: '事件',
-            path: '/develop/dom/event',
+            path: '/development/dom/event',
           },
           {
             title: '节点',
-            path: '/develop/dom/node',
+            path: '/development/dom/node',
           },
           {
             title: '文档',
-            path: '/develop/dom/document',
+            path: '/development/dom/document',
           },
         ],
       },
       {
         title: '扩展能力',
-        path: '/develop/extension',
+        path: '/development/extension',
         children: [
           {
             title: '手势',
-            path: '/develop/extension/gesture',
+            path: '/development/extension/gesture',
           },
           {
             title: 'Sliver',
-            path: '/develop/extension/sliver',
+            path: '/development/extension/sliver',
           },
         ],
       },
       {
         title: '全局变量与方法',
-        path: '/develop/global',
+        path: '/development/global',
       },
     ],
     '/api': [
