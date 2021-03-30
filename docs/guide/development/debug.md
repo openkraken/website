@@ -4,7 +4,7 @@ Kraken 支持通过 Chrome DevTools 进行调试。
 
 注：目前 DevTools 目前仅支持 Element 调试，Network 调试，JS 调试目前还在开发中。
 
-## 如何打开调试工具
+## 打开调试工具
 
 Kraken 在启动之后，会在控制台内显示调试服务的访问地址。
 
