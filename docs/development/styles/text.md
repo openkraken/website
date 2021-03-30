@@ -76,4 +76,4 @@ Kraken 支持以下字体与文本的相关样式。
 
 - 定义：用于限制文本的最大显示行数。
 - 属性值：\<number>
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-clamp)。
+- 参考：[链接](https://www.w3.org/TR/css-overflow-3/#line-clamp)。

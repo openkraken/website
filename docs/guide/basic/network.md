@@ -56,7 +56,7 @@ ws.onclose = function(evt) {
 };
 ```
 
-更多细节可以参考 [WebSocket](/plugin/websocket)。
+更多细节可以参考 [WebSocket](/plugins/kraken_websocket)。
 
 ## 使用 XMLHttpRequest
 

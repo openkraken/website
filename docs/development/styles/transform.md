@@ -23,29 +23,29 @@ Kraken 支持以下变形与过渡的相关样式。
 
 - 定义：为一个元素在不同状态之间切换的时候定义不同的过渡效果。 为 transition-property, transition-duration, transition-delay 和 transition-timing-function 的简写属性。
 - 属性值： transition-property | transition-duration | transition-delay | transition-timing-function
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion)。
+- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition)。
 - 说明： 目前只支持设置一组属性。
 
 #### transition-propery
 
 - 定义：指定应用过渡属性的名称。
 - 属性值：[ all | transform | opacity | background-color ]
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion-property)。
+- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-property)。
 
 #### transition-duration
 
 - 定义：以秒或毫秒为单位指定过渡动画所需的时间。
 - 属性值：\<number>[ ms | s ]
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion-duration)。
+- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-duration)。
 
 #### transition-delay
 
 - 定义：规定了在过渡效果开始作用之前需要等待的时间。
 - 属性值：\<number>[ ms | s ]
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion-delay)。
+- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-delay)。
 
 #### transition-timing-function
 
 - 定义：为 transition 中过渡的 CSS 属性产生不断变化的中间值的函数，用来描述这个中间值是怎样计算的。
 - 属性值：[ ease | ease-in | ease-out | ease-in-out | linear | cubic-bezier() ]
-- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transtion-timing-function)。
+- 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function)。
