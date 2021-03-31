@@ -112,7 +112,7 @@ export default defineConfig({
         children: [
           {
             title: '结构与样式',
-            path: '',
+            path: '/basic/style',
           },
           {
             title: '尺寸',
