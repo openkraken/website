@@ -115,12 +115,12 @@ export default defineConfig({
             path: '/basic/style',
           },
           {
-            title: '尺寸',
+            title: '尺寸与边距',
             path: '/basic/sizing',
           },
           {
-            title: '颜色',
-            path: '',
+            title: '颜色与背景',
+            path: '/basic/color',
           },
           {
             title: '布局',

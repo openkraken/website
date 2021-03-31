@@ -10,18 +10,12 @@ Kraken 支持大部分常用的标准 HTML 标签（具体标签请参考此[文
 
 **示例：**
 
-```html
+```js
 <div>
+  <div>帖子标题</div>
+  <div>发表日期</div>
   <div>
-    帖子标题
-  </div>
-  <div>
-    发表日期
-  </div>
-  <div>
-    <img
-      src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png"
-    />
+    <img src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png" />
   </div>
   <div>
     正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
@@ -40,46 +34,53 @@ Kraken 支持大部分常用的 CSS 样式（具体样式请参考[文档](/deve
 
 **示例：**
 
-```html
-<div style={{
-  padding: '20px',
-  margin: '20px',
-  boxShadow: '0px 0px 2px 1px rgba(0, 0, 0, 0.2)',
-  borderRadius: '5px',
-}}
+```js
+<div
+  style={{
+    padding: '20px',
+    margin: '20px',
+    boxShadow: '0px 0px 2px 1px rgba(0, 0, 0, 0.2)',
+    borderRadius: '5px',
+  }}
 >
-  <div style={{
-    fontSize: '30px',
-    fontStyle: 'italic',
-    margin: '10px 0',
-  }}>
+  <div
+    style={{
+      fontSize: '30px',
+      fontStyle: 'italic',
+      margin: '10px 0',
+    }}
+  >
     帖子标题
   </div>
-  <div style={{
-    fontSize: '14px',
-    color: '#666'
-  }}>
+  <div
+    style={{
+      fontSize: '14px',
+      color: '#666',
+    }}
+  >
     发表日期
   </div>
-  <div style={{
-    margin: '10px 0',
-  }}>
-    <img style={{
-        width: '100%'
+  <div
+    style={{
+      margin: '10px 0',
+    }}
+  >
+    <img
+      style={{
+        width: '100%',
       }}
       src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png"
     />
   </div>
-  <div style={{
-    fontSize: '16px'
-  }}>
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
-    正文 正文 正文 正文 正文 正文 正文
+  <div
+    style={{
+      fontSize: '16px',
+    }}
+  >
+    正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
+    正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
+    正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
+    正文 正文 正文 正文
   </div>
 </div>
 ```
