@@ -8,6 +8,8 @@ Kraken 支持大部分常用的标准 HTML 标签（具体标签请参考此[文
 
 以下例子演示了如何使用原生 HTML 标签写一个简单的博客文章结构：
 
+**示例：**
+
 ```html
 <div>
   <div>
@@ -35,6 +37,8 @@ Kraken 支持大部分常用的标准 HTML 标签（具体标签请参考此[文
 Kraken 支持大部分常用的 CSS 样式（具体样式请参考[文档](/development/styles))，接下来我们继续在上面博客文章示例的 HTML 代码示例上添加样式：
 
 > 为方便演示，示例中统一使用 React / Rax 支持的 [JSX 语法](https://zh-hans.reactjs.org/docs/introducing-jsx.html)来设置内联 style。
+
+**示例：**
 
 ```html
 <div style={{
@@ -80,5 +84,6 @@ Kraken 支持大部分常用的 CSS 样式（具体样式请参考[文档](/deve
 </div>
 ```
 
-最终渲染效果：  
+**渲染效果**：
+
 <img width="365" src="https://img.alicdn.com/imgextra/i4/O1CN01yT1WnN2209htINZeG_!!6000000007057-2-tps-730-1096.png" />

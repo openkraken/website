@@ -116,7 +116,7 @@ export default defineConfig({
           },
           {
             title: '尺寸',
-            path: '',
+            path: '/basic/sizing',
           },
           {
             title: '颜色',
