@@ -366,35 +366,35 @@ export default defineConfig({
         children: [
           {
             title: '容器配置',
-            path: '',
+            path: '/api/widget/container-config',
           },
           {
             title: '加载资源',
-            path: '',
+            path: '/api/widget/load',
           },
           {
             title: '事件',
-            path: '',
+            path: '/api/widget/event',
           },
           {
             title: '开启调试',
-            path: '',
+            path: '/api/widget/debug',
           },
           {
             title: '手势捕获',
-            path: '',
+            path: '/api/widget/gesture',
           },
           {
             title: '动画控制',
-            path: '',
+            path: '/api/widget/animation',
           },
           {
             title: '页面跳转',
-            path: '',
+            path: '/api/widget/navigation',
           },
           {
             title: '与 JS 通信',
-            path: '',
+            path: '/api/widget/bridge',
           },
         ],
       },
