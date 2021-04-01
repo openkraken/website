@@ -132,6 +132,10 @@ export default defineConfig({
             path: '',
           },
           {
+            title: '文本输入',
+            path: '',
+          },
+          {
             title: '多媒体',
             path: '/basic/multimedia',
           },
@@ -140,8 +144,8 @@ export default defineConfig({
             path: '/guide/basic/scrollable',
           },
           {
-            title: '触摸事件',
-            path: '',
+            title: '触摸与手势',
+            path: '/guide/basic/touch',
           },
           {
             title: '定时器',
@@ -157,7 +161,7 @@ export default defineConfig({
           },
           {
             title: '动画',
-            path: '',
+            path: '/guide/basic/animation',
           },
         ],
       },
@@ -179,7 +183,7 @@ export default defineConfig({
           },
           {
             title: '状态管理',
-            path: '',
+            path: '/guide/development/state',
           },
           {
             title: '前端调试',
@@ -367,35 +371,35 @@ export default defineConfig({
         children: [
           {
             title: '容器配置',
-            path: '',
+            path: '/api/widget/container-config',
           },
           {
             title: '加载资源',
-            path: '',
+            path: '/api/widget/load',
           },
           {
             title: '事件',
-            path: '',
+            path: '/api/widget/event',
           },
           {
             title: '开启调试',
-            path: '',
+            path: '/api/widget/debug',
           },
           {
             title: '手势捕获',
-            path: '',
+            path: '/api/widget/gesture',
           },
           {
             title: '动画控制',
-            path: '',
+            path: '/api/widget/animation',
           },
           {
             title: '页面跳转',
-            path: '',
+            path: '/api/widget/navigation',
           },
           {
             title: '与 JS 通信',
-            path: '',
+            path: '/api/widget/bridge',
           },
         ],
       },
