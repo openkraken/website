@@ -178,7 +178,7 @@ export default defineConfig({
           },
           {
             title: '状态管理',
-            path: '',
+            path: '/guide/development/state',
           },
           {
             title: '前端调试',
