@@ -43,40 +43,17 @@ Kraken 支持大部分常用的 CSS 样式（具体样式请参考[文档](/deve
     borderRadius: '5px',
   }}
 >
-  <div
-    style={{
-      fontSize: '30px',
-      fontStyle: 'italic',
-      margin: '10px 0',
-    }}
-  >
+  <div style={{ fontSize: '30px', fontStyle: 'italic', margin: '10px 0' }}>
     帖子标题
   </div>
-  <div
-    style={{
-      fontSize: '14px',
-      color: '#666',
-    }}
-  >
-    发表日期
-  </div>
-  <div
-    style={{
-      margin: '10px 0',
-    }}
-  >
+  <div style={{ fontSize: '14px', color: '#666' }}>发表日期</div>
+  <div style={{ margin: '10px 0' }}>
     <img
-      style={{
-        width: '100%',
-      }}
+      style={{ width: '100%' }}
       src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png"
     />
   </div>
-  <div
-    style={{
-      fontSize: '16px',
-    }}
-  >
+  <div style={{ fontSize: '16px' }}>
     正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
     正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文
     正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文 正文

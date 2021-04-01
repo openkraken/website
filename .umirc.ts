@@ -124,7 +124,7 @@ export default defineConfig({
           },
           {
             title: '布局',
-            path: '',
+            path: '/basic/layout',
           },
           {
             title: '多媒体',
@@ -273,16 +273,16 @@ export default defineConfig({
         path: '/development/styles',
         children: [
           {
-            title: '盒模型',
-            path: '/development/styles/boxmodel',
-          },
-          {
-            title: '定位',
-            path: '/development/styles/position',
+            title: '尺寸与边距',
+            path: '/development/styles/sizing',
           },
           {
             title: '布局',
             path: '/development/styles/layout',
+          },
+          {
+            title: '定位',
+            path: '/development/styles/position',
           },
           {
             title: '字体与文本',

@@ -1,6 +1,6 @@
 # 布局
 
-在布局方式上 Kraken 目前支持 W3C 标准的[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)与 [Flexbox 布局](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
+在布局方式上 Kraken 目前支持 W3C 标准的[流式布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout)与 [弹性盒布局](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
 
 ## 布局方式
 
@@ -29,9 +29,9 @@ Kraken 中默认内联显示的常用标签有 `<span>` `<img>` `<input>` `<a>`�
 在文档流中，块元素一个接一个地显示，就像该文档的写作模式中的段落一样，从顶部开始向下显示并移动页面。
 Kraken 中默认块级展示的常用标签有 `<div>` `<p>` 。
 
-## Flexbox 布局
+## 弹性盒布局
 
-Kraken 的 Flexbox 布局基于 CSS 的 [Flexbox 模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)，Kraken 支持的 Flexbox 属性如下：
+Kraken 的弹性盒布局基于 CSS 的 [Flexbox 模型](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)，Kraken 支持的 Flexbox 属性如下：
 
 ### flex-direction
 
