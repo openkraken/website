@@ -141,7 +141,7 @@ export default defineConfig({
           },
           {
             title: '滚动容器',
-            path: '',
+            path: '/guide/basic/scrollable',
           },
           {
             title: '触摸与手势',
@@ -149,7 +149,7 @@ export default defineConfig({
           },
           {
             title: '定时器',
-            path: '',
+            path: '/guide/basic/timer',
           },
           {
             title: '网络请求',
@@ -157,7 +157,7 @@ export default defineConfig({
           },
           {
             title: '页面跳转',
-            path: '',
+            path: '/guide/basic/navigation',
           },
           {
             title: '动画',
@@ -171,7 +171,7 @@ export default defineConfig({
         children: [
           {
             title: '准备环境',
-            path: '',
+            path: '/guide/development/setup',
           },
           {
             title: '用 Rax 开发一个 Kraken 应用',
