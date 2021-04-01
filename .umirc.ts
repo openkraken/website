@@ -139,8 +139,8 @@ export default defineConfig({
             path: '',
           },
           {
-            title: '触摸事件',
-            path: '',
+            title: '触摸与手势',
+            path: '/guide/basic/touch',
           },
           {
             title: '定时器',
@@ -156,7 +156,7 @@ export default defineConfig({
           },
           {
             title: '动画',
-            path: '',
+            path: '/guide/basic/animation',
           },
         ],
       },
