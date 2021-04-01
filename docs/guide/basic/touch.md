@@ -38,7 +38,7 @@ root.addEventListener('click', () => {
 });
 ```
 
-在 Rax/React/Vue 等应用中，只需要通过框架提供的能力，给相应的元素绑定上 click 事件即可进行相关操作。
+在 Rax / React / Vue 等应用中，只需要通过框架提供的能力，给相应的元素绑定上 click 事件即可进行相关操作。
 
 ## 使用更高级的手势能力
 
