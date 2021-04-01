@@ -11,7 +11,7 @@ Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/dev
 **示例：**
 
 ```js
-<div style={{ padding: '20px' }}>
+<div>
   {/* 固定尺寸 */}
   <div style={{ width: '25vw', height: '100px', backgroundColor: 'pink' }}>
     固定宽高
@@ -47,4 +47,26 @@ Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/dev
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i4/O1CN01pnq07I1yypiPZIQpG_!!6000000006648-2-tps-700-720.png" width=350 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i1/O1CN01A33yOu1GtTzqOcw0e_!!6000000000680-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/api-sizing.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01LEc4cS1SYCzJS2qCp_!!6000000002258-2-tps-370-370.png" />
+    </div>
+  </div>
+</div>
