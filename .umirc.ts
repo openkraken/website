@@ -58,8 +58,9 @@ export default defineConfig({
       .introduction-img{ display: none !important; }\
       .introduction-infos{ width:100%; padding:120px 25px }\
       .footer-container div ul li { width: 100% !important }\
-      .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center }\
+      .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
+      .__dumi-default-navbar-logo{ width: 50px }\
     }',
   ],
   scripts: [
@@ -125,6 +126,10 @@ export default defineConfig({
           {
             title: '布局',
             path: '/basic/layout',
+          },
+          {
+            title: '文本输入',
+            path: '',
           },
           {
             title: '多媒体',
