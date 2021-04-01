@@ -128,7 +128,7 @@ export default defineConfig({
           },
           {
             title: '多媒体',
-            path: '',
+            path: '/basic/multimedia',
           },
           {
             title: '滚动容器',
