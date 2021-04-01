@@ -12,6 +12,49 @@
       href="https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png"
     />
     <style>
+      .preview-image {
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
+        border-radius: 6px;
+        margin: 10px 20px 20px 0;
+        width: 360px;
+      }
+    </style>
+    <style>
+      .preview-tips {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+      }
+    </style>
+    <style>
+      .preview-code {
+        margin-top: 10px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        color: #000;
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      }
+    </style>
+    <style>
+      .preview-qrcode {
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <style>
+      .preview-title {
+        font-weight: bold;
+        margin: 0 0 20px;
+      }
+    </style>
+    <style>
+      .preview-row {
+        margin-bottom: 20px;
+      }
+    </style>
+    <style>
       .markdown {
         padding-bottom: 200px;
       }
@@ -124,10 +167,14 @@
       }
     </style>
     <style>
-      @media only screen and (min-width: 767px) {      .__dumi-default-menu { width: 350px !important }      .markdown{ padding-left: 380px !important }      .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }      .homepage-subtitle { font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em; width: 47% }      .homepage-img { width: 50%;position: absolute;right: 0;z-index: 1 }       .quick-start-github{ line-height: 42px; }      .quick-start{ margin-top: 50px; display: flex;flex-direction:row; }      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:470px }      .introduction-infos{ width:50%; padding:120px 25px }      .footer-block-content{ flex-grow: 1; }      .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }      .markdown{ padding-right: 200px },    }
+      @media only screen and (min-width: 767px) {      .code-preview {display: flex; justify-content: space-between;}      .__dumi-default-menu { width: 350px !important }      .markdown{ padding-left: 380px !important }      .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }      .homepage-subtitle { font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em; width: 47% }      .homepage-img { width: 50%;position: absolute;right: 0;z-index: 1 }       .quick-start-github{ line-height: 42px; }      .quick-start{ margin-top: 50px; display: flex;flex-direction:row; }      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:470px }      .introduction-infos{ width:50%; padding:120px 25px }      .footer-block-content{ flex-grow: 1; }      .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }      .markdown{ padding-right: 200px },    }
     </style>
     <style>
       @media only screen and (max-width: 767px) {
+        .code-preview {
+          display: flex;
+          flex-direction: column;
+        }
         .homepage-title {
           text-align: center;
           color: #0b1b3e;
