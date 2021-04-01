@@ -8,6 +8,8 @@ Kraken 提供了 [TouchEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/T
 
 如果开发者需要监听用户在某个元素上的用手指（触摸笔）触摸屏幕并做某个交互手势的全部过程并触发某个特定行为，可以按照如下所示的例子来处理。
 
+**示例：**
+
 ```js
 const root = document.getElementById('root');
 
@@ -29,6 +31,8 @@ root.addEventListener('touchend', e => {
 ## click 事件
 
 如果开发者想要监听用户点击某个元素的行为做出交互事件（比如提交表单、刷新页面等），就需要监听 click 事件。
+
+**示例：**
 
 ```js
 const root = document.getElementById('root');

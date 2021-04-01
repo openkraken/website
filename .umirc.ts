@@ -9,6 +9,9 @@ export default defineConfig({
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
+    '@keyframes levitate { 0% { transform: translate3d(0,-2.3%,0);} 50% {transform: translate3d(0,2.3%,0);} 100% {transform: translate3d(0,-2.3%,0);}}',
+    '.img-animation{ animation: levitate 5s ease-in-out infinite forwards }',
+    '.__dumi-default-code-block{ background-color: #F9F9F9 }',
     '.markdown{ padding-bottom: 200px }',
     'code[class*="language-"], pre[class*="language-"]{ color: #333 }',
     '.markdown :not(pre) code { font-size: 14px }',
