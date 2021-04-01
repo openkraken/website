@@ -65,14 +65,14 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/api-styles.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js
       </div>
     </div>
     <div className="preview-row">
       <div>
         2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
       </div>
-      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01QJsm4p1beSwAwZ2YA_!!6000000003490-2-tps-200-200.png" />
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01pQIRh51KGmzur4LOQ_!!6000000001137-2-tps-200-200.png" />
     </div>
   </div>
 </div>
