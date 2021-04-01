@@ -109,27 +109,23 @@ export default defineConfig({
       },
       {
         title: '基础',
-        path: '/basic',
+        path: '/guide/basic',
         children: [
           {
             title: '结构与样式',
-            path: '/basic/style',
+            path: '/guide/basic/style',
           },
           {
             title: '尺寸与边距',
-            path: '/basic/sizing',
+            path: '/guide/basic/sizing',
           },
           {
             title: '颜色与背景',
-            path: '/basic/color',
+            path: '/guide/basic/color',
           },
           {
             title: '布局',
-            path: '/basic/layout',
-          },
-          {
-            title: '文本输入',
-            path: '',
+            path: '/guide/basic/layout',
           },
           {
             title: '文本输入',
@@ -137,7 +133,7 @@ export default defineConfig({
           },
           {
             title: '多媒体',
-            path: '/basic/multimedia',
+            path: '/guide/basic/multimedia',
           },
           {
             title: '滚动容器',
@@ -314,7 +310,7 @@ export default defineConfig({
             path: '/development/styles/unit',
           },
           {
-            title: '其它',
+            title: '其它样式',
             path: '/development/styles/misc',
           },
           {
@@ -355,7 +351,7 @@ export default defineConfig({
           },
           {
             title: '本地存储',
-            path: '',
+            path: '/development/extension/storage',
           },
         ],
       },
