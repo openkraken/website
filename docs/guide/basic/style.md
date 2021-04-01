@@ -12,14 +12,15 @@ Kraken 支持大部分常用的标准 HTML 标签（所有支持的标签请参�
 
 ```js
 <div>
-  <div>Flutter 入门教程</div>
+  <div>Kraken 入门教程</div>
   <div>2021-1-1</div>
   <div>
-    <img src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png" />
+    <img src="https://img.alicdn.com/imgextra/i4/O1CN01GIxaZ01V0isGFLuJQ_!!6000000002591-2-tps-400-339.png" />
   </div>
   <div>
-    Flutter 是 Google 开源的 UI
-    工具包，帮助开发者通过一套代码库高效构建多平台精美应用，支持移动、Web、桌面和嵌入式平台。
+    Kraken 是一款基于 W3C 标准的高性能渲染引擎。Kraken 底层基于 Flutter
+    进行渲染，通过其自绘渲染的特性，保证多端一致性。上层基于 W3C
+    标准实现，拥有非常庞大的前端开发者生态。
   </div>
 </div>
 ```
@@ -34,17 +35,18 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
 
 ```js
 <div style={{ margin: '20px' }}>
-  <div style={{ fontSize: '30px', margin: '10px 0' }}>Flutter 入门教程</div>
+  <div style={{ fontSize: '30px', margin: '10px 0' }}>Kraken 入门教程</div>
   <div style={{ fontSize: '14px', color: '#666' }}>2021-1-1</div>
   <div style={{ margin: '10px 0' }}>
     <img
       style={{ width: '100%' }}
-      src="https://img.alicdn.com/imgextra/i1/O1CN014crkxU1tk6u8PpEat_!!6000000005939-2-tps-400-300.png"
+      src="https://img.alicdn.com/imgextra/i4/O1CN01GIxaZ01V0isGFLuJQ_!!6000000002591-2-tps-400-339.png"
     />
   </div>
   <div style={{ fontSize: '16px' }}>
-    Flutter 是 Google 开源的 UI
-    工具包，帮助开发者通过一套代码库高效构建多平台精美应用，支持移动、Web、桌面和嵌入式平台。
+    Kraken 是一款基于 W3C 标准的高性能渲染引擎。Kraken 底层基于 Flutter
+    进行渲染，通过其自绘渲染的特性，保证多端一致性。上层基于 W3C
+    标准实现，拥有非常庞大的前端开发者生态。
   </div>
 </div>
 ```
@@ -52,7 +54,7 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
 **渲染效果**：
 
 <div className="code-preview">
-  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01x598NQ1TjwkoX4duO_!!6000000002419-2-tps-720-1324.png" />
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01l9K7WT1PUb17VCz17_!!6000000001844-2-tps-720-1324.png" />
 
   <div className="preview-tips">
     <div className="preview-title">
@@ -70,7 +72,7 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
       <div>
         2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
       </div>
-      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i2/O1CN01hwZu731hahNMqsv1S_!!6000000004294-2-tps-370-370.png" />
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01QJsm4p1beSwAwZ2YA_!!6000000003490-2-tps-200-200.png" />
     </div>
   </div>
 </div>
