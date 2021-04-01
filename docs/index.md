@@ -53,7 +53,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
   <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;">
     <div class="introduction-infos">
       <div style="color:#0b1b3e;font-size:32px;margin:0 0 10px">跨平台一致</div>
-      <div style="line-height:34px;font-size:16px;color:#868686">基于 Flutter 的自绘渲染技术，不再受到平台能力制约，提供跨平台完全一致的 UI，同时支持桌面端 (MacOS、Linux、Windows) 和移动端 (iOS、Android)等</div>
+      <div style="line-height:34px;font-size:16px;color:#868686">基于 Flutter 的自绘渲染技术，不再受到平台能力制约，提供跨平台完全一致的 UI，同时支持桌面端 (macOS、Linux、Windows) 和移动端 (iOS、Android)等</div>
     </div>
     <img class="introduction-img" src="https://gw.alicdn.com/tfs/TB1oTMisoY1gK0jSZFCXXcwqXXa-1180-888.png" style="display:block;max-width:50%">
   </div>

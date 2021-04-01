@@ -58,8 +58,9 @@ export default defineConfig({
       .introduction-img{ display: none !important; }\
       .introduction-infos{ width:100%; padding:120px 25px }\
       .footer-container div ul li { width: 100% !important }\
-      .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center }\
+      .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
+      .__dumi-default-navbar-logo{ width: 50px }\
     }',
   ],
   scripts: [
@@ -112,23 +113,27 @@ export default defineConfig({
         children: [
           {
             title: '结构与样式',
-            path: '',
+            path: '/basic/style',
           },
           {
-            title: '尺寸',
-            path: '',
+            title: '尺寸与边距',
+            path: '/basic/sizing',
           },
           {
-            title: '颜色',
-            path: '',
+            title: '颜色与背景',
+            path: '/basic/color',
           },
           {
             title: '布局',
+            path: '/basic/layout',
+          },
+          {
+            title: '文本输入',
             path: '',
           },
           {
             title: '多媒体',
-            path: '',
+            path: '/basic/multimedia',
           },
           {
             title: '滚动容器',
@@ -273,16 +278,16 @@ export default defineConfig({
         path: '/development/styles',
         children: [
           {
-            title: '盒模型',
-            path: '/development/styles/boxmodel',
-          },
-          {
-            title: '定位',
-            path: '/development/styles/position',
+            title: '尺寸与边距',
+            path: '/development/styles/sizing',
           },
           {
             title: '布局',
             path: '/development/styles/layout',
+          },
+          {
+            title: '定位',
+            path: '/development/styles/position',
           },
           {
             title: '字体与文本',
