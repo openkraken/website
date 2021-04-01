@@ -45,8 +45,8 @@ export default defineConfig({
       .markdown{ padding-right: 200px },\
     }',
     '@media only screen and (max-width: 767px) {\
-      .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
-      .homepage-subtitle { padding:0 16px;text-align: center, font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
+      .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0;display: table;margin: 0 auto }\
+      .homepage-subtitle { margin:0 auto;text-align: center;display:table;font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
       .homepage-img { display: none }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
       .quick-start-btn{ display: block; margin: 0 auto; }\
@@ -70,7 +70,11 @@ export default defineConfig({
     },
     {
       content:
-        "window.onload=()=>document.getElementById('sayKraken-img').onclick=()=>sayKraken.play()",
+        "window.addEventListener('click', function(e){\
+          if(e.target.id === 'sayKraken-img'){\
+            sayKraken.play()\
+          }\
+        },false)",
       charset: 'utf-8',
     },
   ],
@@ -78,6 +82,10 @@ export default defineConfig({
     {
       title: '教程',
       path: '/guide',
+    },
+    {
+      title: '开发',
+      path: '/development',
     },
     {
       title: 'API',
@@ -99,38 +107,84 @@ export default defineConfig({
         path: '/guide',
       },
       {
-        title: '接入与使用',
-        path: '/guide/use',
+        title: '基础',
+        path: '/basic',
         children: [
           {
-            title: '用 Rax 开发一个 Kraken 应用',
-            path: '/guide/use/rax',
+            title: '结构与样式',
+            path: '',
           },
           {
-            title: '用 Vue 开发一个 Kraken 应用',
-            path: '/guide/use/vue',
+            title: '尺寸',
+            path: '',
           },
           {
-            title: '在 Flutter 应用中集成 Kraken',
-            path: '/guide/use/interpolation-flutter',
+            title: '颜色',
+            path: '',
           },
           {
-            title: '在原生 App 中集成 Kraken',
-            path: '/guide/use/interpolation-app',
+            title: '布局',
+            path: '',
+          },
+          {
+            title: '多媒体',
+            path: '',
+          },
+          {
+            title: '滚动容器',
+            path: '',
+          },
+          {
+            title: '触摸事件',
+            path: '',
+          },
+          {
+            title: '定时器',
+            path: '',
+          },
+          {
+            title: '网络请求',
+            path: '/guide/basic/network',
+          },
+          {
+            title: '页面跳转',
+            path: '',
+          },
+          {
+            title: '动画',
+            path: '',
           },
         ],
       },
       {
-        title: '网络请求',
-        path: '/guide/network',
-      },
-      {
-        title: '前端代码调试',
-        path: '/guide/debug',
-      },
-      {
-        title: 'Kraken 与浏览器的差异',
-        path: '/guide/difference-to-web',
+        title: '开发',
+        path: 'development',
+        children: [
+          {
+            title: '准备环境',
+            path: '',
+          },
+          {
+            title: '用 Rax 开发一个 Kraken 应用',
+            path: '/guide/development/rax',
+          },
+          {
+            title: '用 Vue 开发一个 Kraken 应用',
+            path: '/guide/development/vue',
+          },
+          {
+            title: '状态管理',
+            path: '',
+          },
+          {
+            title: '前端调试',
+            path: '/guide/development/debug',
+          },
+          {
+            title: '与浏览器的差异',
+            path: '/guide/development/difference-to-web',
+          },
+        ],
       },
       {
         title: '进阶',
@@ -145,11 +199,11 @@ export default defineConfig({
             path: '/guide/advanced/gesture',
           },
           {
-            title: '处理页面跳转',
+            title: 'Native 控制页面跳转',
             path: '/guide/advanced/handle-navigation',
           },
           {
-            title: 'JS 与 Native 通信',
+            title: 'JavaScript 与 Native 通信',
             path: '/guide/advanced/communicate-with-native',
           },
           {
@@ -159,6 +213,20 @@ export default defineConfig({
           {
             title: '测算 Kraken 的运行性能',
             path: '/guide/advanced/measure-performance',
+          },
+        ],
+      },
+      {
+        title: '客户端接入',
+        path: '/guide/native',
+        children: [
+          {
+            title: '在 Flutter 应用中集成 Kraken',
+            path: '/guide/native/interpolation-flutter',
+          },
+          {
+            title: '在原生 App 中集成 Kraken',
+            path: '/guide/native/interpolation-app',
           },
         ],
       },
@@ -195,99 +263,139 @@ export default defineConfig({
         ],
       },
     ],
-    '/api': [
+    '/development': [
       {
         title: '标签',
-        path: '/api/tags',
+        path: '/development/tags',
       },
       {
         title: '样式',
-        path: '/api/styles',
+        path: '/development/styles',
         children: [
           {
             title: '盒模型',
-            path: '/api/styles/boxmodel',
+            path: '/development/styles/boxmodel',
           },
           {
             title: '定位',
-            path: '/api/styles/position',
+            path: '/development/styles/position',
           },
           {
             title: '布局',
-            path: '/api/styles/layout',
+            path: '/development/styles/layout',
           },
           {
             title: '字体与文本',
-            path: '/api/styles/text',
+            path: '/development/styles/text',
           },
           {
             title: '边框与圆角',
-            path: '/api/styles/border',
+            path: '/development/styles/border',
           },
           {
             title: '颜色与背景',
-            path: '/api/styles/background',
+            path: '/development/styles/background',
           },
           {
             title: '变形与过渡',
-            path: '/api/styles/transform',
+            path: '/development/styles/transform',
           },
           {
             title: '单位',
-            path: '/api/styles/unit',
+            path: '/development/styles/unit',
           },
           {
-            title: '其它样式',
-            path: '/api/styles/misc',
+            title: '其它',
+            path: '/development/styles/misc',
           },
           {
             title: '与浏览器差异',
-            path: '/api/styles/difference',
+            path: '/development/styles/difference',
           },
         ],
       },
       {
         title: 'DOM',
-        path: '/api/dom',
+        path: '/development/dom',
         children: [
           {
             title: '事件',
-            path: '/api/dom/event',
+            path: '/development/dom/event',
           },
           {
             title: '节点',
-            path: '/api/dom/node',
+            path: '/development/dom/node',
           },
           {
             title: '文档',
-            path: '/api/dom/document',
+            path: '/development/dom/document',
+          },
+        ],
+      },
+      {
+        title: '扩展能力',
+        path: '/development/extension',
+        children: [
+          {
+            title: '手势',
+            path: '/development/extension/gesture',
+          },
+          {
+            title: 'Sliver',
+            path: '/development/extension/sliver',
+          },
+          {
+            title: '本地存储',
+            path: '',
           },
         ],
       },
       {
         title: '全局变量与方法',
-        path: '/api/global',
+        path: '/development/global',
       },
+    ],
+    '/api': [
       {
-        title: 'Kraken Widget',
+        title: 'Widget API',
         path: '/api/widget',
-      },
-      {
-        title: '扩展能力',
-        path: '/api/extension',
         children: [
           {
-            title: '手势',
-            path: '/api/extension/gesture',
+            title: '容器配置',
+            path: '',
           },
           {
-            title: 'Sliver',
-            path: '/api/extension/sliver',
+            title: '加载资源',
+            path: '',
+          },
+          {
+            title: '事件',
+            path: '',
+          },
+          {
+            title: '开启调试',
+            path: '',
+          },
+          {
+            title: '手势捕获',
+            path: '',
+          },
+          {
+            title: '动画控制',
+            path: '',
+          },
+          {
+            title: '页面跳转',
+            path: '',
+          },
+          {
+            title: '与 JS 通信',
+            path: '',
           },
         ],
       },
       {
-        title: '插件',
+        title: '插件 API',
         path: '/api/plugin',
       },
     ],

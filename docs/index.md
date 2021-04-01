@@ -17,8 +17,9 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
   </div>
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
-      北海（Kraken）
-      <img style="cursor: pointer" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=20 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
+      北海 
+      <span style="font-size:32px;margin-left: .5em">Kraken</span>
+      <img  style="cursor: pointer;margin-left: .2em;" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=15 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
       高性能 Web 渲染引擎，基于 Flutter 构建
