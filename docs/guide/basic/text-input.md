@@ -22,15 +22,30 @@ input.addEventListener('input', event => {
 });
 ```
 
-```bash
-kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-input.js
-```
-
-<img src="https://gw.alicdn.com/imgextra/i2/O1CN01ySbvyk1iPXL5IOn9K_!!6000000004405-2-tps-256-256.png" width=200 />
-
 使用 Kraken 运行后，在输入框内输入任意文本，都会将输入的内容同步展示到下边的 `div` 中。
 
-<img src="https://gw.alicdn.com/imgextra/i4/O1CN01fKjB6F1XrVl2nKCLW_!!6000000002977-2-tps-944-1560.png" width="400" />
+<div className="code-preview">
+  <img src="https://gw.alicdn.com/imgextra/i4/O1CN01fKjB6F1XrVl2nKCLW_!!6000000002977-2-tps-944-1560.png" />
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-input.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://gw.alicdn.com/imgextra/i3/O1CN01vmxrrh1RKddZf6NGA_!!6000000002093-2-tps-260-260.png" />
+    </div>
+  </div>
+</div>
 
 可以看到我们使用了 `placeholder` 属性来储存当无内容输入时候的占位，并且通过监听 `input` 事件获知到了用户输入内容的时机。
 
