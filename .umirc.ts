@@ -60,7 +60,7 @@ export default defineConfig({
       .footer-container div ul li { width: 100% !important }\
       .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
-      .__dumi-default-navbar-logo{ width: 50px !important }\
+      .__dumi-default-navbar-logo{ width: 50px }\
     }',
   ],
   scripts: [
