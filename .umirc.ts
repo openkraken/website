@@ -113,19 +113,19 @@ export default defineConfig({
         children: [
           {
             title: '结构与样式',
-            path: '',
+            path: '/basic/style',
           },
           {
-            title: '尺寸',
-            path: '',
+            title: '尺寸与边距',
+            path: '/basic/sizing',
           },
           {
-            title: '颜色',
-            path: '',
+            title: '颜色与背景',
+            path: '/basic/color',
           },
           {
             title: '布局',
-            path: '',
+            path: '/basic/layout',
           },
           {
             title: '文本输入',
@@ -133,7 +133,7 @@ export default defineConfig({
           },
           {
             title: '多媒体',
-            path: '',
+            path: '/basic/multimedia',
           },
           {
             title: '滚动容器',
@@ -278,16 +278,16 @@ export default defineConfig({
         path: '/development/styles',
         children: [
           {
-            title: '盒模型',
-            path: '/development/styles/boxmodel',
-          },
-          {
-            title: '定位',
-            path: '/development/styles/position',
+            title: '尺寸与边距',
+            path: '/development/styles/sizing',
           },
           {
             title: '布局',
             path: '/development/styles/layout',
+          },
+          {
+            title: '定位',
+            path: '/development/styles/position',
           },
           {
             title: '字体与文本',
