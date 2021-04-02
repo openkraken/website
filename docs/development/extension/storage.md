@@ -12,7 +12,7 @@ Kraken 实现了 `AsyncStorage` API 作为本地存储的接口，与大家熟�
 
 读取存储项，需要注意的是，`key` 必须是一个字符串类型的变量。
 
-示例：
+**示例：**
 
 ```js
 const value = await asyncStorage.getItem('foo');
@@ -23,7 +23,7 @@ console.log(`Value is: ${value}`);
 
 设置存储项，`key` 和 `value` 都必须是一个字符串类型的变量。
 
-示例：
+**示例：**
 
 ```js
 await asyncStorage.setItem('foo', 'bar');
@@ -33,7 +33,7 @@ await asyncStorage.setItem('foo', 'bar');
 
 移除存储项，`key` 必须是一个字符串类型的变量。
 
-示例：
+**示例：**
 
 ```js
 await asyncStorage.removeItem('foo');
@@ -43,7 +43,7 @@ await asyncStorage.removeItem('foo');
 
 获取所有存储内容的 `key` 的数组。
 
-示例：
+**示例：**
 
 ```js
 const keys = await asyncStorage.getAllKeys();
@@ -54,7 +54,7 @@ console.log(`All keys: ${keys}`);
 
 清除所有存储的内容。
 
-示例：
+**示例：**
 
 ```js
 await asyncStorage.clear();

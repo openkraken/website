@@ -4,7 +4,7 @@
 
 需加载执行的 JavaScript 脚本的 URL。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
@@ -16,7 +16,7 @@ Kraken kraken = Kraken(
 
 需加载执行的 JavaScript 脚本本地路径。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
@@ -28,7 +28,7 @@ Kraken kraken = Kraken(
 
 需加载执行的 JavaScript 脚本的内容。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
