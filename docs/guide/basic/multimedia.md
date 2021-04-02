@@ -50,10 +50,11 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 **示例：**
 
 ```js
-<div style={{ padding: '20px' }}>
+<div>
   <video
     src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-    style={{ width: '100%' }}
+    autoplay={true}
+    style={{ width: '100%', height: '200px' }}
   />
 </div>
 ```
