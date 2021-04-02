@@ -19,7 +19,7 @@ Kraken 的基于 CSS 的[盒模型](https://developer.mozilla.org/zh-CN/docs/Web
 ### max-height
 
 - 定义：指定元素的最大高度。
-- 属性值：\<number>[ px | rpx | vw | vh | vmin | vmax | % ]
+- 属性值：none | \<number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/max-height)。
 
 ### width
@@ -37,7 +37,7 @@ Kraken 的基于 CSS 的[盒模型](https://developer.mozilla.org/zh-CN/docs/Web
 ### max-width
 
 - 定义：指定元素的最大宽度。
-- 属性值：\<number>[ px | rpx | vw | vh | vmin | vmax | % ]
+- 属性值：none | \<number>[ px | rpx | vw | vh | vmin | vmax | % ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/max-width)。
 
 #### margin

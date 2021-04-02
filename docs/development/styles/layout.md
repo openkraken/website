@@ -79,7 +79,7 @@ Kraken 的弹性盒布局基于 CSS 的 [Flexbox 模型](https://developer.mozil
 ### flex
 
 - 定义：定义了 flex 成员项可以占用容器中剩余空间的大小。
-- 属性值：[ auto | \<flex-grow> \<flex-shrink>? || \<flex-basis> ]
+- 属性值：[ auto | initial | none | \<flex-grow> \<flex-shrink>? || \<flex-basis> ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)。
 
 ### flex-grow
