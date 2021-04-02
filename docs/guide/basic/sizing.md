@@ -59,14 +59,14 @@ Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/dev
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/api-sizing.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-sizing.js
       </div>
     </div>
     <div className="preview-row">
       <div>
         2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
       </div>
-      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01LEc4cS1SYCzJS2qCp_!!6000000002258-2-tps-370-370.png" />
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01ZH38q51czMd4AIfb3_!!6000000003671-2-tps-200-200.png" />
     </div>
   </div>
 </div>

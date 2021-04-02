@@ -7,7 +7,7 @@ Kraken 支持以下变形与过渡的相关样式。
 ### transform
 
 - 定义：旋转，缩放，倾斜或平移指定元素。
-- 属性值：[ martix() | martix3d() | rotate() | rotateX() | rotateY() | rotateZ() | rotate3d() | translate() | translateX() | translateY() | translateZ() | translate3d() | scale() | scaleX() | scaleY() | perspective() | skew() ]
+- 属性值：none | [ martix() | martix3d() | rotate() | rotateX() | rotateY() | rotateZ() | rotate3d() | translate() | translateX() | translateY() | translateZ() | translate3d() | scale() | scaleX() | scaleY() | perspective() | skew() ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform)。
 - 说明：skew() 大于 90 度时动画旋转顺序与浏览器相反，见 [issue](https://github.com/openkraken/kraken/issues/25)
 

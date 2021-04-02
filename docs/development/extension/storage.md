@@ -15,7 +15,7 @@ Kraken 实现了 `AsyncStorage` API 作为本地存储的接口，与大家熟�
 示例：
 
 ```js
-const value = asyncStorage.getItem('foo');
+const value = await asyncStorage.getItem('foo');
 console.log(`Value is: ${value}`);
 ```
 
@@ -26,7 +26,7 @@ console.log(`Value is: ${value}`);
 示例：
 
 ```js
-asyncStorage.setItem('foo', 'bar');
+await asyncStorage.setItem('foo', 'bar');
 ```
 
 ### removeItem(key)
@@ -36,7 +36,7 @@ asyncStorage.setItem('foo', 'bar');
 示例：
 
 ```js
-asyncStorage.removeItem('foo');
+await asyncStorage.removeItem('foo');
 ```
 
 ### getAllKeys()
@@ -46,7 +46,7 @@ asyncStorage.removeItem('foo');
 示例：
 
 ```js
-const keys = asyncStorage.getAllKeys();
+const keys = await asyncStorage.getAllKeys();
 console.log(`All keys: ${keys}`);
 ```
 
@@ -57,5 +57,5 @@ console.log(`All keys: ${keys}`);
 示例：
 
 ```js
-asyncStorage.clear();
+await asyncStorage.clear();
 ```

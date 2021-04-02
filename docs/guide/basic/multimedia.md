@@ -11,7 +11,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 ```js
 <div style={{ padding: '20px' }}>
   <img
-    src="https://img.alicdn.com/imgextra/i1/O1CN01Fch4UU1W9Fs6HYq8G_!!6000000002745-2-tps-490-190.png"
+    src="https://img.alicdn.com/imgextra/i4/O1CN01GIxaZ01V0isGFLuJQ_!!6000000002591-2-tps-400-339.png"
     style={{ width: '100%' }}
   />
 </div>
@@ -19,7 +19,29 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i2/O1CN01cr9yFl1hMV6Dgd1QU_!!6000000004263-2-tps-744-338.png" width=372 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01bOyzka1nbVm4XjCs1_!!6000000005108-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-image.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01llXZG21IbHUBpiDnt_!!6000000000911-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>
 
 ## 视频
 
@@ -30,7 +52,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 ```js
 <div style={{ padding: '20px' }}>
   <video
-    src="https://videocdn.taobao.com/oss/ali-video/1fa0c3345eb3433b8af7e995e2013cea/1458900536/video.mp4"
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
     style={{ width: '100%' }}
   />
 </div>
@@ -38,4 +60,26 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i1/O1CN01SuQOIK1fClRsxvkm4_!!6000000003971-2-tps-742-458.png" width=371 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i1/O1CN01uFSWbo24k4e9pci5q_!!6000000007428-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-video.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01I0hsO41NlsjX2YLK8_!!6000000001611-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>

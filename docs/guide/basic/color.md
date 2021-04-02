@@ -50,14 +50,14 @@
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/api-color.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-color.js
       </div>
     </div>
     <div className="preview-row">
       <div>
         2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
       </div>
-      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01eqsSnp1JoqpwHsMkI_!!6000000001076-2-tps-370-370.png" />
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01fBBI8s297fVxwnJoW_!!6000000008021-2-tps-200-200.png" />
     </div>
   </div>
 </div>
