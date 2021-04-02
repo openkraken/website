@@ -5,7 +5,7 @@
 
 下面的例子演示如何创建一个滚动容器：
 
-```javascript
+```html
 <div style={{ width: '100px', height: '100px', overflow: 'scroll' }}>
   <p>
     The overflow property specifies whether to clip content or to add scrollbars
