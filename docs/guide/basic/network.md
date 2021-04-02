@@ -32,7 +32,7 @@ fetch(url, {
   .then(json => console.log(json));
 ```
 
-更多信息可以参考[全局变量与方法](/api/global)。
+更多信息可以参考[全局变量与方法](/development/global)。
 
 ## WebSocket
 
