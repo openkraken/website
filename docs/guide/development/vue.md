@@ -40,24 +40,12 @@ import App from './App.vue';
 createApp(App).mount(document.body);
 ```
 
-由于 [createEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createEvent) 已废弃，但目前 Vue 在 web 的 platform 中还是用到了该方法，所以需要通过 polyfill 来支持一下该特性。
-
-```js
-// src/polyfill.js
-if (!document.createEvent) {
-  document.createEvent = () => {
-    return new Event('');
-  };
-}
-```
-
-配置 vue.config.js，将 polyfill.js 打入包中，同时，由于没有 Script 标签的支持，所以需要将 bundle 打在一个包中。
+配置 vue.config.js，由于没有 Script 标签的支持，所以需要将 bundle 打在一个包中。
 
 ```js
 module.exports = {
   chainWebpack: config => {
     config.optimization.delete('splitChunks');
-    config.entry('app').prepend('./src/polyfill.js');
   },
 };
 ```
