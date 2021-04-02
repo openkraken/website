@@ -15,31 +15,89 @@ Kraken 支持了前三种目前 Web 开发中主流使用的布局方式，以�
 
 如果未使用任何 CSS 样式来改变标签的排版方式，页面内的标签将按照正常的布局流来展示。
 
-所有标签在布局方式上都被分为[块级](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements)（如 `<div>`）与[行内](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elements)（如`<span>`）两种排版方式。块级标签的排版规则是会在上一个标签下另起一行，并按照样式上设置的 margin 来分隔；而行内标签则不会另起一行，只要在其父级块级标签的宽度内有足够的空间，它们与其他行内标签被安排在同一行。如果空间不够，则将被移到新的一行。
+所有标签在布局方式上都被默认分为[块级](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements)（如 `<div>`）与[行内](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elements)（如`<span>`）两种显示类型，同时可以通过 CSS 的 [display 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display) 改变标签默认的显示类型。
+
+块级标签的排版规则是会在上一个标签下另起一行，并按照样式上设置的 margin 来分隔；而行内标签则不会另起一行，只要在其父级块级标签的宽度内有足够的空间，它们与其他行内标签被安排在同一行。如果空间不够，则将被移到新的一行。
 
 **示例：**
 
 ```js
-<div style={{ padding: '20px' }}>
-  {/* 块级标签 */}
-  <div style={{ fontSize: '30px' }}>页面标题</div>
-
-  <div style={{ marginTop: '20px' }}>
-    {/* 行内标签 */}
-    <span>段落一 正文正文</span>
-    <span style={{ color: 'red', fontSize: '18px' }}>高亮文本</span>
-    <span>正文正文正文</span>
+<div style={{ marginLeft: '-20px' }}>
+  {/* 块级 */}
+  <div style={{ textAlign: 'center' }}>
+    {/* 行内 */}
+    <p
+      style={{
+        display: 'inline-block',
+        backgroundColor: 'pink',
+        width: '40%',
+        height: '100px',
+        margin: '20px 0 0 20px',
+      }}
+    />
+    {/* 行内 */}
+    <span
+      style={{
+        display: 'inline-block',
+        backgroundColor: 'lightblue',
+        width: '40%',
+        height: '100px',
+        margin: '20px 0 0 20px',
+      }}
+    />
   </div>
 
-  <div style={{ marginTop: '20px' }}>
-    <span>段落二 正文正文正文正文正文正文正文</span>
+  {/* 块级 */}
+  <div style={{ textAlign: 'center' }}>
+    {/* 行内 */}
+    <div
+      style={{
+        display: 'inline-block',
+        backgroundColor: 'orange',
+        width: '40%',
+        height: '100px',
+        margin: '20px 0 0 20px',
+      }}
+    />
+    {/* 行内 */}
+    <span
+      style={{
+        display: 'inline-block',
+        backgroundColor: 'lightgreen',
+        width: '40%',
+        height: '100px',
+        margin: '20px 0 0 20px',
+      }}
+    />
   </div>
 </div>
 ```
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i3/O1CN014XjRLd1CUVwPGEQVF_!!6000000000084-2-tps-740-380.png" width=370 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i1/O1CN01nJgGq21MiqUQ27w25_!!6000000001469-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flow-layout.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01BHfjbd1mDri05zcYk_!!6000000004921-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>
 
 ## 弹性盒布局
 
@@ -58,7 +116,7 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
 **示例：**
 
 ```js
-<div style={{ padding: '20px' }}>
+<div>
   {/* 横向排版: 水平等间距 & 垂直居中 */}
   <div
     style={{
@@ -67,31 +125,39 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
       justifyContent: 'space-evenly',
       alignItems: 'center',
       backgroundColor: '#999',
-      marginTop: '20px',
+      marginTop: '10px',
     }}
   >
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'yellow' }} />
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'red' }} />
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'green' }} />
+    <div style={{ width: '50px', height: '50px', backgroundColor: 'orange' }} />
+    <div
+      style={{ width: '50px', height: '50px', backgroundColor: 'lightblue' }}
+    />
+    <div
+      style={{ width: '50px', height: '50px', backgroundColor: 'lightgreen' }}
+    />
   </div>
 
   {/* 横向排版: 换行 & 行间等间距 & 水平等间距 */}
   <div
     style={{
       display: 'flex',
-      height: '200px',
+      height: '150px',
       flexWrap: 'wrap',
       justifyContent: 'space-evenly',
       alignContent: 'space-evenly',
       backgroundColor: '#999',
-      marginTop: '20px',
+      marginTop: '10px',
     }}
   >
     <div
-      style={{ width: '150px', height: '50px', backgroundColor: 'yellow' }}
+      style={{ width: '150px', height: '50px', backgroundColor: 'orange' }}
     />
-    <div style={{ width: '150px', height: '50px', backgroundColor: 'red' }} />
-    <div style={{ width: '150px', height: '50px', backgroundColor: 'green' }} />
+    <div
+      style={{ width: '150px', height: '50px', backgroundColor: 'lightblue' }}
+    />
+    <div
+      style={{ width: '150px', height: '50px', backgroundColor: 'lightgreen' }}
+    />
   </div>
 
   {/* 纵向排版: 垂直等间距 & 水平居中 */}
@@ -103,12 +169,16 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
       justifyContent: 'space-evenly',
       alignItems: 'center',
       backgroundColor: '#999',
-      marginTop: '20px',
+      marginTop: '10px',
     }}
   >
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'yellow' }} />
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'red' }} />
-    <div style={{ width: '50px', height: '50px', backgroundColor: 'green' }} />
+    <div style={{ width: '50px', height: '50px', backgroundColor: 'orange' }} />
+    <div
+      style={{ width: '50px', height: '50px', backgroundColor: 'lightblue' }}
+    />
+    <div
+      style={{ width: '50px', height: '50px', backgroundColor: 'lightgreen' }}
+    />
   </div>
 
   {/* 横向排版: 子项宽度按比例拉伸 & 子项高度自动拉伸 */}
@@ -118,25 +188,47 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
       height: '100px',
       justifyContent: 'space-evenly',
       backgroundColor: '#999',
-      marginTop: '20px',
+      marginTop: '10px',
     }}
   >
-    <div style={{ flexGrow: 1, backgroundColor: 'yellow' }} />
-    <div style={{ flexGrow: 2, backgroundColor: 'red' }} />
-    <div style={{ flexGrow: 3, backgroundColor: 'green' }} />
+    <div style={{ flexGrow: 1, backgroundColor: 'orange' }} />
+    <div style={{ flexGrow: 2, backgroundColor: 'lightblue' }} />
+    <div style={{ flexGrow: 3, backgroundColor: 'lightgreen' }} />
   </div>
 </div>
 ```
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i1/O1CN01pugN2N1Zvkejx3AYq_!!6000000003257-2-tps-724-1400.png" width=362 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i1/O1CN012H2bAt1yMMRjwhIKt_!!6000000006564-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flex-layout.js 
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01sBl1yz1tCfzWbBGWB_!!6000000005866-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>
 
 ## 定位
 
 有时候我们需要将标签重叠在另一个标签上面，或者滚动时始终与视窗保持在同一位置，这时就需要用到 CSS 中的定位能力。
 
-CSS 中一共定义了五种定位：
+CSS 提供了五种定位方式：
 
 1. static：静态定位，默认值，标签在文档流中按当前的位置布局，指定 top, right, bottom, left 和 z-index 属性无效。
 
@@ -229,4 +321,26 @@ Kraken 支持的与定位相关的所有属性请参考[开发文档](/developme
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i4/O1CN01WGvScv1nRtSRZltMa_!!6000000005087-2-tps-700-788.png" width=350 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN0165tLbR22Qig4BSSI9_!!6000000007115-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-position.js 
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01Ot39kM1yCHjKKSEmL_!!6000000006542-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>
