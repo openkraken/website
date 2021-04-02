@@ -6,7 +6,7 @@
 
 自定义 Kraken 容器的背景色。
 
-示例：
+**示例：**
 
 ```dart
 Color color = const Color(0x000000);
@@ -20,7 +20,7 @@ Kraken kraken = Kraken(
 
 自定义 Kraken 容器的宽度。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
@@ -32,7 +32,7 @@ Kraken kraken = Kraken(
 
 自定义 Kraken 容器的高度。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(

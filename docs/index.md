@@ -50,7 +50,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
 </div>
 
 <div style="background-color:#f7f8fa">
-  <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;">
+  <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;align-items: center;">
     <div class="introduction-infos">
       <div style="color:#0b1b3e;font-size:32px;margin:0 0 10px">跨平台一致</div>
       <div style="line-height:34px;font-size:16px;color:#868686">基于 Flutter 的自绘渲染技术，不再受到平台能力制约，提供跨平台完全一致的 UI，同时支持桌面端 (macOS、Linux、Windows) 和移动端 (iOS、Android)等</div>
@@ -66,6 +66,26 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       <div style="color:#0b1b3e;font-size:32px;margin:0 0 10px">原生性能</div>
       <div style="line-height:34px;font-size:16px;color:#868686">使用 AOT 构建技术将 Kraken 编译成机器码，提供更接近原生的性能；同步光栅化，支持无限列表流畅滚动且没有白屏。</div>
     </div>
+  </div>
+</div>
+
+<div class="sponsors-container">
+  <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative">
+    <div style="font-size: 1.875rem;font-weight: 500;margin: 50px auto;">合作与赞助</div>
+  </div>
+  <div class="sponsors-list" >
+      <div class="sponsors">
+        <img src="//gw.alicdn.com/tfs/TB11_n_fq67gK0jSZFHXXa9jVXa-1280-533.png_200x200.jpg" />
+      </div>
+      <div class="sponsors">
+        <img src="//img.alicdn.com/imgextra/i1/O1CN01Tn1UyG1KgRB77QBoQ_!!6000000001193-2-tps-993-210.png" />
+      </div>
+      <div class="sponsors">
+        <img src="//img.alicdn.com/imgextra/i1/O1CN01ecuJpR1pZL83I7EV1_!!6000000005374-2-tps-735-313.png" />
+      </div>
+      <div class="sponsors">
+        <img src="//gw.alicdn.com/tfs/TB1LW.Xfvb2gK0jSZK9XXaEgFXa-190-27.png" />
+      </div>
   </div>
 </div>
 

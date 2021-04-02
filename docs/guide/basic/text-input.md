@@ -25,7 +25,8 @@ input.addEventListener('input', event => {
 使用 Kraken 运行后，在输入框内输入任意文本，都会将输入的内容同步展示到下边的 `div` 中。
 
 <div className="code-preview">
-  <img src="https://gw.alicdn.com/imgextra/i4/O1CN01fKjB6F1XrVl2nKCLW_!!6000000002977-2-tps-944-1560.png" />
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i3/O1CN01YAc3w11khyW4hpoYR_!!6000000004716-2-tps-360-662.png" />
+
   <div className="preview-tips">
     <div className="preview-title">
       请选择以下任意一种方式预览：
@@ -42,7 +43,7 @@ input.addEventListener('input', event => {
       <div>
         2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
       </div>
-      <img className="preview-qrcode" src="https://gw.alicdn.com/imgextra/i3/O1CN01vmxrrh1RKddZf6NGA_!!6000000002093-2-tps-260-260.png" />
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01pQIRh51KGmzur4LOQ_!!6000000001137-2-tps-200-200.png" />
     </div>
   </div>
 </div>

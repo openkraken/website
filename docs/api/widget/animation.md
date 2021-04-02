@@ -4,7 +4,7 @@
 
 Widget 动画控制器。为了避免初次执行 JavaScript 而导致的卡顿，使用这个参数可以让 JavaScript 在外部动画执行结束之后再开始执行。
 
-示例：
+**示例：**
 
 ```dart
 class FirstRoute extends StatelessWidget {

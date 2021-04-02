@@ -4,7 +4,7 @@
 
 在文档装载完成后会触发 onLoad 事件。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
@@ -18,7 +18,7 @@ Kraken kraken = Kraken(
 
 在文档装载异常的回调函数。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
@@ -32,7 +32,7 @@ Kraken kraken = Kraken(
 
 JavaScript 执行异常时通过该回调抛出异常。
 
-示例：
+**示例：**
 
 ```dart
 Kraken kraken = Kraken(
