@@ -43,7 +43,7 @@ Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Ra
 
 ### 如果你是 Rax 开发者
 
-那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/use/rax)。
+那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/development/rax)。
 
 ### 如果你是 Vue 开发者
 

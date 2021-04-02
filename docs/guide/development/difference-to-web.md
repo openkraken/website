@@ -51,7 +51,7 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 
 ## 样式能力差异
 
-请参考[与浏览器样式差异](/api/styles/difference)文档。
+请参考[与浏览器差异](/development/styles/difference)文档。
 
 ## 本地存储
 
