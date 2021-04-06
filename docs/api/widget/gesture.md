@@ -1,4 +1,4 @@
-# 手势捕获
+# 手势
 
 ## gestureClient
 

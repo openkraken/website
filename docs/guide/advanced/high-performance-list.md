@@ -35,7 +35,31 @@ for (let i = 0; i < 100; i++) {
 document.body.appendChild(container);
 ```
 
-<img alt="preview sliver" src="https://gw.alicdn.com/imgextra/i4/O1CN01Amsvbd1cMQxd7yay2_!!6000000003586-2-tps-886-1816.png" width=400 />
+**渲染效果**：
+
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i4/O1CN01AMUGBt1bpSRjWwYdO_!!6000000003514-2-tps-360-662.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-high-performance-list.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01eX1cyI1vCnKNgkfO4_!!6000000006137-2-tps-260-260.png" />
+    </div>
+  </div>
+</div>
 
 这样一个简单的 Sliver 滚动列表就可以工作了，当你向下滚动的时候，Kraken 会动态生成对应的 RenderObject 并同时释放已经移出可视区域（Viewport）的节点对应的 RenderObject。
 
@@ -76,4 +100,4 @@ export default function ScrollView(props) {
 
 ## API 参考
 
-更多细节请跳转到 [Sliver API](/api/extension/sliver) 文档查看。
+更多细节请跳转到 [Sliver API](/development/extension/sliver) 文档查看。

@@ -13,7 +13,7 @@ export default defineConfig({
     '.img-animation{ animation: levitate 5s ease-in-out infinite forwards }',
     '.__dumi-default-code-block{ background-color: #F9F9F9 }',
     '.preview-image {box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6); border-radius: 6px; margin: 10px 20px 20px 0; width: 360px;}',
-    '.preview-tips {margin-left: 10px;margin-top: 10px;display: flex; flex-direction: column; max-width: 500px;}',
+    '.preview-tips {margin-left: 50px;margin-top: 10px;display: flex; flex-direction: column; max-width: 500px;}',
     '.preview-code {margin-top: 10px; background-color: #f9f9f9; padding: 10px; color: #000;font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;}',
     '.preview-qrcode {box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6); margin-top: 20px; width: 200px; height: 200px;}',
     '.preview-title {font-weight: bold; margin: 0 0 20px;}',
@@ -40,7 +40,7 @@ export default defineConfig({
     '.__dumi-default-navbar-logo{ width: 100px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '@media only screen and (min-width: 767px) {\
-      .code-preview {display: flex; justify-content: space-between;max-width: 1000px}\
+      .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
       .markdown{ padding-left: 380px !important }\
       .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
@@ -399,7 +399,7 @@ export default defineConfig({
             path: '/api/widget/debug',
           },
           {
-            title: '手势捕获',
+            title: '手势',
             path: '/api/widget/gesture',
           },
           {

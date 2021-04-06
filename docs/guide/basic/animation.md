@@ -31,4 +31,4 @@ Kraken 提供了 Transition 的能力以便开发者通过该属性来开发一�
 </div>
 ```
 
-更详细的 API 请参考[变形与过渡](/development/styles/transform)
+更详细的 API 请参考[变形与过渡](/development/styles/transform)。
