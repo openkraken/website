@@ -2,9 +2,11 @@
 
 一个复杂的可交互动态应用往往需要状态管理，以管理数据以及 UI 状态。
 
-## 如果你是 Rax/React 用户
+## 如果你是 Rax / React 用户
 
-在 Rax/React 应用中，我们可以按如下方式使用 [State Hook](https://zh-hans.reactjs.org/docs/hooks-state.html)来管理我们应用内的状态。
+在 Rax / React 应用中，我们可以按如下方式使用 [State Hook](https://zh-hans.reactjs.org/docs/hooks-state.html)来管理我们应用内的状态。
+
+**示例：**
 
 ```js
 import React, { useState } from 'react';
@@ -27,6 +29,8 @@ function Example() {
 ## 如果你是 Vue 用户
 
 在 Vue 应用中，开发者同样可以在 data 中管理组件/应用的状态。
+
+**示例：**
 
 ```html
 <template>

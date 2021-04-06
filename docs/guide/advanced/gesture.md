@@ -42,4 +42,4 @@ Kraken 在 `GestureEvent` 上进行扩展，增加不同手势的一些参数：
 
 通过这些 `GestureEvent` 的参数，我们可以在应用程序中非常方便的监听某个具体元素上的手势事件，来根据参数得知目前手势的一些状态，从而快速开发一个拥有复杂手势交互的应用。
 
-更详细的 API 介绍，请查看[手势](/api/extension/gesture)
+更详细的 API 介绍，请查看[手势](/development/extension/gesture)。

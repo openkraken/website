@@ -9,6 +9,15 @@ export default defineConfig({
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
+    '@keyframes levitate { 0% { transform: translate3d(0,-2.3%,0);} 50% {transform: translate3d(0,2.3%,0);} 100% {transform: translate3d(0,-2.3%,0);}}',
+    '.img-animation{ animation: levitate 5s ease-in-out infinite forwards }',
+    '.__dumi-default-code-block{ background-color: #F9F9F9 }',
+    '.preview-image {box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3); border-radius: 6px; margin: 10px 20px 20px 0; width: 360px;}',
+    '.preview-tips {margin-left: 50px;margin-top: 10px;display: flex; flex-direction: column; max-width: 500px;}',
+    '.preview-code {margin-top: 10px; background-color: #f9f9f9; padding: 10px; color: #000;font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;}',
+    '.preview-qrcode { margin-top: 20px; width: 200px; height: 200px;}',
+    '.preview-title {font-weight: bold; margin: 0 0 20px;}',
+    '.preview-row {margin-bottom: 20px;}',
     '.markdown{ padding-bottom: 200px }',
     'code[class*="language-"], pre[class*="language-"]{ color: #333 }',
     '.markdown :not(pre) code { font-size: 14px }',
@@ -31,6 +40,7 @@ export default defineConfig({
     '.__dumi-default-navbar-logo{ width: 100px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '@media only screen and (min-width: 767px) {\
+      .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
       .markdown{ padding-left: 380px !important }\
       .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
@@ -42,9 +52,14 @@ export default defineConfig({
       .introduction-infos{ width:50%; padding:120px 25px }\
       .footer-block-content{ flex-grow: 1; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
-      .markdown{ padding-right: 200px },\
+      .markdown{ padding-right: 200px }\
+      .sponsors-container{ box-shadow: 0 0 8px srgba(0,0,0,.101562);background-color:#f8fafc; padding: 100px 150px }\
+      .sponsors-list{ display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;align-items: center; }\
+      .sponsors{ margin-left: 50px;margin-right:50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
+      .preview-tips{ display: none; }\
+      .code-preview {display: flex; flex-direction: column;}\
       .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0;display: table;margin: 0 auto }\
       .homepage-subtitle { margin:0 auto;text-align: center;display:table;font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
       .homepage-img { display: none }\
@@ -61,6 +76,9 @@ export default defineConfig({
       .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
       .__dumi-default-navbar-logo{ width: 50px }\
+      .sponsors-container{ padding-bottom: 30px;box-shadow: 0 0 8px rgba(0,0,0,.101562);background-color:#f8fafc; }\
+      .sponsors-list{ padding: 0 30px;width:100%;margin:0 auto;position:relative; }\
+      .sponsors{ vertical-align: middle;margin-top: 20px;margin:0 20px;display: inline-block;width: 100px; }\
     }',
   ],
   scripts: [
@@ -109,35 +127,31 @@ export default defineConfig({
       },
       {
         title: '基础',
-        path: '/basic',
+        path: '/guide/basic',
         children: [
           {
             title: '结构与样式',
-            path: '/basic/style',
+            path: '/guide/basic/style',
           },
           {
             title: '尺寸与边距',
-            path: '/basic/sizing',
+            path: '/guide/basic/sizing',
           },
           {
             title: '颜色与背景',
-            path: '/basic/color',
+            path: '/guide/basic/color',
           },
           {
             title: '布局',
-            path: '/basic/layout',
+            path: '/guide/basic/layout',
           },
           {
-            title: '文本输入',
-            path: '',
-          },
-          {
-            title: '文本输入',
-            path: '',
+            title: '处理文本输入',
+            path: '/guide/basic/text-input',
           },
           {
             title: '多媒体',
-            path: '/basic/multimedia',
+            path: '/guide/basic/multimedia',
           },
           {
             title: '滚动容器',
@@ -314,7 +328,7 @@ export default defineConfig({
             path: '/development/styles/unit',
           },
           {
-            title: '其它',
+            title: '其它样式',
             path: '/development/styles/misc',
           },
           {
@@ -355,7 +369,7 @@ export default defineConfig({
           },
           {
             title: '本地存储',
-            path: '',
+            path: '/development/extension/storage',
           },
         ],
       },
@@ -386,7 +400,7 @@ export default defineConfig({
             path: '/api/widget/debug',
           },
           {
-            title: '手势捕获',
+            title: '手势',
             path: '/api/widget/gesture',
           },
           {

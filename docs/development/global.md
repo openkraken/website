@@ -42,6 +42,8 @@ Kraken 所提供的 Fetch API 兼容 W3C 的协议规范，因此你可以直接
 
 在下面的示例中，我们使用 FetchAPI 去发起一个 GET 请求，这个请求会返回一个 JSON 字符串，我们可以通过调用 response 的`json()`方法将其转成对象，从供后面的代码使用：
 
+**示例：**
+
 ```javascript
 fetch('http://example.com/demo.json')
   .then(function(response) {
@@ -96,7 +98,7 @@ fetch('http://example.com/post', {
 
 当连接建立到时候触发此事件。同时也可以使用 onopen 属性
 
-### 示例
+**示例：**
 
 ```javascript
 // Create WebSocket connection.

@@ -31,7 +31,7 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 
 Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序。
 
-使用一个 Android 手机扫描下面的二维码体验：
+使用一个 Android 手机扫描下面的二维码下载体验：
 
 TODO: Gallary 二维码图片
 
@@ -43,7 +43,7 @@ Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Ra
 
 ### 如果你是 Rax 开发者
 
-那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/use/rax)。
+那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/development/rax)。
 
 ### 如果你是 Vue 开发者
 
@@ -53,4 +53,4 @@ Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Ra
 kraken https://raw.githubusercontent.com/openkraken/samples/main/demos/hello-vue/dist/js/app.js
 ```
 
-当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 Vue 开发一个 Kraken 应用](/guide/use/vue)。
+当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 Vue 开发一个 Kraken 应用](/guide/development/vue)。

@@ -7,7 +7,7 @@
 **示例：**
 
 ```js
-<div style={{ padding: '20px' }}>
+<div>
   {/* 关键字字体颜色 */}
   <div style={{ color: 'blue', fontSize: '16px' }}>关键字颜色</div>
 
@@ -38,4 +38,26 @@
 
 **渲染效果：**
 
-<img src="https://img.alicdn.com/imgextra/i4/O1CN01jmXffj2054jIjrtQQ_!!6000000006797-2-tps-700-776.png" width=350 />
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i1/O1CN01XtPcnn29zFr1Bz0Zl_!!6000000008138-2-tps-720-1324.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-color.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01fBBI8s297fVxwnJoW_!!6000000008021-2-tps-200-200.png" />
+    </div>
+  </div>
+</div>

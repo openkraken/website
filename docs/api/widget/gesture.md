@@ -1,4 +1,4 @@
-# 手势捕获
+# 手势
 
 ## gestureClient
 
@@ -13,7 +13,7 @@
 - `dragEndCallback`  
   手势结束时触发
 
-示例：
+**示例：**
 
 ```dart
 class NativeGestureClient implements GestureClient {

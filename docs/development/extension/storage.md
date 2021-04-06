@@ -4,54 +4,58 @@ Kraken 实现了 `AsyncStorage` API 作为本地存储的接口，与大家熟�
 
 你无需引入任何模块，直接使用 `asyncStorage` 对象就可以进行操作。
 
-> 需要额外注意的是，目前 Kraken 的本地存储还未实现跨域 [Origin](https://developer.mozilla.org/zh-CN/docs/Glossary/Origin) 级别的隔离，未来我们会提供相关支持，你可以关注此 [issue#123](https://github.com/openkraken/kraken/issues/127) 的进展。
+> 需要额外注意的是，目前 Kraken 的本地存储还未实现跨域 [Origin](https://developer.mozilla.org/zh-CN/docs/Glossary/Origin) 级别的隔离，未来我们会提供相关支持，你可以关注此 [issue#127](https://github.com/openkraken/kraken/issues/127) 的进展。
 
 ## API
 
-- `getItem(key)` 读取存储项
+### getItem(key)
 
-需要注意的是，`key` 必须是一个字符串类型的变量。
+读取存储项，需要注意的是，`key` 必须是一个字符串类型的变量。
 
-示例
+**示例：**
 
 ```js
-const value = asyncStorage.getItem('foo');
+const value = await asyncStorage.getItem('foo');
 console.log(`Value is: ${value}`);
 ```
 
-- `setItem(key, value)` 设置存储项
+### setItem(key, value)
 
-`key` 和 `value` 都必须是一个字符串类型的变量。
+设置存储项，`key` 和 `value` 都必须是一个字符串类型的变量。
 
-示例
+**示例：**
 
 ```js
-asyncStorage.setItem('foo', 'bar');
+await asyncStorage.setItem('foo', 'bar');
 ```
 
-- `removeItem(key)` 移除存储项
+### removeItem(key)
 
-`key` 必须是一个字符串类型的变量。
+移除存储项，`key` 必须是一个字符串类型的变量。
 
-示例
+**示例：**
 
 ```js
-asyncStorage.removeItem('foo');
+await asyncStorage.removeItem('foo');
 ```
 
-- `getAllKeys()` 获取所有存储内容的 `key` 的数组
+### getAllKeys()
 
-示例
+获取所有存储内容的 `key` 的数组。
+
+**示例：**
 
 ```js
-const keys = asyncStorage.getAllKeys();
+const keys = await asyncStorage.getAllKeys();
 console.log(`All keys: ${keys}`);
 ```
 
-- `clear()` 清除所有存储的内容
+### clear()
 
-示例
+清除所有存储的内容。
+
+**示例：**
 
 ```js
-asyncStorage.clear();
+await asyncStorage.clear();
 ```

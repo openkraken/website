@@ -4,7 +4,7 @@
 
 与 JavaScript 交换信息的通道。
 
-示例：
+**示例：**
 
 ```dart
 KrakenJavaScriptChannel javaScriptChannel = KrakenJavaScriptChannel();
