@@ -36,7 +36,7 @@
     </style>
     <style>
       .preview-image {
-        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
         border-radius: 6px;
         margin: 10px 20px 20px 0;
         width: 360px;
@@ -44,7 +44,7 @@
     </style>
     <style>
       .preview-tips {
-        margin-left: 10px;
+        margin-left: 50px;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -62,7 +62,6 @@
     </style>
     <style>
       .preview-qrcode {
-        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6);
         margin-top: 20px;
         width: 200px;
         height: 200px;
@@ -195,7 +194,7 @@
       @media only screen and (min-width: 767px) {
         .code-preview {
           display: flex;
-          justify-content: space-between;
+          justify-content: left;
           max-width: 1000px;
         }
         .__dumi-default-menu {
@@ -291,6 +290,9 @@
     </style>
     <style>
       @media only screen and (max-width: 767px) {
+        .preview-tips {
+          display: none;
+        }
         .code-preview {
           display: flex;
           flex-direction: column;
