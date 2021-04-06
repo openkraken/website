@@ -17,7 +17,7 @@
 **渲染效果：**
 
 <div className="code-preview">
-  <img className="preview-image" src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210406114820.jpg" />
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01DRI45K1OB4W5Mz3ix_!!6000000001666-2-tps-360-662.png" />
 
   <div className="preview-tips">
     <div className="preview-title">
