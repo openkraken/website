@@ -4,7 +4,7 @@ Kraken 实现了 `AsyncStorage` API 作为本地存储的接口，与大家熟�
 
 你无需引入任何模块，直接使用 `asyncStorage` 对象就可以进行操作。
 
-> 需要额外注意的是，目前 Kraken 的本地存储还未实现跨域 [Origin](https://developer.mozilla.org/zh-CN/docs/Glossary/Origin) 级别的隔离，未来我们会提供相关支持，你可以关注此 [issue#123](https://github.com/openkraken/kraken/issues/127) 的进展。
+> 需要额外注意的是，目前 Kraken 的本地存储还未实现跨域 [Origin](https://developer.mozilla.org/zh-CN/docs/Glossary/Origin) 级别的隔离，未来我们会提供相关支持，你可以关注此 [issue#127](https://github.com/openkraken/kraken/issues/127) 的进展。
 
 ## API
 
