@@ -24,7 +24,7 @@ npm run build
 kraken ./dist/js/app.js
 ```
 
-<img src="https://gw.alicdn.com/imgextra/i3/O1CN01LiZmbF1acLUTDzWzF_!!6000000003350-2-tps-944-1560.png" width="300px"></img>
+<img class="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01o7N4Y21sm71NGx468_!!6000000005808-2-tps-360-662.png" width="300px"></img>
 
 ## 初始化一个 Vue 项目
 

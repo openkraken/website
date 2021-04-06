@@ -47,7 +47,7 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 
 在 Kraken 中，并不是所有的 DOM 和全局 API 被支持。抛开浏览器的历史包袱，我们实现了大部分现代的、高频使用的、用户友好的 W3C API。
 
-更多详细的支持列表，可以参考站点的 [API 文档](/api/tags)。
+更多详细的支持列表，可以参考站点的 [API 文档](/development/tags)。
 
 ## 样式能力差异
 
