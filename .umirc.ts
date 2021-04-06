@@ -12,10 +12,10 @@ export default defineConfig({
     '@keyframes levitate { 0% { transform: translate3d(0,-2.3%,0);} 50% {transform: translate3d(0,2.3%,0);} 100% {transform: translate3d(0,-2.3%,0);}}',
     '.img-animation{ animation: levitate 5s ease-in-out infinite forwards }',
     '.__dumi-default-code-block{ background-color: #F9F9F9 }',
-    '.preview-image {box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6); border-radius: 6px; margin: 10px 20px 20px 0; width: 360px;}',
+    '.preview-image {box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3); border-radius: 6px; margin: 10px 20px 20px 0; width: 360px;}',
     '.preview-tips {margin-left: 50px;margin-top: 10px;display: flex; flex-direction: column; max-width: 500px;}',
     '.preview-code {margin-top: 10px; background-color: #f9f9f9; padding: 10px; color: #000;font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;}',
-    '.preview-qrcode {box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.6); margin-top: 20px; width: 200px; height: 200px;}',
+    '.preview-qrcode { margin-top: 20px; width: 200px; height: 200px;}',
     '.preview-title {font-weight: bold; margin: 0 0 20px;}',
     '.preview-row {margin-bottom: 20px;}',
     '.markdown{ padding-bottom: 200px }',
@@ -58,6 +58,7 @@ export default defineConfig({
       .sponsors{ margin-left: 50px;margin-right:50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
+      .preview-tips{ display: none; }\
       .code-preview {display: flex; flex-direction: column;}\
       .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0;display: table;margin: 0 auto }\
       .homepage-subtitle { margin:0 auto;text-align: center;display:table;font-weight: 100;font-size: 18px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em;  }\
