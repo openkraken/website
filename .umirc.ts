@@ -419,7 +419,17 @@ export default defineConfig({
       },
       {
         title: '插件 API',
-        path: '/api/plugin',
+        path: '/api/plugins',
+        children: [
+          {
+            title: 'Module API',
+            path: '/api/plugins/module',
+          },
+          {
+            title: 'JavaScript API',
+            path: '/api/plugins/javascript',
+          },
+        ],
       },
     ],
     '/plugins': [
