@@ -44,4 +44,4 @@ kraken http://[your.ip]:3333/kraken/home.js
 kraken http://[your.ip]:3333/kraken/home.js
 ```
 
-<img src="https://gw.alicdn.com/imgextra/i3/O1CN01qoxT0P1m07pG7S2BY_!!6000000004891-2-tps-944-1560.png" width="300px"></img>
+<img class="preview-image" src="//img.alicdn.com/imgextra/i3/O1CN01dfJxos1lnl8Pzjvwa_!!6000000004864-2-tps-720-1324.png" width="300px"></img>
