@@ -7,28 +7,52 @@ Kraken 提供了 Transition 的能力以便开发者通过该属性来开发一�
 **示例：**
 
 ```js
+setTimeout(() => {
+  const f = document.getElementById('foo');
+  f.style.left = '200px';
+  f.style.top = '200px';
+  f.style.background = 'blue';
+}, 1000);
+
 <div
-  style={{ width: '100%', height: '100%' }}
-  onClick={() => {
-    const f = document.getElementById('foo');
-    f.style.left = ev.clientX - 25 + 'px';
-    f.style.top = ev.clientY - 25 + 'px';
+  id="foo"
+  style={{
+    borderRadius: '50px',
+    width: '50px',
+    height: '50px',
+    background: 'red',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    transition: 'all 1s',
   }}
->
-  <div
-    id="foo"
-    style={{
-      borderRadius: '50px',
-      width: '50px',
-      height: '50px',
-      background: 'red',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      transition: 'all 1s',
-    }}
-  ></div>
-</div>
+></div>;
 ```
+
+**渲染效果**：
+
+<div className="code-preview">
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i4/O1CN01HS4uqg1e4gqlXWfxU_!!6000000003818-2-tps-360-662.png" />
+
+  <div className="preview-tips">
+    <div className="preview-title">
+      请选择以下任意一种方式预览：
+    </div>
+    <div className="preview-row">
+      <div>
+        1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
+      </div>
+      <div className="preview-code">
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-animation.js
+      </div>
+    </div>
+    <div className="preview-row">
+      <div>
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+      </div>
+      <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i2/O1CN01LRf0DP24NAqS1zrFH_!!6000000007378-2-tps-400-400.png" />
+    </div>
+  </div>
+</div>
 
 更详细的 API 请参考[变形与过渡](/development/styles/transform)。
