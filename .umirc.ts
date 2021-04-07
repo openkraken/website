@@ -185,7 +185,7 @@ export default defineConfig({
       },
       {
         title: '框架开发',
-        path: 'development',
+        path: '/guide/development',
         children: [
           {
             title: '用 Rax 开发一个 Kraken 应用',
@@ -356,7 +356,7 @@ export default defineConfig({
         ],
       },
       {
-        title: '全局变量与方法',
+        title: '宿主环境',
         path: '/api/global',
       },
     ],

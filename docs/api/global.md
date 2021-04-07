@@ -3,9 +3,9 @@ order: 1
 toc: menu
 ---
 
-# 全局变量与方法
+# 宿主环境
 
-跟浏览器的 BOM(Browser Object Model) 一样，Kraken 也提供了一系列宿主环境的全局变量与方法。
+跟浏览器的 BOM(Browser Object Model) 一样，Kraken 也提供了一系列宿主环境的变量与方法。
 
 ## 定时
 
