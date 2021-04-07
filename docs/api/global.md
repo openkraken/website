@@ -85,39 +85,6 @@ fetch('http://example.com/post', {
 
 使用 `addEventListener` 来绑定事件，使用 `removeEventListener` 来取消事件绑定
 
-## WebSocket
-
-#### close
-
-当连接中断，触发此事件。同时也可以使用 onclose 属性
-
-#### error
-
-当连接异常时触发此事件。同时也可以使用 onerror 属性
-
-#### message
-
-当接收到数据当时候触发此事件。同时也可以使用 onmessage 属性
-
-#### open
-
-当连接建立到时候触发此事件。同时也可以使用 onopen 属性
-
-**示例：**
-
-```javascript
-// Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
-// Connection opened
-socket.addEventListener('open', function(event) {
-  socket.send('Hello Server!');
-});
-// Listen for messages
-socket.addEventListener('message', function(event) {
-  console.log('Message from server ', event.data);
-});
-```
-
 ## URL
 
 `URL` 可以作为一个构造函数被调用来构造 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象。
