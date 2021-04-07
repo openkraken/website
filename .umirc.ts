@@ -39,6 +39,8 @@ export default defineConfig({
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
     '.__dumi-default-navbar-logo{ width: 100px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
+    '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
+    '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
     '@media only screen and (min-width: 767px) {\
       .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
@@ -55,7 +57,7 @@ export default defineConfig({
       .markdown{ padding-right: 200px }\
       .sponsors-container{ box-shadow: 0 0 8px srgba(0,0,0,.101562);background-color:#f8fafc; padding: 100px 150px }\
       .sponsors-list{ display:flex;flex-direction:row;max-width:1200px;width:100%;margin:0 auto;position:relative;align-items: center; }\
-      .sponsors{ filter: grayscale(100%);opacity: 0.66;margin: 20px 50px;width:200px;vertical-align: middle; }\
+      .sponsors{ margin: 20px 50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
       .preview-tips{ display: none; }\
