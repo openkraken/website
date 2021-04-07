@@ -64,7 +64,7 @@ Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/dev
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01ZH38q51czMd4AIfb3_!!6000000003671-2-tps-200-200.png" />
     </div>

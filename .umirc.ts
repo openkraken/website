@@ -26,6 +26,7 @@ export default defineConfig({
     '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
+    '.__dumi-default-layout-features{ max-width: 1180px !important }',
     'ul li a::before, nav > span > a.active::after { opacity: 0 !important; background-color: #F6AF1F !important }',
     '.__dumi-default-layout-content{ max-width: none !important }',
     '.__dumi-default-layout[data-route="/"] .markdown{ padding-bottom: 0px !important;padding-left: 0px !important; padding-right: 0px !important }',
@@ -186,24 +187,6 @@ export default defineConfig({
         ],
       },
       {
-        title: '框架开发',
-        path: '/guide/development',
-        children: [
-          {
-            title: '用 Rax 开发一个 Kraken 应用',
-            path: '/guide/development/rax',
-          },
-          {
-            title: '用 Vue 开发一个 Kraken 应用',
-            path: '/guide/development/vue',
-          },
-          {
-            title: '用 React 开发一个 Kraken 应用',
-            path: '/guide/development/react',
-          },
-        ],
-      },
-      {
         title: '进阶',
         path: '/guide/advanced',
         children: [
@@ -230,6 +213,24 @@ export default defineConfig({
           {
             title: '测算 Kraken 的运行性能',
             path: '/guide/advanced/measure-performance',
+          },
+        ],
+      },
+      {
+        title: '框架开发',
+        path: '/guide/development',
+        children: [
+          {
+            title: '用 Rax 开发 Kraken 应用',
+            path: '/guide/development/rax',
+          },
+          {
+            title: '用 Vue 开发 Kraken 应用',
+            path: '/guide/development/vue',
+          },
+          {
+            title: '用 React 开发 Kraken 应用',
+            path: '/guide/development/react',
           },
         ],
       },
@@ -274,6 +275,44 @@ export default defineConfig({
       {
         title: '标签',
         path: '/api/tags',
+        children: [
+          {
+            title: '分区根元素',
+            path: '/api/tags/sectioning-root',
+          },
+          {
+            title: '内容分区',
+            path: '/api/tags/content-sectioning',
+          },
+          {
+            title: '文本内容',
+            path: '/api/tags/text-content',
+          },
+          {
+            title: '内联文本语义',
+            path: '/api/tags/inline-text-semantics',
+          },
+          {
+            title: '表单',
+            path: '/api/tags/forms',
+          },
+          {
+            title: '图片和多媒体',
+            path: '/api/tags/image-and-multimedia',
+          },
+          {
+            title: '编辑标识',
+            path: '/api/tags/demarcating-edits',
+          },
+          {
+            title: '内嵌内容',
+            path: '/api/tags/embedded-content',
+          },
+          {
+            title: '脚本',
+            path: '/api/tags/scripting',
+          },
+        ],
       },
       {
         title: '样式',
@@ -359,7 +398,41 @@ export default defineConfig({
       },
       {
         title: '宿主环境',
-        path: '/api/global',
+        path: '/api/host-environment',
+        children: [
+          {
+            title: 'Timers',
+            path: '/api/host-environment/timers',
+          },
+          {
+            title: 'requestAnimationFrame',
+            path: '/api/host-environment/requestanimationframe',
+          },
+          {
+            title: 'Screen',
+            path: '/api/host-environment/screen',
+          },
+          {
+            title: 'fetch',
+            path: '/api/host-environment/fetch',
+          },
+          {
+            title: 'XMLHttpRequest',
+            path: '/api/host-environment/xmlhttprequest',
+          },
+          {
+            title: 'URL',
+            path: '/api/host-environment/url',
+          },
+          {
+            title: 'URLSearchParams',
+            path: '/api/host-environment/urlsearchparams',
+          },
+          {
+            title: 'Console',
+            path: '/api/host-environment/console',
+          },
+        ],
       },
     ],
     '/plugins': [

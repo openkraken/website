@@ -1,4 +1,4 @@
-# 用 Rax 开发一个 Kraken 应用
+# 用 Rax 开发 Kraken 应用
 
 ## 初始化项目
 

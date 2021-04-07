@@ -1,4 +1,4 @@
-# 用 react 开发一个 Kraken 应用
+# 用 react 开发 Kraken 应用
 
 ## 示例应用
 
