@@ -82,3 +82,33 @@ module.exports = {
   };
 </script>
 ```
+
+# 状态管理
+
+一个复杂的可交互动态应用往往需要状态管理，以管理数据以及 UI 状态。
+
+在 Vue 应用中，开发者同样可以在 data 中管理组件/应用的状态。
+
+**示例：**
+
+```html
+<template>
+  <div>
+    <button v-on:click="counter += 1">Add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {
+        counter: 0,
+      };
+    },
+  };
+</script>
+```
+
+同样的，对于复杂的大型应用，我们更推荐使用 Vue 官方提供的 [Vuex](https://vuex.vuejs.org/)来管理应用的状态。

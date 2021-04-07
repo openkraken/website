@@ -45,3 +45,29 @@ kraken http://[your.ip]:3333/kraken/home.js
 ```
 
 <img class="preview-image" src="//img.alicdn.com/imgextra/i3/O1CN01dfJxos1lnl8Pzjvwa_!!6000000004864-2-tps-720-1324.png" width="300px"></img>
+
+## 状态管理
+
+一个复杂的可交互动态应用往往需要状态管理，以管理数据以及 UI 状态。
+
+在 Rax 应用中，我们可以按如下方式使用 [State Hook](https://zh-hans.reactjs.org/docs/hooks-state.html)来管理我们应用内的状态。
+
+**示例：**
+
+```js
+import { useState } from 'rax';
+
+function Example() {
+  // 声明一个叫 "count" 的 state 变量
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+当然，这样的方式会导致状态分散到各个组件中，不同组件之间需要通过通信的方式来保证数据的传递以及同步。当所开发的应用变大后，复杂度也会明显提高，并不利于开发者在大型应用中做状态管理。对于大型应用，我们 Rax 官方推荐使用的状态管理库 [icestore](https://github.com/ice-lab/icestore) 。
