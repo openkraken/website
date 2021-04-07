@@ -29,7 +29,7 @@ export default defineConfig({
     'ul li a::before, nav > span > a.active::after { opacity: 0 !important; background-color: #F6AF1F !important }',
     '.__dumi-default-layout-content{ max-width: none !important }',
     '.__dumi-default-layout[data-route="/"] .markdown{ padding-bottom: 0px !important;padding-left: 0px !important; padding-right: 0px !important }',
-    '.__dumi-default-layout-features{ max-width: none !important }',
+    '.__dumi-default-layout-features{ max-width: 1180px }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
     '::-webkit-scrollbar{ display:none }',
     '.__dumi-default-layout-footer-meta { display: none !important }',

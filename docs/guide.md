@@ -39,7 +39,7 @@ TODO: Gallary 二维码图片
 
 Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Rax 开发者还是 React 开发者，都可以使用你最熟悉的框架来开发一个 Kraken 应用。
 
-![](https://img.alicdn.com/imgextra/i1/O1CN018a3mFu28GXZC6hTVQ_!!6000000007905-2-tps-1080-418.png)
+![](https://img.alicdn.com/imgextra/i1/O1CN017l9JYV1HHIam1kLgC_!!6000000000732-2-tps-1097-263.png)
 
 ### 如果你是 Rax 开发者
 
