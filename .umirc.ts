@@ -54,8 +54,8 @@ export default defineConfig({
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
       .markdown{ padding-right: 200px }\
       .sponsors-container{ box-shadow: 0 0 8px srgba(0,0,0,.101562);background-color:#f8fafc; padding: 100px 150px }\
-      .sponsors-list{ display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;align-items: center; }\
-      .sponsors{ margin-left: 50px;margin-right:50px;width:200px;vertical-align: middle; }\
+      .sponsors-list{ flex-wrap: wrap;display:flex;flex-direction:row;max-width:1200px;width:100%;margin:0 auto;position:relative;align-items: center; }\
+      .sponsors{ margin: 20px 50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
       .preview-tips{ display: none; }\
@@ -194,6 +194,10 @@ export default defineConfig({
           {
             title: '用 Vue 开发一个 Kraken 应用',
             path: '/guide/development/vue',
+          },
+          {
+            title: '用 React 开发一个 Kraken 应用',
+            path: '/guide/development/react',
           },
         ],
       },

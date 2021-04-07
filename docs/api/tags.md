@@ -1,5 +1,4 @@
 ---
-title: Config
 order: 1
 toc: menu
 ---

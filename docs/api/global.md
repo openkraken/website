@@ -1,3 +1,8 @@
+---
+order: 1
+toc: menu
+---
+
 # 全局变量与方法
 
 跟浏览器的 BOM(Browser Object Model) 一样，Kraken 也提供了一系列宿主环境的全局变量与方法。
@@ -38,8 +43,6 @@ Kraken 所提供的 Fetch API 兼容 W3C 的协议规范，因此你可以直接
 
 需要注意的是在浏览器中，Fetch 会受到浏览器的[同源策略安全限制](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)，但是在 Kraken 并没有提供类似浏览器那样的安全限制，所以你可以使用 Fetch 请求网络上的任何一个 API，但是需要注意的是，一定确保执行 Fetch 的代码是可信任的，否则将会引起安全问题。
 
-### 示例
-
 在下面的示例中，我们使用 FetchAPI 去发起一个 GET 请求，这个请求会返回一个 JSON 字符串，我们可以通过调用 response 的`json()`方法将其转成对象，从供后面的代码使用：
 
 **示例：**
@@ -78,9 +81,11 @@ fetch('http://example.com/post', {
   });
 ```
 
-### Events
+## Events
 
 使用 `addEventListener` 来绑定事件，使用 `removeEventListener` 来取消事件绑定
+
+## WebSocket
 
 #### close
 
@@ -117,7 +122,7 @@ socket.addEventListener('message', function(event) {
 
 `URL` 可以作为一个构造函数被调用来构造 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象。
 
-### 构造器
+#### 构造器
 
 `URL()` 构造函数返回一个新创建的 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象，表示由一组参数定义的 URL。
 如果给定的基本 URL 或生成的 URL 不是有效的 URL 链接，则会抛出一个异常。
@@ -146,7 +151,7 @@ var k = new URL('http://www.example.com', 'https://developers.mozilla.com');
 var l = new URL('http://www.example.com', b); // Creates a URL pointing to 'http://www.example.com/'
 ```
 
-### 属性
+#### 属性
 
 - `href`
   包含完整 URL 的 String。
@@ -173,7 +178,7 @@ var l = new URL('http://www.example.com', b); // Creates a URL pointing to 'http
 - `searchParams`
   返回一个用来访问当前 URL GET 请求参数的 URLSearchParams 对象。
 
-### 方法
+#### 方法
 
 - `toString()`
   返回一个包含完整 URL 的 [String](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString)。它是 [URL.href](https://developer.mozilla.org/zh-CN/docs/Web/API/URLUtils/href) 的别名，但区别在于 toString 不能用于修改值。
@@ -182,7 +187,7 @@ var l = new URL('http://www.example.com', b); // Creates a URL pointing to 'http
 
 `URLSearchParams` 接口定义了一些实用的方法来处理 URL 的查询字符串。
 
-### 构造函数
+#### 构造函数
 
 `URLSearchParams()` 构造器创建并返回一个新的 [URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams) 对象。 开头的`"?"` 字符会被忽略。
 
@@ -213,7 +218,7 @@ const params3 = new URLSearchParams([
 const params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
-### 方法
+#### 方法
 
 - `append()` 插入一个指定的键/值对作为新的搜索参数。
 
