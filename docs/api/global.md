@@ -7,7 +7,7 @@ toc: menu
 
 跟浏览器的 BOM(Browser Object Model) 一样，Kraken 也提供了一系列宿主环境的变量与方法。
 
-## 定时
+## 定时器
 
 Kraken 支持与浏览器相同的用于定时的 API，包含：
 
@@ -81,19 +81,19 @@ fetch('http://example.com/post', {
   });
 ```
 
-## Events
+#### 事件
 
 使用 `addEventListener` 来绑定事件，使用 `removeEventListener` 来取消事件绑定
 
 ## XMLHttpRequest
 
-### 接口说明
+#### 接口说明
 
 `XMLHttpRequest` 接口用于与服务器交互。
 
-### 构造函数
+#### 构造函数
 
-#### XMLHttpRequest()
+**XMLHttpRequest()**
 
 创建并返回一个 `XMLHttpRequest` 对象。
 
@@ -101,66 +101,54 @@ fetch('http://example.com/post', {
 const myXHR = new XMLHttpRequest();
 ```
 
-### 属性
+#### 属性
 
-- `onabort`
+- `onabort`  
   当请求被停止时触发，例如当程序调用 `XMLHttpRequest.abort()` 时。回调入参 `event` 遵循 `ProgressEvent`。
 
-- `onerror`
+- `onerror`  
   当请求遭遇错误时触发。回调入参 event 遵循 `ProgressEvent`。
 
-- `onload`
+- `onload`  
   当请求成功完成时触发。回调入参 event 遵循 `ProgressEvent`。
 
-- `onloadend`
+- `onloadend`  
   当请求结束时触发，无论请求成功还是失败。回调入参 event 遵循 `ProgressEvent`。
 
-- `onloadstart`
+- `onloadstart`  
   当开始传送数据时被调用。回调入参 event 遵循 `ProgressEvent`。
 
-- `onloadend`
+- `onloadend`  
   当请求接收到更多数据时，周期性地触发。回调入参 event 遵循 `ProgressEvent`。
 
-- `ontimeout`
+- `ontimeout`  
   在预设时间内没有接收到响应时触发。回调入参 event 遵循 `ProgressEvent`。
 
-- `onreadystatechange`
+- `onreadystatechange`  
   当 readyState 属性发生变化时，调用的回调函数。回调入参 event 遵循 `ProgressEvent`。
 
-- `onreadystatechange`
+- `onreadystatechange`  
   当 readyState 属性发生变化时，调用的回调函数。回调入参 event 遵循 `ProgressEvent`。
 
-- `readyState`
+- `readyState`  
   返回一个无符号短整型数字，代表请求的状态码。
 
-- `responseType`
-  返回响应类型的枚举值。
-
-- `responseURL`
-  返回经过序列化的响应 URL，如果该 URL 为空，则返回空字符串。如果 URL 有锚点，则位于 URL # 后面的内容会被删除。如果 URL 有重定向， `responseURL` 的值会是经过多次重定向后的最终 URL 。
-
-- `response`
+- `response`  
   返回整个响应实体。其类型取决于 `responseType` 的值。你可以尝试设置 `responseType` 的值，以便通过特定的类型请求数据。如果请求尚未完成或未成功，则取值是 null 。response 可能的类型包括： ArrayBuffer、Blob、Document、String 或者一个 JavaScript 对象。
 
-- `responseText`
+- `responseText`  
   返回响应文本，如果请求失败则返回 null，如果请求还未发送，则返回 ''。
 
-- `responseXML`
+- `responseXML`  
   返回一个包含请求检索的 HTML 或 XML 的 `Document`。如果请求未成功，尚未发送，或者检索的数据无法正确解析为 XML 或 HTML，则为 null。默认是当作 “text / xml” 来解析。当 `responseType` 设置为 `document` 并且请求已异步执行时，响应将被当作 “text / html” 来解析。
 
-- `status`
+- `status`  
   返回一个无符号短整型数字，代表请求的响应状态。status 码是标准的 [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)。在请求完成前，status 的值为 0。
 
-- `statusText`
+- `statusText`  
   返回一个字符串，代表请求的响应状态的文本信息。如果请求的状态 `readyState` 的值为 UNSENT 或者 OPENED ，则这个属性的值将会是一个空字符串。如果服务器未明确指定一个状态文本信息，则 `statusText` 的值将会被自动赋值为 OK。
 
-- `timeout`
-  一个无符号长整型数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。默认值为 0，意味着没有超时。
-
-- `upload`
-  返回一个 `XMLHttpRequestUpload` 对象，用来表示上传的进度。这个对象是不透明的，但是作为一个 `XMLHttpRequestEventTarget` ，可以通过对其绑定事件来追踪它的进度。
-
-### 方法
+#### 方法
 
 - `abort`  
   如果请求已被发出，则立刻中止请求。当一个请求被终止，它的 `readyState` 将被置为 0（XMLHttpRequest.UNSENT），并且请求的 `status` 置为 0。
@@ -177,7 +165,7 @@ const myXHR = new XMLHttpRequest();
 - `send`  
   用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。`send()` 方法接受一个可选的参数，作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。如果没有使用 `setRequestHeader()` 方法设置 Accept 头信息，则会发送带有 "_ / _" 的 Accept 头信息。
 
-### 事件
+#### 事件
 
 - `abort`  
   当请求遭遇错误时触发。
@@ -188,19 +176,10 @@ const myXHR = new XMLHttpRequest();
 - `loadend`  
   当请求结束时触发，无论请求成功还是失败。
 
-- `loadend`  
-  当请求结束时触发，无论请求成功还是失败。
-
 - `loadstart`  
   当接收到响应数据时触发。
 
-- `progress`  
-  当请求接收到更多数据时，周期性地触发。
-
-- `timeout`  
-  在预设时间内没有接收到响应时触发。
-
-### 参考
+#### 参考
 
 - [链接](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
 
@@ -208,7 +187,7 @@ const myXHR = new XMLHttpRequest();
 
 `URL` 可以作为一个构造函数被调用来构造 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象。
 
-#### 构造器
+#### 构造函数
 
 `URL()` 构造函数返回一个新创建的 [URL](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象，表示由一组参数定义的 URL。
 如果给定的基本 URL 或生成的 URL 不是有效的 URL 链接，则会抛出一个异常。
