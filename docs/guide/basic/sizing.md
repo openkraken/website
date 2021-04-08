@@ -6,7 +6,7 @@
 
 对应 CSS 属性来说，`width`, `height` 描述标签的宽高，`padding` 描述标签的内边距，`margin` 描述标签的外边距。
 
-Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/development/styles/sizing)。
+Kraken 支持的与尺寸边距相关的所有属性请参考[开发文档](/api/styles/sizing)。
 
 **示例：**
 

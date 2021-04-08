@@ -109,7 +109,7 @@ Kraken 支持了前三种目前 Web 开发中主流使用的布局方式，以�
 
 于是在 CSS3 标准中引入了弹性盒（Flexbox）的布局方式，解决了诸多之前布局方式的局限。详细的概念介绍请参考此[文档](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
 
-Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/development/styles/layout#弹性盒布局)。
+Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/api/styles/layout#弹性盒布局)。
 
 以下通过示例介绍简单用法：
 

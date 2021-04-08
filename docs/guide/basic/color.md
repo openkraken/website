@@ -1,8 +1,8 @@
 # 颜色与背景
 
-颜色 `color` 作用于字体上，背景 `background` 则可作用于任意元素（包含文本），Kraken 支持的颜色与背景相关属性请参考对应的[开发文档](/development/styles/background)。
+颜色 `color` 作用于字体上，背景 `background` 则可作用于任意元素（包含文本），Kraken 支持的颜色与背景相关属性请参考对应的[开发文档](/api/styles/background)。
 
-对于颜色同时支持颜色关键字，rgba，16 进制等多种格式，具体请参考对应的[开发文档](/development/styles/unit#css-颜色单位)。
+对于颜色同时支持颜色关键字，rgba，16 进制等多种格式，具体请参考对应的[开发文档](/api/styles/unit#css-颜色单位)。
 
 **示例：**
 

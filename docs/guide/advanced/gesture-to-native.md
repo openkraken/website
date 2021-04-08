@@ -45,4 +45,4 @@ Kraken kraken = Kraken(
 );
 ```
 
-详细的 API 调用见 [Kraken Widget](/api/widget/gesture)。
+详细的 API 调用见 [开发文档](/guide/native/widget)。

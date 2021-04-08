@@ -45,7 +45,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 
 ## 视频
 
-视频不属于 Kraken 原生支持的能力，需要先安装这个 [kraken_video_player 插件](https://pub.dev/packages/kraken_video_player)来支持，详细安装方法请参考[开发文档](/plugins/kraken_video_player)。
+视频不属于 Kraken 原生支持的能力，需要先安装这个 [kraken_video_player 插件](https://pub.dev/packages/kraken_video_player)来支持，详细安装方法请参考[开发文档](/plugins/official/kraken_video_player)。
 
 **示例：**
 

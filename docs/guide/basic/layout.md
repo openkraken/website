@@ -109,7 +109,7 @@ Kraken 支持了前三种目前 Web 开发中主流使用的布局方式，以�
 
 于是在 CSS3 标准中引入了弹性盒（Flexbox）的布局方式，解决了诸多之前布局方式的局限。详细的概念介绍请参考此[文档](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
 
-Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/development/styles/layout#弹性盒布局)。
+Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/api/styles/layout#弹性盒布局)。
 
 以下通过示例介绍简单用法：
 
@@ -240,7 +240,7 @@ CSS 提供了五种定位方式：
 
 5. sticky: 粘性定位，标签根据正常文档流进行定位，然后相对它的最近滚动祖先和  [containing block](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block) (最近块级祖先)，基于 top, right, bottom 和  left 的值进行偏移。偏移值不会影响任何其他标签的位置。
 
-Kraken 支持的与定位相关的所有属性请参考[开发文档](/development/styles/position)。
+Kraken 支持的与定位相关的所有属性请参考[开发文档](/api/styles/position)。
 
 **示例：**
 

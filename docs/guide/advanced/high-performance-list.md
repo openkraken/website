@@ -100,4 +100,4 @@ export default function ScrollView(props) {
 
 ## API 参考
 
-更多细节请跳转到 [Sliver API](/development/extension/sliver) 文档查看。
+更多细节请跳转到 [Sliver API](/api/increase/sliver) 文档查看。

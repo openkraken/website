@@ -30,7 +30,7 @@ root.appendChild(document.createTextNode('Hello World!'));
 document.body.appendChild(root);
 ```
 
-相比 HTML，JS 具有更灵活的特性。由于实现了标准的 DOM API，你可以使用前端社区中大多数优秀的前端框架，如 Vue、Rax、React 等等，具体可以参考[介绍](/guide)。
+相比 HTML，JS 具有更灵活的特性。由于实现了标准的 DOM API，你可以使用前端社区中大多数优秀的前端框架，如 Vue、Rax、React 等等，具体可以参考[开发文档](/guide)。
 
 ## 有限的 CSS 支持
 
@@ -55,4 +55,4 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 
 ## 本地存储
 
-在浏览器中，我们经常使用 `LocalStorage` 进行本地数据的存储，而在 Kraken 中则使用 `AsyncStorage` 实现本地存储，它提供了更高效的异步 API 以防止 I/O 阻塞 UI 线程，更多信息可以查看[异步本地存储](/api/extension/storage)。
+在浏览器中，我们经常使用 `LocalStorage` 进行本地数据的存储，而在 Kraken 中则使用 `AsyncStorage` 实现本地存储，它提供了更高效的异步 API 以防止 I/O 阻塞 UI 线程，更多信息可以查看[异步本地存储](/api/increase/storage)。

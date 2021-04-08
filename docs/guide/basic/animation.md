@@ -55,4 +55,4 @@ setTimeout(() => {
   </div>
 </div>
 
-更详细的 API 请参考[变形与过渡](/development/styles/transform)。
+更详细的 API 请参考[开发文档](/api/styles/transform)。

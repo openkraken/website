@@ -32,11 +32,11 @@ fetch(url, {
   .then(json => console.log(json));
 ```
 
-更多信息可以参考[全局变量与方法](/api/global)。
+更多信息可以参考[开发文档](/api/host-environment/fetch)。
 
 ## WebSocket
 
-HTTP 的网络通信只能由客户端发起，而 WebSocket 则提供了双向通信的支持。WebSocket 的 API 基于事件通信的模型，在 Kraken 中只要提前加载 [WebSocket 插件](/plugin/websocket) 就可以使用了。
+HTTP 的网络通信只能由客户端发起，而 WebSocket 则提供了双向通信的支持。WebSocket 的 API 基于事件通信的模型，在 Kraken 中只要提前加载 [WebSocket 插件](https://pub.dev/packages/kraken_websocket) 就可以使用了。
 
 ```js
 const ws = new WebSocket('wss://echo.websocket.org');
@@ -56,7 +56,7 @@ ws.onclose = function(evt) {
 };
 ```
 
-更多细节可以参考 [WebSocket](/plugins/kraken_websocket)。
+更多细节可以参考 [开发文档](/plugins/official/kraken_websocket)。
 
 ## 使用 XMLHttpRequest
 
