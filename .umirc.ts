@@ -235,6 +235,10 @@ export default defineConfig({
         ],
       },
       {
+        title: 'Kraken Gallery',
+        path: 'https://github.com/openkraken/gallery',
+      },
+      {
         title: '客户端集成',
         path: '/guide/native',
         children: [
