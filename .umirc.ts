@@ -5,7 +5,7 @@ export default defineConfig({
   locales: [['zh-CN', '中文']],
   title: ' ',
   logo:
-    'https://img.alicdn.com/imgextra/i1/O1CN01Fch4UU1W9Fs6HYq8G_!!6000000002745-2-tps-490-190.png',
+    'https://img.alicdn.com/imgextra/i1/O1CN01CUE2IL1FdAGnYPawX_!!6000000000509-2-tps-350-116.png',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
@@ -38,7 +38,7 @@ export default defineConfig({
     '.__dumi-default-layout { padding-left: 0px !important;padding-right: 0px !important; padding-bottom: 0px !important }',
     '.footer-container a { color: #FFFFFF !important }',
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
-    '.__dumi-default-navbar-logo{ width: 100px }',
+    '.__dumi-default-navbar-logo{ width: 30px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
@@ -233,6 +233,10 @@ export default defineConfig({
             path: '/guide/development/react',
           },
         ],
+      },
+      {
+        title: 'Kraken Gallery',
+        path: 'https://github.com/openkraken/gallery',
       },
       {
         title: '客户端集成',

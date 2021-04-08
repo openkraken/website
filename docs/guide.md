@@ -6,7 +6,7 @@ Kraken 是一款基于 W3C 标准的高性能渲染引擎。Kraken 底层基于 
 
 ## 快速体验 Kraken
 
-**macOS 用户**
+#### macOS 用户
 
 Kraken CLI 是面向前端开发者的桌面端 Kraken 应用，提供调试和预览能力。
 
@@ -27,13 +27,15 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 
 如果你想要调试，可以在 Chrome 中打开一个新的 Tab 页，然后粘贴即可访问 Chrome DevTools 来调试 Kraken 应用。
 
-**Windows 用户**
+#### Windows 用户
 
-Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序。
+Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序，请使用安卓手机下载 [Kraken Gallery](https://github.com/openkraken/gallery) 以体验 Kraken 在移动端的表现。
 
-使用一个 Android 手机扫描下面的二维码下载体验：
+#### Kraken Playground
 
-TODO: Gallary 二维码图片
+使用一个 Android 手机扫描下面的二维码下载 Kraken Playground，以体验各个文档中的示例。
+
+<img src="https://img.alicdn.com/imgextra/i3/O1CN01FGQcF91hKD7T5drVR_!!6000000004258-2-tps-400-400.png" width="200px"></img>
 
 ## 创建一个 Kraken 应用
 
