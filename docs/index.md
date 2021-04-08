@@ -71,7 +71,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
 
 <div class="sponsors-container">
   <div style="display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative">
-    <div style="font-size: 1.875rem;font-weight: 500;margin: 50px auto;">合作与赞助</div>
+    <div style="font-size: 1.875rem;font-weight: 500;margin: 50px auto;">使用与赞助</div>
   </div>
   <div class="sponsors-list" >
       <div class="sponsors">
@@ -85,6 +85,12 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       </div>
       <div class="sponsors">
         <img src="//gw.alicdn.com/tfs/TB1LW.Xfvb2gK0jSZK9XXaEgFXa-190-27.png" />
+      </div>
+      <div class="sponsors">
+        <img src="//img.alicdn.com/imgextra/i3/O1CN01wwEQZz1xrfuVHbvwZ_!!6000000006497-2-tps-1025-338.png" />
+      </div>
+      <div class="sponsors">
+        <div style="width: 100px;font-size: 22px;margin: 0px auto;color: rgb(134, 134, 134);">虚位以待</div>
       </div>
   </div>
 </div>

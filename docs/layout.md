@@ -240,7 +240,7 @@ CSS 提供了五种定位方式：
 
 5. sticky: 粘性定位，标签根据正常文档流进行定位，然后相对它的最近滚动祖先和  [containing block](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block) (最近块级祖先)，基于 top, right, bottom 和  left 的值进行偏移。偏移值不会影响任何其他标签的位置。
 
-Kraken 支持的与定位相关的所有属性请参考[开发文档](/api/styles/position)。
+Kraken 支持的与定位相关的所有属性请参考[开发文档](/development/styles/position)。
 
 **示例：**
 

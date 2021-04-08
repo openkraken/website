@@ -26,10 +26,11 @@ export default defineConfig({
     '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     'ul li > span::before { background-color: #F6AF1F !important }',
+    '.__dumi-default-layout-features{ max-width: 1180px !important }',
     'ul li a::before, nav > span > a.active::after { opacity: 0 !important; background-color: #F6AF1F !important }',
     '.__dumi-default-layout-content{ max-width: none !important }',
     '.__dumi-default-layout[data-route="/"] .markdown{ padding-bottom: 0px !important;padding-left: 0px !important; padding-right: 0px !important }',
-    '.__dumi-default-layout-features{ max-width: none !important }',
+    '.__dumi-default-layout-features{ max-width: 1180px }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
     '::-webkit-scrollbar{ display:none }',
     '.__dumi-default-layout-footer-meta { display: none !important }',
@@ -39,6 +40,8 @@ export default defineConfig({
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
     '.__dumi-default-navbar-logo{ width: 100px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
+    '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
+    '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
     '@media only screen and (min-width: 767px) {\
       .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
@@ -54,8 +57,8 @@ export default defineConfig({
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
       .markdown{ padding-right: 200px }\
       .sponsors-container{ box-shadow: 0 0 8px srgba(0,0,0,.101562);background-color:#f8fafc; padding: 100px 150px }\
-      .sponsors-list{ display:flex;flex-direction:row;max-width:1180px;width:100%;margin:0 auto;position:relative;align-items: center; }\
-      .sponsors{ margin-left: 50px;margin-right:50px;width:200px;vertical-align: middle; }\
+      .sponsors-list{ display:flex;flex-direction:row;max-width:1200px;width:100%;margin:0 auto;position:relative;align-items: center; }\
+      .sponsors{ margin: 20px 50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
       .preview-tips{ display: none; }\
@@ -103,15 +106,11 @@ export default defineConfig({
       path: '/guide',
     },
     {
-      title: '开发',
-      path: '/development',
-    },
-    {
       title: 'API',
       path: '/api',
     },
     {
-      title: '常用插件',
+      title: '插件',
       path: '/plugins',
     },
     {
@@ -177,35 +176,13 @@ export default defineConfig({
             title: '动画',
             path: '/guide/basic/animation',
           },
-        ],
-      },
-      {
-        title: '开发',
-        path: 'development',
-        children: [
-          {
-            title: '准备环境',
-            path: '/guide/development/setup',
-          },
-          {
-            title: '用 Rax 开发一个 Kraken 应用',
-            path: '/guide/development/rax',
-          },
-          {
-            title: '用 Vue 开发一个 Kraken 应用',
-            path: '/guide/development/vue',
-          },
-          {
-            title: '状态管理',
-            path: '/guide/development/state',
-          },
           {
             title: '前端调试',
-            path: '/guide/development/debug',
+            path: '/guide/basic/debug',
           },
           {
             title: '与浏览器的差异',
-            path: '/guide/development/difference-to-web',
+            path: '/guide/basic/difference-to-web',
           },
         ],
       },
@@ -240,7 +217,25 @@ export default defineConfig({
         ],
       },
       {
-        title: '客户端接入',
+        title: '框架开发',
+        path: '/guide/development',
+        children: [
+          {
+            title: '用 Rax 开发 Kraken 应用',
+            path: '/guide/development/rax',
+          },
+          {
+            title: '用 Vue 开发 Kraken 应用',
+            path: '/guide/development/vue',
+          },
+          {
+            title: '用 React 开发 Kraken 应用',
+            path: '/guide/development/react',
+          },
+        ],
+      },
+      {
+        title: '客户端集成',
         path: '/guide/native',
         children: [
           {
@@ -251,19 +246,9 @@ export default defineConfig({
             title: '在原生 App 中集成 Kraken',
             path: '/guide/native/interpolation-app',
           },
-        ],
-      },
-      {
-        title: '插件',
-        path: '/guide/plugin',
-        children: [
           {
-            title: '什么是插件',
-            path: '/guide/plugin/introduction',
-          },
-          {
-            title: '开发插件',
-            path: '/guide/plugin/development',
+            title: 'Kraken Widget',
+            path: '/guide/native/widget',
           },
         ],
       },
@@ -286,168 +271,206 @@ export default defineConfig({
         ],
       },
     ],
-    '/development': [
+    '/api': [
       {
         title: '标签',
-        path: '/development/tags',
+        path: '/api/tags',
+        children: [
+          {
+            title: '分区根元素',
+            path: '/api/tags/sectioning-root',
+          },
+          {
+            title: '内容分区',
+            path: '/api/tags/content-sectioning',
+          },
+          {
+            title: '文本内容',
+            path: '/api/tags/text-content',
+          },
+          {
+            title: '内联文本语义',
+            path: '/api/tags/inline-text-semantics',
+          },
+          {
+            title: '表单',
+            path: '/api/tags/forms',
+          },
+          {
+            title: '图片和多媒体',
+            path: '/api/tags/image-and-multimedia',
+          },
+          {
+            title: '编辑标识',
+            path: '/api/tags/demarcating-edits',
+          },
+          {
+            title: '内嵌内容',
+            path: '/api/tags/embedded-content',
+          },
+          {
+            title: '脚本',
+            path: '/api/tags/scripting',
+          },
+        ],
       },
       {
         title: '样式',
-        path: '/development/styles',
+        path: '/api/styles',
         children: [
           {
             title: '尺寸与边距',
-            path: '/development/styles/sizing',
+            path: '/api/styles/sizing',
           },
           {
             title: '布局',
-            path: '/development/styles/layout',
+            path: '/api/styles/layout',
           },
           {
             title: '定位',
-            path: '/development/styles/position',
+            path: '/api/styles/position',
           },
           {
             title: '字体与文本',
-            path: '/development/styles/text',
+            path: '/api/styles/text',
           },
           {
             title: '边框与圆角',
-            path: '/development/styles/border',
+            path: '/api/styles/border',
           },
           {
             title: '颜色与背景',
-            path: '/development/styles/background',
+            path: '/api/styles/background',
           },
           {
             title: '变形与过渡',
-            path: '/development/styles/transform',
+            path: '/api/styles/transform',
           },
           {
             title: '单位',
-            path: '/development/styles/unit',
+            path: '/api/styles/unit',
           },
           {
             title: '其它样式',
-            path: '/development/styles/misc',
+            path: '/api/styles/misc',
           },
           {
             title: '与浏览器差异',
-            path: '/development/styles/difference',
+            path: '/api/styles/difference',
           },
         ],
       },
       {
         title: 'DOM',
-        path: '/development/dom',
+        path: '/api/dom',
         children: [
           {
             title: '事件',
-            path: '/development/dom/event',
+            path: '/api/dom/event',
           },
           {
             title: '节点',
-            path: '/development/dom/node',
+            path: '/api/dom/node',
           },
           {
             title: '文档',
-            path: '/development/dom/document',
+            path: '/api/dom/document',
           },
         ],
       },
       {
-        title: '扩展能力',
-        path: '/development/extension',
+        title: '增强能力',
+        path: '/api/enhancement',
         children: [
           {
             title: '手势',
-            path: '/development/extension/gesture',
+            path: '/api/enhancement/gesture',
           },
           {
             title: 'Sliver',
-            path: '/development/extension/sliver',
+            path: '/api/enhancement/sliver',
           },
           {
-            title: '本地存储',
-            path: '/development/extension/storage',
-          },
-        ],
-      },
-      {
-        title: '全局变量与方法',
-        path: '/development/global',
-      },
-    ],
-    '/api': [
-      {
-        title: 'Widget API',
-        path: '/api/widget',
-        children: [
-          {
-            title: '容器配置',
-            path: '/api/widget/container-config',
-          },
-          {
-            title: '加载资源',
-            path: '/api/widget/load',
-          },
-          {
-            title: '事件',
-            path: '/api/widget/event',
-          },
-          {
-            title: '开启调试',
-            path: '/api/widget/debug',
-          },
-          {
-            title: '手势',
-            path: '/api/widget/gesture',
-          },
-          {
-            title: '动画控制',
-            path: '/api/widget/animation',
-          },
-          {
-            title: '页面跳转',
-            path: '/api/widget/navigation',
-          },
-          {
-            title: '与 JS 通信',
-            path: '/api/widget/bridge',
+            title: '异步本地存储',
+            path: '/api/enhancement/storage',
           },
         ],
       },
       {
-        title: '插件 API',
-        path: '/api/plugins',
+        title: '宿主环境',
+        path: '/api/host-environment',
         children: [
           {
-            title: 'Module API',
-            path: '/api/plugins/module',
+            title: 'Timers',
+            path: '/api/host-environment/timers',
           },
           {
-            title: 'JavaScript API',
-            path: '/api/plugins/javascript',
+            title: 'requestAnimationFrame',
+            path: '/api/host-environment/requestanimationframe',
+          },
+          {
+            title: 'Screen',
+            path: '/api/host-environment/screen',
+          },
+          {
+            title: 'fetch',
+            path: '/api/host-environment/fetch',
+          },
+          {
+            title: 'XMLHttpRequest',
+            path: '/api/host-environment/xmlhttprequest',
+          },
+          {
+            title: 'URL',
+            path: '/api/host-environment/url',
+          },
+          {
+            title: 'URLSearchParams',
+            path: '/api/host-environment/urlsearchparams',
+          },
+          {
+            title: 'Console',
+            path: '/api/host-environment/console',
           },
         ],
       },
     ],
     '/plugins': [
       {
-        title: 'WebSocket',
-        path: '/plugins/kraken_websocket',
+        title: '插件',
+        path: '/plugins/plugin',
+        children: [
+          {
+            title: '什么是插件',
+            path: '/plugins/plugin/introduction',
+          },
+          {
+            title: '开发插件',
+            path: '/plugins/plugin/development',
+          },
+        ],
       },
       {
-        title: 'AnimationPlayer',
-        path: '/plugins/kraken_animation_player',
-      },
-      {
-        title: 'WebView',
-        path: '/plugins/kraken_webview',
-      },
-      {
-        title: 'Video',
-        path: '/plugins/kraken_video_player',
+        title: '官方插件',
+        path: '/plugins/official',
+        children: [
+          {
+            title: 'WebSocket',
+            path: '/plugins/official/kraken_websocket',
+          },
+          {
+            title: 'AnimationPlayer',
+            path: '/plugins/official/kraken_animation_player',
+          },
+          {
+            title: 'WebView',
+            path: '/plugins/official/kraken_webview',
+          },
+          {
+            title: 'Video',
+            path: '/plugins/official/kraken_video_player',
+          },
+        ],
       },
     ],
   },

@@ -36,7 +36,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01llXZG21IbHUBpiDnt_!!6000000000911-2-tps-200-200.png" />
     </div>
@@ -45,7 +45,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
 
 ## 视频
 
-视频不属于 Kraken 原生支持的能力，需要先安装这个 [kraken_video_player 插件](https://pub.dev/packages/kraken_video_player)来支持，详细安装方法请参考[开发文档](/plugins/kraken_video_player)。
+视频不属于 Kraken 原生支持的能力，需要先安装这个 [kraken_video_player 插件](https://pub.dev/packages/kraken_video_player)来支持，详细安装方法请参考[开发文档](/plugins/official/kraken_video_player)。
 
 **示例：**
 
@@ -78,7 +78,7 @@ Kraken 支持所有 Flutter 支持的图像格式，包含 `JPEG, PNG, GIF, Anim
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01I0hsO41NlsjX2YLK8_!!6000000001611-2-tps-200-200.png" />
     </div>

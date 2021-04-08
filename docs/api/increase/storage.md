@@ -1,4 +1,4 @@
-# 本地存储
+# 异步本地存储
 
 Kraken 实现了 `AsyncStorage` API 作为本地存储的接口，与大家熟悉的 [LocalStorage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage) 一样，`AsyncStorage` 也是 [Web Storage](https://www.w3.org/TR/webstorage/) 的一种实现。
 

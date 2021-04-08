@@ -1,4 +1,4 @@
-# 介绍
+# 快速起步
 
 ## Kraken 是什么
 
@@ -39,18 +39,34 @@ TODO: Gallary 二维码图片
 
 Kraken 不限制上层开发者使用的框架，无论你是 Vue 开发者、Rax 开发者还是 React 开发者，都可以使用你最熟悉的框架来开发一个 Kraken 应用。
 
-![](https://img.alicdn.com/imgextra/i1/O1CN018a3mFu28GXZC6hTVQ_!!6000000007905-2-tps-1080-418.png)
+![](https://img.alicdn.com/imgextra/i1/O1CN017l9JYV1HHIam1kLgC_!!6000000000732-2-tps-1097-263.png)
 
 ### 如果你是 Rax 开发者
 
-那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发一个 Kraken 应用](/guide/development/rax)。
+你可以使用我们构建出来的 Rax bundle 来运行一个 Kraken 应用，以此体验一下 Rax 应用在 Kraken 下的表现。
+
+```shell
+kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-rax.js
+```
+
+当然，如果你期望了解更多如何使用 Rax 来开发一个 Kraken 应用，那么可以基于 `npm init rax` 命令来快速创建一个 Rax for Kraken 的应用。更详细的步骤请访问[用 Rax 开发 Kraken 应用](/guide/development/rax)。
 
 ### 如果你是 Vue 开发者
 
 你可以使用我们构建出来的 Vue bundle 来运行一个 Kraken 应用，以此体验一下 Vue 应用在 Kraken 下的表现。
 
 ```shell
-kraken https://raw.githubusercontent.com/openkraken/samples/main/demos/hello-vue/dist/js/app.js
+kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-vue.js
 ```
 
-当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 Vue 开发一个 Kraken 应用](/guide/development/vue)。
+当然，如果你期望了解更多如何使用 Vue 来开发一个 Kraken 应用，或者如何对 Vue 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 Vue 开发 Kraken 应用](/guide/development/vue)。
+
+### 如果你是 React 开发者
+
+你可以使用我们构建出来的 React bundle 来运行一个 Kraken 应用，以此体验一下 React 应用在 Kraken 下的表现。
+
+```shell
+kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-react.js
+```
+
+当然，如果你期望了解更多如何使用 React 来开发一个 Kraken 应用，或者如何对 React 的老项目进行改造，使它能够在 Kraken 上运行，可以访问[用 React 开发 Kraken 应用](/guide/development/react)。

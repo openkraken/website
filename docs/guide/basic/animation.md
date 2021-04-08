@@ -48,11 +48,11 @@ setTimeout(() => {
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken PlayGround App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i2/O1CN01LRf0DP24NAqS1zrFH_!!6000000007378-2-tps-400-400.png" />
     </div>
   </div>
 </div>
 
-更详细的 API 请参考[变形与过渡](/development/styles/transform)。
+更详细的 API 请参考[开发文档](/api/styles/transform)。

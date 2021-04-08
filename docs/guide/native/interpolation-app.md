@@ -8,7 +8,7 @@
 
 打开 AndroidStudio，选择 new Project，这里以 EmptyActivity 为初始化项目，使用 Java 为默认 Language
 
-<img src="https://gw.alicdn.com/tfs/TB1cmU.0oY1gK0jSZFMXXaWcVXa-1500-989.png" width=600 />
+<img src="https://gw.alicdn.com/tfs/TB1cmU.0oY1gK0jSZFMXXaWcVXa-1500-989.png" style="max-width: 600px" />
 
 ### 2. 获取 Kraken Android SDK
 
@@ -90,7 +90,7 @@ public class MainActivity extends FlutterActivity {
 
 打开 XCode.app，选择 Create a new XCode Project，这里以 Single View App 为初始化项目模板，使用 Objective-C 为默认 Language。
 
-<img src="https://gw.alicdn.com/tfs/TB1ugs.0oY1gK0jSZFCXXcwqXXa-1498-1100.png" width="600" />
+<img src="https://gw.alicdn.com/tfs/TB1ugs.0oY1gK0jSZFCXXcwqXXa-1498-1100.png" style="max-width: 600px" />
 
 ### 2. 获取 Kraken iOS SDK
 

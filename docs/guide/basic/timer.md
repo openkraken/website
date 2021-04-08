@@ -38,3 +38,5 @@ let timer = setTimeout(function() {
 }, 1000);
 clearTimeout(timer);
 ```
+
+想了解 Kraken 支持哪些定时器，请查看[开发文档](/api/host-environment/timers)。
