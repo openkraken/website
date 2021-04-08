@@ -55,7 +55,7 @@
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="#" target="_blank">Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01fBBI8s297fVxwnJoW_!!6000000008021-2-tps-200-200.png" />
     </div>
