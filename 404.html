@@ -120,6 +120,11 @@
       }
     </style>
     <style>
+      .__dumi-default-layout-features {
+        max-width: 1180px !important;
+      }
+    </style>
+    <style>
       ul li a::before,
       nav > span > a.active::after {
         opacity: 0 !important;
@@ -140,7 +145,7 @@
     </style>
     <style>
       .__dumi-default-layout-features {
-        max-width: none !important;
+        max-width: 1180px;
       }
     </style>
     <style>
@@ -188,6 +193,18 @@
     <style>
       .__dumi-default-layout-features > dl dt {
         margin-bottom: 8px !important;
+      }
+    </style>
+    <style>
+      .sponsors img {
+        filter: grayscale(100%);
+        opacity: 0.66;
+      }
+    </style>
+    <style>
+      .sponsors img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
       }
     </style>
     <style>
@@ -274,15 +291,14 @@
         .sponsors-list {
           display: flex;
           flex-direction: row;
-          max-width: 1180px;
+          max-width: 1200px;
           width: 100%;
           margin: 0 auto;
           position: relative;
           align-items: center;
         }
         .sponsors {
-          margin-left: 50px;
-          margin-right: 50px;
+          margin: 20px 50px;
           width: 200px;
           vertical-align: middle;
         }
