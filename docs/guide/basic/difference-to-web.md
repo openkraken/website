@@ -55,4 +55,4 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 
 ## 本地存储
 
-在浏览器中，我们经常使用 `LocalStorage` 进行本地数据的存储，而在 Kraken 中则使用 `AsyncStorage` 实现本地存储，它提供了更高效的异步 API 以防止 I/O 阻塞 UI 线程，更多信息可以查看[异步本地存储](/api/increase/storage)。
+在浏览器中，我们经常使用 `LocalStorage` 进行本地数据的存储，而在 Kraken 中则使用 `AsyncStorage` 实现本地存储，它提供了更高效的异步 API 以防止 I/O 阻塞 UI 线程，更多信息可以查看[异步本地存储](/api/enhancement/storage)。

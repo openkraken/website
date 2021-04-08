@@ -380,19 +380,19 @@ export default defineConfig({
       },
       {
         title: '增强能力',
-        path: '/api/increase',
+        path: '/api/enhancement',
         children: [
           {
             title: '手势',
-            path: '/api/increase/gesture',
+            path: '/api/enhancement/gesture',
           },
           {
             title: 'Sliver',
-            path: '/api/increase/sliver',
+            path: '/api/enhancement/sliver',
           },
           {
             title: '异步本地存储',
-            path: '/api/increase/storage',
+            path: '/api/enhancement/storage',
           },
         ],
       },
