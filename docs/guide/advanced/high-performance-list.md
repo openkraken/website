@@ -9,7 +9,7 @@ const container = document.createElement('div');
 // 修改 display 为 sliver.
 container.style.display = 'sliver';
 // 必须指定渲染容器节点滚动方向的尺寸(height).
-container.style.height = '300px';
+container.style.height = '100vh';
 
 // 创建 100 个子节点.
 for (let i = 0; i < 100; i++) {
