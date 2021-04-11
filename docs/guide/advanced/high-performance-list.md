@@ -38,7 +38,7 @@ document.body.appendChild(container);
 **渲染效果**：
 
 <div className="code-preview">
-  <img className="preview-image" src="https://img.alicdn.com/imgextra/i4/O1CN01AMUGBt1bpSRjWwYdO_!!6000000003514-2-tps-360-662.png" />
+  <img className="preview-image" src="https://img.alicdn.com/imgextra/i2/O1CN01Wb4AvS1vvg8hF82c5_!!6000000006235-2-tps-720-1324.png" />
 
   <div className="preview-tips">
     <div className="preview-title">
