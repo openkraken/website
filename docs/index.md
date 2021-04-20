@@ -13,7 +13,9 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
 
 <div class="homepage-root">
   <div>
-    <img class="homepage-img img-animation" src="//img.alicdn.com/imgextra/i2/O1CN01Ptcvye1RVAkCRf4gN_!!6000000002116-2-tps-1717-1452.png" />
+    <video class="homepage-img" muted autoplay loop="loop" align="center"  >
+      <source src="//kraken.oss-cn-hangzhou.aliyuncs.com/videos/header_animation.mp4" type="video/mp4">
+    </video>
   </div>
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
