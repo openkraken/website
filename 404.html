@@ -115,6 +115,12 @@
       }
     </style>
     <style>
+      .support-frame img {
+        margin: 20px 10px 0px;
+        cursor: pointer;
+      }
+    </style>
+    <style>
       ul li > span::before {
         background-color: #f6af1f !important;
       }
@@ -134,6 +140,11 @@
     <style>
       .__dumi-default-layout-content {
         max-width: none !important;
+      }
+    </style>
+    <style>
+      .__dumi-default-layout-hero + .__dumi-default-layout-content {
+        margin-top: 0px !important;
       }
     </style>
     <style>
@@ -236,12 +247,12 @@
         }
         .homepage-title {
           color: #0b1b3e;
-          font-size: 50px;
+          font-size: 70px;
           line-height: 71px;
           max-width: 600px;
           margin: 0;
-          padding-top: 106px;
-          padding-bottom: 28px;
+          padding-top: 80px;
+          padding-bottom: 42px;
           font-weight: 600;
           box-sizing: content-box;
           box-sizing: initial;
@@ -275,9 +286,8 @@
         .homepage-root {
           max-width: 1180px;
           width: 100%;
-          margin: 0 auto 120px;
+          margin: 0 auto 50px;
           position: relative;
-          padding-top: 30px;
           height: 470px;
         }
         .introduction-infos {
@@ -310,6 +320,10 @@
           margin: 0 auto;
           position: relative;
           align-items: center;
+        }
+        .github-btn {
+          color: #4f5959;
+          border-color: #f6f6f6;
         }
         .sponsors {
           margin: 20px 50px;
@@ -366,6 +380,12 @@
           display: block;
           margin: 0 auto;
         }
+        .github-btn {
+          display: block;
+          margin: 0px auto;
+          width: 170px;
+          margin-top: 20px;
+        }
         iframe.quick-start-btn {
           display: none;
         }
@@ -385,8 +405,7 @@
           width: 100%;
           margin: 0 auto 20px;
           position: relative;
-          padding-top: 30px;
-          height: 470px;
+          height: 400px;
         }
         .__dumi-default-layout-features dl {
           padding-left: 80px !important;
@@ -439,6 +458,10 @@
           display: inline-block;
           width: 100px;
         }
+        .support-frame {
+          margin: 0px auto;
+          width: 150px;
+        }
       }
     </style>
     <link rel="stylesheet" href="/umi.css" />
@@ -446,7 +469,7 @@
       window.routerBase = "/";
     </script>
     <script>
-      //! umi version: 3.4.10
+      //! umi version: 3.4.11
     </script>
     <script>
       !(function () {
