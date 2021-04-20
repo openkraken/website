@@ -24,17 +24,17 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       <img  style="cursor: pointer;margin-left: .2em;" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=20 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
-      高性能 Web 渲染引擎，基于<img style="vertical-align: top" src="https://img.alicdn.com/imgextra/i1/O1CN01OWUwTg1eqmRBC63cj_!!6000000003923-2-tps-411-415.png" width=30 />Flutter 构建
+      高性能 Web 渲染引擎，基于<img style="vertical-align: bottom;width: 70px;margin-left: -10px;margin-right: -8px;margin-bottom: -9px;" src="https://img.alicdn.com/imgextra/i1/O1CN01OWUwTg1eqmRBC63cj_!!6000000003923-2-tps-411-415.png" />Flutter 构建
     </div>
     <div class="support-frame" >
       <a href="/guide/development/vue">
         <img src="https://img.alicdn.com/imgextra/i3/O1CN01HmN4l21lpai7j2p3H_!!6000000004868-2-tps-200-200.png" width=30 />
       </a>
       <a href="/guide/development/react">
-        <img src="https://img.alicdn.com/imgextra/i2/O1CN01lvphf51nFzADKJiv7_!!6000000005061-2-tps-411-415.png" width=30 />
+        <img src="https://img.alicdn.com/imgextra/i1/O1CN01uGx1211Qz71aICRY9_!!6000000002046-2-tps-325-289.png" width=30 />
       </a>
       <a href="/guide/development/rax">
-        <img src="https://img.alicdn.com/imgextra/i2/O1CN01IomUrB1yVWN6aPYjv_!!6000000006584-2-tps-54-52.png" width=30 />
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01KgGBlg1Y2xfB9wnnJ_!!6000000003002-2-tps-325-289.png" width=30 />
       </a>
     </div>
     <div class="quick-start" >
