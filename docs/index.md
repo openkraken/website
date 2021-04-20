@@ -20,18 +20,34 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
       北海 
-      <span style="font-size:32px;margin-left: .5em">Kraken</span>
-      <img  style="cursor: pointer;margin-left: .2em;" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=15 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
+      <span style="font-size:42px;margin-left: .5em">Kraken</span>
+      <img  style="cursor: pointer;margin-left: .2em;" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" width=20 /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
-      高性能 Web 渲染引擎，基于 Flutter 构建
+      高性能 Web 渲染引擎，基于<img style="vertical-align: bottom;width: 70px;margin-left: -10px;margin-right: -8px;margin-bottom: -9px;" src="https://img.alicdn.com/imgextra/i1/O1CN01OWUwTg1eqmRBC63cj_!!6000000003923-2-tps-411-415.png" />Flutter 构建
+    </div>
+    <div class="support-frame" >
+      <a href="/guide/development/vue">
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01HmN4l21lpai7j2p3H_!!6000000004868-2-tps-200-200.png" width=30 />
+      </a>
+      <a href="/guide/development/react">
+        <img src="https://img.alicdn.com/imgextra/i1/O1CN01uGx1211Qz71aICRY9_!!6000000002046-2-tps-325-289.png" width=30 />
+      </a>
+      <a href="/guide/development/rax">
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01KgGBlg1Y2xfB9wnnJ_!!6000000003002-2-tps-325-289.png" width=30 />
+      </a>
     </div>
     <div class="quick-start" >
       <a class="quick-start-btn" href="/guide" >
-        <button style="width: 150px;margin-right: 0;color: #fff;background: #F6AF1F;height: 44px;font-size: 16px;border: 1px solid #F6AF1F;border-radius: 22px;box-sizing: border-box;cursor: pointer;outline: none;" >快速开始</button>
+        <button style="width: 150px;margin-right: 20px;color: #fff;background: #F6AF1F;height: 44px;font-size: 16px;border: 1px solid #F6AF1F;border-radius: 22px;box-sizing: border-box;cursor: pointer;outline: none;" >快速开始</button>
       </a>
-      <div class="quick-start-github">
-        <iframe  style="border-top-width: 0px;vertical-align: bottom;margin-left:30px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;width: 160px;height: 36px;" src="https://ghbtns.com/github-btn.html?user=openkraken&repo=kraken&type=star&count=true&size=large" ></iframe>
+      <div class="github-btn" >
+        <a rel="noopener" href="https://github.com/openkraken/kraken" >
+          <button style="width: 150px;margin-right: 0;height: 44px;font-size: 16px;border: 1px solid;border-radius: 22px;box-sizing: border-box;cursor: pointer;outline: none;" >
+            <svg style="vertical-align:top; width: 20px;margin-right: 10px" aria-labelledby="simpleicons-github-dark-icon" lang="" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-dark-icon" lang="en">GitHub Dark icon</title><path fill="#7F8C8D" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+            GITHUB
+          </button>
+        </a>
       </div>
     </div>
   </div>
