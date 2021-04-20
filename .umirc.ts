@@ -62,6 +62,7 @@ export default defineConfig({
       .markdown{ padding-right: 200px }\
       .sponsors-container{ box-shadow: 0 0 8px srgba(0,0,0,.101562);background-color:#f8fafc; padding: 100px 150px }\
       .sponsors-list{ display:flex;flex-direction:row;max-width:1200px;width:100%;margin:0 auto;position:relative;align-items: center; }\
+      .github-btn{ color: #4f5959;border-color: #f6f6f6; }\
       .sponsors{ margin: 20px 50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
@@ -72,10 +73,11 @@ export default defineConfig({
       .homepage-img { display: none }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
       .quick-start-btn{ display: block; margin: 0 auto; }\
+      .github-btn{ display: block; margin: 0px auto;width: 170px;margin-top:20px; }\
       iframe.quick-start-btn{ display: none; }\
       .quick-start-github{ text-align: center;margin-top: 20px;margin-left: 0; position: relative;top: 10px; }\
       .__dumi-default-layout[data-route="/"]{ padding-left: 0 !important; padding-right: 0 !important }\
-      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 20px;position: relative;height:470px }\
+      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 20px;position: relative;height:400px }\
       .__dumi-default-layout-features dl { padding-left: 80px !important;width: 170px;margin: 30px auto !important; display: table; }\
       .introduction-img{ display: none !important; }\
       .introduction-infos{ width:100%; padding:120px 25px }\
@@ -86,6 +88,7 @@ export default defineConfig({
       .sponsors-container{ padding-bottom: 30px;box-shadow: 0 0 8px rgba(0,0,0,.101562);background-color:#f8fafc; }\
       .sponsors-list{ padding: 0 30px;width:100%;margin:0 auto;position:relative; }\
       .sponsors{ vertical-align: middle;margin-top: 20px;margin:0 20px;display: inline-block;width: 100px; }\
+      .support-frame{ margin: 0px auto; width: 150px; }\
     }',
   ],
   scripts: [
