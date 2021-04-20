@@ -25,10 +25,12 @@ export default defineConfig({
     'a:hover { color: #F6AF1F !important }',
     '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
+    '.support-frame img{ margin: 20px 10px 0px; cursor: pointer; }',
     'ul li > span::before { background-color: #F6AF1F !important }',
     '.__dumi-default-layout-features{ max-width: 1180px !important }',
     'ul li a::before, nav > span > a.active::after { opacity: 0 !important; background-color: #F6AF1F !important }',
     '.__dumi-default-layout-content{ max-width: none !important }',
+    '.__dumi-default-layout-hero + .__dumi-default-layout-content{ margin-top: 0px !important }',
     '.__dumi-default-layout[data-route="/"] .markdown{ padding-bottom: 0px !important;padding-left: 0px !important; padding-right: 0px !important }',
     '.__dumi-default-layout-features{ max-width: 1180px }',
     '.__dumi-default-menu-list > li > a::after{ background-color: #F6AF1F !important }',
@@ -48,12 +50,12 @@ export default defineConfig({
       .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
       .markdown{ padding-left: 380px !important }\
-      .homepage-title { color: #0b1b3e;font-size: 50px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 106px;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
+      .homepage-title { color: #0b1b3e;font-size: 70px;line-height: 71px;max-width: 600px;margin: 0;padding-top: 80px;padding-bottom: 42px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0 }\
       .homepage-subtitle { font-weight: 100;font-size: 18px;margin-bottom: 10px;font-family: PingFangSC-Light;color: #000;line-height: 1.8em; width: 47% }\
       .homepage-img { width: 50%;position: absolute;right: 0;z-index: 1 } \
       .quick-start-github{ line-height: 42px; }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:row; }\
-      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 120px;position: relative;padding-top: 30px;height:470px }\
+      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 50px;position: relative;height:470px }\
       .introduction-infos{ width:50%; padding:120px 25px }\
       .footer-block-content{ flex-grow: 1; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; }\
@@ -73,7 +75,7 @@ export default defineConfig({
       iframe.quick-start-btn{ display: none; }\
       .quick-start-github{ text-align: center;margin-top: 20px;margin-left: 0; position: relative;top: 10px; }\
       .__dumi-default-layout[data-route="/"]{ padding-left: 0 !important; padding-right: 0 !important }\
-      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 20px;position: relative;padding-top: 30px;height:470px }\
+      .homepage-root{ max-width: 1180px;width: 100%;margin: 0 auto 20px;position: relative;height:470px }\
       .__dumi-default-layout-features dl { padding-left: 80px !important;width: 170px;margin: 30px auto !important; display: table; }\
       .introduction-img{ display: none !important; }\
       .introduction-infos{ width:100%; padding:120px 25px }\
