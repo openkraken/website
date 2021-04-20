@@ -208,6 +208,20 @@
       }
     </style>
     <style>
+      video:focus {
+        outline: -webkit-focus-ring-color auto 0px;
+      }
+    </style>
+    <style>
+      video::-webkit-media-controls {
+        overflow: hidden !important;
+      }
+      video::-webkit-media-controls-enclosure {
+        width: calc(100% + 32px);
+        margin-left: auto;
+      }
+    </style>
+    <style>
       @media only screen and (min-width: 767px) {
         .code-preview {
           display: flex;
@@ -432,7 +446,7 @@
       window.routerBase = "/";
     </script>
     <script>
-      //! umi version: 3.4.8
+      //! umi version: 3.4.10
     </script>
     <script>
       !(function () {
