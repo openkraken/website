@@ -2,7 +2,7 @@
 
 Kraken 支持通过 Chrome DevTools 进行调试。
 
-注：目前 DevTools 目前仅支持 Element 调试，Network 调试，JS 调试目前还在开发中。
+注：目前 DevTools 目前仅支持 Element 调试，JS 调试，Network 调试目前还在开发中。
 
 ## 打开调试工具
 
