@@ -73,7 +73,7 @@ export default defineConfig({
       .homepage-img { display: none }\
       .quick-start{ margin-top: 50px; display: flex;flex-direction:column; }\
       .quick-start-btn{ display: block; margin: 0 auto; }\
-      .github-btn{ display: block; margin: 0px auto;width: 170px;margin-top:20px; }\
+      .github-btn{ color: #4f5959;border-color: #f6f6f6;display: block; margin: 0px auto;width: 170px;margin-top:20px; }\
       iframe.quick-start-btn{ display: none; }\
       .quick-start-github{ text-align: center;margin-top: 20px;margin-left: 0; position: relative;top: 10px; }\
       .__dumi-default-layout[data-route="/"]{ padding-left: 0 !important; padding-right: 0 !important }\
@@ -89,6 +89,7 @@ export default defineConfig({
       .sponsors-list{ padding: 0 30px;width:100%;margin:0 auto;position:relative; }\
       .sponsors{ vertical-align: middle;margin-top: 20px;margin:0 20px;display: inline-block;width: 100px; }\
       .support-frame{ margin: 0px auto; width: 150px; }\
+      .flutter-icon{ display: none; }\
     }',
   ],
   scripts: [
