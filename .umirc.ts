@@ -42,6 +42,8 @@ export default defineConfig({
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
+    'video:focus {outline: -webkit-focus-ring-color auto 0px;}',
+    'video::-webkit-media-controls {overflow: hidden !important;};video::-webkit-media-controls-enclosure {width: calc(100% + 32px);margin-left: auto;}',
     '@media only screen and (min-width: 767px) {\
       .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
