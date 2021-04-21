@@ -46,6 +46,7 @@ export default defineConfig({
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
     'video:focus {outline: -webkit-focus-ring-color auto 0px;}',
     'video::-webkit-media-controls {overflow: hidden !important;};video::-webkit-media-controls-enclosure {width: calc(100% + 32px);margin-left: auto;}',
+    'a:hover { text-decoration:none !important;}',
     '@media only screen and (min-width: 767px) {\
       .say-kraken{ cursor: pointer;margin-left: .2em;width: 20px; }\
       .english-title{ font-size:42px;margin-left: .5em }\
