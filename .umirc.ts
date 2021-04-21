@@ -46,7 +46,10 @@ export default defineConfig({
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
     'video:focus {outline: -webkit-focus-ring-color auto 0px;}',
     'video::-webkit-media-controls {overflow: hidden !important;};video::-webkit-media-controls-enclosure {width: calc(100% + 32px);margin-left: auto;}',
+    'a:hover { text-decoration:none !important;}',
     '@media only screen and (min-width: 767px) {\
+      .say-kraken{ cursor: pointer;margin-left: .2em;width: 20px; }\
+      .english-title{ font-size:42px;margin-left: .5em }\
       .code-preview {display: flex; justify-content: left;max-width: 1000px}\
       .__dumi-default-menu { width: 350px !important }\
       .markdown{ padding-left: 380px !important }\
@@ -66,6 +69,8 @@ export default defineConfig({
       .sponsors{ margin: 20px 50px;width:200px;vertical-align: middle; }\
     }',
     '@media only screen and (max-width: 767px) {\
+      .say-kraken{ cursor: pointer;margin-left: .2em;width: 14px; }\
+      .english-title{ font-size:22px;margin-left: .5em }\
       .preview-tips{ display: none; }\
       .code-preview {display: flex; flex-direction: column;}\
       .homepage-title { text-align: center; color: #0b1b3e;font-size: 38px;line-height: 71px;max-width: 600px;margin: 0;padding-bottom: 28px;font-weight: 600;box-sizing: content-box;box-sizing: initial;position: relative;font-family: PingFangSC-Semibold;letter-spacing: 0;display: table;margin: 0 auto }\
