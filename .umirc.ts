@@ -23,6 +23,7 @@ export default defineConfig({
     '.markdown :not(pre) code { font-size: 14px }',
     '.markdown pre { font-size: 13px }',
     'a:hover { color: #F6AF1F !important }',
+    '.__dumi-default-layout{ overflow-x: hidden; }',
     '.__dumi-default-layout-content a { color: #F6AF1F !important }',
     'a.active { color: #F6AF1F !important }',
     '.support-frame img{ margin: 20px 10px 0px; cursor: pointer; }',
