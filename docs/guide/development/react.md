@@ -86,7 +86,7 @@ export default App;
 **示例：**
 
 ```js
-import { useState } from 'rax';
+import { useState } from 'react';
 
 function Example() {
   // 声明一个叫 "count" 的 state 变量
