@@ -18,7 +18,7 @@
    git checkout <flutter_version>
    ```
 
-4. 按照 [Flutter 官方文档](https://flutter.dev/docs/get-started/install/windows#update-your-path) 的步骤安装 Flutter 的相关依赖, 确保执行 `flutter doctor` 不再有任何警告。
+4. 按照 [Flutter 官方文档](https://flutter.dev/docs/get-started/install/macos#update-your-path) 的步骤安装 Flutter 的相关依赖, 确保执行 `flutter doctor` 不再有任何警告。
 
 5. 安装 CMake
 
