@@ -8,7 +8,7 @@
 
 ## Android 端使用 kraken SDK release 包问题
 
-SDK API 存在一些问题，可以看用 Widget API，与 Flutter 应用一块构建进行测试。
+SDK API 存在一些问题，可以使用 Widget API，与 Flutter 应用一块构建进行测试。
 
 参考：[https://github.com/openkraken/kraken/issues/235](https://github.com/openkraken/kraken/issues/235)
 
