@@ -288,6 +288,10 @@ export default defineConfig({
           },
         ],
       },
+      {
+        title: '常见问题',
+        path: '/guide/faq',
+      },
     ],
     '/api': [
       {
