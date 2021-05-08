@@ -2,7 +2,10 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   mode: 'site',
-  locales: [['zh-CN', '中文']],
+  locales: [
+    ['zh-CN', '中文'],
+    ['en-US', 'English'],
+  ],
   title: ' ',
   logo:
     'https://img.alicdn.com/imgextra/i1/O1CN01CUE2IL1FdAGnYPawX_!!6000000000509-2-tps-350-116.png',
