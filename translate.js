@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const path = require('path');
-const sleep = require('sleep');
 const {
   readdirSync,
   statSync,
@@ -13,20 +12,26 @@ const {
 const dirDocs = './docs';
 const dir = path.join(__dirname, dirDocs);
 
-function travel(dir, callback) {
-  readdirSync(dir).forEach(file => {
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+async function travel(dir, callback) {
+  const dirs = readdirSync(dir);
+  for (let i = 0; i < dirs.length; i++) {
+    const file = dirs[i];
     const pathname = path.join(dir, file);
     if (statSync(pathname).isDirectory()) {
-      travel(pathname, callback);
+      await travel(pathname, callback);
     } else {
-      callback(pathname);
+      await callback(pathname);
     }
-  });
+  }
 }
-travel(dir, function(pathname) {
-  if (path.extname(pathname) === '.md') {
+
+travel(dir, async function(pathname) {
+  console.log('travel', pathname);
+  if (path.extname(pathname) === '.md' && pathname.indexOf('en-US') < 0) {
     /* 随机 sleep 防止被 google 反爬虫 */
-    sleep.sleep(parseInt(Math.random() * 3 + 2));
+    await delay(parseInt(Math.random() * 3000 + 2000));
 
     const fileContent = readFileSync(pathname, { encoding: 'utf-8' });
 
@@ -43,17 +48,23 @@ travel(dir, function(pathname) {
       fileContent,
     )}`;
 
-    fetch(url)
-      .then(res => res.json())
-      .then(function(data) {
-        data &&
-          data[0] &&
-          data[0] &&
-          data[0].forEach(item => {
-            if (item && item[0]) {
-              appendFileSync(enFilePath, item[0]);
-            }
-          });
-      });
+    // console.log('fetch~~~');
+    // console.log('pathname=', pathname)
+    // console.log(url);
+
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      if (data && data[0]) {
+        data[0].forEach(item => {
+          if (item && item[0]) {
+            appendFileSync(enFilePath, item[0]);
+          }
+        });
+      }
+    } catch (e) {
+      console.log(pathname, 'translate failed.');
+    }
   }
 });
