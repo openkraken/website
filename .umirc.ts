@@ -268,6 +268,10 @@ export default defineConfig({
             title: 'Kraken Widget',
             path: '/guide/native/widget',
           },
+          {
+            title: '集成开发者工具',
+            path: '/guide/native/embedded-devtools',
+          },
         ],
       },
       {

@@ -49,20 +49,48 @@ npm run build:bridge:all
 
 Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方法待补充。
 
-使用 XCode 打开 `kraken/example/macos/Runner.xcworkspace`
+**使用 Clion**
 
-然后在 Bridge 中代码添加一行 `assert(false)`，这样做的目的是强制触发一次代码异常，这样就可以在 XCode 上设置调试断点。
+调试 Bridge 代码最方便快捷的方式是使用 Clion，可以快速修改和调试 C/C++ 代码。
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210322174105.jpg)
+1. 使用 Clion 打开 `kraken/bridge` 目录。
+2. 打开 Preference -> Build，Execution，Depolyment -> CMake，按照下图的方式进行配置。
 
-然后执行下面的命令重新构建 `Bridge`
+![image](https://user-images.githubusercontent.com/4409743/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
 
-```shell script
-npm run build:bridge:macos
+这个时候就可以进行 Bridge 的编译，构建的产物在 `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
+
+3. 在 `kraken/kraken/macos/` 目录，使用下面的命令修改软链接。
+
+```bash
+  cd /path/to/kraken/kraken/macos
+  rm libkraken_jsc.dylib
+  ln -s /path/to/kraken/bridge/cmake-build-debug/libkraken_jsc.dylib # 必须是绝对地址
+  echo > prepare.sh
 ```
 
-然后再回到 XCode 运行 example 应用。这时候 Kraken 会不出意外的抛出异常，而这时候 XCode 也会把 `Bridge` 的源代码显示出来。
+4. 创建 flutter 应用启动脚本
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210322175048.jpg)
+创建任意位置创建一个脚本文件，用来执行编译 flutter app 的命令。
 
-这时候只需要在代码行数点击以下即可创建一个断点，然后删掉 `assert(false)` 重新构建 `Bridge` 即可调试 C/C++ 的代码。
+```bash
+  echo "flutter build macos --debug" > ~/build_flutter.sh
+```
+
+5. 在 Clion 建立配置关联启动脚本
+
+打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置
+
+![image](https://user-images.githubusercontent.com/4409743/117528742-59558000-b006-11eb-8870-8b9d69f3b14f.png)
+
+6. 串联启动脚本，并绑定启动应用
+
+将 Executable 选择为 `kraken/kraken/example/build/macos/Build/Products/Debug/kraken_example.app`
+
+并在下面 Before launch 中添加上面创建的 `Build Flutter Example App`
+
+https://user-images.githubusercontent.com/4409743/117528845-e0a2f380-b006-11eb-8049-130715f3ccd0.mp4
+
+7. 点击右上角的调试按钮，就可以在任何 C/C++ 代码中设置断点并进行调试。
+
+![image](https://user-images.githubusercontent.com/4409743/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
