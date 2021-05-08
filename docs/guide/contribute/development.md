@@ -56,7 +56,7 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 1. 使用 Clion 打开 `kraken/bridge` 目录。
 2. 打开 Preference -> Build，Execution，Depolyment -> CMake，按照下图的方式进行配置。
 
-![image](https://user-images.githubusercontent.com/4409743/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
 
 这个时候就可以进行 Bridge 的编译，构建的产物在 `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
 
@@ -81,7 +81,7 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 
 打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置
 
-![image](https://user-images.githubusercontent.com/4409743/117528742-59558000-b006-11eb-8870-8b9d69f3b14f.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528742-59558000-b006-11eb-8870-8b9d69f3b14f.png)
 
 6. 串联启动脚本，并绑定启动应用
 
@@ -89,8 +89,10 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 
 并在下面 Before launch 中添加上面创建的 `Build Flutter Example App`
 
-https://user-images.githubusercontent.com/4409743/117528845-e0a2f380-b006-11eb-8049-130715f3ccd0.mp4
+ <video muted autoplay loop="loop" style="width: 100%">
+    <source src="https://user-images.githubusercontent.com/4409743/117528845-e0a2f380-b006-11eb-8049-130715f3ccd0.mp4" type="video/mp4">
+  </video>
 
 7. 点击右上角的调试按钮，就可以在任何 C/C++ 代码中设置断点并进行调试。
 
-![image](https://user-images.githubusercontent.com/4409743/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
