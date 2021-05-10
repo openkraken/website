@@ -160,6 +160,13 @@
       }
     </style>
     <style>
+      .__dumi-default-layout[data-route="/en-US"] .markdown {
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+    </style>
+    <style>
       .__dumi-default-layout-features {
         max-width: 1180px;
       }
@@ -198,6 +205,12 @@
     </style>
     <style>
       .__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer {
+        display: none;
+      }
+    </style>
+    <style>
+      .__dumi-default-layout[data-route="/en-US"]
+        .__dumi-default-layout-footer {
         display: none;
       }
     </style>
@@ -430,6 +443,10 @@
           padding-left: 0 !important;
           padding-right: 0 !important;
         }
+        .__dumi-default-layout[data-route="/en-US"] {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
         .homepage-root {
           max-width: 1180px;
           width: 100%;
@@ -502,7 +519,7 @@
       window.routerBase = "/";
     </script>
     <script>
-      //! umi version: 3.4.15
+      //! umi version: 3.4.18
     </script>
     <script>
       !(function () {
