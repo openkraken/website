@@ -117,24 +117,44 @@ export default defineConfig({
       charset: 'utf-8',
     },
   ],
-  navs: [
-    {
-      title: '教程',
-      path: '/guide',
-    },
-    {
-      title: 'API',
-      path: '/api',
-    },
-    {
-      title: '插件',
-      path: '/plugins',
-    },
-    {
-      title: 'GITHUB',
-      path: 'https://github.com/openkraken/kraken',
-    },
-  ],
+  navs: {
+    'zh-CN': [
+      {
+        title: '教程',
+        path: '/guide',
+      },
+      {
+        title: 'API',
+        path: '/api',
+      },
+      {
+        title: '插件',
+        path: '/plugins',
+      },
+      {
+        title: 'GITHUB',
+        path: 'https://github.com/openkraken/kraken',
+      },
+    ],
+    'en-US': [
+      {
+        title: 'GUIDE',
+        path: '/en-US/guide',
+      },
+      {
+        title: 'API',
+        path: '/en-US/api',
+      },
+      {
+        title: 'PLUGINS',
+        path: '/en-US/plugins',
+      },
+      {
+        title: 'GITHUB',
+        path: 'https://github.com/openkraken/kraken',
+      },
+    ],
+  },
   menus: {
     '/guide': [
       {
@@ -494,6 +514,364 @@ export default defineConfig({
           {
             title: 'Video',
             path: '/plugins/official/kraken_video_player',
+          },
+        ],
+      },
+    ],
+    '/en-US/guide': [
+      {
+        title: 'Quick start',
+        path: '/en-US/guide',
+      },
+      {
+        title: 'Basic',
+        path: '/en-US/guide/basic',
+        children: [
+          {
+            title: 'Structure and style',
+            path: '/en-US/guide/basic/style',
+          },
+          {
+            title: 'Dimensions and margins',
+            path: '/en-US/guide/basic/sizing',
+          },
+          {
+            title: 'Color and background',
+            path: '/en-US/guide/basic/color',
+          },
+          {
+            title: 'Layout',
+            path: '/en-US/guide/basic/layout',
+          },
+          {
+            title: 'Processing text input',
+            path: '/en-US/guide/basic/text-input',
+          },
+          {
+            title: 'Multimedia',
+            path: '/en-US/guide/basic/multimedia',
+          },
+          {
+            title: 'Scroll container',
+            path: '/en-US/guide/basic/scrollable',
+          },
+          {
+            title: 'Touch and gesture',
+            path: '/en-US/guide/basic/touch',
+          },
+          {
+            title: 'Timer',
+            path: '/en-US/guide/basic/timer',
+          },
+          {
+            title: 'Network request',
+            path: '/en-US/guide/basic/network',
+          },
+          {
+            title: 'Page jump',
+            path: '/en-US/guide/basic/navigation',
+          },
+          {
+            title: 'Animation',
+            path: '/en-US/guide/basic/animation',
+          },
+          {
+            title: 'Front-end code debugging',
+            path: '/en-US/guide/basic/debug',
+          },
+          {
+            title: 'Difference with browser',
+            path: '/en-US/guide/basic/difference-to-web',
+          },
+        ],
+      },
+      {
+        title: 'Advanced',
+        path: '/en-US/guide/advanced',
+        children: [
+          {
+            title: 'Implement a high-performance long list',
+            path: '/en-US/guide/advanced/high-performance-list',
+          },
+          {
+            title: 'Use enhanced gesture capabilities',
+            path: '/en-US/guide/advanced/gesture',
+          },
+          {
+            title: 'Handling page jumps',
+            path: '/en-US/guide/advanced/handle-navigation',
+          },
+          {
+            title: 'JS and Native communication',
+            path: '/en-US/guide/advanced/communicate-with-native',
+          },
+          {
+            title: 'Native and Kraken for gesture transfer',
+            path: '/en-US/guide/advanced/gesture-to-native',
+          },
+          {
+            title: 'Measure the performance of Kraken',
+            path: '/en-US/guide/advanced/measure-performance',
+          },
+        ],
+      },
+      {
+        title: 'Frame development',
+        path: '/en-US/guide/development',
+        children: [
+          {
+            title: 'Develop Kraken application with Rax',
+            path: '/en-US/guide/development/rax',
+          },
+          {
+            title: 'Develop Kraken application with Vue',
+            path: '/en-US/guide/development/vue',
+          },
+          {
+            title: 'Develop Kraken application with React',
+            path: '/en-US/guide/development/react',
+          },
+        ],
+      },
+      {
+        title: 'Client integration',
+        path: '/en-US/guide/native',
+        children: [
+          {
+            title: 'Integrate Kraken in the Flutter application',
+            path: '/en-US/guide/native/interpolation-flutter',
+          },
+          {
+            title: 'Integrate Kraken in native apps',
+            path: '/en-US/guide/native/interpolation-app',
+          },
+          {
+            title: 'Kraken Widget',
+            path: '/en-US/guide/native/widget',
+          },
+        ],
+      },
+      {
+        title: 'Contribute',
+        path: '/en-US/guide/contribute',
+        children: [
+          {
+            title: 'Prepare the development environment',
+            path: '/en-US/guide/contribute/environment',
+          },
+          {
+            title: 'Development and debugging',
+            path: '/en-US/guide/contribute/development',
+          },
+          {
+            title: 'Writing test cases',
+            path: '/en-US/guide/contribute/test',
+          },
+        ],
+      },
+      {
+        title: 'FAQ',
+        path: '/en-US/guide/faq',
+      },
+    ],
+    '/en-US/api': [
+      {
+        title: 'tags',
+        path: '/en-US/api/tags',
+        children: [
+          {
+            title: 'Partition root element',
+            path: '/en-US/api/tags/sectioning-root',
+          },
+          {
+            title: 'Content Partition',
+            path: '/en-US/api/tags/content-sectioning',
+          },
+          {
+            title: 'Text content',
+            path: '/en-US/api/tags/text-content',
+          },
+          {
+            title: 'Inline text semantics',
+            path: '/en-US/api/tags/inline-text-semantics',
+          },
+          {
+            title: 'Form',
+            path: '/en-US/api/tags/forms',
+          },
+          {
+            title: 'Picture and multimedia',
+            path: '/en-US/api/tags/image-and-multimedia',
+          },
+          {
+            title: 'Edit logo',
+            path: '/en-US/api/tags/demarcating-edits',
+          },
+          {
+            title: 'Embedded content',
+            path: '/en-US/api/tags/embedded-content',
+          },
+          {
+            title: 'Script',
+            path: '/en-US/api/tags/scripting',
+          },
+        ],
+      },
+      {
+        title: 'Styles',
+        path: '/en-US/api/styles',
+        children: [
+          {
+            title: 'Dimensions and margins',
+            path: '/en-US/api/styles/sizing',
+          },
+          {
+            title: 'Layout',
+            path: '/en-US/api/styles/layout',
+          },
+          {
+            title: 'Positioning',
+            path: '/en-US/api/styles/position',
+          },
+          {
+            title: 'Fonts and text',
+            path: '/en-US/api/styles/text',
+          },
+          {
+            title: 'Border and rounded corners',
+            path: '/en-US/api/styles/border',
+          },
+          {
+            title: 'Color and background',
+            path: '/en-US/api/styles/background',
+          },
+          {
+            title: 'Transformation and transition',
+            path: '/en-US/api/styles/transform',
+          },
+          {
+            title: 'Unit',
+            path: '/en-US/api/styles/unit',
+          },
+          {
+            title: 'Other styles',
+            path: '/en-US/api/styles/misc',
+          },
+          {
+            title: 'Difference with browser',
+            path: '/en-US/api/styles/difference',
+          },
+        ],
+      },
+      {
+        title: 'DOM',
+        path: '/en-US/api/dom',
+        children: [
+          {
+            title: 'Event',
+            path: '/en-US/api/dom/event',
+          },
+          {
+            title: 'Node',
+            path: '/en-US/api/dom/node',
+          },
+          {
+            title: 'Document',
+            path: '/en-US/api/dom/document',
+          },
+        ],
+      },
+      {
+        title: 'Enhancement',
+        path: '/en-US/api/enhancement',
+        children: [
+          {
+            title: 'Gesture',
+            path: '/en-US/api/enhancement/gesture',
+          },
+          {
+            title: 'Sliver',
+            path: '/en-US/api/enhancement/sliver',
+          },
+          {
+            title: 'Asynchronous local storage',
+            path: '/en-US/api/enhancement/storage',
+          },
+        ],
+      },
+      {
+        title: 'Host environment',
+        path: '/en-US/api/host-environment',
+        children: [
+          {
+            title: 'Timers',
+            path: '/en-US/api/host-environment/timers',
+          },
+          {
+            title: 'requestAnimationFrame',
+            path: '/en-US/api/host-environment/requestanimationframe',
+          },
+          {
+            title: 'Screen',
+            path: '/api/host-environment/screen',
+          },
+          {
+            title: 'fetch',
+            path: '/en-US/api/host-environment/fetch',
+          },
+          {
+            title: 'XMLHttpRequest',
+            path: '/en-US/api/host-environment/xmlhttprequest',
+          },
+          {
+            title: 'URL',
+            path: '/en-US/api/host-environment/url',
+          },
+          {
+            title: 'URLSearchParams',
+            path: '/en-US/api/host-environment/urlsearchparams',
+          },
+          {
+            title: 'Console',
+            path: '/en-US/api/host-environment/console',
+          },
+        ],
+      },
+    ],
+    '/en-US/plugins': [
+      {
+        title: 'Plugins',
+        path: '/en-US/plugins/plugin',
+        children: [
+          {
+            title: 'What is the Kraken plugin',
+            path: '/en-US/plugins/plugin/introduction',
+          },
+          {
+            title: 'Development plugin',
+            path: '/en-US/plugins/plugin/development',
+          },
+        ],
+      },
+      {
+        title: 'Official plugin',
+        path: '/en-US/plugins/official',
+        children: [
+          {
+            title: 'WebSocket',
+            path: '/en-US/plugins/official/kraken_websocket',
+          },
+          {
+            title: 'AnimationPlayer',
+            path: '/en-US/plugins/official/kraken_animation_player',
+          },
+          {
+            title: 'WebView',
+            path: '/en-US/plugins/official/kraken_webview',
+          },
+          {
+            title: 'Video',
+            path: '/en-US/plugins/official/kraken_video_player',
           },
         ],
       },
