@@ -40,7 +40,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
       </a>
     </div>
     <div class="quick-start" >
-      <a class="quick-start-btn" href="/guide" >
+      <a class="quick-start-btn" href="/en-US/guide" >
         <button style="width: 150px;margin-right: 20px;color: #fff;background: #F6AF1F;height: 44px;font-size: 16px;border: 1px solid #F6AF1F;border-radius: 22px;box-sizing: border-box;cursor: pointer;outline: none;" >Quick start</button>
       </a>
       <div class="github-btn" >
