@@ -1,6 +1,6 @@
 # Dimensions and margins
 
-Kraken's CSS-based [Box Model](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model?spm=a2c7j.-zh-docs-styles-common-styles.0.0 .3f95bcbbzSH3n5) to describe the size and margins of the label, involving the following attributes:
+Kraken's CSS-based [Box Model](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) to describe the size and margins of the label, involving the following attributes:
 
 ## Attributes
 

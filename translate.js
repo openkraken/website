@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const { readFileSync, appendFileSync, unlinkSync, existsSync } = require('fs');
 
+const LIMIT_FILE_CONTENT = 4000;
+
 async function trasnlate(pathname) {
   console.log('translate:', pathname);
 
@@ -11,29 +13,40 @@ async function trasnlate(pathname) {
     '.en-US' +
     pathname.slice(pathname.indexOf('.md'));
 
-  if (existsSync(enFilePath)) {
-    unlinkSync(enFilePath);
+  async function fetchTranslate(content, delEnglishFile) {
+    const url = `https://translate.googleapis.com/translate_a/single?oe=UTF-8&i=UTF-8&client=gtx&dt=t&hl=zh-CN&sl=zh-CN&tl=en&text=${encodeURIComponent(
+      content,
+    )}`;
+
+    try {
+      const res = await fetch(url);
+
+      const data = await res.json();
+
+      if (existsSync(enFilePath) && delEnglishFile) {
+        unlinkSync(enFilePath);
+      }
+
+      if (data && data[0]) {
+        data[0].forEach(item => {
+          if (item && item[0]) {
+            appendFileSync(enFilePath, item[0]);
+          }
+        });
+      }
+
+      console.log(pathname, ' success.');
+    } catch (e) {
+      console.log(pathname, ' failed.');
+      console.log(e);
+    }
   }
 
-  const url = `https://translate.googleapis.com/translate_a/single?oe=UTF-8&i=UTF-8&client=gtx&dt=t&hl=zh-CN&sl=zh-CN&tl=en&text=${encodeURIComponent(
-    fileContent,
-  )}`;
-
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    if (data && data[0]) {
-      data[0].forEach(item => {
-        if (item && item[0]) {
-          appendFileSync(enFilePath, item[0]);
-        }
-      });
-    }
-
-    console.log(pathname, ' success.');
-  } catch (e) {
-    console.log(pathname, ' failed.');
+  for (let i = 0; i < Math.ceil(fileContent.length / LIMIT_FILE_CONTENT); i++) {
+    await fetchTranslate(
+      fileContent.slice(LIMIT_FILE_CONTENT * i, LIMIT_FILE_CONTENT * (i + 1)),
+      i === 0,
+    );
   }
 }
 

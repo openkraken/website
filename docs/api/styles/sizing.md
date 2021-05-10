@@ -1,6 +1,6 @@
 # 尺寸与边距
 
-Kraken 的基于 CSS 的[盒模型](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model?spm=a2c7j.-zh-docs-styles-common-styles.0.0.3f95bcbbzSH3n5) 来描述标签的尺寸与边距，涉及以下的属性：
+Kraken 的基于 CSS 的[盒模型](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 来描述标签的尺寸与边距，涉及以下的属性：
 
 ## 属性
 

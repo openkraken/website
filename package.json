@@ -4,7 +4,8 @@
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
-    "translate": "node translate.js",
+    "translateAll": "node translateAll.js",
+    "translate": "node translateFile.js",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "deploy": "gh-pages -d dist"
   },
