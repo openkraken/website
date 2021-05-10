@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const { readFileSync, appendFileSync, unlinkSync, existsSync } = require('fs');
 
-const LIMIT_FILE_CONTENT = 4000;
+const LIMIT_FILE_CONTENT = 3000;
 
 async function trasnlate(pathname) {
   console.log('translate:', pathname);

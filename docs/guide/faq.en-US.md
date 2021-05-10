@@ -1,4 +1,4 @@
-# common problem
+# FAQ
 
 ## Reference local image path not found
 

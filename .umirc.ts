@@ -816,7 +816,7 @@ export default defineConfig({
           },
           {
             title: 'Screen',
-            path: '/api/host-environment/screen',
+            path: '/en-US/api/host-environment/screen',
           },
           {
             title: 'fetch',
