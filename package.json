@@ -4,6 +4,8 @@
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
+    "translateAll": "node translateAll.js",
+    "translate": "node translateFile.js",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "deploy": "gh-pages -d dist"
   },
@@ -30,7 +32,11 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
     "prism-react-renderer": "^1.2.0",
-    "slash": "^3.0.0"
+    "slash": "^3.0.0",
+    "sleep": "^6.3.0"
   }
 }
