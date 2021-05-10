@@ -1,4 +1,4 @@
-# Incident
+# Event
 
 Kraken provides most of the W3C (whatwg) standard event-related API implementations.
 The following lists the currently supported APIs and their attributes and methods. For detailed documentation, please refer to the standard documentation.
