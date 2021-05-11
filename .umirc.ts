@@ -7,11 +7,11 @@ export default defineConfig({
     ['en-US', 'English'],
   ],
   title: ' ',
-  logo:
-    'https://img.alicdn.com/imgextra/i1/O1CN01CUE2IL1FdAGnYPawX_!!6000000000509-2-tps-350-116.png',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
+    '.__dumi-default-layout[data-route^="/"] .__dumi-default-navbar-logo { background-image:url("https://img.alicdn.com/imgextra/i1/O1CN01CUE2IL1FdAGnYPawX_!!6000000000509-2-tps-350-116.png") }',
+    '.__dumi-default-layout[data-route^="/en-US"] .__dumi-default-navbar-logo { background-image:url("https://img.alicdn.com/imgextra/i3/O1CN01A87U1Y21wUXsXpExt_!!6000000007049-2-tps-572-116.png") }',
     '.__dumi-default-dark { display: none }',
     '@keyframes levitate { 0% { transform: translate3d(0,-2.3%,0);} 50% {transform: translate3d(0,2.3%,0);} 100% {transform: translate3d(0,-2.3%,0);}}',
     '.img-animation { animation: levitate 5s ease-in-out infinite forwards }',
