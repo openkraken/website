@@ -40,7 +40,7 @@ import App from './App.vue';
 createApp(App).mount(document.body);
 ```
 
-配置 vue.config.js，由于没有 Script 标签的支持，所以需要将 bundle 打在一个包中。
+配置 vue.config.js，由于 Kraken 的入口是一个 JavaScript 文件，所以需要将入口打包成一个 JavaScript 文件。
 
 ```js
 module.exports = {

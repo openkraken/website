@@ -45,7 +45,7 @@ ReactDOM.render(
 );
 ```
 
-由于 Kraken 没有 Script 标签的支持，你需要配置 webpack ，使 bundle 打在一个包中。
+由于 Kraken 入口是一个 JavaScript 文件，你需要配置 webpack ，使 bundle 打在一个包中。
 
 此外，需要注意的是，目前 Kraken 只支持内联样式，所以我们建议使用下列方法来写 `CSS 样式`。
 
