@@ -1,4 +1,4 @@
-# Network blocker
+# Network Interceptor
 
 Sometimes we need to intercept or replace the requests sent by Kraken. This ability is usually used to implement functions such as custom caching, error rate statistics, and authentication.
 
