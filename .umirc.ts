@@ -252,7 +252,7 @@ export default defineConfig({
             path: '/guide/advanced/network-intercept',
           },
           {
-            title: 'Native 与 Kraken 进行手势传递',
+            title: 'Native 与 Kraken 进行交互传递',
             path: '/guide/advanced/gesture-to-native',
           },
           {

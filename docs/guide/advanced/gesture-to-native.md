@@ -1,4 +1,6 @@
-# Native 与 Kraken 进行手势传递
+# Native 与 Kraken 进行交互传递
+
+## 滚动传递
 
 当 Kraken 与 Native 结合使用时，往往会遇到手势冲突的问题，比如说同一个横滑手势在 Kraken 内部消费产生了一个滚动容器的滚动动作，同样在 Native 也会产生一个横滑动作，使得整个 Native 容器被横滑关闭。
 
@@ -46,3 +48,37 @@ Kraken kraken = Kraken(
 ```
 
 详细的 API 调用见 [开发文档](/guide/native/widget)。
+
+## 触摸传递
+
+当 Kraken 与 Native 结合使用时，由于 Flutter 会默认消费 Native 的触摸事件，所以需要 Kraken 重新抛出相关 Touch 事件给 Widget，以便处理在 Kraken View 之下的 Native View 的一些交互事件。
+
+因此，Kraken 提供了一个 `EventClient` 的抽象类，Kraken 用户可以通过继承该抽象类实现相应的方法，以捕获 Kraken 抛出的 Touch event。
+
+```dart
+/// Pass Touch to native.
+abstract class EventClient {
+  void eventListener(Event event);
+}
+```
+
+通过实现 `eventListener` 即可监听 Kraken 顶层节点的回调。其用法与前端标准的 `addEventListener` 类似，抛出的是符合前端标准的 [Touch Event](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) 事件。
+
+举个例子：
+
+```dart
+class NativeEventClient implements EventClient {
+  @override
+  void eventListener(Event event) {
+    /// ...
+  }
+}
+```
+
+在 Kraken 的 Widget 初始化时传入。
+
+```dart
+Kraken kraken = Kraken(
+  eventClient: NativeEventClient(),
+);
+```
