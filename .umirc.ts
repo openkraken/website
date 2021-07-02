@@ -248,6 +248,10 @@ export default defineConfig({
             path: '/guide/advanced/communicate-with-native',
           },
           {
+            title: 'Kraken 网络请求拦截器',
+            path: '/guide/advanced/network-intercept',
+          },
+          {
             title: 'Native 与 Kraken 进行交互传递',
             path: '/guide/advanced/gesture-to-native',
           },
@@ -612,6 +616,10 @@ export default defineConfig({
           {
             title: 'JS and Native communication',
             path: '/en-US/guide/advanced/communicate-with-native',
+          },
+          {
+            title: 'Kraken Network Interceptor',
+            path: '/en-US/guide/advanced/network-intercept',
           },
           {
             title: 'Native and Kraken for gesture transfer',
