@@ -35,7 +35,7 @@ Kraken currently does not provide a CLI program that can run on the Windows plat
 
 Use your Android phone to scan the QR code below to download Kraken Playground to experience the examples in each document.
 
-<img src="https://img.alicdn.com/imgextra/i3/O1CN01FGQcF91hKD7T5drVR_!!6000000004258-2-tps-400-400.png" width="200px"></img>
+<img src="https://gw.alicdn.com/imgextra/i4/O1CN01KBxF3l221zJJ9NLKe_!!6000000007061-2-tps-400-400.png" width="200px"></img>
 
 ## Create a Kraken application
 
