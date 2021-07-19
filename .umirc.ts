@@ -232,6 +232,10 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
+            title: '使用 Fluter Widget 自定义元素',
+            path: '/guide/advanced/widget-custom-element',
+          },
+          {
             title: '实现一个高性能长列表',
             path: '/guide/advanced/high-performance-list',
           },
@@ -601,6 +605,10 @@ export default defineConfig({
         title: 'Advanced',
         path: '/en-US/guide/advanced',
         children: [
+          {
+            title: 'Use Fluter Widget to customize elements',
+            path: '/en-US/guide/advanced/widget-custom-element',
+          },
           {
             title: 'Implement a high-performance long list',
             path: '/en-US/guide/advanced/high-performance-list',
