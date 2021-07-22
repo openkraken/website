@@ -60,39 +60,26 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 
 这个时候就可以进行 Bridge 的编译，构建的产物在 `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
 
-3. 在 `kraken/kraken/macos/` 目录，使用下面的命令修改软链接。
-
-```bash
-  cd /path/to/kraken/kraken/macos
-  rm libkraken_jsc.dylib
-  ln -s /path/to/kraken/bridge/cmake-build-debug/libkraken_jsc.dylib # 必须是绝对地址
-  echo > prepare.sh
-```
-
-4. 创建 flutter 应用启动脚本
-
-创建任意位置创建一个脚本文件，用来执行编译 flutter app 的命令。
-
-```bash
-  echo "flutter build macos --debug" > ~/build_flutter.sh
-```
-
-5. 在 Clion 建立配置关联启动脚本
+3. 在 Clion 中添加 flutter 构建命令
 
 打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528742-59558000-b006-11eb-8870-8b9d69f3b14f.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
 
-6. 串联启动脚本，并绑定启动应用
+4. 在 Clion 中添加 npm scripts 构建命令
 
-将 Executable 选择为 `kraken/kraken/example/build/macos/Build/Products/Debug/kraken_example.app`
+继续按照上面的方式，添加一个 NPM 构建命令
 
-并在下面 Before launch 中添加上面创建的 `Build Flutter Example App`
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
 
- <video muted autoplay loop="loop" style="width: 100%">
-    <source src="https://user-images.githubusercontent.com/4409743/117528845-e0a2f380-b006-11eb-8049-130715f3ccd0.mp4" type="video/mp4">
-  </video>
+5. 串联启动脚本，并绑定启动应用
 
-7. 点击右上角的调试按钮，就可以在任何 C/C++ 代码中设置断点并进行调试。
+在 CMake Application 中选择 kraken，然后将 Executable 选择为 `kraken/kraken/example/build/macos/Build/Products/Debug/kraken_example.app`
+
+并且在 Before Launch 中删掉默认提供的 Build，添加上面创建的 flutter 构建命令和 npm scripts 构建命令，注意 npm 构建命令要在最前面。
+
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
+
+6. 点击右上角的调试按钮，就可以在任何 C/C++ 代码中设置断点并进行调试。
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
