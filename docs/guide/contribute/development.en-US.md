@@ -49,20 +49,37 @@ Dart code can be debugged using Android Studio or VSCode. The specific usage met
 
 The debugging of Bridge code currently only supports the macOS platform, and the debugging method of the Windows platform needs to be added.
 
-Use XCode to open `kraken/example/macos/Runner.xcworkspace`
+**Use Clion**
 
-Then add a line of `assert(false)` to the code in Bridge. The purpose of this is to force a code exception to be triggered, so that you can set debugging breakpoints on XCode.
+The most convenient and quick way to debug Bridge code is to use Clion, which can quickly modify and debug C/C++ code.
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210322174105.jpg)
+1. Use Clion to open the `kraken/bridge` directory.
+2. Open Preference -> Build, Execution, Depolyment -> CMake, and configure it as shown in the figure below.
 
-Then execute the following command to rebuild `Bridge`
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
 
-```shell script
-npm run build:bridge:macos
-```
+At this time, Bridge can be compiled, and the built product is in `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
 
-Then go back to XCode to run the example application. At this time, Kraken will not accidentally throw an exception, and at this time, XCode will also display the source code of `Bridge`.
+3. Add flutter build command in Clion
 
-![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210322175048.jpg)
+Open Run -> Edit Configurations, click on the `+` in the upper left corner to create a `Shell Script` configuration
 
-At this time, you only need to click below the number of lines of code to create a breakpoint, then delete the `assert(false)` and rebuild the `Bridge` to debug the C/C++ code.
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
+
+4. Add npm scripts build command in Clion
+
+Continue to follow the above method to add a NPM build command
+
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
+
+5. Connect startup scripts and bind startup applications
+
+Select kraken in CMake Application, then select Executable as `kraken/kraken/example/build/macos/Build/Products/Debug/kraken_example.app`
+
+And delete the build provided by default in Before Launch, add the flutter build command and npm scripts build command created above, pay attention to the npm build command to be at the top.
+
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
+
+6. Click the debug button in the upper right corner to set breakpoints and debug in any C/C++ code.
+
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
