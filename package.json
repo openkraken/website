@@ -1,6 +1,12 @@
 {
   "private": true,
   "name": "dumi-app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openkraken/website.git",
+    "branch": "main",
+    "platform": "github"
+  },
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
