@@ -1,5 +1,7 @@
 # Integrate Kraken in the Flutter application
 
+> Android simulator is not supported.
+
 Here, we have completely installed [Flutter version specified by Kraken](https://github.com/openkraken/kraken/blob/main/kraken/pubspec.yaml#L8) in our setting environment, and `flutter doctor` detection All passed.
 
 Use the following command to create a new Flutter App

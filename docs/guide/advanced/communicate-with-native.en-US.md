@@ -1,5 +1,22 @@
 # JS and Native communication
 
+## Prepare to work
+
+**[SDK Integration](/guide/native/interpolation-app)**
+
+No additional configuration is required.
+
+**[Kraken Widget Integration](/guide/native/interpolation-flutter)**
+
+You need to pass in `KrakenNativeChannel()` parameter to Kraken object to enable the communication between js and native.
+
+```dart
+Kraken(
+   bundlePath:'assets/bundle.js',
+   javaScriptChannel: KrakenNativeChannel(),
+)
+```
+
 ## Communicate with Native in JS environment
 
 Kraken adds a global object of `kraken` to the JS environment, and there is a `kraken.methodChannel` object on this global object, which is used to implement message communication with Native.

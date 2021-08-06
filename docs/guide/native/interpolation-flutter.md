@@ -1,5 +1,7 @@
 # 在 Flutter 应用中集成 Kraken
 
+> 不支持 Android 模拟器，请使用真机
+
 在这里，我们设定环境中已经完全安装 [Kraken 指定的 Flutter stable 版本](https://github.com/openkraken/kraken/blob/main/kraken/pubspec.yaml#L8)，并且 `flutter doctor` 检测全部通过。
 
 使用下面的命令创建一个新的 Flutter App

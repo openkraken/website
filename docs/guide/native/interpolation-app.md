@@ -1,5 +1,7 @@
 # 在原生 App 中集成 Kraken
 
+> 不支持 Android 模拟器，请使用真机
+
 除了直接集成到 flutter 应用之外，Kraken 还提供预构建到 SDK，可以方便地集成至 iOS 以及 Android 应用内。
 
 ## 集成到 Android 应用

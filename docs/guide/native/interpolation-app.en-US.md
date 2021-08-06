@@ -1,5 +1,7 @@
 # Integrate Kraken in native apps
 
+> Android simulator is not supported.
+
 In addition to being directly integrated into the flutter application, Kraken also provides pre-built into the SDK, which can be easily integrated into iOS and Android applications.
 
 ## Integrate into Android app

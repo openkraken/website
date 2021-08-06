@@ -1,5 +1,22 @@
 # JS 与 Native 通信
 
+## 准备工作
+
+**[SDK 集成](/guide/native/interpolation-app)**
+
+无需任何额外配置。
+
+**[Kraken Widget 集成](/guide/native/interpolation-flutter)**
+
+需要给 Kraken 对象传入 `KrakenNativeChannel()` 才可以实现 js 与 native 的通信。
+
+```dart
+Kraken(
+  bundlePath: 'assets/bundle.js',
+  javaScriptChannel: KrakenNativeChannel(),
+)
+```
+
 ## 在 JS 环境中与 Native 通信
 
 Kraken 在 JS 环境中添加了 `kraken` 的全局对象，在这个全局对象上有 `kraken.methodChannel` 对象，用于实现和 Native 的消息通信。

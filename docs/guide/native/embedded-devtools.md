@@ -2,6 +2,8 @@
 
 Kraken 支持使用 Chrome DevTools 进行调试，通过安装 `kraken_devtools` 来开启。
 
+> 仅支持 macOS，Android ARM64 平台
+
 ## 安装
 
 > 开发者工具集成目前仅支持使用 flutter 集成的方式进行接入，SDK 集成接入的方式还在开发中。
