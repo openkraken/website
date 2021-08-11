@@ -161,7 +161,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
             </li>
             <li style="width: 200px;margin-bottom: 15px;">
               <img src="//img.alicdn.com/tfs/TB1k4.laW6qK1RjSZFmXXX0PFXa-237-237.png" style="vertical-align: middle; margin-right: 5px; max-width: 16px; max-height: 16px;">
-              <a style="color:#ffffff;" target="_blank" href="//midwayjs.org/"> Midway </a>
+              <a style="color:#ffffff;" target="_blank" href="//www.midwayjs.org/"> Midway </a>
             </li>
           </ul>
         </div>
