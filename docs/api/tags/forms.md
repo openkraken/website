@@ -8,7 +8,7 @@
 ### \<input>
 
 - 定义：用于创建接收用户输入字符的输入框。
-- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 。
+- 参考： [链接](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input) 。
 
 ### \<label>
 
