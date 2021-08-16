@@ -1,4 +1,4 @@
-# Network interception
+# Network interceptor
 
 ## Network request interceptor
 
@@ -79,7 +79,7 @@ void main() {
 
 ## Custom URI resolution
 
-Kraken will be insideImplement a set of URI parsing rules `UriParser`. When developers need to customize a set of URI parsing rules, they can process `UriParser`.
+Kraken will be thereThis part implements a set of URI parsing rules `UriParser`. When developers need to customize a set of URI parsing rules, they can process `UriParser`.
 
 ### A simple example
 
