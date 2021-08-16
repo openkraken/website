@@ -1,18 +1,20 @@
 # Network Interceptor
 
-Sometimes we need to intercept or replace the requests sent by Kraken. This ability is usually used to implement functions such as custom caching, error rate statistics, and authentication.
+## Network request interceptor
+
+Sometimes we need to intercept or replace the internal requests of Kraken. This ability is usually used to implement custom caching, error rate statistics, authentication and other functions.
 
 Kraken provides the `httpClientInterceptor` parameter on the Widget layer, and the network interceptor can be implemented by implementing a custom `HttpClientInterceptor`.
 
-## Abstract class method description
+### Abstract class method description
 
 We need to implement `HttpClientInterceptor` to provide network interception capabilities. It has 3 methods:
 
--`Future<HttpClientRequest?> beforeRequest(HttpClientRequest request)`: Before making the request, at this time the `HttpClientRequest` object has been created, it will be passed in as the first parameter of this method, you can directly modify this object, or you You can also return a new `HttpClientRequest` object. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> shouldInterceptRequest(HttpClientRequest request)`: Triggered when the request is initiated. Unlike `beforeRequest`, you can directly return a `HttpClientResponse` object. At this time, Kraken will no longer initiate real network requests. Instead, use this object as the return object of this request. This is useful when implementing a custom cache function. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> afterResponse(HttpClientRequest request, HttpClientResponse response);`: Triggered after the request returns, it will pass in both `HttpClientRequest` and `HttpClientResponse` objects; but at this time `HttpClientRequest` is a read-only object, modify It has no meaning; `HttpClientResponse` can be modified, or you can return a new `HttpClientResponse` object as the return object of this request. Returning a Null value means that no modification is made.
+-`Future<HttpClientRequest?> beforeRequest(HttpClientRequest request)`: Before making the request, at this time the `HttpClientRequest` object has been created, it will be passed in as the first parameter of this method, you can directly modify this object, or you You can also return a new `HttpClientRequest` object. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> shouldInterceptRequest(HttpClientRequest request)`: Triggered when the request is initiated. Unlike `beforeRequest`, you can directly return a `HttpClientResponse` object. At this time, Kraken will no longer initiate real network requests. Instead, use this object as the return object of this request. This is useful when implementing a custom cache function. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> afterResponse(HttpClientRequest request, HttpClientResponse response);`: Triggered after the request returns, it will pass in both `HttpClientRequest` and `HttpClientResponse` objects; but at this time `HttpClientRequest` is a read-only object, modify It has no meaning; `HttpClientResponse` can be modified, or you can return a new `HttpClientResponse` object as the return object of this request. Returning a Null value means that no modification will be made.
 
 > Tips: `HttpClientResponse` is also an abstract class, you can use `HttpClientStreamResponse` as the actual implementation of `HttpClientResponse`.
 
-## A simple example
+### A simple example
 
 ```dart
 import'dart:typed_data';
@@ -71,6 +73,29 @@ void main() {
         });
     ''',
     httpClientInterceptor: CustomHttpClientInterceptor(),
+  ));
+}
+```
+
+## Custom URI resolution
+
+Kraken will be thereThis part implements a set of URI parsing rules `UriParser`. When developers need to customize a set of URI parsing rules, they can process `UriParser`.
+
+### A simple example
+
+```dart
+class MyUriParser extends UriParser {
+  @override
+  String resolve(Uri base, Uri relative) {
+    String uri = super.resolve(base, relative);
+    // custom parse uri.
+    return uri;
+  }
+}
+
+void main() {
+  runApp(Kraken(
+    uriParser: MyUriParser(),
   ));
 }
 ```

@@ -1,10 +1,12 @@
 # 网络拦截器
 
+## 网络请求拦截器
+
 有时候我们需要对 Kraken 内部发出的请求进行拦截或者替换，这种能力通常被用来实现自定义缓存、错误率统计、鉴权等功能。
 
 Kraken 在 Widget 层提供了 `httpClientInterceptor` 参数，可以通过实现自定义的 `HttpClientInterceptor` 来实现网络拦截器。
 
-## 抽象类方法说明
+### 抽象类方法说明
 
 我们需要实现 `HttpClientInterceptor` 来提供网络拦截的能力，它有 3 个方法：
 
@@ -14,7 +16,7 @@ Kraken 在 Widget 层提供了 `httpClientInterceptor` 参数，可以通过实�
 
 > Tips: `HttpClientResponse` 也是一个抽象类，你可以使用 `HttpClientStreamResponse` 作为 `HttpClientResponse` 的实际实现。
 
-## 一个简单的例子
+### 一个简单的例子
 
 ```dart
 import 'dart:typed_data';
@@ -73,6 +75,29 @@ void main() {
         });
     ''',
     httpClientInterceptor: CustomHttpClientInterceptor(),
+  ));
+}
+```
+
+## 自定义 URI 解析
+
+Kraken 会在内部实现一套 URI 的解析规则 `UriParser`，当开发者需要自定义一套 URI 解析规则时候，可以对 `UriParser` 进行处理。
+
+### 一个简单的例子
+
+```dart
+class MyUriParser extends UriParser {
+  @override
+  String resolve(Uri base, Uri relative) {
+    String uri = super.resolve(base, relative);
+    // custom parse uri.
+    return uri;
+  }
+}
+
+void main() {
+  runApp(Kraken(
+    uriParser: MyUriParser(),
   ));
 }
 ```
