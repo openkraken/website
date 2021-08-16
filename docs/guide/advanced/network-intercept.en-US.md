@@ -1,4 +1,4 @@
-# Network interceptor
+# Network Interceptor
 
 ## Network request interceptor
 
