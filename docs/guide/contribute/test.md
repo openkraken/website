@@ -35,7 +35,7 @@ describe('block-in', () => {
       );
       BODY.appendChild(div);
 
-      await matchViewportSnapshot();
+      await snapshot();
     });
   }
 });
@@ -43,9 +43,9 @@ describe('block-in', () => {
 
 ## 验证渲染效果
 
-Kraken 中提供了 `matchViewportSnapshot()` 函数可以将当前的渲染结果截屏并保存成 PNG 图片，图片的命名取决于测试用例中 `describe` 和 `it` 的值。
+Kraken 中提供了 `snapshot()` 函数可以将当前的渲染结果截屏并保存成 PNG 图片，图片的命名取决于测试用例中 `describe` 和 `it` 的值。
 
-当生成的图片名称在本地已经存在的时候，测试框架就会对两张图片的内存进行像素对比，如果发现两张图片的渲染结果存在差异，就会导致 `matchViewportSnapshot()` 抛出异常，使得测试失败。
+当生成的图片名称在本地已经存在的时候，测试框架就会对两张图片的内存进行像素对比，如果发现两张图片的渲染结果存在差异，就会导致 `snapshot()` 抛出异常，使得测试失败。
 
 生成的图片文件都会存放在 `integration_tests/snapshots`。
 

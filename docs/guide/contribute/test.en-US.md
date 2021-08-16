@@ -35,7 +35,7 @@ describe('block-in', () => {
       );
       BODY.appendChild(div);
 
-      await matchViewportSnapshot();
+      await snapshot();
     });
   }
 });
@@ -43,9 +43,9 @@ describe('block-in', () => {
 
 ## Verify the rendering effect
 
-Kraken provides the `matchViewportSnapshot()` function to take a screenshot of the current rendering result and save it as a PNG image. The name of the image depends on the values ​​of `describe` and `it` in the test case.
+Kraken provides the `snapshot()` function to take a screenshot of the current rendering result and save it as a PNG image. The name of the image depends on the values ​​of `describe` and `it` in the test case.
 
-When the generated image name already exists locally, the test framework will compare the memory of the two images in pixels. If there is a difference in the rendering results of the two images, it will cause the `matchViewportSnapshot()` to throw an exception, making The test failed.
+When the generated image name already exists locally, the test framework will compare the memory of the two images by pixel. If there is a difference in the rendering results of the two images, it will cause the `snapshot()` to throw an exception, making The test failed.
 
 The generated image files will be stored in `integration_tests/snapshots`.
 
@@ -55,7 +55,7 @@ The test needs to be run on the macOS platform.
 
 Execute `npm test` under the Kraken project to run the test.
 
-> Note: Different macOS models may have some inconsistent snapshot tests, depending on the GPU model and device driver of the currently running machine.
+> Note: Different macOS models may have some inconsistencies in the snapshot test, depending on the GPU model and device driver of the currently running machine.
 > Currently known as Intel GPU and NVIDIA, AMD GPU snapshot results are slightly different, but this will still cause integration test snapshot comparison failure.
 
 In order to ensure the consistency of snapshot verification, it is recommended to submit a `Pull Request` to [openkraken/kraken](https://github.com/openkraken/kraken), and then use the official CI of the Kraken team to perform the test.
