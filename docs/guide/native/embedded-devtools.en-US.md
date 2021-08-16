@@ -12,8 +12,8 @@ Add the dependency of `kraken_devtools` in the `pubspec.yaml` file.
 
 ```
 Kraken kraken = Kraken(
-   bundlePath:'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
-   devToolsService: ChromeDevToolsService(),
+  bundleURL:'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
+  devToolsService: ChromeDevToolsService(),
 );
 ```
 

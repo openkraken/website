@@ -12,7 +12,7 @@ Kraken 支持使用 Chrome DevTools 进行调试，通过安装 `kraken_devtools
 
 ```
 Kraken kraken = Kraken(
-  bundlePath: 'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
+  bundleURL: 'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
   devToolsService: ChromeDevToolsService(),
 );
 ```
