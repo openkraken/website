@@ -20,7 +20,7 @@
 这里以 `swipe` 手势为例：
 
 ```js
-element.addEventLisenter('swipe', gestureEvent => {
+element.addEventListener('swipe', gestureEvent => {
   if (gestureEvent.state === 'down') {
     // ...
   } else if (gestureEvent.state === 'move') {
