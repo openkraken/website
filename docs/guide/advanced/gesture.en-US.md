@@ -20,7 +20,7 @@ Similar to ordinary Event, you only need to listen to a specific gesture event o
 Here is an example of the `swipe` gesture:
 
 ```js
-element.addEventLisenter('swipe', gestureEvent => {
+element.addEventListener('swipe', gestureEvent => {
   if (gestureEvent.state === 'down') {
     // ...
   } else if (gestureEvent.state === 'move') {
