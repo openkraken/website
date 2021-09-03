@@ -29,7 +29,7 @@ $ kraken https://raw.githubusercontent.com/openkraken/kraken/master/kraken/examp
 
 #### Windows 用户
 
-Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序，请使用安卓手机下载 [Kraken Gallery](https://github.com/openkraken/gallery) 以体验 Kraken 在移动端的表现。
+Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序，请使用安卓手机下载 [Kraken Gallery](https://github.com/openkraken/gallery)以体验 Kraken 在移动端的表现。
 
 #### Kraken Playground
 
