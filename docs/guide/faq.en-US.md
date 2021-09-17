@@ -1,8 +1,8 @@
-# FAQ
+# common problem
 
 ## Reference local image path not found
 
-Local image loading needs to rely on Flutter’s assets mechanism. Please refer to [Flutter Documentation](https://flutter.dev/docs/development/ui/assets-and-images). You need to declare the image file to pubspec.yaml in order to Obtain the correct index relationship when packaging.
+Local image loading needs to rely on Flutter’s assets mechanism. Refer to [Flutter Documentation](https://flutter.dev/docs/development/ui/assets-and-images), and you need to declare the image file in pubspec.yaml in order to Obtain the correct index relationship when packaging.
 
 Reference: [https://github.com/openkraken/kraken/issues/239](https://github.com/openkraken/kraken/issues/239)
 
@@ -27,3 +27,7 @@ Reference: [https://github.com/openkraken/kraken/issues/190](https://github.com/
 ## Windows platform Kraken CLI
 
 Kraken CLI for Windows platform is under development.
+
+## Integrated Kraken package volume increment
+
+Reference: [https://github.com/openkraken/kraken/issues/688](https://github.com/openkraken/kraken/issues/688)
