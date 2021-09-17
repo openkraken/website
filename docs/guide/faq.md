@@ -27,3 +27,7 @@ sudo npm install -g @openkraken/cli --unsafe-perm
 ## Windows 平台 Kraken CLI
 
 Windows 平台 Kraken CLI 正在开发中。
+
+## 集成 Kraken 包体积增量
+
+参考： [https://github.com/openkraken/kraken/issues/688](https://github.com/openkraken/kraken/issues/688)
