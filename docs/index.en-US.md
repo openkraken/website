@@ -169,6 +169,10 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
     <div style="display:flex;margin-top: 18px" >
       <div style="margin: 0px auto;">
         <a  href="//beian.miit.gov.cn/">浙ICP备09109183号-99</a>
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015955">
+          <img style="margin-left: 20px; margin-right: 3px; position: relative; top: 4px;" src="https://gw.alicdn.com/imgextra/i1/O1CN01YKr8hx1ieC395Z2qm_!!6000000004437-2-tps-20-20.png" />
+          浙公网安备 33011002015955号
+        </a>
       </div>
     </div>
     <div style="display:flex;margin-top: 18px">
