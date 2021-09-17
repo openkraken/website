@@ -167,12 +167,15 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
         </div>
       </div>
     </div>
-    <div style="display:flex;margin-top: 18px" >
-      <div style="margin: 0px auto;">
-        <a target="_blank" href="//beian.miit.gov.cn/">浙ICP备09109183号-99</a>
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015955">
-          <img style="margin-left: 20px; margin-right: 3px; position: relative; top: 4px;" src="https://gw.alicdn.com/imgextra/i1/O1CN01YKr8hx1ieC395Z2qm_!!6000000004437-2-tps-20-20.png" />
+    <div style="display:flex;margin-top: 18px">
+      <div style="margin: 0px auto; padding: 0 40px; text-align: center;">
+        <a target="_blank" rel="noopener noreferrer" href="http://beian.miit.gov.cn/">浙ICP备09109183号-99</a>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015955">
+          <img style="margin-left: 20px; margin-right: 3px; position: relative; top: 4px; width: 20px;" src="https://gw.alicdn.com/imgextra/i1/O1CN01YKr8hx1ieC395Z2qm_!!6000000004437-2-tps-20-20.png" />
           浙公网安备 33011002015955号
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="http://idinfo.zjamr.zj.gov.cn/bscx.do?method=lzxx&id=3301843301002004003505">
+          <img src="https://gw.alicdn.com/imgextra/i3/O1CN01pVd9gR1OCRjtpvt1t_!!6000000001669-1-tps-65-70.gif" style="margin-left: 20px;margin-right: 3px;position: relative;top: 4px; width: 20px;" />
         </a>
       </div>
     </div>
