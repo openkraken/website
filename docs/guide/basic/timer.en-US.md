@@ -39,4 +39,4 @@ let timer = setTimeout(function() {
 clearTimeout(timer);
 ```
 
-To know which timers Kraken supports, please check [Development Document](/api/host-environment/timers).
+To know which timers Kraken supports, please check [Development Document](/en-US/api/host-environment/timers).

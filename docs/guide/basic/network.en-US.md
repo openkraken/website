@@ -32,7 +32,7 @@ fetch(url, {
   .then(json => console.log(json));
 ```
 
-For more information, please refer to [Development Document](/api/host-environment/fetch).
+For more information, please refer to [Development Document](/en-US/api/host-environment/fetch).
 
 ## WebSocket
 
@@ -56,7 +56,7 @@ ws.onclose = function(evt) {
 };
 ```
 
-For more details, please refer to [Development Document](/plugins/official/kraken_websocket).
+For more details, please refer to [Development Document](/en-US/plugins/official/kraken_websocket).
 
 ## Use XMLHttpRequest
 

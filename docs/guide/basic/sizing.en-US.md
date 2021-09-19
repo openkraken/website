@@ -6,7 +6,7 @@ When the page is rendered, Kraken is based on the [W3C box model](https://develo
 
 Corresponding to the CSS properties, `width`, `height` describe the width and height of the label, `padding` describes the inner margin of the label, and `margin` describes the outer margin of the label.
 
-Please refer to [Development Document](/api/styles/sizing) for all the attributes related to size margins supported by Kraken.
+Please refer to [Development Document](/en-US/api/styles/sizing) for all the attributes related to size margins supported by Kraken.
 
 **Example:**
 

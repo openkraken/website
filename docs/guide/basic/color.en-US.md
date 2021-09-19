@@ -1,8 +1,8 @@
 # Color and background
 
-The color `color` acts on the font, and the background `background` can act on any element (including text). For the color and background-related attributes supported by Kraken, please refer to the corresponding [Development Document](/api/styles/background).
+The color `color` acts on the font, and the background `background` can act on any element (including text). For the color and background-related attributes supported by Kraken, please refer to the corresponding [Development Document](/en-US/api/styles/background).
 
-For colors, it supports multiple formats such as color keywords, rgba, hexadecimal, etc. For details, please refer to the corresponding [Development Document](/api/styles/unit#css-color unit).
+For colors, it supports multiple formats such as color keywords, rgba, hexadecimal, etc. For details, please refer to the corresponding [Development Document](/en-US/api/styles/unit#css-color-unit).
 
 **Example:**
 

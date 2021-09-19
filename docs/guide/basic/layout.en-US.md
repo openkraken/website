@@ -109,7 +109,7 @@ For a long time, the only reliable and cross-browser compatible layout methods i
 
 Therefore, the Flexbox layout method was introduced in the CSS3 standard, which solved the limitations of many previous layout methods. For detailed concept introduction, please refer to this [document](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 
-For all properties related to flexbox layout supported by Kraken, please refer to [Development Document](/api/styles/layout#flexbox layout).
+For all properties related to flexbox layout supported by Kraken, please refer to [Development Document](/en-US/api/styles/layout#flexbox layout).
 
 The following uses examples to introduce simple usage:
 
@@ -240,7 +240,7 @@ CSS provides five positioning methods:
 
 5. sticky: sticky positioning, the tag is positioned according to the normal document flow, and then relative to its nearest scrolling ancestor and [containing block](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block) (The nearest block-level ancestor), offset based on the values ​​of top, right, bottom and left. The offset value does not affect the position of any other labels.
 
-Please refer to [Development Document](/api/styles/position) for all the properties related to positioning supported by Kraken.
+Please refer to [Development Document](/en-US/api/styles/position) for all the properties related to positioning supported by Kraken.
 
 **Example:**
 

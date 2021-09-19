@@ -55,4 +55,4 @@ setTimeout(() => {
   </div>
 </div>
 
-For more detailed API, please refer to [Development Document](/api/styles/transform).
+For more detailed API, please refer to [Development Document](/en-US/api/styles/transform).

@@ -4,7 +4,7 @@ Kraken implements W3C standard HTML tags and CSS styles, so you can use Web deve
 
 ## Build the page structure
 
-Kraken supports most of the commonly used standard HTML tags (for all supported tags, please refer to [Development Document](/api/tags)). Using these tags can help us build the basic structure of the page.
+Kraken supports most of the commonly used standard HTML tags (for all supported tags, please refer to [Development Document](/en-US/api/tags)). Using these tags can help us build the basic structure of the page.
 
 The following example demonstrates how to write a simple blog post structure using native HTML tags:
 
@@ -29,7 +29,7 @@ The following example demonstrates how to write a simple blog post structure usi
 
 ## Add style
 
-Kraken supports most of the commonly used CSS styles (for all supported styles, please refer to [Development Document](/api/styles)). Next, we will continue to add styles to the HTML code example of the blog post example above:
+Kraken supports most of the commonly used CSS styles (for all supported styles, please refer to [Development Document](/en-US/api/styles)). Next, we will continue to add styles to the HTML code example of the blog post example above:
 
 > For the convenience of demonstration, the code examples uniformly use React / Rax supported [JSX syntax](https://zh-hans.reactjs.org/docs/introducing-jsx.html) to set the inline style.
 

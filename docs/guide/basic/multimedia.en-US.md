@@ -45,7 +45,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
 
 ## Video
 
-Video is not natively supported by Kraken. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/plugins/official/kraken_video_player) .
+Video is not natively supported by Kraken. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/en-US/plugins/official/kraken_video_player) .
 
 **Example:**
 
