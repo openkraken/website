@@ -30,7 +30,7 @@ root.appendChild(document.createTextNode('Hello World!'));
 document.body.appendChild(root);
 ```
 
-Compared to HTML, JS has more flexible features. Since the standard DOM API is implemented, you can use most of the excellent front-end frameworks in the front-end community, such as Vue, Rax, React, etc., for details, please refer to [Development Document](/guide).
+Compared to HTML, JS has more flexible features. Since the standard DOM API is implemented, you can use most of the excellent front-end frameworks in the front-end community, such as Vue, Rax, React, etc., for details, please refer to [Development Document](/en-US/guide).
 
 ## Limited CSS support
 
@@ -47,12 +47,12 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // Use inline CSS Tex
 
 In Kraken, not all DOM and global APIs are supported. Putting aside the historical baggage of browsers, we implemented most of the modern, frequently used, and user-friendly W3C APIs.
 
-For more detailed support list, please refer to [API document](/api/tags) on the site.
+For more detailed support list, please refer to [API document](/en-US/api/tags) on the site.
 
 ## Style ability difference
 
-Please refer to the [Differences from browser](/api/styles/difference) document.
+Please refer to the [Differences from browser](/en-US/api/styles/difference) document.
 
 ## Local storage
 
-In browsers, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/api/enhancement/storage).
+In browsers, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/en-US/api/enhancement/storage).

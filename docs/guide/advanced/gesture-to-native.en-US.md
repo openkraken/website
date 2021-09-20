@@ -47,7 +47,7 @@ Kraken kraken = Kraken(
 );
 ```
 
-For detailed API calls, see [Development Document](/guide/native/widget).
+For detailed API calls, see [Development Document](/en-US/guide/native/widget).
 
 ## Touch pass
 

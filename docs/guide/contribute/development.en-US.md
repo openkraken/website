@@ -13,7 +13,7 @@ After installing the editor, you also need to install additional Flutter plugins
 
 ## Build Bridge
 
-Before running Kraken, you also need to build the JS Bridge code locally. The bridge code is in the `bridge` directory and is implemented by C++. Before compiling, make sure to follow the instructions in [Prepare Development Environment](/guide/contribute/environment) to build the dependencies required for the build.
+Before running Kraken, you also need to build the JS Bridge code locally. The bridge code is in the `bridge` directory and is implemented by C++. Before compiling, make sure to follow the instructions in [Prepare Development Environment](/en-US/guide/contribute/environment) to build the dependencies required for the build.
 
 **macOS platform**
 

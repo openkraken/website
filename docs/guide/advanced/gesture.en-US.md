@@ -42,4 +42,4 @@ Kraken expands on `GestureEvent`, adding some parameters for different gestures:
 
 Through these `GestureEvent` parameters, we can easily monitor gesture events on a specific element in the application, and learn some of the current gesture states based on the parameters, so as to quickly develop an application with complex gesture interaction.
 
-For more detailed API introduction, please see [gesture](/api/enhancement/gesture).
+For more detailed API introduction, please see [gesture](/en-US/api/enhancement/gesture).

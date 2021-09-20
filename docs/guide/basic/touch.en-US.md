@@ -46,4 +46,4 @@ In applications such as Rax / React / Vue, you only need to bind the click event
 
 ## Use more advanced gesture capabilities
 
-On the Web, developers often need to encapsulate the underlying [TouchEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) to provide a set of higher-level gesture capabilities. Kraken has built-in these commonly used gesture abilities. For the specific usage of advanced gesture abilities, please refer to [Using Enhanced Gesture Abilities](/guide/advanced/gesture).
+On the Web, developers often need to encapsulate the underlying [TouchEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) to provide a set of higher-level gesture capabilities. Kraken has built-in these commonly used gesture abilities. For the specific usage of advanced gesture abilities, please refer to [Using Enhanced Gesture Abilities](/en-US/guide/advanced/gesture).

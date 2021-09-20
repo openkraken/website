@@ -2,11 +2,11 @@
 
 ## Prepare to work
 
-**[SDK Integration](/guide/native/interpolation-app)**
+**[SDK Integration](/en-US/guide/native/interpolation-app)**
 
 No additional configuration is required.
 
-**[Kraken Widget Integration](/guide/native/interpolation-flutter)**
+**[Kraken Widget Integration](/en-US/guide/native/interpolation-flutter)**
 
 You need to pass in `KrakenNativeChannel()` parameter to Kraken object to enable the communication between js and native.
 
