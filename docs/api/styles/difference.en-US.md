@@ -1,6 +1,6 @@
-# Difference with browser
+# Difference from browser
 
-Kraken has the following differences with browsers in CSS standards:
+Kraken has the following differences with browsers in terms of CSS standards:
 
 | Properties     | Differences                                                                                                                                                  |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

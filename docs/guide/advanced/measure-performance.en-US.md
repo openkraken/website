@@ -4,7 +4,7 @@ In the process of using Kraken, it is inevitable to encounter some performance b
 
 Under normal circumstances, Kraken can quickly complete the rendering of the page, but in some special scenarios, Kraken's performance will be affected, so that the overall performance experience does not look so good.
 
-In the Profile operating mode, Kraken collects the time spent in each phase of the operation. You can obtain the running performance report of each module of Kraken through a simple JS API to locate performance problems.
+In the Profile operation mode, Kraken collects the time spent in each stage of the operation. You can get the running performance report of each module of Kraken through a simple JS API to locate performance problems.
 
 ## Turn on Profile mode
 

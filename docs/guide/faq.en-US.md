@@ -6,7 +6,7 @@ Local image loading needs to rely on Flutter’s assets mechanism. Refer to [Flu
 
 Reference: [https://github.com/openkraken/kraken/issues/239](https://github.com/openkraken/kraken/issues/239)
 
-## The problem of using the kraken SDK release package on the Android side
+## The issue of using the kraken SDK release package on the Android side
 
 There are some problems with the SDK API. You can use the Widget API to build and test with the Flutter application.
 

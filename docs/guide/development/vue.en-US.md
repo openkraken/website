@@ -30,7 +30,7 @@ kraken ./dist/js/app.js
 
 Vue provides an official [Vue CLI](https://github.com/vuejs/vue-cli), we can directly use [Vue CLI](https://github.com/vuejs/vue-cli) Let's initialize a Vue project, and then do some engineering transformations on the project to make the Vue project run smoothly on Kraken.
 
-Since Kraken does not have HTML, our root node must be `document.body`. Therefore, developers need to change the input parameter of mount to `document.body` in the entry file.
+Since Kraken does not have HTML, our root node must be `document.body`. Therefore, the developer needs to change the input parameter of mount to `document.body` in the entry file.
 
 ```js
 // src/main.js
@@ -40,7 +40,7 @@ import App from './App.vue';
 createApp(App).mount(document.body);
 ```
 
-Configure vue.config.js. Since there is no support for Script tags, you need to put the bundle in a package.
+Configure vue.config.js. Since the entrance of Kraken is a JavaScript file, the entrance needs to be packaged into a JavaScript file.
 
 ```js
 module.exports = {
@@ -111,4 +111,4 @@ In Vue applications, developers can also manage the state of components/applicat
 </script>
 ```
 
-Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transmission and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For complex large-scale applications, we recommend using [Vuex](https://vuex.vuejs.org/) officially provided by Vue to manage the status of the application.
+Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transfer and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For complex large-scale applications, we recommend using [Vuex](https://vuex.vuejs.org/) officially provided by Vue to manage the state of the application.

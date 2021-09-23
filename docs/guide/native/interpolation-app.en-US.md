@@ -1,6 +1,6 @@
 # Integrate Kraken in native apps
 
-> Android simulator is not supported.
+> Android emulator is not supported, please use a real device
 
 In addition to being directly integrated into the flutter application, Kraken also provides pre-built into the SDK, which can be easily integrated into iOS and Android applications.
 
@@ -8,7 +8,7 @@ In addition to being directly integrated into the flutter application, Kraken al
 
 ### 1. Prepare your AndroidStudio project
 
-Open AndroidStudio, select new Project, here we use EmptyActivity as the initial project, and use Java as the default Language
+Open AndroidStudio, select new Project, here we use EmptyActivity as the initial project and Java as the default Language
 
 <img src="https://gw.alicdn.com/tfs/TB1cmU.0oY1gK0jSZFMXXaWcVXa-1500-989.png" style="max-width: 600px" />
 
@@ -56,7 +56,7 @@ compileOptions {
 }
 ```
 
--For more build configurations, please refer to https://developer.android.com/studio/build/dependencies?hl=zh-cn
+- For more build configurations, please refer to https://developer.android.com/studio/build/dependencies?hl=zh-cn
 
 ### 5. Add startup code in MainActivity
 
@@ -122,7 +122,7 @@ target'MyiOSApplication' do
   use_frameworks!
 
   # Pods for MyiOSApplication
-  pod'Flutter', :podspec =>'/path/to/ios-sdk/[build mode]/Flutter.podspec'
+  pod'Flutter', :podspec ==>'/path/to/ios-sdk/[build mode]/Flutter.podspec'
 end
 ```
 
@@ -157,7 +157,7 @@ Use xcode to open the xcodeworkspace file, edit `ViewController.m`, and add the 
 Then add a button to the `viewDidLoad` method:
 
 ```objective-c
--(void)viewDidLoad {
+- (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   // Make a button to call the showFlutter function when pressed.
@@ -175,7 +175,7 @@ Then add a button to the `viewDidLoad` method:
 Then implement the `showFlutter` method:
 
 ```objective-c
--(void)showFlutter {
+- (void)showFlutter {
   FlutterEngine *flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
   // Runs the default Dart entrypoint with a default Flutter route.
   [flutterEngine run];

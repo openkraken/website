@@ -1,6 +1,6 @@
 # Multimedia
 
-For the images and videos that are frequently used for multimedia on the page, Kraken uses the `<img>` and `<video>` tags to support them. The specific usage is introduced below.
+The images and videos that are used for multimedia on the page are supported by Kraken using `<img>` and `<video>` tags respectively. The specific usage is introduced below.
 
 ## Image
 
@@ -28,7 +28,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-image.js
@@ -43,9 +43,9 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
   </div>
 </div>
 
-## Video
+## video
 
-Video is not natively supported by Kraken. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/en-US/plugins/official/kraken_video_player) .
+Video does not belong to Kraken's native support capabilities. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/en-US/plugins/official/kraken_video_player) .
 
 **Example:**
 
@@ -70,7 +70,7 @@ Video is not natively supported by Kraken. You need to install this [kraken_vide
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-video.js

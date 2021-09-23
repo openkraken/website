@@ -40,7 +40,7 @@ setTimeout(() => {
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-animation.js

@@ -18,7 +18,7 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(json => console.log(json));
 ```
 
-Sometimes you need to use the POST method to initiate a request to the HTTP URL. You can add a second optional parameter to the fetch method:
+Sometimes you need to use the POST method to initiate a request to the HTTP URL, you can add a second optional parameter to the fetch method:
 
 ```js
 const data = {

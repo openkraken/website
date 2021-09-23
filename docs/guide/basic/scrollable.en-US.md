@@ -1,6 +1,6 @@
 # Scroll container
 
-Adding `overflow: scroll` to an ordinary fixed-size container can create a scrolling container.
+You can create a scrolling container by adding `overflow: scroll` to an ordinary fixed-size container.
 By default, the scroll container supports horizontal scrolling and vertical scrolling, and horizontal and vertical scrolling can be set separately through `overflow-x: scroll` and `overflow-y: scroll`.
 
 The following example demonstrates how to create a rolling container:
@@ -25,7 +25,7 @@ The following example demonstrates how to create a rolling container:
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-scrollable.js

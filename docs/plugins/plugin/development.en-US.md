@@ -148,7 +148,7 @@ kraken-npbt build
 
 The built products will also be automatically placed in different directories in the plug-in project according to different platforms:
 
--**macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib` -**iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib` -**android:** -`your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so` -`your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
+- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib` -**iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib` -**android:** -`your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so` -`your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
 
 **Register the bridge build product to the plugin**
 

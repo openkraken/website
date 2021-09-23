@@ -1,19 +1,19 @@
 # Gesture
 
-When the user triggers a gesture interaction on an element, the corresponding gesture event will be triggered.
+When the user triggers a gesture interaction action on an element, the corresponding gesture event will be triggered.
 
 ## gesture event
 
 Kraken expands on [GestureEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/GestureEvent), adding some parameters for different gestures:
 
--state: Some states of continuous gestures, down, move, up.
--direction: direction, left, right, up, down.
--deltaX: coordinate of X axis movement.
--deltaY: The coordinate of Y axis movement.
--velocityX: X axis moving speed.
--velocityY: Y axis moving speed.
--scale: The scale of enlargement or reduction.
--rotation: angle.
+- state: Some states of continuous gestures, down, move, up.
+- direction: direction, left, right, up, down.
+- deltaX: coordinate of X axis movement.
+- deltaY: The coordinate of Y axis movement.
+- velocityX: X axis moving speed.
+- velocityY: Y axis moving speed.
+- scale: The scale of enlargement or reduction.
+- rotation: angle.
 
 ## swipe
 

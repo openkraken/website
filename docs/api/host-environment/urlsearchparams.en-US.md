@@ -1,6 +1,6 @@
 # URLSearchParams
 
-The `URLSearchParams` interface defines some useful methods to process URL query strings.
+The `URLSearchParams` interface defines some practical methods to process URL query strings.
 
 ## Constructor
 
@@ -33,18 +33,18 @@ const params3 = new URLSearchParams([
 const params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
-## Method
+## method
 
--`append()` inserts a specified key/value pair as a new search parameter.
+- `append()` inserts a specified key/value pair as a new search parameter.
 
--`delete()` deletes the specified search parameter and its corresponding value from the search parameter list.
+- `delete()` deletes the specified search parameter and its corresponding value from the search parameter list.
 
--`get()` Get the first value of the specified search parameter.
+- `get()` Get the first value of the specified search parameter.
 
--`getAll()` Get all the values ​​of the specified search parameter, and the return is an array.
+- `getAll()` Get all the values ​​of the specified search parameter, and the return is an array.
 
--`has()` returns a Boolean to determine whether this search parameter exists.
+- `has()` returns a Boolean to determine whether this search parameter exists.
 
--`set()` sets a new value of a search parameter. If there are multiple values, all other values ​​will be deleted.
+- `set()` sets a new value of a search parameter. If there are multiple values, all other values ​​will be deleted.
 
--`toString()` returns a string composed of search parameters, which can be used directly on the URL.
+- `toString()` returns a string composed of search parameters, which can be used directly on the URL.

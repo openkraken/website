@@ -20,7 +20,7 @@ for (let i = 0; i < 100; i++) {
   ele.style.padding = '35rpx 60rpx';
   ele.appendChild(document.createTextNode(`The ${i + 1} element`));
 
-  // Simulate a scene with variable height of internal elements
+  // Simulate a scene with varying heights of internal elements
   if (i % 3 === 0) {
     const img = new Image();
     img.src =
@@ -46,7 +46,7 @@ document.body.appendChild(container);
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-high-performance-list.js
@@ -61,7 +61,7 @@ document.body.appendChild(container);
   </div>
 </div>
 
-Such a simple Sliver scrolling list can work. When you scroll down, Kraken will dynamically generate the corresponding RenderObject and release the corresponding RenderObject of the node that has moved out of the viewport.
+Such a simple Sliver scrolling list will work. When you scroll down, Kraken will dynamically generate the corresponding RenderObject and release the RenderObject corresponding to the node that has moved out of the viewport.
 
 ## Progressive support
 

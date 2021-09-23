@@ -4,7 +4,7 @@ Kraken implements W3C standard HTML tags and CSS styles, so you can use Web deve
 
 ## Build the page structure
 
-Kraken supports most of the commonly used standard HTML tags (for all supported tags, please refer to [Development Document](/en-US/api/tags)). Using these tags can help us build the basic structure of the page.
+Kraken supports most commonly used standard HTML tags (for all supported tags, please refer to [Development Document](/en-US/api/tags)). Using these tags can help us build the basic structure of the page.
 
 The following example demonstrates how to write a simple blog post structure using native HTML tags:
 
@@ -19,8 +19,8 @@ The following example demonstrates how to write a simple blog post structure usi
   </div>
   <div>
     Kraken is a high-performance rendering engine based on W3C standards. The
-    bottom layer of Kraken is based on Flutter Perform rendering, through its
-    self-drawn rendering feature, to ensure multi-end consistency. The upper
+    bottom layer of Kraken is based on Flutter Perform rendering and ensure
+    multi-end consistency through its self-drawn rendering feature. The upper
     layer is based on W3C Standard implementation, with a very large front-end
     developer ecosystem.
   </div>
@@ -49,8 +49,8 @@ Kraken supports most of the commonly used CSS styles (for all supported styles, 
   </div>
   <div style={{ fontSize: '16px' }}>
     Kraken is a high-performance rendering engine based on W3C standards. The
-    bottom layer of Kraken is based on Flutter Perform rendering, through its
-    self-drawn rendering feature, to ensure multi-end consistency. The upper
+    bottom layer of Kraken is based on Flutter Perform rendering and ensure
+    multi-end consistency through its self-drawn rendering feature. The upper
     layer is based on W3C Standard implementation, with a very large front-end
     developer ecosystem.
   </div>
@@ -68,7 +68,7 @@ Kraken supports most of the commonly used CSS styles (for all supported styles, 
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js

@@ -1,4 +1,4 @@
-# Prepare the development environment
+# Prepare development environment
 
 Building Kraken requires the installation of specific tools, and the installation method for each platform is different.
 
@@ -39,13 +39,13 @@ Building Kraken requires the installation of specific tools, and the installatio
 
 3. Install [Android Studio](https://developer.android.com/studio)
 
-4. Download [ninja](https://github.com/ninja-build/ninja/releases), and then copy the installed ninja.exe file to the `C:\Windows` directory, so that you can directly in the Terminal Enter the `ninja` command to call.
+4. Download [ninja](https://github.com/ninja-build/ninja/releases), then copy the installed ninja.exe file to the `C:\Windows` directory, so that you can directly in the Terminal Enter the `ninja` command to invoke it.
 
 5. Install [CMake for Windows](https://cmake.org/download/)
 
 6. Install NDK
 
-   Open Android Studio, open Files> Settings> Appearance & Behavior> System Settings> Android SDK. Select NDK, and install version 20.1.5948944.
+   Open Android Studio, open Files> Settings> Appearance & Behavior> System Settings> Android SDK. Select NDK, and then install version 20.1.5948944.
 
    ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
 

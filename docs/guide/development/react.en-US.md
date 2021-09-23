@@ -45,7 +45,7 @@ ReactDOM.render(
 );
 ```
 
-Since Kraken does not support Script tags, you need to configure webpack so that the bundle is included in a package.
+Since the Kraken entry is a JavaScript file, you need to configure webpack so that the bundle is included in a package.
 
 In addition, it should be noted that currently Kraken only supports inline styles, so we recommend using the following methods to write `CSS styles`.
 
@@ -101,4 +101,4 @@ function Example() {
 }
 ```
 
-Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transmission and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For large applications, we recommend using a state management library of class `Flux` such as [Redux](https://redux.js.org/).
+Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transfer and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For large-scale applications, we recommend using a state management library of class `Flux` such as [Redux](https://redux.js.org/).

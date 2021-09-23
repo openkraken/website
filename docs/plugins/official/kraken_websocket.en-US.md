@@ -81,7 +81,7 @@ The status of the current connection.
 
 The address of the connection.
 
-### Method
+### method
 
 **WebSocket.close([code[, reason]])**
 
@@ -91,7 +91,7 @@ Disconnect.
 
 send data.
 
-### Incident
+### event
 
 Use `addEventListener` or set the listener via the `oneventname` property.
 

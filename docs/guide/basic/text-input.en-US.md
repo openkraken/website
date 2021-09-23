@@ -2,7 +2,7 @@
 
 In the browser, the `<input>` tag allows developers to process the user's text input. Similarly, in Kraken, we can still use the familiar `<input>` to achieve this ability.
 
-For the simplest example, the content input by the user is synchronously displayed in the `div`:
+For the simplest example, the content entered by the user is synchronously displayed in the `div`:
 
 ```js
 const input = document.createElement('input');
@@ -33,7 +33,7 @@ After running with Kraken, enter any text in the input box, and the entered cont
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-input.js
@@ -54,17 +54,17 @@ You can see that we use the `placeholder` attribute to store the placeholder whe
 
 The attribute `placeholder` has been introduced above, which can be used to control the content displayed in the control when the form control is empty. Other attributes supported by Kraken are:
 
--placeholder: When the form control is empty, the content displayed in the control.
--autofocus: When configured, allows to automatically get the focus when the page loads.
--value: The content value of the input box.
+- placeholder: When the form control is empty, the content displayed in the control.
+- autofocus: When configured, allows to automatically get the focus when the page loads.
+- value: The content value of the input box.
 
 ## Input type
 
 Input supports many types (types). The default value is `text`, which is a text type. Not all types are supported in Kraken. The supported types and descriptions are enumerated below.
 
--text: The default value, used to enter text.
--number: It is used to enter numbers, and the numeric keyboard will be displayed on devices with dynamic keyboards.
--tel: Used to enter a phone number, the phone number keyboard will be displayed on a device with a dynamic keyboard.
+- text: The default value, used to enter text.
+- number: It is used to enter numbers, and the numeric keyboard will be displayed on devices with dynamic keyboards.
+- tel: Used to enter a phone number, the phone number keyboard will be displayed on a device with a dynamic keyboard.
 
 ## More
 

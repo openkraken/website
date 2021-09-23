@@ -240,7 +240,7 @@ CSS provides five positioning methods:
 
 5. sticky: sticky positioning, the tag is positioned according to the normal document flow, and then relative to its nearest scrolling ancestor and [containing block](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block) (The nearest block-level ancestor), offset based on the values ​​of top, right, bottom and left. The offset value does not affect the position of any other labels.
 
-Please refer to [Development Document](/en-US/api/styles/position) for all the properties related to positioning supported by Kraken.
+Please refer to [Development Document](/en-US/development/styles/position) for all the attributes related to positioning supported by Kraken.
 
 **Example:**
 
@@ -338,7 +338,7 @@ Please refer to [Development Document](/en-US/api/styles/position) for all the p
     </div>
     <div className="preview-row">
       <div>
-        2. First download <a href="/guide#kraken-playground" >Kr on your Android phoneaken Playground App</a>, then open the App and scan the QR code below to preview:
+        2. First download <a href="/guide#kraken-playgro on your Android phoneund" >Kraken Playground App</a>, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01Ot39kM1yCHjKKSEmL_!!6000000006542-2-tps-200-200.png" />
     </div>

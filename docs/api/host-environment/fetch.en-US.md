@@ -1,10 +1,10 @@
 # Fetch
 
-The Fetch API provided by Kraken is compatible with W3C protocol specifications, so you can seamlessly migrate the `fetch` calling code in the browser to the Kraken environment.
+The Fetch API provided by Kraken is compatible with the W3C protocol specification, so you can seamlessly migrate the `fetch` calling code in the browser to the Kraken environment.
 
-In the Kraken environment, the Fetch API not only provides the `fetch` function, but also provides support for `Request` and `Response`. Through these two built-in constructors, some more complex functions can be implemented, such as customizing request headers, processing different types of data return types, etc.
+In the Kraken environment, the Fetch API not only provides the `fetch` function, but also provides support for `Request` and `Response`. Through these two built-in constructors, some more complex functions can be implemented, such as customizing request headers, processing different types of data return types, and so on.
 
-It should be noted that in the browser, Fetch will be subject to the browser’s [Same-origin Policy Security Restrictions](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy), but Kraken does not provide security restrictions like browsers, so you can use Fetch to request any API on the network, but it should be noted that you must ensure that the code executing Fetch is trusted, otherwise it will cause Security Question.
+It should be noted that in the browser, Fetch will be subject to the browser’s [Same Origin Policy Security Restrictions](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy), but Kraken does not provide security restrictions like browsers, so you can use Fetch to request any API on the network, but it should be noted that you must ensure that the code executing Fetch is trustworthy, otherwise it will cause Security Question.
 
 In the following example, we use FetchAPI to initiate a GET request. This request will return a JSON string. We can convert it into an object by calling the `json()` method of response for use by the following code:
 

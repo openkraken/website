@@ -8,7 +8,7 @@ The web entry file is an HTML document with extensions such as `.html` or `.htm`
 
 Kraken is more similar to React Native and Weex. It accepts a JSBundle of `.js` and uses the DOM API to build views and styles.
 
-This choice is for performance considerations. Modern front-end frameworks usually use JS logic to manipulate DOM to generate UI. Directly downloading JS can reduce the time it takes to download and parse HTML documents.
+This choice is based on performance considerations. Modern front-end frameworks usually use JS logic to manipulate DOM to generate UI. Directly downloading JS can reduce the time it takes to download and parse HTML documents.
 
 HTML documents under the Web:
 
@@ -55,4 +55,4 @@ Please refer to the [Differences from browser](/en-US/api/styles/difference) doc
 
 ## Local storage
 
-In browsers, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/en-US/api/enhancement/storage).
+In the browser, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/en-US/api/enhancement/storage).

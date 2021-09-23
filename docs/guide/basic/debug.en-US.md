@@ -18,6 +18,6 @@ Copy and paste the `devtools://` prefix to the address into the Chrome browser t
 
 There are some differences between opening the debugging tool on the Android/iOS device and the PC. If you use the method of installing APK on the phone to run Kraken, it is difficult to see the output of Kraken in the console.
 
-In addition to the output on the console, Kraken also automatically copies the debugging address of `devtools://` to the pasteboard. You only need to send the contents of the pasteboard to the PC on the mobile phone to debug.
+In addition to the output on the console, Kraken also automatically copied the debugging address of `devtools://` to the pasteboard. You only need to send the contents of the pasteboard to the PC on the mobile phone to debug.
 
-Note: Please make sure that the mobile phone and the PC are in the same local area network, otherwise the connection may not be connected.
+Note: Please make sure that your phone and PC are in the same local area network, otherwise you may not be able to connect.
