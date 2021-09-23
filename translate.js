@@ -36,7 +36,9 @@ async function trasnlate(pathname) {
               str = '- ' + str.slice(1, str.length);
             }
             // Deal with english path.
-            str = str.replace(/\]\(\//g, '](/en-US/');
+            str = str
+              .replace(/\]\(\//g, '](/en-US/')
+              .replace(/href="\//g, 'href="/en-US/');
             appendFileSync(enFilePath, str);
           }
         });
