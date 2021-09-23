@@ -9,7 +9,7 @@ Kraken supports the following three ways to jump to the page, choose any one:
 ## Jump through the `a` tag
 
 ```javascript
-<a href="/example.js">Click To Navigation</a>
+<a href="/en-US/example.js">Click To Navigation</a>
 ```
 
 ## Jump by calling `window.open`

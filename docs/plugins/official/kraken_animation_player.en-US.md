@@ -45,7 +45,7 @@ Animation file address
 
 Types of animation files
 
-### Method
+### method
 
 **play(name: string)**
 

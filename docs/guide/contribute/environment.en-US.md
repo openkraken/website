@@ -1,4 +1,4 @@
-# Prepare the development environment
+# Prepare development environment
 
 Building Kraken requires the installation of specific tools, and the installation method for each platform is different.
 
@@ -39,7 +39,7 @@ Building Kraken requires the installation of specific tools, and the installatio
 
 3. Install [Android Studio](https://developer.android.com/studio)
 
-4. Download [ninja](https://github.com/ninja-build/ninja/releases), and then copy the installed ninja.exe file to the `C:\Windows` directory, so that you can directly in the Terminal Enter the `ninja` command to call.
+4. Download [ninja](https://github.com/ninja-build/ninja/releases), and then copy the installed ninja.exe file to the `C:\Windows` directory, so that you can directly in the Terminal Enter the `ninja` command to invoke it.
 
 5. Install [CMake for Windows](https://cmake.org/download/)
 
@@ -61,4 +61,4 @@ Building Kraken requires the installation of specific tools, and the installatio
    git checkout <flutter_version>
    ```
 
-9. Follow the steps in [Flutter official documentation](https://flutter.dev/docs/get-started/install/windows#update-your-path) to install Flutter's related dependencies, and make sure that the execution of `flutter doctor` no longer exists Any warnings.
+9. Follow the steps in [Flutter official documentation](https://flutter.dev/docs/get-started/install/windows#update-your-path) to install Flutter's related dependencies, and make sure to execute `flutter doctor` no more Any warnings.

@@ -6,10 +6,10 @@ Kraken's development environment is a Flutter application development environmen
 
 Kraken's source code supports development through the following two editors:
 
--Android Studio and IntelliJ
--Visual Studio Code
+- Android Studio and IntelliJ
+- Visual Studio Code
 
-After installing the editor, you also need to install additional Flutter plugins. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
+After installing the editor, you also need to install an additional Flutter plugin. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
 
 ## Build Bridge
 
@@ -62,7 +62,7 @@ At this time, Bridge can be compiled, and the built product is in `kraken/bridge
 
 3. Add flutter build command in Clion
 
-Open Run -> Edit Configurations, click on the `+` in the upper left corner to create a `Shell Script` configuration
+Open Run -> Edit Configurations, click the `+` in the upper left corner to create a `Shell Script` configuration
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
 

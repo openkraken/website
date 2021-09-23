@@ -62,7 +62,7 @@ abstract class EventClient {
 }
 ```
 
-By implementing `eventListener`, you can monitor the callbacks of Kraken's top-level nodes. Its usage is similar to the front-end standard `addEventListener`, and it throws [Touch Event](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) events that conform to the front-end standard.
+By implementing `eventListener`, you can listen to the callbacks of Kraken's top-level nodes. Its usage is similar to the front-end standard `addEventListener`, and it throws [Touch Event](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) events that conform to the front-end standard.
 
 for example:
 

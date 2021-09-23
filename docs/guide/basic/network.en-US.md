@@ -36,7 +36,7 @@ For more information, please refer to [Development Document](/en-US/api/host-env
 
 ## WebSocket
 
-HTTP network communication can only be initiated by the client, while WebSocket provides support for two-way communication. The WebSocket API is based on the event communication model, and it can be used by loading [WebSocket Plug-in](https://pub.dev/packages/kraken_websocket) in Kraken in advance.
+HTTP network communication can only be initiated by the client, while WebSocket provides support for two-way communication. The WebSocket API is based on the event communication model, and it can be used by loading [WebSocket plug-in](https://pub.dev/packages/kraken_websocket) in Kraken in advance.
 
 ```js
 const ws = new WebSocket('wss://echo.websocket.org');

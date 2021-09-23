@@ -1,8 +1,8 @@
 # Integrate Kraken in the Flutter application
 
-> Android simulator is not supported.
+> Android emulator is not supported, please use a real device
 
-Here, we have completely installed [Flutter version specified by Kraken](https://github.com/openkraken/kraken/blob/main/kraken/pubspec.yaml#L8) in our setting environment, and `flutter doctor` detection All passed.
+Here, we have completely installed [Flutter stable version specified by Kraken](https://github.com/openkraken/kraken/blob/main/kraken/pubspec.yaml#L8) in our setting environment, and `flutter doctor` All tests passed.
 
 Use the following command to create a new Flutter App
 
@@ -23,7 +23,7 @@ HWI TL00 (mobile) • 77P5T18126000120 • android-arm64 • Android 9 (API 28)
 Open the `pubspec.yaml` file, and add the dependency of `kraken` under `dependencies`.
 
 ```yaml
-dependencies: kraken:'>= 0.0.1' # Will install the latest kraken dependency
+dependencies: kraken:'>= 0.0.1' # will install the latest kraken dependency
 ```
 
 Then execute the following command to automatically install the dependencies:
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Kraken kraken = Kraken(bundleURL:'https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js');
+    Kraken kraken = Kraken(bundleURL:'http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js');
 
     return MaterialApp(
       title:'Flutter Demo',

@@ -1,8 +1,8 @@
-# Network Interceptor
+# Network blocker
 
 ## Network request interceptor
 
-Sometimes we need to intercept or replace the internal requests of Kraken. This ability is usually used to implement custom caching, error rate statistics, authentication and other functions.
+Sometimes we need to intercept or replace the requests sent by Kraken. This ability is usually used to implement functions such as custom caching, error rate statistics, and authentication.
 
 Kraken provides the `httpClientInterceptor` parameter on the Widget layer, and the network interceptor can be implemented by implementing a custom `HttpClientInterceptor`.
 
@@ -10,7 +10,9 @@ Kraken provides the `httpClientInterceptor` parameter on the Widget layer, and t
 
 We need to implement `HttpClientInterceptor` to provide network interception capabilities. It has 3 methods:
 
--`Future<HttpClientRequest?> beforeRequest(HttpClientRequest request)`: Before making the request, at this time the `HttpClientRequest` object has been created, it will be passed in as the first parameter of this method, you can directly modify this object, or you You can also return a new `HttpClientRequest` object. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> shouldInterceptRequest(HttpClientRequest request)`: Triggered when the request is initiated. Unlike `beforeRequest`, you can directly return a `HttpClientResponse` object. At this time, Kraken will no longer initiate real network requests. Instead, use this object as the return object of this request. This is useful when implementing a custom cache function. Returning a Null value means that no modification will be made. -`Future<HttpClientResponse?> afterResponse(HttpClientRequest request, HttpClientResponse response);`: Triggered after the request returns, it will pass in both `HttpClientRequest` and `HttpClientResponse` objects; but at this time `HttpClientRequest` is a read-only object, modify It has no meaning; `HttpClientResponse` can be modified, or you can return a new `HttpClientResponse` object as the return object of this request. Returning a Null value means that no modification will be made.
+- `Future<HttpClientRequest?> beforeRequest(HttpClientRequest request)`: Before making the request, at this time the `HttpClientRequest` object has been created, it will be passed in as the first parameter of this method, you can directly modify this object, or you You can also return a new `HttpClientRequest` object. Returning a Null value means that no modification will be made.
+- `Future<HttpClientResponse?> shouldInterceptRequest(HttpClientRequest request)`: Triggered when the request is initiated. Unlike `beforeRequest`, you can directly return a `HttpClientResponse` object. At this time, Kraken will no longer initiate real network requests. Instead, use this object as the return object of this request. This is useful when implementing a custom cache function. Returning a Null value means that no modification will be made.
+- `Future<HttpClientResponse?> afterResponse(HttpClientRequest request, HttpClientResponse response);`: Triggered after the request returns, it will pass in both `HttpClientRequest` and `HttpClientResponse` objects; but at this time `HttpClientRequest` is a read-only object, modify It has no meaning; `HttpClientResponse` can be modified, or you can return a new `HttpClientResponse` object as the return object of this request. Returning a Null value means that no modification will be made.
 
 > Tips: `HttpClientResponse` is also an abstract class, you can use `HttpClientStreamResponse` as the actual implementation of `HttpClientResponse`.
 

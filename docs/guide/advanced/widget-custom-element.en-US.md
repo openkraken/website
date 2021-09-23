@@ -15,7 +15,7 @@ void defineKrakenCustomElements() {
 }
 ```
 
-The way of creating custom elements is the same as creating ordinary elements:
+The way of creating custom elements is the same as creating common elements:
 
 ```js
 const text = document.createElement('flutter-text');

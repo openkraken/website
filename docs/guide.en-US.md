@@ -35,7 +35,7 @@ Kraken currently does not provide a CLI program that can run on the Windows plat
 
 Use your Android phone to scan the QR code below to download Kraken Playground to experience the examples in each document.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/80__46bf3eaeb94f716e0d49c3f6beddabed_c12a17e1b28794b033f4cbe64463ee5b.png" width="200px" alt="QR code"></img>
+<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/80__46bf3eaeb94f716e0d49c3f6beddabed_c12a17e1b28794b033f4cbe64463ee5b.png" width="200px"></img>
 
 ## Create a Kraken application
 
@@ -61,7 +61,7 @@ You can use the Vue bundle we built to run a Kraken application to experience th
 kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-vue.js
 ```
 
-Of course, if you want to learn more about how to use Vue to develop a Kraken application, or how to transform an old project of Vue so that it can run on Kraken, you can visit [Develop Kraken Application with Vue](/en-US/guide/development/vue).
+Of course, if you want to learn more about how to use Vue to develop a Kraken application, or how to transform an old project of Vue so that it can run on Kraken, you can visit [Develop Kraken Application with Vue](/en-US/guide/development/ vue).
 
 ### If you are a React developer
 
@@ -71,4 +71,4 @@ You can use the React bundle we built to run a Kraken application to experience 
 kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-react.js
 ```
 
-Of course, if you want to learn more about how to use React to develop a Kraken application, or how to transform an old React project so that it can run on Kraken, you can visit [Develop Kraken Application with React](/en-US/guide/development/react).
+Of course, if you want to learn more about how to use React to develop a Kraken application, or how to transform an old React project so that it can run on Kraken, you can visit [Develop Kraken Application with React](/en-US/guide/development/ react).

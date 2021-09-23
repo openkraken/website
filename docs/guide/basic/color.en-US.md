@@ -2,7 +2,7 @@
 
 The color `color` acts on the font, and the background `background` can act on any element (including text). For the color and background-related attributes supported by Kraken, please refer to the corresponding [Development Document](/en-US/api/styles/background).
 
-For colors, it supports multiple formats such as color keywords, rgba, hexadecimal, etc. For details, please refer to the corresponding [Development Document](/en-US/api/styles/unit#css-color-unit).
+For colors, it supports multiple formats such as color keywords, rgba, hexadecimal, etc. For details, please refer to the corresponding [Development Document](/en-US/api/styles/unit#css-color unit).
 
 **Example:**
 
@@ -47,7 +47,7 @@ For colors, it supports multiple formats such as color keywords, rgba, hexadecim
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-color.js
@@ -55,7 +55,7 @@ For colors, it supports multiple formats such as color keywords, rgba, hexadecim
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01fBBI8s297fVxwnJoW_!!6000000008021-2-tps-200-200.png" />
     </div>

@@ -1,6 +1,6 @@
 # JS and Native communication
 
-## Prepare to work
+## Ready to work
 
 **[SDK Integration](/en-US/guide/native/interpolation-app)**
 
@@ -8,12 +8,12 @@ No additional configuration is required.
 
 **[Kraken Widget Integration](/en-US/guide/native/interpolation-flutter)**
 
-You need to pass in `KrakenNativeChannel()` parameter to Kraken object to enable the communication between js and native.
+You need to pass in `KrakenNativeChannel()` to the Kraken object to realize the communication between js and native.
 
 ```dart
 Kraken(
-   bundlePath:'assets/bundle.js',
-   javaScriptChannel: KrakenNativeChannel(),
+  bundlePath:'assets/bundle.js',
+  javaScriptChannel: KrakenNativeChannel(),
 )
 ```
 
@@ -44,7 +44,7 @@ Note: In the JS test, it will be forced to be converted to null types: NaN, unde
 
 At any time, the client can actively call the methods implemented by JavaScript, even if JavaScript has not yet called any methods on the client.
 
-By default, any call sent by the client will be discarded, unless JavaScript is used to call `kraken.methodChannel.setMethodCallHandler` to register a handler.
+By default, any calls sent by the client will be discarded, unless JavaScript is used to call `kraken.methodChannel.setMethodCallHandler` to register a handler.
 
 After the processing function is set, any call sent by any client will call this processing function.
 

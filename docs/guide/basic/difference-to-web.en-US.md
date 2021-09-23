@@ -8,7 +8,7 @@ The web entry file is an HTML document with extensions such as `.html` or `.htm`
 
 Kraken is more similar to React Native and Weex. It accepts a JSBundle of `.js` and uses the DOM API to build views and styles.
 
-This choice is for performance considerations. Modern front-end frameworks usually use JS logic to manipulate DOM to generate UI. Directly downloading JS can reduce the time it takes to download and parse HTML documents.
+This choice is based on performance considerations. Modern front-end frameworks usually use JS logic to manipulate DOM to generate UI. Directly downloading JS can reduce the time it takes to download and parse HTML documents.
 
 HTML documents under the Web:
 
@@ -30,7 +30,7 @@ root.appendChild(document.createTextNode('Hello World!'));
 document.body.appendChild(root);
 ```
 
-Compared to HTML, JS has more flexible features. Since the standard DOM API is implemented, you can use most of the excellent front-end frameworks in the front-end community, such as Vue, Rax, React, etc., for details, please refer to [Development Document](/en-US/guide).
+Compared to HTML, JS has more flexible features. Due to the implementation of the standard DOM API, you can use most of the excellent front-end frameworks in the front-end community, such as Vue, Rax, React, etc., for details, please refer to [Development Document](/en-US/guide).
 
 ## Limited CSS support
 
@@ -47,7 +47,7 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // Use inline CSS Tex
 
 In Kraken, not all DOM and global APIs are supported. Putting aside the historical baggage of browsers, we implemented most of the modern, frequently used, and user-friendly W3C APIs.
 
-For more detailed support list, please refer to [API document](/en-US/api/tags) on the site.
+For more detailed support list, please refer to the [API document](/en-US/api/tags) on the site.
 
 ## Style ability difference
 

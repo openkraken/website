@@ -4,7 +4,7 @@
 
 View the project source code: https://github.com/openkraken/kraken_plugin_examples/tree/main/plugins/my_kraken_plugin
 
-Next, a simple example demonstrates how to add a custom API to Kraken's JS environment.
+Next, a simple example is used to demonstrate how to add a custom API to Kraken's JS environment.
 
 Our goal is to create a plug-in, and then add a global object of `alarmClock`, and support to register a callback in the JS layer to handle the alarm sound, and then implement the timer function in the Dart layer.
 
@@ -26,7 +26,7 @@ Whether it is a plug-in written in JavaScript or C/C++, you need to use the `kra
 npm install kraken-npbt -g
 ```
 
-After the installation is complete, use the following command to initialize the project in the plug-in directory. It will generate the necessary compilation project files in the `bridge` directory.
+After the installation is complete, use the following command to initialize the project in the plugin directory. It will generate the necessary compilation project files in the `bridge` directory.
 
 ```bash
 kraken-npbt configure
@@ -126,11 +126,11 @@ class AlarmClockModule extends BaseModule {
 }
 ```
 
-Kraken provides a basic BaseModule abstract class, and a Kraken Module can be realized by implementing the methods defined by BaseModule.
+Kraken provides the basic BaseModule abstract class to implement BaseModuThe method defined by le can implement a Kraken Module.
 
 Kraken uses Module in its design to handle calls from the JavaScript API. Therefore, for the JS API of AlarmClock, the Module name is AlarmClockModule.
 
-There are two ways to return data to JavaScript in Module. The first one is to return data through `InvokeModuleCallback callback`. As long as the JavaScript code is called, and a function is passed in as a callback at the last parameter, you can call the InvokeModuleCallback callback on the Dart layer to directly perform the callback. The callback parameter can be passed `errmsg` or `data` to handle both abnormal and normal situations.
+There are two ways to return data to JavaScript in the Module. The first is to return through the `InvokeModuleCallback callback`. As long as the JavaScript code is called, and a function is passed in as a callback at the last parameter, you can call the InvokeModuleCallback callback on the Dart layer to directly perform the callback. The callback parameter can be passed `errmsg` or `data` to handle both abnormal and normal situations.
 
 The second way is to call `moduleManager.emitModuleEvent(name, event: alarmEvent, data:'Wake Up!');` in any function in Module to trigger a Module event. This event can be monitored by calling `kraken.addKrakenModuleListener` on JavaScript. However, it is worth noting that any event triggered by a Module will execute the callback registered by `kraken.addKrakenModuleListener`, so it is also necessary to determine the name of the Module called when the callback is executed.
 
@@ -140,7 +140,7 @@ Now that we have completed most of the functions, we only need to register the c
 
 **Build bridge**
 
-The `kraken-npbt` tool can build both C++ and JavaScript files in the bridge directory into a dynamic link library product. Just use the following commands to build macOS / iOS / Android platform products with one click.
+The `kraken-npbt` tool can build both the C++ and JavaScript files in the bridge directory into a dynamic link library product. Just use the following commands to build macOS / iOS / Android platform products with one click.
 
 ```bash
 kraken-npbt build
@@ -148,7 +148,11 @@ kraken-npbt build
 
 The built products will also be automatically placed in different directories in the plug-in project according to different platforms:
 
--**macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib` -**iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib` -**android:** -`your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so` -`your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
+- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib`
+- **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib`
+- **android:**
+  - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so`
+  - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
 
 **Register the bridge build product to the plugin**
 

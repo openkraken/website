@@ -30,7 +30,16 @@ async function trasnlate(pathname) {
       if (data && data[0]) {
         data[0].forEach(item => {
           if (item && item[0]) {
-            appendFileSync(enFilePath, item[0]);
+            let str = item[0] || '';
+            // Deal with '- xxxxxxx' for md.translation will lose spaces.The exclusion of '---'.
+            if (str.charAt(0) === '-' && str.charAt(1) !== '-') {
+              str = '- ' + str.slice(1, str.length);
+            }
+            // Deal with english path.
+            str = str
+              .replace(/\]\(\//g, '](/en-US/')
+              .replace(/href="\//g, 'href="/en-US/');
+            appendFileSync(enFilePath, str);
           }
         });
       }

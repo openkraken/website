@@ -45,7 +45,7 @@ ReactDOM.render(
 );
 ```
 
-Since Kraken does not support Script tags, you need to configure webpack so that the bundle is included in a package.
+Since the Kraken entry is a JavaScript file, you need to configure webpack so that the bundle is included in a package.
 
 In addition, it should be noted that currently Kraken only supports inline styles, so we recommend using the following methods to write `CSS styles`.
 

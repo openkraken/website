@@ -1,6 +1,6 @@
 # Handling page jumps
 
-In many businesses, there will be scenes where the page jumps, that is, the user clicks a place on the page to trigger the page jump.
+In many businesses, there will be scenes where the page jumps, that is, the user clicks on a place on the page to trigger the page jump.
 
 On the browser, the page jump is achieved by the browser by jumping to a new Tab page, or directly refreshing the current page. On the client, the page will first perform a client switching animation, and then jump to a new page.
 
@@ -57,7 +57,7 @@ Kraken kraken = Kraken(
 
 ```
 
-Therefore, in this page, clicking the text in the first line will trigger the page jump, but clicking the text in the second line will cause nothing to happen.
+Therefore, on this page, clicking on the first line of text will trigger the page jump, but clicking on the second line of text will cause nothing to happen.
 
 ## Control custom jumps in iOS / Android
 

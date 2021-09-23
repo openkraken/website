@@ -25,26 +25,26 @@ const myDocument = new Document();
 
 ### Attributes
 
-no
+without
 
-### Method
+### method
 
--`createElement`
-Create an HTML element specified by the tag name tagName. If the user agent cannot recognize the tagName, an unknown HTML element HTMLUnknownElement will be generated.
+- `createElement`
+  Create an HTML element specified by the tag name tagName. If the user agent cannot recognize the tagName, an unknown HTML element HTMLUnknownElement will be generated.
 
--`createTextNode`
-Create a new Text node. This method can be used to escape HTML characters.
+- `createTextNode`
+  Create a new Text node. This method can be used to escape HTML characters.
 
--`getElementById`
-Returns an element that matches a specific ID.
+- `getElementById`
+  Returns an element that matches a specific ID.
 
--`getElementsByTagName`
-Returns a dynamic HTML collection that includes all elements of the given tag name.
+- `getElementsByTagName`
+  Returns a dynamic HTML collection that includes all elements of the given tag name.
 
-### Reference
+### refer to
 
--[Link](https://developer.mozilla.org/zh-CN/docs/Web/API/document)
+- [Link](https://developer.mozilla.org/zh-CN/docs/Web/API/document)
 
-### Description
+### illustrate
 
 `querySelector`, `querySelectorAll`, `getElementsByClassName` APIs are not currently supported.

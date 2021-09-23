@@ -8,10 +8,10 @@ Therefore, Kraken has built-in commonly used gesture capabilities to meet the ba
 
 ## What gesture capabilities are built-in
 
--swipe
--pan (slide)
--longpress (long press)
--scale
+- swipe
+- pan (slide)
+- longpress (long press)
+- scale
 
 ## how to use
 
@@ -31,14 +31,14 @@ element.addEventListener('swipe', gestureEvent => {
 
 Kraken expands on `GestureEvent`, adding some parameters for different gestures:
 
--state: Some states of continuous gestures, down, move, up.
--direction: direction, left, right, up, down.
--deltaX: coordinate of X axis movement.
--deltaY: The coordinate of Y axis movement.
--velocityX: X axis moving speed.
--velocityY: Y axis moving speed.
--scale: The scale of enlargement or reduction.
--rotation: angle.
+- state: Some states of continuous gestures, down, move, up.
+- direction: direction, left, right, up, down.
+- deltaX: coordinate of X axis movement.
+- deltaY: The coordinate of Y axis movement.
+- velocityX: X axis moving speed.
+- velocityY: Y axis moving speed.
+- scale: The scale of enlargement or reduction.
+- rotation: angle.
 
 Through these `GestureEvent` parameters, we can easily monitor gesture events on a specific element in the application, and learn some of the current gesture states based on the parameters, so as to quickly develop an application with complex gesture interaction.
 

@@ -33,21 +33,32 @@ var l = new URL('http://www.example.com', b); // Creates a URL pointing to'http:
 
 ## Attributes
 
--`href`
-A String containing the full URL. -`protocol`
-A String containing the URL protocol name, with a':' at the end. -`host`
-A String containing the URL domain name,':', and port number. -`hostname`
-A String containing the URL domain name. -`port`
-A String containing the URL port number. -`pathname`
-A String beginning with a'/' followed by the URL file path. -`search`
-A String that starts with a'?' and immediately follows the URL request parameter. -`hash`
-A String that starts with a'#' immediately followed by the URL anchor mark. -`username`
-A String containing the username specified in front of the domain name. -`password`
-A String containing the password specified in front of the domain name. -`origin` read only
-Returns a String containing the protocol name, domain name, and port number. -`searchParams`
-Returns a URLSearchParams object used to access the parameters of the current URL GET request.
+- `href`
+  A String containing the full URL.
+- `protocol`
+  A String containing the URL protocol name, with a':' at the end.
+- `host`
+  A String containing the URL domain name,':', and port number.
+- `hostname`
+  A String containing the URL domain name.
+- `port`
+  A String containing the URL port number.
+- `pathname`
+  A String beginning with a'/' followed by the URL file path.
+- `search`
+  A String that starts with a'?' and immediately follows the URL request parameter.
+- `hash`
+  A String starting with a'#' immediately followed by the URL anchor mark.
+- `username`
+  A String containing the username specified in front of the domain name.
+- `password`
+  A String containing the password specified in front of the domain name.
+- `origin` read only
+  Returns a String containing the protocol name, domain name, and port number.
+- `searchParams`
+  Returns a URLSearchParams object used to access the parameters of the current URL GET request.
 
-## Method
+## method
 
--`toString()`
-Return a [String](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString) containing the complete URL. It is an alias of [URL.href](https://developer.mozilla.org/zh-CN/docs/Web/API/URLUtils/href), but the difference is that toString cannot be used to modify the value.
+- `toString()`
+  Return a [String](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString) containing the complete URL. It is an alias of [URL.href](https://developer.mozilla.org/zh-CN/docs/Web/API/URLUtils/href), but the difference is that toString cannot be used to modify the value.

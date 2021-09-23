@@ -4,7 +4,7 @@ The Kraken plugin is a Flutter plugin that can be used to extend Kraken's capabi
 
 Kraken's rendering capabilities can be customized through the Kraken plug-in, including custom tags, adding custom APIs in the global JS environment, and rendering custom content through PlatformView.
 
-The development of Kraken plug-in requires certain client development capabilities. Developers need to have a certain foundation for Android / iOS development, and also need to master the relevant skills of Flutter application development.
+The development of the Kraken plug-in requires certain client development capabilities. Developers need to have a certain foundation for Android / iOS development, and also need to master the relevant skills of Flutter application development.
 
 For details, please refer to [Development Plugin](/en-US/plugins/plugin/development).
 

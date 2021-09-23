@@ -80,7 +80,7 @@ Kraken kraken = Kraken(
 );
 ```
 
-## Incident
+## event
 
 ### onLoad
 
@@ -142,14 +142,16 @@ Kraken kraken = Kraken(
 
 ### gestureClient
 
-Capture unconsumed gestures within Kraken, and customize gesture events.
+Capture unconsumed gestures inside Kraken, and customize gesture events.
 
 method
 
--`dragStartCallback`
-Triggered when the gesture starts -`dragUpdateCallback`
-Triggered when the gesture moves -`dragEndCallback`
-Triggered when the gesture ends
+- `dragStartCallback`
+  Triggered when the gesture starts
+- `dragUpdateCallback`
+  Triggered when the gesture moves
+- `dragEndCallback`
+  Triggered when the gesture ends
 
 **Example:**
 
