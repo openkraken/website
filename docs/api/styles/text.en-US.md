@@ -1,4 +1,4 @@
-# Fonts and text
+# Font and text
 
 Kraken supports the following fonts and related text styles.
 
@@ -44,14 +44,14 @@ Kraken supports the following fonts and related text styles.
 
 ### text-decoration
 
-- Definition: Specify the appearance of the decoration line of the text (underline, overline, through/strikethrough or flashing), which is [text-decoration-line](https://developer.mozilla.org/zh-CN/docs /Web/CSS/text-decoration-line),[text-decoration-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color),[text- decoration-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style), and the new [text-decoration-thickness](https://developer. mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness) Abbreviation for attribute.
+- Definition: Specifies the appearance of the decoration line of the text (underline, overline, through line/strikethrough or flashing), which is [text-decoration-line](https://developer.mozilla.org/zh-CN/docs /Web/CSS/text-decoration-line),[text-decoration-color](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color),[text- decoration-style](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style), and the new [text-decoration-thickness](https://developer. mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness) Abbreviation of attribute.
 - Property value: [underline | overline | line-through | none]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration).
 
 ### line-height
 
 - Definition: Specify the spacing between multiple lines of elements, such as the spacing of multiple lines of text. For block-level elements, it specifies the minimum height of the line boxes of the element. For non-replaced inline elements, it is used to calculate the height of the line box.
-- Property value: [normal | <±number>[ no unit | px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: [normal | <±number>[ no unit | px | rpx | vw | vh | vmin | vmax |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height).
 
 ### text-shadow

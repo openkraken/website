@@ -17,7 +17,7 @@ const myXHR = new XMLHttpRequest();
 ## Attributes
 
 - `onabort`
-  Triggered when the request is stopped, for example when the program calls `XMLHttpRequest.abort()`. Callback input parameter `event` follows `ProgressEvent`.
+  Triggered when the request is stopped, for example when the program calls `XMLHttpRequest.abort()`. The callback input parameter `event` follows `ProgressEvent`.
 
 - `onerror`
   Triggered when the request encounters an error. The callback input parameter event follows `ProgressEvent`.
@@ -90,7 +90,7 @@ const myXHR = new XMLHttpRequest();
   Triggered when the request ends, regardless of whether the request succeeds or fails.
 
 - `loadstart`
-  Triggers when response data is received.
+  Triggered when response data is received.
 
 ## refer to
 

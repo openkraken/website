@@ -1,6 +1,6 @@
 # Layout
 
-A core problem faced when arranging the page structure is how to typeset the labels in the page. Page typesetting needs to use the layout-related capabilities in CSS. The current layout methods supported in the CSS standard are mainly:
+One of the core problems faced when arranging the page structure is how to typeset the labels in the page. Page typesetting requires the use of layout-related capabilities in CSS. The current layout methods supported in the CSS standard are mainly:
 
 1. [Flow Layout](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
 2. [Flexbox layout](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
@@ -9,11 +9,11 @@ A core problem faced when arranging the page structure is how to typeset the lab
 5. [Grid Layout](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
 6. [Multiple column layout](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 
-Kraken supports the first three layout methods that are currently mainstream in web development. The following is an example of how to use them. (For a more detailed introduction to CSS layout capabilities, please refer to this [document](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction))
+Kraken supports the first three layout methods that are currently mainstream in Web development. The following is an example of how to use them. (For a more detailed introduction to CSS layout capabilities, please refer to this [document](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction))
 
 ## Flow Layout
 
-If you do not use any CSS styles to change the layout of the labels, the labels in the page will be displayed according to the normal layout flow.
+If no CSS styles are used to change the layout of the labels, the labels in the page will be displayed according to the normal layout flow.
 
 All tags are divided into [Block-level](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements) (such as `<div>`) and [ Inline](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elements) (such as `<span>`) two display types, at the same time you can pass the CSS [display property](https: //developer.mozilla.org/zh-CN/docs/Web/CSS/display) Change the default display type of the label.
 
@@ -84,7 +84,7 @@ The typesetting rule for block-level labels is to start a new line under the pre
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flow-layout.js
@@ -92,7 +92,7 @@ The typesetting rule for block-level labels is to start a new line under the pre
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01BHfjbd1mDri05zcYk_!!6000000004921-2-tps-200-200.png" />
     </div>
@@ -107,7 +107,7 @@ For a long time, the only reliable and cross-browser compatible layout methods i
 2. Make all children of the container occupy the same amount of available width/height, regardless of how much width/height is available in the container.
 3. Make all columns in a multi-column layout occupy the same height, even if the amount of content contained in each column is different.
 
-Therefore, the Flexbox layout method was introduced in the CSS3 standard, which solved the limitations of many previous layout methods. For detailed concept introduction, please refer to this [document](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
+So the Flexbox layout method is introduced in the CSS3 standard, which solves the limitations of many previous layout methods. For detailed concept introduction, please refer to this [document](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 
 For all properties related to the flexbox layout supported by Kraken, please refer to [Development Document](/en-US/api/styles/layout#flexbox layout).
 
@@ -209,7 +209,7 @@ The following uses examples to introduce simple usage:
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flex-layout.js
@@ -217,7 +217,7 @@ The following uses examples to introduce simple usage:
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01sBl1yz1tCfzWbBGWB_!!6000000005866-2-tps-200-200.png" />
     </div>
@@ -232,7 +232,7 @@ CSS provides five positioning methods:
 
 1. static: static positioning, the default value, the label is laid out according to the current position in the document flow, and the specified top, right, bottom, left and z-index properties are invalid.
 
-2. relative: relative positioning, the label is first placed in the position when the positioning is not added, and then the label position is adjusted without changing the page layout (therefore, the position of the label will be left blank when the positioning is not added)
+2. relative: relative positioning, the label is first placed in the position when the positioning is not added, and then the label position is adjusted without changing the page layout (therefore, the label will be left blank when the positioning is not added)
 
 3. Absolute: Absolute positioning, the label will be moved out of the normal document flow, and no space is reserved for the label. The label position is determined by specifying the offset of the label relative to the nearest non-static positioning ancestor label.
 
@@ -330,7 +330,7 @@ Please refer to [Development Document](/en-US/api/styles/position) for all the p
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-position.js
@@ -338,7 +338,7 @@ Please refer to [Development Document](/en-US/api/styles/position) for all the p
     </div>
     <div className="preview-row">
       <div>
-        2. First download <a href="/guide#kraken-playground" >Kr on your Android phoneaken Playground App</a>, then open the App and scan the QR code below to preview:
+        2. First download <a href="/en-US/guide#kraken-playground" >Kr on your Android phoneaken Playground App</a>, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01Ot39kM1yCHjKKSEmL_!!6000000006542-2-tps-200-200.png" />
     </div>

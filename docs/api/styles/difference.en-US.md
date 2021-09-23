@@ -1,4 +1,4 @@
-# Difference from browser
+# Difference with browser
 
 Kraken has the following differences with browsers in terms of CSS standards:
 

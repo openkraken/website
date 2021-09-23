@@ -9,7 +9,7 @@ Kraken's source code supports development through the following two editors:
 - Android Studio and IntelliJ
 - Visual Studio Code
 
-After installing the editor, you also need to install additional Flutter plugins. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
+After installing the editor, you also need to install an additional Flutter plugin. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
 
 ## Build Bridge
 
@@ -80,6 +80,6 @@ And delete the build provided by default in Before Launch, add the flutter build
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
 
-6. Click the debug button in the upper right corner to set breakpoints in any C/C++ code and debug.
+6. Click the debug button in the upper right corner to set breakpoints and debug in any C/C++ code.
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)

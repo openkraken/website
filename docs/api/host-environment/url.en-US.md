@@ -13,7 +13,7 @@ var url = new URL(url, [base]);
 
 `url` is a String representing an absolute or relative URL. If _url_ is a relative URL, _base_ will be used as the base URL. If url is an absolute URL, _base_ will be ignored, regardless of whether it is given or not.
 
-`base` (optional) is a String representing the base URL. It will only be effective when _url_ is a relative URL. If not specified, the default is `''`.
+`base` (optional) is a String representing the base URL. It will only work when _url_ is a relative URL. If not specified, the default is `''`.
 
 ```javascript
 var a = new URL('/', 'https://developer.mozilla.org'); // Creates a URL pointing to'https://developer.mozilla.org/'

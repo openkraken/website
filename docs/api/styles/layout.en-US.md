@@ -1,8 +1,8 @@
 # Layout
 
-In terms of layout, Kraken currently supports the W3C standard [Flow Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout) and [Flexible Box Layout](https://developer .mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
+In terms of layout, Kraken currently supports W3C standard [Flow Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flow_Layout) and [Flexible Box Layout](https://developer .mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 
-## Layout method
+## Layout
 
 The display attribute defines the display type of the element, and controls the layout by specifying different values.
 
@@ -21,8 +21,8 @@ Kraken supports CSS flow layout, that is, arranging elements in the document flo
 
 ### Inline elements
 
-In the document flow, inline elements are displayed in the inline direction, that is, the direction in which the words are expressed in the sentence according to the document writing mode, and are displayed one by one from the left.
-Commonly used tags displayed inline by default in Kraken are `<span>` `<img>` `<input>` `<a>`.
+In the document flow, inline elements are displayed in the inline direction, that is, the direction in which the words are expressed in the sentence according to the document writing mode, starting from the left and displayed one by one.
+The common tags displayed inline by default in Kraken are `<span>` `<img>` `<input>` `<a>`.
 
 ### Block element
 
@@ -31,7 +31,7 @@ The common tags displayed at the block level by default in Kraken are `<div>` `<
 
 ## Flexbox layout
 
-Kraken's flexbox layout is based on the CSS [Flexbox model](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox), Kraken supports the following Flexbox properties:
+Kraken’s flexbox layout is based on the CSS [Flexbox model](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox). The Flexbox properties supported by Kraken are as follows:
 
 ### flex-direction
 
@@ -42,7 +42,7 @@ Kraken's flexbox layout is based on the CSS [Flexbox model](https://developer.mo
 ### flex-wrap
 
 - Definition: Specify whether the flex member items are displayed in a single line or in multiple lines. If line wrapping is allowed, this attribute also specifies the arrangement direction within the line.
-- Attribute value: [nowrap | wrap | wrap-reverse]
+- Property value: [nowrap | wrap | wrap-reverse]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-wrap).
 
 ### flex-flow
@@ -66,13 +66,13 @@ Kraken's flexbox layout is based on the CSS [Flexbox model](https://developer.mo
 
 ### align-content
 
-- Definition: When the flex member items are arranged in multiple rows, the arrangement of each row in the direction of the vertical axis is defined. This attribute is invalid for single-line arrangement (flex-wrap: nowrap is set).
+- Definition: When the flex member items are arranged in multiple rows, it defines the arrangement of each row in the direction of the vertical axis. This attribute is invalid for single-line arrangement (flex-wrap: nowrap is set).
 - Property value: [flex-start | flex-end | center | space-around | space-between]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content).
 
 ### align-self
 
-- Definition: Defines how a single flex member item in the flex container is arranged along the vertical axis to handle the blank part.
+- Definition: Defines how a single flex member item in the flex container is arranged in the vertical axis direction to deal with the blank part.
 - Property value: [flex-start | flex-end | cener | baseline | stretch]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self).
 

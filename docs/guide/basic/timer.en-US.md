@@ -16,7 +16,7 @@ setTimeout(function() {
 
 ## Create a repetitive timer
 
-Use `setInterval(fn)` to create an iterative timer. The callback function passed in `setInterval(fn)` will be called once every time a certain interval passes.
+Use `setInterval(fn)` to create an iterative timer. The callback function passed in `setInterval(fn)` will be called once every time an interval passes.
 
 The following code will output Ping approximately every 1s.
 
@@ -28,7 +28,7 @@ setInterval(function() {
 
 ## Interrupt timer
 
-Use `clearTimeout` to interrupt a timer that has not expired. Either a temporary timer can be interrupted, or a repetitive timer can be interrupted.
+Use `clearTimeout` to interrupt a timer that has not yet expired. Either a temporary timer can be interrupted, or a repetitive timer can be interrupted.
 
 The following code will never output Ping.
 

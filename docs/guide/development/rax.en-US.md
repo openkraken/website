@@ -70,4 +70,4 @@ function Example() {
 }
 ```
 
-Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transfer and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For large-scale applications, we recommend the state management library [icestore](https://github.com/ice-lab/icestore) officially provided by Rax.
+Of course, this method will cause the state to be dispersed among various components, and different components need to communicate to ensure data transmission and synchronization. When the developed application becomes larger, the complexity will also increase significantly, which is not conducive for developers to do state management in large-scale applications. For large-scale applications, we recommend the state management library [icestore](https://github.com/ice-lab/icestore) officially provided by Rax.

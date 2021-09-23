@@ -1,6 +1,6 @@
 # Multimedia
 
-The images and videos that are used for multimedia on the page are supported by Kraken using `<img>` and `<video>` tags respectively. The specific usage is introduced below.
+For the images and videos that are frequently used for multimedia on the page, Kraken uses the `<img>` and `<video>` tags to support them. The specific usage is introduced below.
 
 ## Image
 
@@ -28,7 +28,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-image.js
@@ -36,7 +36,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01llXZG21IbHUBpiDnt_!!6000000000911-2-tps-200-200.png" />
     </div>
@@ -45,7 +45,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
 
 ## video
 
-Video does not belong to Kraken's native support capabilities. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/en-US/plugins/official/kraken_video_player) .
+Video is not natively supported by Kraken. You need to install this [kraken_video_player plugin](https://pub.dev/packages/kraken_video_player) to support it. For detailed installation methods, please refer to [Development Document](/en-US/plugins/official/kraken_video_player) .
 
 **Example:**
 
@@ -70,7 +70,7 @@ Video does not belong to Kraken's native support capabilities. You need to insta
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-video.js
@@ -78,7 +78,7 @@ Video does not belong to Kraken's native support capabilities. You need to insta
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01I0hsO41NlsjX2YLK8_!!6000000001611-2-tps-200-200.png" />
     </div>

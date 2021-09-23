@@ -2,7 +2,7 @@
 
 In the browser, the `<input>` tag allows developers to process the user's text input. Similarly, in Kraken, we can still use the familiar `<input>` to achieve this ability.
 
-For the simplest example, the content entered by the user is synchronously displayed in the `div`:
+To give a simplest example, the content input by the user is synchronously displayed in the `div`:
 
 ```js
 const input = document.createElement('input');
@@ -33,7 +33,7 @@ After running with Kraken, enter any text in the input box, and the entered cont
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-input.js
@@ -41,7 +41,7 @@ After running with Kraken, enter any text in the input box, and the entered cont
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01xYDF611nA20oVARrf_!!6000000005048-2-tps-400-400.png" />
     </div>
@@ -55,7 +55,7 @@ You can see that we use the `placeholder` attribute to store the placeholder whe
 The attribute `placeholder` has been introduced above, which can be used to control the content displayed in the control when the form control is empty. Other attributes supported by Kraken are:
 
 - placeholder: When the form control is empty, the content displayed in the control.
-- autofocus: When configured, allows to automatically get the focus when the page loads.
+- autofocus: When configured, allows to automatically get focus when the page loads.
 - value: The content value of the input box.
 
 ## Input type

@@ -84,7 +84,7 @@ The typesetting rule for block-level labels is to start a new line under the pre
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flow-layout.js
@@ -92,7 +92,7 @@ The typesetting rule for block-level labels is to start a new line under the pre
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01BHfjbd1mDri05zcYk_!!6000000004921-2-tps-200-200.png" />
     </div>
@@ -209,7 +209,7 @@ The following uses examples to introduce simple usage:
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flex-layout.js
@@ -217,7 +217,7 @@ The following uses examples to introduce simple usage:
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01sBl1yz1tCfzWbBGWB_!!6000000005866-2-tps-200-200.png" />
     </div>
@@ -330,7 +330,7 @@ Please refer to [Development Document](/en-US/development/styles/position) for a
     </div>
     <div className="preview-row">
       <div>
-        1. Install <a href="/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
+        1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
         kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-position.js
@@ -338,7 +338,7 @@ Please refer to [Development Document](/en-US/development/styles/position) for a
     </div>
     <div className="preview-row">
       <div>
-        2. First download <a href="/guide#kraken-playgro on your Android phoneund" >Kraken Playground App</a>, then open the App and scan the QR code below to preview:
+        2. First download <a href="/en-US/guide#kraken-playgro on your Android phoneund" >Kraken Playground App</a>, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01Ot39kM1yCHjKKSEmL_!!6000000006542-2-tps-200-200.png" />
     </div>

@@ -4,7 +4,7 @@ A complex interactive application often requires the developer to handle touch e
 
 ## TouchEvent
 
-Kraken provides [TouchEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) so that developers can monitor the underlying touch events. This type of event is used to describe one or more contacts, allowing developers to detect the movement of contacts, the increase and decrease of contacts, and so on.
+Kraken provides [TouchEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) to enable developers to monitor the underlying touch events. This type of event is used to describe one or more contacts, allowing developers to detect the movement of contacts, the increase and decrease of contacts, and so on.
 
 If the developer needs to monitor the entire process of the user touching the screen with a finger (touch pen) on an element and making an interactive gesture and triggering a specific behavior, you can follow the example shown below.
 
