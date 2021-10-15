@@ -44,12 +44,12 @@ kraken.methodChannel
 
 在任何时刻，客户端都可以主动调用 JavaScript 所实现的方法，即使现在 JavaScript 还没有调用客户端任何方法。
 
-在默认情况下，客户端发送过来的任何调用都会被抛弃，除非使用 JavaScript 调用 `kraken.methodChannel.setMethodCallHandler` 注册一个处理函数。
+在默认情况下，客户端发送过来的任何调用都会被抛弃，除非使用 JavaScript 调用 `kraken.methodChannel.addMethodCallHandler` 注册一个处理函数。
 
 在设置了处理函数之后，任何客户端发送过来的任何调用都将调用这个处理函数。
 
 ```javascript
-kraken.methodChannel.setMethodCallHandler((method, args) => {
+kraken.methodChannel.addMethodCallHandler((method, args) => {
   switch (method) {
     case 'foo':
       handleFoo(args);
@@ -96,7 +96,7 @@ Krake kraken = Kraken(
 **直接调用 JavaScript 注册的方法**
 
 除了被动接收来自 JavaScript 的调用之外，在 Dart 环境中也可以直接调用 `invokeMethod` 方法来调用 JS 环境中注册的方法。
-这个方法调用会触发 JS 环境中 `kraken.methodChannel.setMethodCallHandler` 函数所注册的回调。
+这个方法调用会触发 JS 环境中 `kraken.methodChannel.addMethodCallHandler` 函数所注册的回调。
 
 **调用 JS 侧的函数**
 
