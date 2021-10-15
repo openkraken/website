@@ -1,7 +1,5 @@
 # Native 与 Kraken 进行交互传递
 
-触摸传递
-
 ## 手势监听器
 
 当 Kraken 与 Native 结合使用时，往往会遇到手势冲突的问题，比如说同一个横滑手势在 Kraken 内部消费产生了一个滚动容器的滚动动作，同样在 Native 也会产生一个横滑动作，使得整个 Native 容器被横滑关闭。此外，当 Kraken 与 Native 结合使用时，由于 Flutter 会默认消费 Native 的触摸事件，所以需要 Kraken 重新抛出相关 Touch 事件给 Widget，以便处理在 Kraken View 之下的 Native View 的一些交互事件。
