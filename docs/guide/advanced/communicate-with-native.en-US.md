@@ -44,12 +44,12 @@ Note: In the JS test, it will be forced to be converted to null types: NaN, unde
 
 At any time, the client can actively call the methods implemented by JavaScript, even if JavaScript has not yet called any methods on the client.
 
-By default, any calls sent by the client will be discarded, unless JavaScript is used to call `kraken.methodChannel.setMethodCallHandler` to register a handler.
+By default, any calls sent by the client will be discarded, unless JavaScript is used to call `kraken.methodChannel.addMethodCallHandler` to register a handler.
 
 After the processing function is set, any call sent by any client will call this processing function.
 
 ```javascript
-kraken.methodChannel.setMethodCallHandler((method, args) => {
+kraken.methodChannel.addMethodCallHandler((method, args) => {
   switch (method) {
     case 'foo':
       handleFoo(args);
@@ -96,7 +96,7 @@ Assign a callback function to `KrakenJavaScriptChannel.onMethodCall` to handle c
 **Directly call the JavaScript registration method**
 
 In addition to passively receiving calls from JavaScript, you can also directly call the invokeMethod method in the Dart environment to call the methods registered in the JS environment.
-This method call will trigger the callback registered by the `kraken.methodChannel.setMethodCallHandler` function in the JS environment.
+This method call will trigger the callback registered by the `kraken.methodChannel.addMethodCallHandler` function in the JS environment.
 
 **Call the function on the JS side**
 
