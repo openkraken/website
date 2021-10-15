@@ -140,9 +140,9 @@ Kraken kraken = Kraken(
 
 ## Gesture
 
-### gestureClient
+### gestureListener
 
-Capture unconsumed gestures inside Kraken, and customize gesture events.
+Listen for interactive behavior events thrown by Kraken.
 
 method
 
@@ -156,33 +156,35 @@ method
 **Example:**
 
 ```dart
-class NativeGestureClient implements GestureClient {
-  @override
-  void dragStartCallback(DragStartDetails details) {
-    // ...
-  }
-
-  @override
-  void dragUpdateCallback(DragUpdateDetails details) {
-    // ...
-  }
-
-  @override
-  void dragEndCallback(DragEndDetails details) {
-    // ...
-  }
-}
-
-Kraken kraken = Kraken(
-  gestureClient: NativeGestureClient(),
-);
+Kraken(
+GestureListener: gestureListener(
+    onDrag: (GestureEvent gestureEvent) {
+      if (gestureEvent.state == EVENT_STATE_START) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_UPDATE) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_END) {
+        //...
+      }
+    },
+    onTouchStart: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchEnd: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchMove: (TouchEvent touchEvent) {
+      //...
+    }
+  ),
+)
 ```
 
 ## Animation control
 
 ### animationController
 
-Widget animation controller. In order to avoid the lag caused by the first execution of JavaScript, use this parameter to enable JavaScript to start execution after the execution of the external animation ends.
+Widget animation controller. In order to avoid the lag caused by the first execution of JavaScript, use this parameter to allow JavaScript to start execution after the execution of the external animation ends.
 
 **Example:**
 
@@ -207,8 +209,7 @@ class FirstRoute extends StatelessWidget {
             Navigator.push(
               context,
               route,
-            );
-          },
+            );},
         ),
       ),
     );
