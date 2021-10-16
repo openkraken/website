@@ -1,84 +1,62 @@
 # Native 与 Kraken 进行交互传递
 
-## 滚动传递
+## 手势监听器
 
-当 Kraken 与 Native 结合使用时，往往会遇到手势冲突的问题，比如说同一个横滑手势在 Kraken 内部消费产生了一个滚动容器的滚动动作，同样在 Native 也会产生一个横滑动作，使得整个 Native 容器被横滑关闭。
+当 Kraken 与 Native 结合使用时，往往会遇到手势冲突的问题，比如说同一个横滑手势在 Kraken 内部消费产生了一个滚动容器的滚动动作，同样在 Native 也会产生一个横滑动作，使得整个 Native 容器被横滑关闭。此外，当 Kraken 与 Native 结合使用时，由于 Flutter 会默认消费 Native 的触摸事件，所以需要 Kraken 重新抛出相关 Touch 事件给 Widget，以便处理在 Kraken View 之下的 Native View 的一些交互事件。
 
-因此，Kraken 提供了一个 `GestureClient` 的抽象类，Kraken 用户可以通过继承该抽象类实现相应的方法，以此来捕获 Kraken 内部不需要消费的手势，来传递给 Native 使用，触发相应的手势事件。
+因此，Kraken 提供了一个 `gestureListener` 的监听器，使 Kraken 开发者可以通过实现相应的方法，监听相关交互传递以触发相应的事件。
 
 ```dart
-abstract class GestureClient {
-  void dragUpdateCallback(DragUpdateDetails details);
-
-  void dragStartCallback(DragStartDetails details);
-
-  void dragEndCallback(DragEndDetails details);
-}
+Kraken(
+bundleURL: 'xxxxxxx',
+GestureListener: gestureListener(
+    onXXX: (Infos infos) {
+      // ...
+    },
+  ),
+)
 ```
 
-`dragUpdateCallback`,`dragStartCallback`,`dragEndCallback` 三个函数分别会在手势开始、滑动中以及结束三个阶段分别触发。
+### onDrag
 
-举个例子：
+通过 `onDrag` 可以监听嵌套滚动容器到顶（底）端后的向外传递的一个拖动交互。监听器会在触发操作后抛出一个符合标准 [GestureEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/GestureEvent) 的事件，以供开发者实现相应逻辑。
 
 ```dart
-class NativeGestureClient implements GestureClient {
-  @override
-  void dragUpdateCallback(DragUpdateDetails details) {
-    print('dragUpdateCallback=${details}');
-  }
-
-  @override
-  void dragStartCallback(DragStartDetails details) {
-    print('dragStartCallback=${details}');
-  }
-
-  @override
-  void dragEndCallback(DragEndDetails details) {
-    print('dragEndCallback=${details}');
-  }
-}
+Kraken(
+bundleURL: 'xxxxxxx',
+GestureListener: gestureListener(
+    onDrag: (GestureEvent gestureEvent) {
+      if (gestureEvent.state == EVENT_STATE_START) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_UPDATE) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_END) {
+        //...
+      }
+    },
+  ),
+)
 ```
 
-在 Kraken 的 Widget 初始化时传入。
+### onTouch
+
+开发者可以通过监听 `onTouch` 相关的监听器来监听触摸交互的传递。
+
+注：因为 Kraken 内部实现了按需计算收集与 `dispatch`，不建议频繁监听 `TouchMove` 事件做一些重逻辑的计算，以避免引发性能问题。
 
 ```dart
-Kraken kraken = Kraken(
-  gestureClient: NativeGestureClient(),
-);
-```
-
-详细的 API 调用见 [开发文档](/guide/native/widget)。
-
-## 触摸传递
-
-当 Kraken 与 Native 结合使用时，由于 Flutter 会默认消费 Native 的触摸事件，所以需要 Kraken 重新抛出相关 Touch 事件给 Widget，以便处理在 Kraken View 之下的 Native View 的一些交互事件。
-
-因此，Kraken 提供了一个 `EventClient` 的抽象类，Kraken 用户可以通过继承该抽象类实现相应的方法，以捕获 Kraken 抛出的 Touch event。
-
-```dart
-/// Pass Touch to native.
-abstract class EventClient {
-  void eventListener(Event event);
-}
-```
-
-通过实现 `eventListener` 即可监听 Kraken 顶层节点的回调。其用法与前端标准的 `addEventListener` 类似，抛出的是符合前端标准的 [Touch Event](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) 事件。
-
-举个例子：
-
-```dart
-class NativeEventClient implements EventClient {
-  @override
-  void eventListener(Event event) {
-    /// ...
-  }
-}
-```
-
-在 Kraken 的 Widget 初始化时传入。
-
-```dart
-Kraken kraken = Kraken(
-  eventClient: NativeEventClient(),
-);
+Kraken(
+bundleURL: 'xxxxxxx',
+GestureListener: gestureListener(
+    onTouchStart: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchEnd: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchMove: (TouchEvent touchEvent) {
+      //...
+    }
+  ),
+)
 ```

@@ -140,9 +140,9 @@ Kraken kraken = Kraken(
 
 ## 手势
 
-### gestureClient
+### gestureListener
 
-捕获 Kraken 内部未消费的手势，可以自定义手势事件。
+监听 Kraken 抛出的交互行为事件。
 
 方法
 
@@ -156,26 +156,28 @@ Kraken kraken = Kraken(
 **示例：**
 
 ```dart
-class NativeGestureClient implements GestureClient {
-  @override
-  void dragStartCallback(DragStartDetails details) {
-    // ...
-  }
-
-  @override
-  void dragUpdateCallback(DragUpdateDetails details) {
-    // ...
-  }
-
-  @override
-  void dragEndCallback(DragEndDetails details) {
-    // ...
-  }
-}
-
-Kraken kraken = Kraken(
-  gestureClient: NativeGestureClient(),
-);
+Kraken(
+GestureListener: gestureListener(
+    onDrag: (GestureEvent gestureEvent) {
+      if (gestureEvent.state == EVENT_STATE_START) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_UPDATE) {
+        //...
+      } else if (gestureEvent.state == EVENT_STATE_END) {
+        //...
+      }
+    },
+    onTouchStart: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchEnd: (TouchEvent touchEvent) {
+      //...
+    },
+    onTouchMove: (TouchEvent touchEvent) {
+      //...
+    }
+  ),
+)
 ```
 
 ## 动画控制
