@@ -233,6 +233,10 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
+            title: '使用 Quickjs Bytecode 提升加载性能',
+            path: '/guide/advanced/use-quickjs-bytecode',
+          },
+          {
             title: '使用 Fluter Widget 自定义元素',
             path: '/guide/advanced/widget-custom-element',
           },
