@@ -1,4 +1,4 @@
-# 开发插件
+# 开发 JS API 插件
 
 ## 一个简单的闹钟 API
 
@@ -148,24 +148,24 @@ kraken-npbt build
 
 构建的产物也会自动按照不同的平台，放置在插件项目中的不同目录下：
 
-- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib`
-- **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib`
+- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin.dylib`
+- **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin.dylib`
 - **android:**
-  - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so`
-  - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
+  - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin.so`
+  - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin.so`
 
 **将 bridge 构建产物注册到插件**
 
 **macOS: [my_kraken_plugin/macos/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/macos/my_kraken_plugin.podspec#L18)**
 
 ```
-s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
+s.vendored_libraries = 'libmy_kraken_plugin.dylib'
 ```
 
 **iOS:** **[my_kraken_plugin/ios/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/ios/my_kraken_plugin.podspec#L20)**
 
 ```
-s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
+s.vendored_libraries = 'libmy_kraken_plugin.dylib'
 ```
 
 **Android:** **[my_kraken_plugin/android/build.gradle](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/android/build.gradle#L33)**
@@ -193,14 +193,14 @@ import 'dart:typed_data';
 
 /// Search dynamic lib from env.KRAKEN_LIBRARY_PATH or /usr/lib
 const String KRAKEN_JS_ENGINE = 'KRAKEN_JS_ENGINE';
-final String kkJsEngine = Platform.environment[KRAKEN_JS_ENGINE] ??
-    ((Platform.isIOS || Platform.isMacOS || Platform.isAndroid) ? 'jsc' : 'quickjs');
-final String libName = 'libmy_kraken_plugin_$kkJsEngine';
-final String nativeDynamicLibraryName = (Platform.isMacOS || Platform.isIOS)
-    ? '$libName.dylib'
-    : Platform.isWindows ? '$libName.dll' : '$libName.so';
-DynamicLibrary nativeDynamicLibrary =
-    DynamicLibrary.open(nativeDynamicLibraryName);
+final String libName = 'my_kraken_plugin';
+final String nativeDynamicLibraryName = (Platform.isMacOS)
+    ? 'lib$libName.dylib'
+    : Platform.isIOS
+        ? '$libName.framwork/$libName'
+        : Platform.isWindows
+            ? 'lib$libName.dll'
+            : 'lib$libName.so';
 ```
 
 **[my_kraken_plugin.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/my_kraken_plugin.dart)**
