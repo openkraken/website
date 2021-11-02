@@ -8,9 +8,19 @@
 import 'package:kraken/widget.dart';
 import 'package:flutter/material.dart';
 
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(int targetId, Pointer<NativeEventTarget> nativeEventTarget, ElementManager elementManager) :
+        super(targetId, nativeEventTarget, elementManager);
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties) {
+    return Text(properties['value'] ?? '', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+}
+
 void defineKrakenCustomElements() {
-  Kraken.defineCustomElement('flutter-text', (Map<String, dynamic> attributes) {
-    return Text(attributes['value'] ?? '', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  Kraken.defineCustomElement('flutter-text', (targetId, nativeEventTarget, elementManager) {
+    return TextWidgetElement(targetId, nativeEventTarget, elementManager);
   });
 }
 ```
@@ -23,10 +33,8 @@ text.setAttribute('value', 'Hello');
 document.body.appendChild(text);
 
 text.addEventListener('click', function() {
-   // Handle click
+  // Handle click
 });
 ```
 
 为了区别内置元素，自定义元素名称 `name` 必须包含 `-` 字符。同时，每当元素的 attribute 改变时都是触发 `builder` 重新执行，这与 Stateful Widget 机制类似。
-
-
