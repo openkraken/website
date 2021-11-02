@@ -180,3 +180,13 @@ class VideoElement extends Element {
   }
 }
 ```
+
+### 注册 Element 到 JS 环境
+
+通过下面的代码，就可以在 JS 环境中，去创建自定义的 Element。
+
+```dart
+Kraken.defineCustomElement('x-video', (int targetId, Pointer<NativeEventTarget> nativeEventTarget, ElementManager elementManager) {
+  return VideoElement(targetId, nativeEventTarget, elementManager);
+});
+```
