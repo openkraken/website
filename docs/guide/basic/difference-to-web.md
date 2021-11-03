@@ -2,7 +2,7 @@
 
 考虑到更高的性能与更小的体积，Kraken 在使用层面与浏览器有一定的差异。
 
-## 使用 JS 而不是 HTML
+## 普通应用推荐入口使用 JS 而不是 HTML
 
 Web 的入口文件是一个 `.html` 或 `.htm` 等为扩展名的 HTML 文档。
 
@@ -31,6 +31,8 @@ document.body.appendChild(root);
 ```
 
 相比 HTML，JS 具有更灵活的特性。由于实现了标准的 DOM API，你可以使用前端社区中大多数优秀的前端框架，如 Vue、Rax、React 等等，具体可以参考[开发文档](/guide)。
+
+当然，对于一个 SSR 应用，还是推荐使用 HTML 作为入口，具体可以参考[开发文档](/guide/advanced/html)。
 
 ## 有限的 CSS 支持
 

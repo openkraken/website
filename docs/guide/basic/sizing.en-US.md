@@ -64,7 +64,7 @@ Please refer to [Development Document](/en-US/api/styles/sizing) for all the att
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01ZH38q51czMd4AIfb3_!!6000000003671-2-tps-200-200.png" />
     </div>

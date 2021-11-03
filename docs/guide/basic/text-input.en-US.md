@@ -41,7 +41,7 @@ After running with Kraken, enter any text in the input box, and the entered cont
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01xYDF611nA20oVARrf_!!6000000005048-2-tps-400-400.png" />
     </div>
