@@ -41,7 +41,7 @@ input.addEventListener('input', event => {
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01xYDF611nA20oVARrf_!!6000000005048-2-tps-400-400.png" />
     </div>

@@ -56,7 +56,7 @@ Kraken 应用的入口是一个 JavaScript 文件，开发一个普通应用通�
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01xpUopt1LdyiEmVgi5_!!6000000001323-2-tps-400-400.png" />
     </div>
