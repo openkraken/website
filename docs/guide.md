@@ -33,9 +33,9 @@ Kraken 目前暂时没有提供可运行在 Windows 平台的 CLI 程序，请�
 
 #### Kraken Playground
 
-使用 Android 手机扫描下面的二维码下载 Kraken Playground，以体验各个文档中的示例。
+使用 Android 手机扫描下面的二维码下载 Play Kraken App，以体验各个文档中的示例。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/80__46bf3eaeb94f716e0d49c3f6beddabed_c12a17e1b28794b033f4cbe64463ee5b.png" width="200px"></img>
+<img src="https://gw.alicdn.com/imgextra/i2/O1CN01nnIOaJ1MEA068R8C7_!!6000000001402-2-tps-400-520.png" width="200px"></img>
 
 ## 创建一个 Kraken 应用
 
