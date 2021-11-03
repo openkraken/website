@@ -5,12 +5,22 @@ Custom elements allow developers to define new HTML element types through Flutte
 `Kraken.defineCustomElement(name, builder)` provides the ability to register custom elements. In the following example, we register a custom element called `flutter-text`:
 
 ```dart
-import'package:kraken/widget.dart';
-import'package:flutter/material.dart';
+import 'package:kraken/widget.dart';
+import 'package:flutter/material.dart';
+
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(int targetId, Pointer<NativeEventTarget> nativeEventTarget, ElementManager elementManager) :
+        super(targetId, nativeEventTarget, elementManager);
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties) {
+    return Text(properties['value'] ?? '', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+}
 
 void defineKrakenCustomElements() {
-  Kraken.defineCustomElement('flutter-text', (Map<String, dynamic> attributes) {
-    return Text(attributes['value'] ??'', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  Kraken.defineCustomElement('flutter-text', (targetId, nativeEventTarget, elementManager) {
+    return TextWidgetElement(targetId, nativeEventTarget, elementManager);
   });
 }
 ```

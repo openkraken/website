@@ -47,7 +47,6 @@ Kraken supports the following color and background related styles.
 - Definition: Set the background image size. The picture can maintain its original size, or stretch to a new size, or zoom to the size of the available space of the element while maintaining its original proportions.
 - Property value: [cover | contain | auto | \<number>[ px | rpx | vw | vh]]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size).
-- Note: Percentage is not currently supported.
 
 #### background-attachment
 

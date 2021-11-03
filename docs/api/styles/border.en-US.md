@@ -58,5 +58,5 @@ Kraken supports the following styles of borders and rounded corners.
 ### border-\*-radius
 
 - Definition: Set the rounded corners of the frame in a single direction of the element.
-- Attribute value: \<number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: \<number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius).

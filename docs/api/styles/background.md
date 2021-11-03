@@ -47,7 +47,6 @@ Kraken 支持以下颜色与背景的相关样式。
 - 定义：设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
 - 属性值：[ cover | contain | auto | \<number>[ px | rpx | vw | vh ] ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size)。
-- 说明：暂不支持百分比。
 
 #### background-attachment
 

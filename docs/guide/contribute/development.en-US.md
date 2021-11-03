@@ -9,7 +9,7 @@ Kraken's source code supports development through the following two editors:
 - Android Studio and IntelliJ
 - Visual Studio Code
 
-After installing the editor, you also need to install an additional Flutter plugin. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
+After installing the editor, you also need to install additional Flutter plugins. For specific operations, please refer to [Flutter official documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio).
 
 ## Build Bridge
 
@@ -56,19 +56,19 @@ The most convenient and quick way to debug Bridge code is to use Clion, which ca
 1. Use Clion to open the `kraken/bridge` directory.
 2. Open Preference -> Build, Execution, Depolyment -> CMake, and configure it as shown in the figure below.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20211026200425.jpg)
 
-At this time, Bridge can be compiled, and the built product is in `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
+You can use the grammar hints and jump functions provided by Clion.
 
 3. Add flutter build command in Clion
 
-Open Run -> Edit Configurations, click the `+` in the upper left corner to create a `Shell Script` configuration
+Open Run -> Edit Configurations and click on the `+` in the upper left corner to create a `Shell Script` configuration for building the kraken example application.
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
 
 4. Add npm scripts build command in Clion
 
-Continue to follow the above method to add a NPM build command
+Continue to follow the above method and add an NPM build command to build the bridge.
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
 
@@ -80,6 +80,6 @@ And delete the build provided by default in Before Launch, add the flutter build
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
 
-6. Click the debug button in the upper right corner to set breakpoints and debug in any C/C++ code.
+6. Click the debug button in the upper right corner to set breakpoints in any C/C++ code and debug.
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
