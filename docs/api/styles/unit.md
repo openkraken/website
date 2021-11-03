@@ -2,7 +2,7 @@
 
 ## CSS 长度单位
 
-Kraken 目前支持以下单位，注意 `em` `rem` 单位暂不支持。
+Kraken 目前支持以下单位。
 
 - px
 - rpx
@@ -10,6 +10,8 @@ Kraken 目前支持以下单位，注意 `em` `rem` 单位暂不支持。
 - vh
 - vmax
 - vmin
+- rem
+- em
 - %
 
 ## CSS 颜色单位
