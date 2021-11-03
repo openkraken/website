@@ -56,19 +56,19 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 1. 使用 Clion 打开 `kraken/bridge` 目录。
 2. 打开 Preference -> Build，Execution，Depolyment -> CMake，按照下图的方式进行配置。
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117528306-1eeae380-b004-11eb-8ab8-5781912e815c.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20211026200425.jpg)
 
-这个时候就可以进行 Bridge 的编译，构建的产物在 `kraken/bridge/cmake-build-debug/libkraken_jsc.dylib`
+就可以使用 Clion 所提供的语法提示和跳转功能。
 
 3. 在 Clion 中添加 flutter 构建命令
 
-打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置
+打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置，用于构建 kraken example 应用。
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
 
 4. 在 Clion 中添加 npm scripts 构建命令
 
-继续按照上面的方式，添加一个 NPM 构建命令
+继续按照上面的方式，添加一个 NPM 构建命令，用于构建 bridge。
 
 ![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
 
