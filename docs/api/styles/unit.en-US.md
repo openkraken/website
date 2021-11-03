@@ -2,7 +2,7 @@
 
 ## CSS length unit
 
-Kraken currently supports the following units. Note that `em` and `rem` units are not currently supported.
+Kraken currently supports the following units.
 
 - px
 - rpx
@@ -10,6 +10,8 @@ Kraken currently supports the following units. Note that `em` and `rem` units ar
 - vh
 - vmax
 - vmin
+- rem
+- em
 - %
 
 ## CSS color unit
