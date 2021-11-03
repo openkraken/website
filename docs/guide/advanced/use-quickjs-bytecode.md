@@ -1,12 +1,12 @@
-# 使用 Quickjs Bytecode 提升加载性能
+# 使用 QuickJS Bytecode 提升加载性能
 
-Kraken 从 0.9.0 版本开始支持 quickjs 引擎。相比 JavaScriptCore，quickjs 支持使用 quickjs bytecode 来进行页面加载，从而可以跳过 Parse 阶段，直接解析代码并执行，能够大幅度减少首次页面启动过程中，解析 JavaScript 所花费的时间。
+Kraken 从 0.9.0 版本开始支持 QuickJS 引擎。相比 JavaScriptCore，QuickJS 支持使用 QuickJS bytecode 来进行页面加载，从而可以跳过 Parse 阶段，直接解析代码并执行，能够大幅度减少首次页面启动过程中，解析 JavaScript 所花费的时间。
 
-通过[实验证明](https://github.com/openkraken/kraken/pull/446), 采用 Quickjs Bytecode 进行加载能够将 JS 加载时间减少 58.12%。
+通过[实验证明](https://github.com/openkraken/kraken/pull/446), 采用 QuickJS Bytecode 进行加载能够将 JS 加载时间减少 58.12%。
 
 **Bytecode 文件的命名**
 
-由于不同版本之间的 quickjs bytecode 并不一定可以完全兼容，因为 kraken 将所生成的 bytecode 文件命名为 `.kbc1` 格式。
+由于不同版本之间的 QuickJS bytecode 并不一定可以完全兼容，因为 kraken 将所生成的 bytecode 文件命名为 `.kbc1` 格式。
 
 ## 如何获得 Bytecode 文件
 

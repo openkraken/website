@@ -1,8 +1,8 @@
-# Use Quickjs Bytecode to improve loading performance
+# Use QuickJS Bytecode to improve loading performance
 
-Kraken supports the quickjs engine since version 0.9.0. Compared with JavaScriptCore, quickjs support the quickjs bytecode, which can skip the Parse phase and execute the code directly, which can greatly reduce the time of JavaScript stage during the first page startup process.
+Kraken supports the QuickJS engine since version 0.9.0. Compared with JavaScriptCore, QuickJS support the bytecode format, which can skip the Parse phase and execute the code directly, which can greatly reduce the time of JavaScript stage during the first page startup process.
 
-Through [experimental proof](https://github.com/openkraken/kraken/pull/446), using Quickjs Bytecode for loading can reduce JS loading time by 58.12%.
+Through [experimental proof](https://github.com/openkraken/kraken/pull/446), using QuickJS Bytecode for loading can reduce JS loading time by 58.12%.
 
 **The .kbc1 file format**
 
