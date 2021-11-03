@@ -11,9 +11,9 @@ display 属性定义了元素的显示类型，通过指定不同的值来控制
 #### display
 
 - 定义：设置元素的显示类型。
-- 属性值：[ block | inline-block | inline | flex | inline-flex | none ]
+- 属性值：[ block | inline-block | inline | flex | inline-flex | sliver | none ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display)。
-- 说明：Kraken 目前只支持 block | inline-block | inline | flex | inline-flex | none 这几种类型。
+- 说明：Kraken 目前支持的类型有 block | inline-block | inline | flex | inline-flex | sliver | none，其中 `sliver` 为 Kraken 为[高性能列表](/guide/advanced/high-performance-list)扩展的类型。
 
 ## 流式布局
 

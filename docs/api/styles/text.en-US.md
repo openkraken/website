@@ -7,7 +7,7 @@ Kraken supports the following fonts and related text styles.
 ### font-size
 
 - Definition: Used to specify the font size.
-- Attribute value: \<number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: \<number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size).
 
 ### font-weight
@@ -51,7 +51,7 @@ Kraken supports the following fonts and related text styles.
 ### line-height
 
 - Definition: Specify the spacing between multiple lines of elements, such as the spacing of multiple lines of text. For block-level elements, it specifies the minimum height of the line boxes of the element. For non-replaced inline elements, it is used to calculate the height of the line box.
-- Attribute value: [normal | <±number>[ no unit | px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: [normal | <±number>[ no unit | px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height).
 
 ### text-shadow
