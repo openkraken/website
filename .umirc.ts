@@ -233,7 +233,7 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
-            title: '使用 HTML 格式渲染',
+            title: '使用 HTML 格式渲染（SSR）',
             path: '/guide/advanced/html',
           },
           {

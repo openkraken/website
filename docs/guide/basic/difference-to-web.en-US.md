@@ -2,7 +2,7 @@
 
 Considering the higher performance and smaller size, Kraken has a certain difference in the use level and the browser.
 
-## Use JS instead of HTML
+## It is recommended to use JS instead of HTML for the entrance of ordinary applications
 
 The web entry file is an HTML document with extensions such as `.html` or `.htm`.
 
@@ -32,6 +32,8 @@ document.body.appendChild(root);
 
 Compared to HTML, JS has more flexible features. Due to the implementation of the standard DOM API, you can use most of the excellent front-end frameworks in the front-end community, such as Vue, Rax, React, etc., for details, please refer to [Development Document](/en-US/guide).
 
+Of course, for an SSR application, it is recommended to use HTML as the entry point. For details, please refer to [Development Document](/en-US/guide/advanced/html).
+
 ## Limited CSS support
 
 So far, Kraken does not support the use of [Cascading Style Sheets (CSS)](https://developer.mozilla.org/zh-CN/docs/Web/CSS), which means you cannot use `.css` files Or the `<style>` tag. The way to modify the node style is to use [Inline CSS](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E5%86%85%E8%81%94 %E6%A0%B7%E5%BC%8F) or the `style` attribute of the node.
@@ -55,4 +57,4 @@ Please refer to the [Differences from browser](/en-US/api/styles/difference) doc
 
 ## Local storage
 
-In browsers, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/en-US/api/enhancement/storage).
+In the browser, we often use `LocalStorage` for local data storage, while in Kraken we use `AsyncStorage` to implement local storage. It provides a more efficient asynchronous API to prevent I/O from blocking the UI thread. More information You can view [Asynchronous Local Storage](/en-US/api/enhancement/storage).
