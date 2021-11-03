@@ -15,9 +15,8 @@
 ### box-shadow
 
 - 定义：用于在元素的框架上添加阴影效果。
-- 属性值：[ none | \$x \$y \$blur-radius \$spread-radius \$color ]
+- 属性值：[ none | inset \$x \$y \$blur-radius \$spread-radius \$color ]
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)。
-- 说明：暂不支持 inset。
 
 ### visibility
 
