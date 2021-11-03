@@ -233,6 +233,10 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
+            title: '使用 HTML 格式渲染',
+            path: '/guide/advanced/html',
+          },
+          {
             title: '使用 Fluter Widget 自定义元素',
             path: '/guide/advanced/widget-custom-element',
           },
@@ -606,6 +610,10 @@ export default defineConfig({
         title: 'Advanced',
         path: '/en-US/guide/advanced',
         children: [
+          {
+            title: 'Render using HTML format',
+            path: '/en-US/guide/advanced/html',
+          },
           {
             title: 'Use Fluter Widget to customize elements',
             path: '/en-US/guide/advanced/widget-custom-element',
