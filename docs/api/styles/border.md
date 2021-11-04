@@ -54,6 +54,7 @@ Kraken 支持以下边框与圆角的相关样式。
 - 定义：设定元素的边框圆角，为 border-top-left-radius,border-top-right-radius, border-bottom-left-radius 和 border-bottom-right-radius 属性的简写。
 - 属性值：border-top-left-radius | border-top-right-radius | border-bottom-left-radius | border-bottom-right-radius
 - 参考：[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)。
+- 说明：目前设置 border-radius 时必须保证四个方向的 border 相同，否则 border-radius 不生效。
 
 ### border-\*-radius
 
