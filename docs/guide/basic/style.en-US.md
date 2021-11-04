@@ -76,7 +76,7 @@ Kraken supports most of the commonly used CSS styles (for all supported styles, 
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01pQIRh51KGmzur4LOQ_!!6000000001137-2-tps-200-200.png" />
     </div>

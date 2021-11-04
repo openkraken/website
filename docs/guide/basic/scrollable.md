@@ -33,7 +33,7 @@
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/68_687_2b6eb14913b45ac7522637d23acc214c_2d74fdc99be8a021a3f025eb5069a731.png" />
     </div>
