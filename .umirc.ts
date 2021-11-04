@@ -233,6 +233,10 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
+            title: '使用 QuickJS Bytecode 提升加载性能',
+            path: '/guide/advanced/use-quickjs-bytecode',
+          },
+          {
             title: '使用 HTML 格式渲染（SSR）',
             path: '/guide/advanced/html',
           },
@@ -610,6 +614,10 @@ export default defineConfig({
         title: 'Advanced',
         path: '/en-US/guide/advanced',
         children: [
+          {
+            title: 'Use QuickJS Bytecode',
+            path: '/en-US/guide/advanced/use-quickjs-bytecode',
+          },
           {
             title: 'Render using HTML format',
             path: '/en-US/guide/advanced/html',
