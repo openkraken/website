@@ -48,7 +48,7 @@ setTimeout(() => {
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i2/O1CN01LRf0DP24NAqS1zrFH_!!6000000007378-2-tps-400-400.png" />
     </div>

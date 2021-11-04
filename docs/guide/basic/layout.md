@@ -92,7 +92,7 @@ Kraken 支持了前三种目前 Web 开发中主流使用的布局方式，以�
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01BHfjbd1mDri05zcYk_!!6000000004921-2-tps-200-200.png" />
     </div>
@@ -217,7 +217,7 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01sBl1yz1tCfzWbBGWB_!!6000000005866-2-tps-200-200.png" />
     </div>
@@ -338,7 +338,7 @@ Kraken 支持的与定位相关的所有属性请参考[开发文档](/api/style
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i4/O1CN01Ot39kM1yCHjKKSEmL_!!6000000006542-2-tps-200-200.png" />
     </div>

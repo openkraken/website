@@ -237,7 +237,11 @@ export default defineConfig({
             path: '/guide/advanced/use-quickjs-bytecode',
           },
           {
-            title: '使用 Flutter Widget 自定义元素',
+            title: '使用 HTML 格式渲染（SSR）',
+            path: '/guide/advanced/html',
+          },
+          {
+            title: '使用 Fluter Widget 自定义元素',
             path: '/guide/advanced/widget-custom-element',
           },
           {
@@ -610,6 +614,14 @@ export default defineConfig({
         title: 'Advanced',
         path: '/en-US/guide/advanced',
         children: [
+          {
+            title: 'Use QuickJS Bytecode',
+            path: '/en-US/guide/advanced/use-quickjs-bytecode',
+          },
+          {
+            title: 'Render using HTML format',
+            path: '/en-US/guide/advanced/html',
+          },
           {
             title: 'Use Fluter Widget to customize elements',
             path: '/en-US/guide/advanced/widget-custom-element',

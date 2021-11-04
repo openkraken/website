@@ -70,7 +70,7 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
     </div>
     <div className="preview-row">
       <div>
-        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Kraken Playground App</a>，然后打开 App 扫描下方二维码预览：
+        2. 在 Android 手机上先下载 <a href="/guide#kraken-playground" >Play Kraken App</a>，然后打开 App 扫描下方二维码预览：
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01pQIRh51KGmzur4LOQ_!!6000000001137-2-tps-200-200.png" />
     </div>

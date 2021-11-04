@@ -31,7 +31,7 @@ http://[your.ip]:3333/home.html
 [Kraken] Development server at:
 http://[your.ip]:3333/kraken/home.js
 
-[Kraken] Run Kraken Playground App:
+[Kraken] Run Play Kraken App:
 kraken http://[your.ip]:3333/kraken/home.js
 
 ```

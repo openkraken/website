@@ -20,23 +20,23 @@ Kraken supports all types of [position positioning](https://developer.mozilla.or
 ### top
 
 - Definition: Defines the offset between the upper margin boundary of the positioned element and the upper boundary of its containing block. Setting this attribute for non-positioned elements is invalid.
-- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/top).
 
 ### right
 
 - Definition: Defines the offset between the right margin boundary of the positioned element and the right boundary of its containing block. Setting this property for non-positioned elements is invalid.
-- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/right).
 
 ### bottom
 
 - Definition: Defines the offset between the lower margin boundary of the positioned element and the lower boundary of its containing block. Setting this attribute for non-positioned elements is invalid.
-- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom).
 
 ### left
 
 - Definition: Defines the offset between the left margin boundary of the positioned element and the left boundary of its containing block. Setting this attribute for non-positioned elements is invalid.
-- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax |%]
+- Attribute value: <±number>[ px | rpx | vw | vh | vmin | vmax | rem | em |%]
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/left).
