@@ -54,6 +54,7 @@ Kraken supports the following styles of borders and rounded corners.
 - Definition: Set the rounded corners of the element's border, which is the abbreviation of the border-top-left-radius, border-top-right-radius, border-bottom-left-radius and border-bottom-right-radius properties.
 - Property value: border-top-left-radius | border-top-right-radius | border-bottom-left-radius | border-bottom-right-radius
 - Reference: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius).
+- Note: Currently please make sure border has same style in each direction, or else border-radius will take no effect.
 
 ### border-\*-radius
 
