@@ -1,4 +1,4 @@
-# 使用 Fluter Widget 自定义元素
+# 使用 Flutter Widget 自定义元素
 
 自定义元素允许开发者通过 Flutter Widget 定义新的 HTML 元素类型，该机制使得 Kraken 可以直接复用 Flutter Widget 生态。
 
