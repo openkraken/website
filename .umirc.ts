@@ -265,6 +265,10 @@ export default defineConfig({
             path: '/guide/advanced/network-intercept',
           },
           {
+            title: '监测 Kraken 是否在屏',
+            path: '/guide/advanced/check-widget-visibility',
+          },
+          {
             title: 'Native 与 Kraken 进行交互传递',
             path: '/guide/advanced/gesture-to-native',
           },
@@ -645,6 +649,10 @@ export default defineConfig({
           {
             title: 'Kraken Network Interceptor',
             path: '/en-US/guide/advanced/network-intercept',
+          },
+          {
+            title: 'Check Kraken is visible',
+            path: '/en-US/guide/advanced/check-widget-visibility',
           },
           {
             title: 'Native and Kraken for gesture transfer',
