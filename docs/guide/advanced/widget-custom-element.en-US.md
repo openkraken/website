@@ -1,4 +1,4 @@
-# Use Fluter Widget to customize elements
+# Use Flutter Widget to customize elements
 
 ## Basic usage
 

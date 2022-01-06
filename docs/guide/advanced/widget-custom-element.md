@@ -1,4 +1,4 @@
-# 使用 Fluter Widget 自定义元素
+# 使用 Flutter Widget 自定义元素
 
 ## 基础使用
 
