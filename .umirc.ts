@@ -241,7 +241,7 @@ export default defineConfig({
             path: '/guide/advanced/html',
           },
           {
-            title: '使用 Fluter Widget 自定义元素',
+            title: '使用 Flutter Widget 自定义元素',
             path: '/guide/advanced/widget-custom-element',
           },
           {
@@ -627,7 +627,7 @@ export default defineConfig({
             path: '/en-US/guide/advanced/html',
           },
           {
-            title: 'Use Fluter Widget to customize elements',
+            title: 'Use Flutter Widget to customize elements',
             path: '/en-US/guide/advanced/widget-custom-element',
           },
           {
