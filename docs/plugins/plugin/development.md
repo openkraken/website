@@ -2,7 +2,7 @@
 
 ## 一个简单的闹钟 API
 
-查看项目源代码：https://github.com/openkraken/kraken_plugin_examples/tree/main/plugins/my_kraken_plugin
+查看项目源代码：https://github.com/openkraken/samples/tree/main/plugins/my_kraken_plugin
 
 接下来通过一个简单的例子来演示如何给 Kraken 的 JS 环境中添加一个自定义的 API。
 
@@ -15,26 +15,12 @@
 通过 `flutter create` 命令来创建一个 flutter plugin 脚手架。然后在这个 plugin 脚手架上添加我们的代码，现在我们需要添加一些配置，让构建的时候，将所有的依赖都打包进 App 中。
 
 ```shell
-flutter create --template=plugin --ios-language objc --android-language java --platforms ios,android,macos ./my_kraken_plugin
-```
-
-**安装 [kraken-npbt](https://github.com/openkraken/native-plugin-build-tool)**
-
-不管是使用 JavaScript 还是 C/C++ 编写的插件，都需要使用 `kraken-npbt` 工具进行构建
-
-```bash
-npm install kraken-npbt -g
-```
-
-在安装完成之后，使用下面的命令在插件目录内进行项目初始化，它会在 `bridge` 目录下生成必要的编译工程文件。
-
-```bash
-kraken-npbt configure
+flutter create --template=plugin ./my_kraken_plugin
 ```
 
 ### 添加 JavaScript 层的实现
 
-在 bridge 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
+在 lib/ 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
 
 **my_plugin.js**
 
@@ -138,94 +124,28 @@ Kraken 在设计上使用 Module 来处理来自 JavaScript API 的调用。因�
 
 现在我们已经完成了大部分功能的实现，接下来只需把代码注册到 Kraken 中，就大功告成了。
 
-**构建 bridge**
-
-`kraken-npbt` 工具可以把 bridge 目录下的 C++ 和 JavaScript 文件都构建成一个动态链接库产物。只需要使用下面的命令就可以一键构建 macOS / iOS / Android 平台的产物。
+使用下面的命令调用 kraken-cli 所提供的 `qjsc` 命令将 JavaScript 代码转成带有 QuickJS bytecode 的 Dart 源代码：
 
 ```bash
-kraken-npbt build
+kraken qjsc ./lib/my_plugin.js ./lib/my_plugin_qjsc.dart --dart --pluginName my_plugin
 ```
 
-构建的产物也会自动按照不同的平台，放置在插件项目中的不同目录下：
+就会在 lib/ 目录下生成 `my_plugin_qjsc.dart` 文件。
 
-- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin_jsc.dylib`
-- **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin_jsc.dylib`
-- **android:**
-  - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin_jsc.so`
-  - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin_jsc.so`
-
-**将 bridge 构建产物注册到插件**
-
-**macOS: [my_kraken_plugin/macos/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/macos/my_kraken_plugin.podspec#L18)**
-
-```
-s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
-```
-
-**iOS:** **[my_kraken_plugin/ios/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/ios/my_kraken_plugin.podspec#L20)**
-
-```
-s.vendored_libraries = 'libmy_kraken_plugin_jsc.dylib'
-```
-
-**Android:** **[my_kraken_plugin/android/build.gradle](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/android/build.gradle#L33)**
-
-```
-android {
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['jniLibs']
-        }
-    }
-}
-```
-
-**在插件初始化阶段初始化 bridge**
-
-**[platform.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/platform.dart)**
+**在插件初始化阶段初始化 JS**
 
 ```dart
-// ignore_for_file: unused_import, undefined_function
-
-import 'dart:ffi';
-import 'dart:io' show Platform;
-import 'dart:typed_data';
-
-/// Search dynamic lib from env.KRAKEN_LIBRARY_PATH or /usr/lib
-const String KRAKEN_JS_ENGINE = 'KRAKEN_JS_ENGINE';
-final String kkJsEngine = Platform.environment[KRAKEN_JS_ENGINE] ??
-    ((Platform.isIOS || Platform.isMacOS || Platform.isAndroid) ? 'jsc' : 'quickjs');
-final String libName = 'libmy_kraken_plugin_$kkJsEngine';
-final String nativeDynamicLibraryName = (Platform.isMacOS || Platform.isIOS)
-    ? '$libName.dylib'
-    : Platform.isWindows ? '$libName.dll' : '$libName.so';
-DynamicLibrary nativeDynamicLibrary =
-    DynamicLibrary.open(nativeDynamicLibraryName);
-```
-
-**[my_kraken_plugin.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/my_kraken_plugin.dart)**
-
-```dart
-import 'platform.dart';
-import 'dart:ffi';
-
-typedef Native_InitBridge = Void Function();
-typedef Dart_InitBridge = void Function();
-
-final Dart_InitBridge _initBridge =
-nativeDynamicLibrary.lookup<NativeFunction<Native_InitBridge>>('initBridge').asFunction();
-
-void initBridge() {
-  _initBridge();
-}
+import 'alarm_clock_module.dart';
+import 'package:kraken/module.dart';
+import 'my_plugin_qjsc.dart';
 
 class MyKrakenPlugin {
   static void initialize() {
-    initBridge();
-    ModuleManager.defineModule((moduleNamager) => AlarmClockModule(moduleNamager));
+    registerMyPluginByteData();
+    ModuleManager.defineModule(
+        (moduleNamager) => AlarmClockModule(moduleNamager));
   }
 }
-
 ```
 
 之后只需要在应用中的 main 函数内进行插件的初始化，就可以直接使用 AlarmClock 这个 API 了。
