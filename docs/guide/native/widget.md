@@ -46,7 +46,7 @@ Kraken kraken = Kraken(
 
 ### 远程 Bundle
 
-需加载执行的 JavaScript/ByteCode 脚本的 URL。
+需加载执行的 JavaScript/Bytecode 脚本的 URL。
 
 **示例：**
 
@@ -58,7 +58,7 @@ Kraken kraken = Kraken(
 
 ### 本地 Bundle
 
-需加载执行的 JavaScript/ByteCode 本地路径。
+需加载执行的 JavaScript/Bytecode 本地路径。
 
 **示例：**
 
