@@ -1,31 +1,30 @@
-# Integrated developer tools
+# Integrate developer tools
 
-Kraken supports the use of Chrome DevTools for debugging, which can be turned on by installing `kraken_devtools`.
-
-> Only supports macOS, Android ARM64 platform
+Kraken supports debugging with Chrome DevTools, which can be enabled by integrating the KrakenDevTools tool.
+After version 0.10, KrakenDevTools has been integrated into the kraken package.
 
 ## Install
 
-> Developer tool integration currently only supports the use of flutter integration for access, and the SDK integration access method is still under development.
-
-Add the dependency of `kraken_devtools` in the `pubspec.yaml` file.
+> The developer tool integration currently only supports access by using the flutter integration method, and the SDK integration access method is still under development.
 
 ```
-Kraken kraken = Kraken(
-  bundleURL:'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
+import 'package:kraken/devtools.dart';
+
+Kraken(
+  // ...
   devToolsService: ChromeDevToolsService(),
 );
 ```
 
 ## how to use
 
-DevTools will start a service, you can use the Chrome DevTools connection to start debugging.
-When the service is successfully started, the following log will be output on the console:
+DevTools starts a service that can be used to start debugging using the Chrome DevTools connection.
+When the service starts successfully, the following log will be output to the console:
 
 ```
-flutter: Kraken DevTool listening at ws://172.20.10.2:9222
-flutter: Open Chrome/Edge and paste following url to your navigator:
-flutter: devtools://devtools/bundled/inspector.html?ws=172.20.10.2:9222
+flutter: Kraken DevTool listening at ws://0.0.0.0:9222
+flutter: Open Chrome/Edge and paste the following url to your navigator:
+flutter: devtools://devtools/bundled/inspector.html?ws=0.0.0.0:9222
 ```
 
-Paste the address beginning with `devtools://` into the Chrome browser for debugging.
+Open the chrome://inspect page in the Chrome browser to debug.
