@@ -1,18 +1,17 @@
 # 集成开发者工具
 
-Kraken 支持使用 Chrome DevTools 进行调试，通过安装 `kraken_devtools` 来开启。
-
-> 仅支持 macOS，Android ARM64 平台
+Kraken 支持使用 Chrome DevTools 进行调试，通过集成 KrakenDevTools 工具即可开启。
+在 0.10 版本之后，KrakenDevTools 已经被集成到 kraken 包内。
 
 ## 安装
 
 > 开发者工具集成目前仅支持使用 flutter 集成的方式进行接入，SDK 集成接入的方式还在开发中。
 
-在 `pubspec.yaml` 文件中添加 `kraken_devtools` 的依赖。
-
 ```
-Kraken kraken = Kraken(
-  bundleURL: 'https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/fed.js',
+import 'package:kraken/devtools.dart';
+
+Kraken(
+  // ...
   devToolsService: ChromeDevToolsService(),
 );
 ```
@@ -23,9 +22,9 @@ DevTools 会启动一个服务，可以使用 Chrome DevTools 连接来启动调
 当服务成功启动，会在控制台输出以下日志：
 
 ```
-flutter: Kraken DevTool listening at ws://172.20.10.2:9222
+flutter: Kraken DevTool listening at ws://0.0.0.0:9222
 flutter: Open Chrome/Edge and paste following url to your navigator:
-flutter:     devtools://devtools/bundled/inspector.html?ws=172.20.10.2:9222
+flutter:     devtools://devtools/bundled/inspector.html?ws=0.0.0.0:9222
 ```
 
-将 `devtools://` 开头的地址粘贴到 Chrome 浏览器来进行调试。
+在 Chrome 浏览器中打开 chrome://inspect 页面进行调试。
