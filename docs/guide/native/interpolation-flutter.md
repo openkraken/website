@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Kraken kraken = Kraken(bundleURL: 'http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js');
+    Kraken kraken = Kraken(bundle: KrakenBundle.fromUrl('http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js'));
 
     return MaterialApp(
       title: 'Flutter Demo',
