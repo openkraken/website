@@ -6,7 +6,7 @@ export default defineConfig({
     ['zh-CN', '中文'],
     ['en-US', 'English'],
   ],
-  title: ' ',
+  title: 'Kraken',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
@@ -48,7 +48,6 @@ export default defineConfig({
     '.footer-container a { color: #FFFFFF !important }',
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
     '.__dumi-default-layout[data-route="/en-US"] .__dumi-default-layout-footer { display: none }',
-    '.__dumi-default-navbar-logo{ width: 30px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
@@ -98,7 +97,7 @@ export default defineConfig({
       .footer-container div ul li { width: 100% !important }\
       .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
-      .__dumi-default-navbar-logo{ width: 50px }\
+      .__dumi-default-navbar-logo{ width: 50px; color: transparent!important; }\
       .sponsors-container{ padding-bottom: 30px;box-shadow: 0 0 8px rgba(0,0,0,.101562);background-color:#f8fafc; }\
       .sponsors-list{ padding: 0 30px;width:100%;margin:0 auto;position:relative; }\
       .sponsors{ vertical-align: middle;margin-top: 20px;margin:0 20px;display: inline-block;width: 100px; }\
@@ -139,6 +138,21 @@ export default defineConfig({
       {
         title: 'GITHUB',
         path: 'https://github.com/openkraken/kraken',
+        children: [{ title: 'TSC', path: 'https://github.com/openkraken/TSC' }],
+      },
+      {
+        title: 'WIKI',
+        path: 'https://github.com/openkraken/kraken/wiki',
+        children: [
+          {
+            title: 'ROADMAP',
+            path: 'https://github.com/openkraken/kraken/wiki/Roadmap.zh_CN',
+          },
+          {
+            title: '迭代计划',
+            path: 'https://github.com/openkraken/kraken/wiki/Iteration-Plans',
+          },
+        ],
       },
     ],
     'en-US': [
@@ -157,6 +171,21 @@ export default defineConfig({
       {
         title: 'GITHUB',
         path: 'https://github.com/openkraken/kraken',
+        children: [{ title: 'TSC', path: 'https://github.com/openkraken/TSC' }],
+      },
+      {
+        title: 'WIKI',
+        path: 'https://github.com/openkraken/kraken/wiki',
+        children: [
+          {
+            title: 'Roadmap',
+            path: 'https://github.com/openkraken/kraken/wiki/Roadmap',
+          },
+          {
+            title: 'Iteration Plans',
+            path: 'https://github.com/openkraken/kraken/wiki/Iteration-Plans',
+          },
+        ],
       },
     ],
   },
