@@ -20,6 +20,5 @@ Kraken 在 CSS 标准上与浏览器有如下差异：
 | border-image   | 暂不支持                                                                                                                        |
 | text-indent    | 暂不支持                                                                                                                        |
 | animation      | 暂不支持                                                                                                                        |
-| CSS Variable   | 暂不支持                                                                                                                        |
 | iconfont       | 暂不支持                                                                                                                        |
 | calc()         | 暂不支持                                                                                                                        |
