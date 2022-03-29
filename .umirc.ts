@@ -454,6 +454,10 @@ export default defineConfig({
             path: '/api/styles/unit',
           },
           {
+            title: 'CSS 变量',
+            path: '/api/styles/variables',
+          },
+          {
             title: '其它样式',
             path: '/api/styles/misc',
           },
@@ -830,6 +834,10 @@ export default defineConfig({
           {
             title: 'Unit',
             path: '/en-US/api/styles/unit',
+          },
+          {
+            title: 'CSS Variables',
+            path: '/api/styles/variables',
           },
           {
             title: 'Other styles',
