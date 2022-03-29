@@ -34,17 +34,6 @@ document.body.appendChild(root);
 
 当然，对于一个 SSR 应用，还是推荐使用 HTML 作为入口，具体可以参考[开发文档](/guide/advanced/html)。
 
-## 有限的 CSS 支持
-
-到目前为止，Kraken 还不支持使用[层叠样式表(CSS)](https://developer.mozilla.org/zh-CN/docs/Web/CSS)，也就是说你无法使用 `.css` 文件或者 `<style>` 标签。修改节点样式的方式是使用[内联的 CSS](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F) 或者节点的 `style` 属性。
-
-```js
-const div = document.createElement('div');
-div.style.color = 'red'; // 使用 style 属性.
-
-div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS Text.
-```
-
 ## 有限的 DOM & 全局 API 支持
 
 在 Kraken 中，并不是所有的 DOM 和全局 API 被支持。抛开浏览器的历史包袱，我们实现了大部分现代的、高频使用的、用户友好的 W3C API。
@@ -52,6 +41,21 @@ div.setAttribute('style', 'color: red; font-size: 16px;'); // 使用内联 CSS T
 更多详细的支持列表，可以参考站点的 [API 文档](/api/tags)。
 
 ## 样式能力差异
+
+Kraken 0.10 之后，已经支持通过 `<link>` 或 `<style>` 标签引入外部样式，但是 CSS 解析部分只支持了 `class` 选择器，你可以这样使用：
+
+```html
+<!-- index.html -->
+<link rel="stylesheet" href="./common.css" />
+```
+
+```css
+/* common.css */
+.logo {
+  width: 100px;
+  object-fit: contain;
+}
+```
 
 请参考[与浏览器差异](/api/styles/difference)文档。
 
