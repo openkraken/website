@@ -88,8 +88,8 @@ Kraken 会在内部实现一套 URI 的解析规则 `UriParser`，当开发者�
 ```dart
 class MyUriParser extends UriParser {
   @override
-  String resolve(Uri base, Uri relative) {
-    String uri = super.resolve(base, relative);
+  Uri resolve(Uri base, Uri relative) {
+    Uri uri = super.resolve(base, relative);
     // custom parse uri.
     return uri;
   }
