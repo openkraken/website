@@ -88,8 +88,8 @@ Kraken will be thereThis part implements a set of URI parsing rules `UriParser`.
 ```dart
 class MyUriParser extends UriParser {
   @override
-  String resolve(Uri base, Uri relative) {
-    String uri = super.resolve(base, relative);
+  Uri resolve(Uri base, Uri relative) {
+    Uri uri = super.resolve(base, relative);
     // custom parse uri.
     return uri;
   }
