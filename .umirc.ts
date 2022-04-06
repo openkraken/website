@@ -138,6 +138,10 @@ export default defineConfig({
         path: '/plugins',
       },
       {
+        title: '博客',
+        path: '/blog',
+      },
+      {
         title: '贡献',
         children: [
           {
@@ -178,6 +182,10 @@ export default defineConfig({
       {
         title: 'PLUGINS',
         path: '/en-US/plugins',
+      },
+      {
+        title: 'BLOG',
+        path: '/en-US/blog',
       },
       {
         title: 'CONTRIBUTE',
