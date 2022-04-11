@@ -122,6 +122,19 @@ export default defineConfig({
         },false)",
       charset: 'utf-8',
     },
+    {
+      content:
+        'window.krakenPerformanceData = {};\
+      function performanceCallback (type, data) { window.krakenPerformanceData[type] = data; }',
+    },
+    {
+      src:
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/web-load-time-list.js',
+    },
+    {
+      src:
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/kraken-load-time-list.js',
+    },
   ],
   navs: {
     'zh-CN': [
@@ -346,7 +359,7 @@ export default defineConfig({
         ],
       },
       {
-        title: '性能',
+        title: '性能对比',
         path: '/guide/performance',
       },
       {
