@@ -87,11 +87,18 @@ setTimeout(() => {
 
 // Add event listenter to watch route change.
 document.body.addEventListener('click', (e: MouseEvent) => {
-  const target: Element = e.target as Element;
-  if (
-    target.nodeName.toLowerCase() === 'a' &&
-    target.getAttribute('href') === '/guide/performance'
-  ) {
+  let ele = e.target;
+
+  // Find a tag from ancestors.
+  while (ele) {
+    if (ele.nodeName.toLowerCase() === 'a') {
+      break;
+    }
+
+    ele = ele.parentNode;
+  }
+
+  if (ele && ele.getAttribute('href') === '/guide/performance') {
     setTimeout(() => {
       dealwithPerformance();
     }, 0);
