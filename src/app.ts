@@ -54,7 +54,7 @@ const dealwithPerformance = () => {
     chart
       .interval()
       .position('index*time')
-      .color('type', ['rgb(246, 175, 31)', '#2295EC']);
+      .color('type', ['#2295EC', 'rgb(246, 175, 31)']);
     chart.render();
   }
 
