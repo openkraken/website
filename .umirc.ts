@@ -346,6 +346,10 @@ export default defineConfig({
         ],
       },
       {
+        title: '性能',
+        path: '/guide/performance',
+      },
+      {
         title: 'Kraken Gallery',
         path: 'https://github.com/openkraken/gallery',
       },
