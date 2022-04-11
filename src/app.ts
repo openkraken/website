@@ -16,6 +16,8 @@ if (window && navigator && window.location.pathname === '/') {
 }
 
 const dealwithPerformance = () => {
+  if (!window.krakenPerformanceData) return;
+
   let loadtimeList = document.getElementById('loadtimeList');
 
   if (loadtimeList) {
@@ -43,15 +45,39 @@ const dealwithPerformance = () => {
     );
 
     chart.data(data);
-    chart.scale('time', {
-      alias: '首屏时间（ms）',
+    chart.scale({
+      time: {
+        formatter: time => `${time} ms`,
+      },
     });
 
     chart
       .interval()
       .position('index*time')
-      .color('type');
+      .color('type', ['rgb(246, 175, 31)', '#2295EC']);
     chart.render();
+  }
+
+  let compare = {};
+  ['webLoadtime', 'krakenLoadtime'].forEach(type => {
+    const list = window.krakenPerformanceData[`${type}List`];
+    let sumLoadTimes: Number = 0;
+    list.forEach((num: Number) => (sumLoadTimes += num));
+    let averageLoadTime = (sumLoadTimes / list.length).toFixed();
+    compare[type] = averageLoadTime;
+
+    const ele = document.getElementById(type);
+    if (ele) {
+      ele.innerHTML = averageLoadTime;
+    }
+  });
+
+  const compareEle = document.getElementById('compare');
+  if (compareEle) {
+    compareEle.innerHTML = `${(
+      ((compare.webLoadtime - compare.krakenLoadtime) / compare.webLoadtime) *
+      100
+    ).toFixed()} %`;
   }
 };
 

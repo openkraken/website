@@ -6,6 +6,15 @@ Kraken 基于 [Benchmark](https://github.com/openkraken/kraken/tree/main/perform
 
 [Kraken Performance Benchmark](https://github.com/openkraken/kraken/blob/main/scripts/run_benchmark.js) 会自动采集以及上传 Kraken 与 Webview 之间的上述性能数据，默认会采集 60 次，去掉前后 5 次的波动数据，留下 50 组数据作为基准数据，最后得到平均值。
 
+注： 本性能测试的测试机为 MI 6。
+
 以下是最新一次得到数据（已排序并剔除前后波动数据）：
 
-<div id="loadtimeList" style="margin: 100px 0px; width: 100%"></div>
+<div id="loadtimeList" style="margin: 30px 0px; width: 100%"></div>
+
+由上述数据得出平均数据：
+
+- 在 Kraken 中，Benchmark 平均渲染完成时间为 <span id="krakenLoadtime"></span> ms。
+- 在 Webview 中，Benchmark 平均渲染完成时间为 <span id="webLoadtime"></span> ms。
+
+在 MI 6 下，Kraken 首屏时间较 Webview 快 <span id="compare"></span>。
