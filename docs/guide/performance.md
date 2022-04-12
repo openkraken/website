@@ -8,7 +8,7 @@ Kraken 基于 [Benchmark](https://github.com/openkraken/kraken/tree/main/perform
 
 > 注： 本性能测试的测试机为 MI 6。
 
-以下是最新一次得到数据（已排序并剔除前后波动数据）：
+以下是最新一次测试得到的 50 组数据（已排序并剔除前后波动数据）：
 
 <div>
 
@@ -79,7 +79,7 @@ export default () => (
             compare.webLoadtime) *
           100
         ).toFixed()}
-        %。{' '}
+        %。
       </p>
     </div>
   </div>
