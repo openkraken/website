@@ -273,6 +273,16 @@
       }
     </style>
     <style>
+      .performance:hover {
+        color: rgb(246, 175, 31) !important;
+      }
+    </style>
+    <style>
+      .performance {
+        color: #000 !important;
+      }
+    </style>
+    <style>
       .__dumi-default-navbar-logo {
         color: transparent !important;
       }
@@ -546,7 +556,7 @@
       window.routerBase = "/";
     </script>
     <script>
-      //! umi version: 3.5.21
+      //! umi version: 3.5.22
     </script>
     <script>
       !(function () {
@@ -578,6 +588,14 @@
         false
       );
     </script>
+    <script>
+      window.krakenPerformanceData = {};
+      function performanceCallback(type, data) {
+        window.krakenPerformanceData[type] = data;
+      }
+    </script>
+    <script src="https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/web-loadtimeList.js"></script>
+    <script src="https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/kraken-loadtimeList.js"></script>
     <script src="/umi.js"></script>
   </body>
 </html>
