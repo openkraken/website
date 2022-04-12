@@ -6,7 +6,7 @@ Kraken 基于 [Benchmark](https://github.com/openkraken/kraken/tree/main/perform
 
 [Kraken Performance Benchmark](https://github.com/openkraken/kraken/blob/main/scripts/run_benchmark.js) 会自动采集以及上传 Kraken 与 Webview 之间的上述性能数据，默认会采集 60 次，去掉前后 5 次的波动数据，留下 50 组数据作为基准数据，最后得到平均值。
 
-> 注： 本性能测试的测试机为 MI 6。
+> 注： 本性能测试的测试机为 MI 6。WebView 版本为 Chrome/80，Kraken 版本为最新 main 分支版本。
 
 以下是最新一次测试得到的 50 组数据（已排序并剔除前后波动数据）：
 
