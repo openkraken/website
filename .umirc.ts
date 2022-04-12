@@ -131,11 +131,11 @@ export default defineConfig({
     },
     {
       src:
-        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/web-load-time-list.js',
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/web-loadtimeList.js',
     },
     {
       src:
-        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/kraken-load-time-list.js',
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/kraken-loadtimeList.js',
     },
   ],
   navs: {
