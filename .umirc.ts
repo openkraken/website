@@ -755,6 +755,10 @@ export default defineConfig({
         ],
       },
       {
+        title: 'Performance comparison',
+        path: '/guide/performance',
+      },
+      {
         title: 'Client integration',
         path: '/en-US/guide/native',
         children: [
