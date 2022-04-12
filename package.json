@@ -38,7 +38,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@antv/g2": "^4.1.49",
+    "bizcharts": "^4.1.15",
     "fs": "^0.0.1-security",
     "node-fetch": "^2.6.1",
     "path": "^0.12.7",

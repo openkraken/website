@@ -10,11 +10,80 @@ Kraken 基于 [Benchmark](https://github.com/openkraken/kraken/tree/main/perform
 
 以下是最新一次得到数据（已排序并剔除前后波动数据）：
 
-<div id="loadtimeList" style="margin: 30px 0px; width: 100%"></div>
+<div>
 
-由上述数据得出平均数据：
+```jsx
+/**
+ * inline: true
+ */
 
-- 在 Kraken 中，Benchmark 平均渲染完成时间为 <span id="krakenLoadtime"></span> ms。
-- 在 WebView 中，Benchmark 平均渲染完成时间为 <span id="webLoadtime"></span> ms。
+import React from 'react';
+import { G2, Chart, Tooltip, Interval } from 'bizcharts';
 
-在 MI 6 下，Kraken 首屏时间较 WebView 快 <span id="compare"></span>。
+let data = [];
+data = data.concat(
+  window.krakenPerformanceData['webLoadtimeList'].map((time, index) => {
+    return { time, index: index + 1, type: 'webview' };
+  }),
+);
+data = data.concat(
+  window.krakenPerformanceData['krakenLoadtimeList'].map((time, index) => {
+    return { time, index: index + 1, type: 'kraken' };
+  }),
+);
+
+function Grouped() {
+  return (
+    <Chart height={500} padding="auto" data={data} autoFit>
+      <Interval
+        color={{ fields: ['type'], values: ['#2295EC', 'rgb(246, 175, 31)'] }}
+        position="index*time"
+      />
+      <Tooltip shared />
+    </Chart>
+  );
+}
+
+let compare = {};
+['webLoadtime', 'krakenLoadtime'].forEach(type => {
+  const list = window.krakenPerformanceData[`${type}List`];
+  let sumLoadTimes = 0;
+  list.forEach(num => (sumLoadTimes += num));
+  let averageLoadTime = (sumLoadTimes / list.length).toFixed();
+  compare[type] = averageLoadTime;
+
+  const ele = document.getElementById(type);
+  if (ele) {
+    ele.innerHTML = averageLoadTime;
+  }
+});
+
+export default () => (
+  <div>
+    <Grouped />
+    <div>
+      <p>由上述数据得出平均数据 </p>
+      <ul>
+        <li>
+          在 Kraken 中，Benchmark 平均渲染完成时间为 {compare.krakenLoadtime}{' '}
+          ms。
+        </li>
+        <li>
+          在 WebView 中，Benchmark 平均渲染完成时间为 {compare.webLoadtime} ms。
+        </li>
+      </ul>
+      <p>
+        在 MI 6 下，Kraken 首屏时间较 WebView 快{' '}
+        {(
+          ((compare.webLoadtime - compare.krakenLoadtime) /
+            compare.webLoadtime) *
+          100
+        ).toFixed()}
+        %。{' '}
+      </p>
+    </div>
+  </div>
+);
+```
+
+</div>
