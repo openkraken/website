@@ -1,143 +1,113 @@
-# Architecture Overview
+# Kraken Architecture Overview
 
-## Beginning
+## Preface
 
-Kraken is a self-drawn rendering engine based on Flutter. It uses W3C standard HTML, CSS, and JavaScript to generate GUI pictures through a series of calculations, and supports real-time interaction of pictures through JavaScript.
+Kraken is a self-drawn rendering engine based on Flutter. It uses W3C standard HTML, CSS, JavaScript, and supports real-time interaction of the screen through JavaScript.
 
-```
-(HTML+CSS+JS) + Rendering = Pixel.
-```
+Kraken has been deeply customized based on the implementation of the Flutter Rendering layer. While retaining the compatibility with the RenderObject API, it has expanded the layout capabilities compatible with the W3C standard, and added DOM and CSS parsing processing on this basis, and docked with the JavaScript engine. , which implements a browser-like technical architecture:
 
-To achieve this goal, the intermediate process requires very complex calculations. In order to ensure that users can see the interface faster, the entire system must be completed within one frame, otherwise the page will be stuck.
+<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="500" />
 
-In order to ensure the high performance of the project, it can be better maintained and updated. We need to divide the entire complex computing process into different stages through system design, and design a dedicated data structure to achieve efficient updates in different stages. .
+## Bridge layer introduction
 
-## Technical solution based on Flutter
+The Bridge layer provides users with a JavaScript runtime environment based on the ECMAScript standard, and has built-in W3C standard DOM API and BOM API.
 
-It is difficult to complete a self-drawn rendering engine from 0, so the Kraken team chose to work with the existing construction of the community. Flutter from Google is an excellent cross-end rendering engine, but it does not support JavaScript nor W3C standard rendering. Therefore, the Kraken team chose to use the underlying facilities that Flutter has built, and then conduct secondary development on the upper layer of Flutter, and then develop a rendering engine based on the W3C standard.
+**JavaScript Engine used by Kraken**
 
-Based on the architecture diagram provided by Flutter, Kraken will build its own module starting from the Painting layer, and will always maintain compatibility with the Flutter Painting layer to continuously obtain the improvement brought by the underlying upgrade of Flutter.
+Kraken's JavaScript Engine is QuickJS, which supports most of the functions of the ECMA 2020 standard. QuickJS not only supports parsing JavaScript code, but also supports offline conversion of JavaScript to ByteCode format, and then directly parses ByteCode to run. This subtracts the time of the Parse phase during page load.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406152417.jpg" width="500" />
+Through QuickJS Binding, Kraken uses C/C++ to implement most of the functions in the DOM standard, including Node, EventTarget, Element, selectors, etc.
 
-This article will start with the most basic input and gradually expand the content of the Kraken system layered design.
+All front-end frameworks based on DOM standards can run without changing a single line of code, such as the popular React.js, Vue.js and Rax.js.
 
-## Basic Input: HTML/CSS & JavaScript
+The specific implementation details and performance optimization will be introduced in a separate article later.
 
-Like browsers, Kraken also uses HTML/CSS & JavaScript to implement page layout. Among them, HTML/CSS is used to describe the structure and style of the page, while JavaScript is responsible for manipulating and processing data.
+**HTML parsing**
 
-```html
-<style>
-  .container {
-    width: 200px;
-    height: 200px;
-  }
-</style>
+HTML text entered by the user is also parsed at the bridge layer. An HTML Parser is built into the bridge for parsing HTML strings written by users. After parsing the HTML string, a set of DOM node calls are generated, which in turn create DOM objects.
 
-<div class="container">
-  Hello World !
-</div>
+**Communication between C++ and Dart**
 
-<script>
-  let container = document.getElementById('container');
-  container.addEventListener('click', function() {
-    console.log('clicked');
-  });
-</script>
-```
+Below the Bridge layer is the Framework layer implemented in Dart. Kraken's C++ code communicates with the Framework layer through Dart FFI. In Kraken, both C++ and Dart environments contain `BindingObject` objects, which are the main bridge for communication between C++ and Dart. Various operations such as node operations created by the user code by calling the DOM API will be converted into instructions and sent to the Framework layer in batches for processing.
 
-## DOM structure generation
+The specific details will be introduced in a separate article in the future.
 
-For the appealed data, the first step the rendering engine starts is processing the HTML. Students who are familiar with HTML know that HTML is composed of multiple different tags. Tags and tags can be nested and at the same level, and they form a tree-like structure.
+**Plugin Capability**
 
-By parsing HTML and obtaining the structural semantics contained in HTML, the rendering engine obtains a tree-like data structure containing the relationship between tags. In the WhatWG standard, it is called DOM (Document Object Model) Tree.
+In addition to the functionality provided by Kraken, plugin functionality is also provided to users. It allows users to extend new Elements through JavaScript and realize native rendering capabilities through Flutter Widget.
 
-```
-HTML --> Parser --> DOM Tree
-```
+The Kraken team officially maintains some plugins, which can be used as demonstration codes for reference: https://github.com/openkraken/plugins.
 
-There is a 1:1 mapping between tags in the DOM Tree and HTML. The tag name and attribute value of each tag will be mapped to the DOM tree one by one. DOM Tree is a data structure representation of HTML.
+The Bridge layer supports the plug-in capabilities by intercepting the user's property calls and method calls, and sending the calls to the Framework side through the BindingObject channel, and calling some life cycles of the Framework layer Element. This allows users to perceive changes in the JavaScript environment using the rendering code written by the Flutter Widget.
 
-## Double Layer DOM Tree - Compromise for Cross-Language Communication
+The specific details will be introduced in a separate article in the future.
 
-Because it is based on Flutter, the implementation of Kraken's main rendering layer is developed in the Dart language. The JavaScript engine and Binding API are developed in C/C++. So frequent communication between C/C++ and Dart is essential.
+## Framework layer introduction
 
-Dart provides mutual calls between FFI function implementation and C/C++, and the average time is 0.02ms for a single time. However, for the page rendering process, there will be thousands of mutual calls for the first page initialization, so the single time consumption of 0.02 ms is still unacceptable.
+The Framework is written in Dart language and driven by the operation instructions passed from the C++ layer.
 
-Therefore, Kraken merges multiple calls into a set of invocations, which are then sent from C/C++ to Dart for processing at one time.
+**DOM tree**
 
-At the same time, in order to reduce the frequency of communication between each other, C/C++ and Dart each have a DOM tree, which is always synchronized, so that any calls related to the tree structure do not need to go through the cross-language channel.
+The DOM tree is not only the structure tree generated by the user through the JavaScript API, but also responsible for other functional modules connected to the Framework layer, including calling CSS parsing and processing, and generating RenderObjects to complete layout and drawing operations. For some user gesture operations, the DOM node will also trigger corresponding events to call the registered JavaScript functions.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406153912.jpg" width="800" />
+Elements contain very complex functions, including node manipulation, handling of HTML attributes, event registration and binding, and contains a lot of life cycle, user processing CSS and RenderObject.
 
-## DOM Tree based CSS
+The specific details will be introduced in a separate article in the future.
 
-The prerequisite for CSS to work is to have its matching DOM node. Pixel-level manipulation of individual nodes is an essential step if a rendering system wishes to give users more flexible control over the UI they create.
+**CSS styling**
 
-The CSS code appealed is to set each HTML tag with the `class="container"` attribute to be 200px wide and 200px high.
+The CSS code inline by the user through the Style tag and the inlineStyle set through the JavaScript API will be forwarded to the CSS style processing module through the DOM tree. This module contains the parsing of CSS text, and the parsing of value types.
 
-```css
-.container {
-  width: 200px;
-  height: 200px;
-}
-```
+CSS animation is an important part of CSS module, including the implementation of transition and animation. These operations will in turn modify the DOM node to achieve animation control.
 
-CSS text describes a way to apply a set of style rules to which type of tag.
+CSS also contains some very complex layout features. Such as position: absolute, display: flex, etc. And these functions are completed by the CSS module, the DOM tree and the layout module that will be introduced later. The CSS module is mainly responsible for setting the style, the DOM tree is responsible for creating the corresponding RenderObject, and the layout module is to implement the layout algorithm.
 
-```
-[Selector] {
-Rule 1: Rule Content
-Rule 2: Rule Content
-}
-```
+The specific details will be introduced in a separate article in the future.
 
-These style rules will undergo a series of transformation processes through a Parser to generate CSS Rules objects. The selector-based rules are then applied to Elements and stored in properties that contain style information for each Element.
+**Flutter Widget extension support**
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220405172221.jpg" width="400" />
+Since version 0.10, Kraken supports the use of Flutter Widget to develop custom Element extensions. Kraken implements a bridging layer that connects the life cycle of the DOM tree with the life cycle of Flutter Element. In this way, Flutter Widget can be driven, and Flutter Widget can be used to draw and render content within the scope of a Kraken Element, and it also supports multi-layer nesting, which perfectly bridges the boundary between the Web and Flutter ecology. Let the simple and flexible layout of the web and the friendly blend of Flutter Widget for rendering.
 
-## Calculate the size of each Element - Layout stage
+The specific details will be introduced in a separate article in the future.
 
-After the style information required by each Element is stored in properties, then the size occupied by each Element in the page can be calculated based on this information.
+**Module extension**
 
-Due to the subsequent layout and drawing operations, size-related data is generated. At the same time, for some complex layout operations, such as `position: absolute` and `z-index`, more complex processing will be involved. Therefore, a separate set of data structures is needed to handle these processes, rather than all being coupled to Element. Here we call this data structure RenderObject, and the tree composed of it is called RenderObject Tree.
+In addition to custom rendering, Kraken's extensibility also supports the ability to use Dart to enrich JavaScript. Through Module extension, you can easily inject new JavaScript APIs in the JavaScript environment, and use Dart to achieve the capabilities users want.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406154459.jpg" width="600" />
+The specific details will be introduced in a separate article in the future.
 
-The rendering engine will call the `PipelineOwner.flushLayout` method in each frame, call the `layout()` of each RenderObject from top to bottom for layout, and calculate the size of each RenderObject from top to bottom.
+**Debugging Tools**
 
-If the CSS contains size-related properties, such as width and height, it will affect the final size.
+The Chrome Developer Protocol-based debugging service implementation is built into the Kraken module. You can use the Chrome browser to connect and debug Kraken pages through the Chrome Developer Tools. Currently supports debugging Element structure, viewing CSS styles, intercepting Network requests, and will support the JavaScript Debugger function in May 2022.
 
-There are many layout rules defined by CSS, and there will be a separate article to introduce this topic later.
+The debugging tool will start a WebSocket debugging service locally in the application, exchange data with the browser debugging tool through the Chrome Developer Protocol, and pass the current running information of Kraken to the debugging tool for debugging.
 
-Of course, there will be some optimization methods here. If unnecessary, the Layout method of each RenderObject will not be called, which will be explained in detail later.
+The specific details will be introduced in a separate article in the future.
 
-## Add 100 million dots of detail in the frame - Paint stage
+**Gesture Handling**
 
-When the size of each element is determined, the frame of the entire page is built, and the next step is to fill in the details in the frame.
+Many gesture operations are defined in the W3C standard, such as touchstart, click, etc. Kraken's Gesture module is responsible for the computation and processing of this part. When the user touches the screen, the Flutter Engine will send the original touch and click information to the gesture processing module, and the gesture processing module determines which type of the current user's gesture operation belongs to. Finally, check whether there is an event currently bound to this event type. If there is, throw the event to the DOM tree, and then use the DOM node to trigger the bound JavaScript function.
 
-The operation of Paint will be based on the pixel coordinates calculated in the Layout stage as the base point, and then call the drawing API to draw.
+Another core function of gesture processing is the recognition of scroll gestures. In mobile applications, scrolling is the most common operation, and the gesture processing module can accurately identify which scroll gestures are, and calculate the scrolling acceleration, and built-in mathematical functions to derive the displacement for a period of time in the future. Finally, the values ​​of these displacements will be transmitted to the drawing module described later in real time to realize the scrolling effect.
 
-The execution process of Paint is very similar to Layout. When the rendering engine calls all Layout operations in each frame, it will call the `PipelineOwner.flushPaint` method to perform the paint operation.
+The specific details will be introduced in a separate article in the future.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406154734.jpg" width="700" />
+**Layout Module**
 
-If all drawing operations are performed on a single drawing, then all paint calls will be repeated every frame, which can severely impact performance.
+The layout style set by the user through CSS, such as display: flex, position: absolute, etc. The corresponding calculation algorithm will be called in the layout module, such as the flex layout algorithm module and the flow layout algorithm module. The main thing of the layout module is to convert the properties set by the CSS module into dimensions and coordinates through calculation. Let each RenderObject get the size it occupies on the screen and the position coordinates relative to the upper left corner.
 
-Therefore, it is necessary to introduce a multi-layer design scheme, that is, to layer the drawing operations of the entire page, and combine multiple scattered drawing operations into the same layer content. At the same time, we call a single layer a Layer, and a tree structure composed of multiple layers is called a Layer tree.
+The layout module is also the most complex module in Kraken. In the W3C standard, the combination of different styles will bring about various effects, and these combined functions will also be implemented one by one in the layout module.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220405183825.jpg" width="700" />
+The specific details will be introduced in a separate article in the future.
 
-Usually the rendering engine will take different rendering actions for different CSS properties. For color, background, and border, these drawings are relatively simple, and only take effect on the properties of a single Element. The drawing API will be called directly to draw the content to the current Layer. For a scrolling scene, a large number of RenderObjects will be drawn, and a Layer will be generated separately to cache most of the drawing content, which can effectively improve the scrolling frame rate. This also contains a lot of technical details, and there will be separate articles for analysis in the future.
+**Drawing module**
 
-## Integration with Flutter
+The drawing module is the last module implemented in Kraken, and all subsequent operations will be handed over to Flutter for processing. After the layout module completes its work and determines the size and coordinates of each RenderObject, the drawing module will call the graphics API to draw the image on the existing coordinates. Flutter Engine provides a drawing API similar to Canvas, and the drawing module implements the processing of image operations such as border and color through these APIs.
 
-When the construction of the Layer tree is completed, Kraken has completed the integration with Flutter. The next step is to send the Layer layer to the Flutter Engine, which generates the final image.
+Image operation is a relatively performance-intensive operation, so the drawing module includes many optimization methods to optimize image drawing performance.
 
-The final architecture of the integration of Kraken and Flutter is as follows:
-
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="600" />
+The specific details will be introduced in a separate article in the future.
 
 ## Summary
 
-This article introduces the main layered design functions of Kraken and gives a brief introduction. The Kraken team will regularly release the specific work details and thinking of each layer.
+This article introduces the main layered design functions of Kraken and gives a brief introduction. The Kraken team will regularly release the specific implementation details of each layer.

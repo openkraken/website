@@ -1,143 +1,113 @@
-# Kraken 分层设计
+# Kraken 架构介绍
 
 ## 前言
 
-Kraken 是一款采用基于 Flutter 而实现的自绘渲染引擎。它使用 W3C 标准的 HTML，CSS，JavaScript，通过一系列的计算，生成 GUI 画面，并支持通过 JavaScript 实现对画面的实时交互。
+Kraken 是一款采用基于 Flutter 而实现的自绘渲染引擎。它使用 W3C 标准的 HTML，CSS，JavaScript，并支持通过 JavaScript 实现对画面的实时交互。
 
-```
-(HTML+CSS+JS) + Rendering = Pixel.
-```
+Kraken 基于 Flutter Rendering 层的实现进行了深度定制，在保留兼容 RenderObject API 的情况下，扩展出了兼容 W3C 标准的布局能力，并在此基础之上添加了 DOM，CSS 的解析处理，并对接 JavaScript 引擎，实现了一个类浏览器的技术架构：
 
-要达成这一目标，中间过程需要很复杂的计算才能完成，为了确保用户可以更快的看到界面，整套系统必须要在一帧以内完成，否则就会导致页面卡顿。
+<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="500" />
 
-为了能让项目保证高性能的同时，能够更好的维护和更新，我们需要通过系统设计，将整个复杂的计算过程分成不同的阶段，并设计专用的数据结构以实现不同阶段内的高效率更新。
+## Bridge 层介绍
 
-## 基于 Flutter 的技术方案
+Bridge 层为用户提供了基于 ECMAScript 标准的 JavaScript 运行环境，并内置了 W3C 标准的 DOM API 和 BOM API。
 
-从 0 完成一个自绘渲染引擎是一件很困难的事情，因此 Kraken 团队选择借助社区已有的建设来开展工作。源自 Google 的 Flutter 是一套优秀的跨端渲染引擎，只不过并不支持 JavaScript 也不支持 W3C 标准渲染。所以 Kraken 团队选择基于 Flutter 已经建设的底层设施，然后再 Flutter 的上层进行二次开发，进而开发出基于 W3C 标准的渲染引擎。
+**Kraken 使用的 JavaScript Engine**
 
-基于 Flutter 所提供的架构图，Kraken 将从 Painting 层开始建立属于自己的模块，并始终保持和 Flutter Painting 层的兼容，以持续获取 Flutter 底层升级所带来的提升。
+Kraken 的 JavaScript Engine 为 QuickJS，支持 ECMA 2020 标准的绝大部分功能。QuickJS 不光支持解析 JavaScript 代码，同时还支持离线将 JavaScript 转换为 ByteCode 格式，再直接解析 ByteCode 运行。这样可以减去页面加载过程中 Parse 阶段的时间。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406152417.jpg" width="500" />
+通过 QuickJS Binding，Kraken 使用 C/C++ 实现了 DOM 标准内的绝大部分功能，包括 Node，EventTarget，Element，选择器等。
 
-而这篇文章将从最基本的输入开始，逐步展开 Kraken 系统分层设计的内容。
+所有基于 DOM 标准而实现的前端框架，都可以在不更改一行代码的情况下运行，比如流行的 React.js，Vue.js 和 Rax.js。
 
-## 基本的输入：HTML/CSS & JavaScript
+具体的实现细节和性能优化后续会单独开一篇文章进行介绍。
 
-和浏览器一样，Kraken 也同样使用 HTML/CSS & JavaScript 来实现页面的布局。其中 HTML/CSS 用于描述页面的结构和样式，而 JavaScript 负责操作和处理数据。
+**HTML 解析**
 
-```html
-<style>
-  .container {
-    width: 200px;
-    height: 200px;
-  }
-</style>
+用户所输入的 HTML 文本也会在 bridge 层进行解析。bridge 中内置一个 HTML Parser，用于解析用户编写的 HTML 字符串。将 HTML 字符串解析后，会生成一组 DOM 节点的调用，进而创建出 DOM 对象。
 
-<div class="container">
-  Hello World !
-</div>
+**C++ 与 Dart 之间的通信**
 
-<script>
-  let container = document.getElementById('container');
-  container.addEventListener('click', function() {
-    console.log('clicked');
-  });
-</script>
-```
+在 Bridge 层的下面是采用 Dart 实现的 Framework 层。Kraken 的 C++ 代码通过 Dart FFI 与 Framework 层实现相互通信，在 Kraken 中，C++ 和 Dart 环境中都包含 `BindingObject` 对象，它是 C++ 和 Dart 之间相互通信的主要桥梁。用户代码通过调用 DOM API 所创建的节点操作等各种操作，会通过转换成指令，成批发送到 Framework 层进行处理。
 
-## DOM 结构的生成
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-对于上诉的数据，渲染引擎开始的第一步是处理 HTML。熟悉 HTML 的同学都知道，HTML 是由多个不同的标签组成，标签与标签可以嵌套，可以同级，他们之间组成了树形的结构。
+**插件能力**
 
-通过解析 HTML，获取 HTML 包含的结构化语义，渲染引擎就获得了一个包含标签相互关系的树状数据结构，在 WhatWG 标准中，它叫做 DOM（Document Object Model） Tree。
+除了 Kraken 所提供的功能之外，还向用户提供了插件功能。可以让用户自行通过 JavaScript 扩展出新的 Element，并通过 Flutter Widget 来实现原生的渲染能力。
 
-```
-HTML --> Parser --> DOM Tree
-```
+Kraken 团队官方维护了一些插件，可以作为示范代码进行参考：https://github.com/openkraken/plugins。
 
-DOM Tree 和 HTML 中的标签是 1 : 1 的映射关系，每个标签的标签名，属性的值，都将被一一映射到 DOM 树上。DOM Tree 是 HTML 的一种数据结构表达方式。
+Bridge 层对于插件能力的支持，是通过截取用户的属性调用和方法调用，并通过 BindingObject 通道，将调用发送到 Framework 侧，并调用 Framework 层 Element 的一些生命周期。从而让用户使用 Flutter Widget 编写的渲染代码，感知到 JavaScript 环境中的变化。
 
-## 双层 DOM Tree — 跨语言通信的妥协
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-由于是建立在 Flutter 基础之上的缘故，Kraken 的主要渲染层的实现是采用 Dart 语言进行开发。而 JavaScript 引擎和 Binding API 均是采用 C/C++ 开发。所以 C/C++ 和 Dart 之间的频繁通信必不可少。
+## Framework 层介绍
 
-Dart 提供了 FFI 功能实现和 C/C++ 之间的相互调用，平均耗时为 0.02ms 单次。但是对于页面渲染的过程，首次页面初始化会有上千次的相互调用，所以 0.02 ms 单次的耗时依然无法接受。
+Framework 采用 Dart 语言编写，通过 C++ 层传递过来的操作指令进行驱动。
 
-因此 Kraken 将多个调用进行了合并，合并成一组指令的调用，再一次性从 C/C++ 发送到 Dart 进行处理。
+**DOM 树**
 
-同时为了减少相互之间的通信频率，C/C++ 和 Dart 各存在一棵 DOM 树，并始终保持同步，让任何有关树结构有关的调用都无须通过跨语言通道。
+DOM 树既是用户通过 JavaScript API 所生成的结构树，也同时负责着连接到 Framework 层的其他功能模块，包括调用 CSS 的解析和处理，以及生成 RenderObject，用来完成布局和绘图的操作。对于用户的一些手势操作，DOM 节点也会触发对应的事件，以调用所注册的 JavaScript 函数。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406153912.jpg" width="800" />
+Elements 包含非常繁杂的功能，包括节点操作，HTML 属性的处理，事件的注册和绑定，并包含了很多生命周期，用户处理 CSS 和 RenderObject。
 
-## 基于 DOM Tree 的 CSS
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-CSS 生效的前提是拥有其匹配的 DOM 节点。如果一个渲染系统希望给予用户所制作的 UI 有更加灵活的控制能力，那么针对单个节点的像素级操作是必不可少的步骤。
+**CSS 样式处理**
 
-下诉的 CSS 代码是将每个含有 `class="container"` 属性的 HTML 标签，都设置为宽 200px 和高 200px。
+用户通过 Style 标签内联的 CSS 代码和通过 JavaScript API 设置的 inlineStyle，都会通过 DOM 树转发到 CSS 样式处理模块。这个模块包含了对 CSS 文本的解析，值类型的解析。
 
-```css
-.container {
-  width: 200px;
-  height: 200px;
-}
-```
+CSS 动画是 CSS 模块的一个重要的组成部分，包括 transition，animation 的实现。这些操作都会反过来对 DOM 节点造成修改，以实现动画的控制。
 
-CSS 文本中描述了一种将哪一类标签应用一组样式规则的方式。
+CSS 中还包含了一些非常复杂的布局功能。比如 position: absolute, display: flex 等。而这些功能是由 CSS 模块，DOM 树和后面会介绍的布局模块共同完成。其中 CSS 模块主要负责对样式的设置，而 DOM 树负责创建对应的 RenderObject，而布局模块则是去实现布局算法。
 
-```
-[选择器] {
-	规则1: 规则内容
-	规则2: 规则内容
-}
-```
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-这些样式规则，会通过一个 Parser 进行一系列的转换过程，生成 CSS Rules 对象。然后再基于选择器的规则，应用到 Element，存储在包含每个 Element 对应样式信息的 properties 中。
+**Flutter Widget 扩展支持**
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220405172221.jpg" width="400" />
+Kraken 从 0.10 版本开始，支持使用 Flutter Widget 来开发自定义 Element 扩展。Kraken 实现了一个桥接层，可以将 DOM 树的生命周期和 Flutter Element 的生命周期进行对接。从而可以驱动 Flutter Widget，可以在一个 Kraken Element 的范围内，使用 Flutter Widget 去绘制渲染内容，并还支持多层嵌套，完美打通了 Web 和 Flutter 生态之间的边界。让 Web 的简单灵活布局 和 Flutter Widget 友好的混合进行渲染。
 
-## 计算每个 Element 的尺寸 — Layout 阶段
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-当每个 Element 所需要的样式信息都存储到 properties 中之后，接下来就可以基于这些信息来计算每个 Element 在页面中所占用的尺寸。
+**Module 扩展**
 
-由于接下来需要进行布局和绘制操作，会生成和尺寸有关的数据。同时对于一些复杂的布局操作，比如 `position: absolute` 以及 `z-index`，会涉及到更加复杂的处理。因此需要单独一套数据结构用来处理这些流程，而不是都耦合在 Element 上。在这里我们将这套数据结构称之为 RenderObject，由它组成的树叫做 RenderObject Tree。
+Kraken 的扩展能力除了可以进行自定义渲染之外，还支持使用 Dart 来丰富 JavaScript 的能力。通过 Module 扩展，可以很轻易在 JavaScript 环境中去注入新的 JavaScript API，并通过 Dart 来去实现用户所希望的能力。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406154459.jpg" width="600" />
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-渲染引擎会在每一帧调用 `PipelineOwner.flushLayout` 方法，依次从上往下调用每个 RenderObject 的 `layout()` 进行布局，并从上到下依次计算每个 RenderObject 的尺寸。
+**调试工具**
 
-如果 CSS 中含有和尺寸有关的属性，比如 width 和 height，都会对最终的尺寸产生影响。
+Kraken 模块中内置了基于 Chrome Developer Protocol 的调试服务实现。可以使用 Chrome 浏览器连接，并通过 Chrome Developer Tools 来调试 Kraken 页面。目前支持调试 Element 结构，查看 CSS 样式，截取 Network 请求，2022 年 5 月份会支持 JavaScript Debugger 功能。
 
-CSS 所定义的布局规则繁多，后面将会有单独的文章针对次话题展开介绍。
+调试工具会在应用本地启动一个 WebSocket 调试服务，通过 Chrome Developer Protocol 来和浏览器调试工具进行数据交换，并将 Kraken 当前的运行信息传递到调试工具进行调试。
 
-当然这里会有一些优化手段，在不必要的情况下不去调用每个 RenderObject 的 Layout 方法，后面也会详细解读。
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-## 在框架内添加亿点点细节— Paint 阶段
+**手势处理**
 
-当每个元素的尺寸确定之后，整个页面的框架也就搭建完成，接下来就是在框架内填充细节。
+W3C 标准中定义了很多手势操作，如 touchstart，click 等。Kraken 的 Gesture 模块负责这个部分的计算和处理。当用户触控屏幕的时候，Flutter Engine 会将原始的触控点击信息发送到手势处理模块，由手势处理模块判定当前用户的手势操作属于哪一种类型。最后再检测当前对这种事件类型有没有绑定事件，如果有，则将事件抛出到 DOM 树，再由 DOM 节点去触发绑定的 JavaScript 函数。
 
-Paint 的操作会基于 Layout 阶段所计算的像素坐标为基点，然后调用绘图 API 进行绘制。
+手势处理还有一个核心功能是滚动手势的识别。在移动应用中，滚动是最常见的一种操作，而手势处理模块可以精确的识别哪些是滚动手势，并计算出滚动的加速度，内置了数学函数来推导出未来一段时间的位移。最终这些位移的值，会实时传送到后面介绍的绘图模块，用于实现滚动效果。
 
-Paint 的执行过程也 Layout 非常类似，当渲染引擎在每一帧调用完所有的 Layout 操作之后，就会调用 `PipelineOwner.flushPaint` 方法来进行 paint 操作。
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406154734.jpg" width="700" />
+**布局模块**
 
-如果所有的绘制操作都在一张画图上进行操作，那么每一帧都将重复所有的 paint 调用，这样会严重影响性能。
+用户通过 CSS 所设置的布局样式，比如 display: flex, position: absolute 等。都会在布局模块去调用其对应的计算算法，如 flex 布局算法模块，flow 布局算法模块。布局模块最主要的事情是将 CSS 模块所设置过来的属性，通过计算转换成尺寸和坐标。让每一个 RenderObject 都获得其在屏幕中所占用的尺寸和相对左上角的位置坐标。
 
-因此需要引入多图层的设计方案，即将整个页面的绘制操作进行分层，将多个零散的绘制操作合并到同一个图层内容。同时我们将单个图层称之为 Layer，而由多个图层组成的树状结构称之为 Layer 树。
+布局模块也是 Kraken 中最复杂的模块。在 W3C 标准中，不同样式之间的组合会带来各种不一样的效果，而这些组合成的功能，也都会在布局模块中被一一实现。
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220405183825.jpg" width="700" />
+具体的细节也会在后续单独开一篇文章进行介绍。
 
-通常渲染引擎会对不同的 CSS 属性采取不同的渲染操作。对于 color，background，border 这些绘制比较简单，并只生效于单个 Element 的属性，会直接调用绘图 API，将内容绘制到当前的 Layer 上。而对于滚动场景，会涉及大量的 RenderObject 的绘制，则会单独生成 Layer 用于缓存大部分的绘制内容可以有效提升滚动帧率。这其中也包含了很多的技术细节，未来将会有单独的文章进行分析。
+**绘图模块**
 
-## 实现和 Flutter 的融合
+绘图模块是 Kraken 中最后一个实现的模块，后面的操作都将交给 Flutter 进行处理。在布局模块完成工作，确定每个 RenderObject 的尺寸和坐标之后，绘图模块会在已有的坐标上，调用图形 API 进行图像的绘制。Flutter Engine 提供了类似 Canvas 的绘图 API，绘图模块通过这些 API，实现了 border，color 等涉及图像操作的处理。
 
-当完成了 Layer 树的构建，Kraken 就完成了和 Flutter 的相互融合。接下来就是将 Layer 层发送到 Flutter Engine，并由 Flutter Engine 生成最终的图像。
+图像操作是一种比较消耗性能的操作，因此绘图模块包含了很多优化图像绘制性能的优化手段。
 
-最终 Kraken 和 Flutter 相互融合的架构如下：
-
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="600"  />
+具体的细节也会在后续单独开一篇文章进行介绍。
 
 ## 小结
 
-本篇文章介绍了 Kraken 主要的分层设计功能，并进行了简要的介绍，后续 Kraken 团队将会定期发布每层具体的工作细节和思考。
+本篇文章介绍了 Kraken 主要的分层设计功能，并进行了简要的介绍，后续 Kraken 团队将会定期发布每层具体的实现细节内容。
