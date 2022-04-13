@@ -45,6 +45,8 @@ Note: In order to distinguish the built-in elements, the custom element name `na
 
 ## Advanced usage
 
+### Control Rendering in Dart
+
 In addition to enriching the basic rendering capabilities, connecting existing Flutter Widget materials as rendering capabilities to Kraken, you can also optimize the overall experience of Kraken rendering pages on the end through the optimization capabilities of Flutter Widget itself, such as front-end development An Element container that provides dynamic Render Object recycling capabilities without perceptually.
 
 Take a common form in business-waterfall flow scene as an example, through the waterfall flow Widget component connected to the community-[waterfall_flow](https://pub.dev/packages/waterfall_flow) and a drop-down bottoming refresh Widget component-[flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh), we expect to provide a container Element to Kraken's rendering process. At the same time, it is expected that some dynamic Render Object recovery capabilities provided by it internally can ensure smooth scrolling and stable memory performance under long lists.
@@ -91,4 +93,79 @@ And the node can monitor the Custom Event thrown by the Widget component through
 
 ```js
 flutterContainer.addEventListener('refresh', () => {});
+```
+
+### Add custom methods to Element
+
+Elements created by JS can implement arbitrary properties and functions directly by Dart.
+
+**Add property**
+
+In the JS environment, if an Element has a property accessed by JS, the `getBindingProperty` callback will be triggered and pass the name of the property accessed by JS. By returning directly in Dart, you can pass the value back to JS and use it as the return value of JS access.
+
+The returned types supported by properties are the same as those supported by JSON serialization:
+
+- int
+- double
+- String
+- List
+- Map
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  console.log(text.value); // Hello
+  console.log(text.hello); // World!
+  console.log(text.data); // ['A', 'B']
+});
+```
+
+```dart
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(context) : super(context);
+
+  String _textValue = '';
+  List<String> _textData = ['A', 'B'];
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties,
+      List<Widget> children) {
+    _textValue = properties['value'] ?? '';
+    return Text(_textValue,
+        textDirection: TextDirection.ltr,
+        style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+
+  @override
+  getBindingProperty(String key) {
+    if (key == 'value') {
+      return _textValue;
+    } else if (key == 'hello') {
+      return 'World!';
+    } else if (key == 'data') {
+      return _textData;
+    }
+
+    return super.getBindingProperty(key);
+  }
+}
+```
+
+### Add sync function
+
+The method of adding a custom function to an Element is similar to adding a property. You only need to return a Dart function, and you can also return a function in the JS environment. When the function returned by JS is called, the Dart function will also be called.
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  text.sayHi('Kraken'); // flutter: Kraken: Hi!
+});
 ```
