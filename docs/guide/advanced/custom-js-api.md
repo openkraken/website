@@ -1,28 +1,12 @@
-# 开发 JS API 插件
+# 给 JS 运行环境中添加自定义 API
 
 ## 一个简单的闹钟 API
 
-查看项目源代码：https://github.com/openkraken/samples/tree/main/plugins/my_kraken_plugin
-
 接下来通过一个简单的例子来演示如何给 Kraken 的 JS 环境中添加一个自定义的 API。
 
-我们的目标是通过创建一个插件，然后新增一个 `alarmClock` 的全局对象，并支持在 JS 层注册一个回调用于处理闹钟响了，然后在 Dart 层去实现定时器的功能。
-
-### 准备工作
-
-**初始化项目工程**
-
-通过 `flutter create` 命令来创建一个 flutter plugin 脚手架。然后在这个 plugin 脚手架上添加我们的代码，现在我们需要添加一些配置，让构建的时候，将所有的依赖都打包进 App 中。
-
-```shell
-flutter create --template=plugin ./my_kraken_plugin
-```
+我们的目标是通过给 JS 全局环境中新增一个 `alarmClock` 的全局对象，并支持在 JS 层注册一个回调用于处理闹钟响了，然后在 Dart 层去实现定时器的功能。
 
 ### 添加 JavaScript 层的实现
-
-在 lib/ 目录下创建一个名为 my_plugin.js 的文件，然后放入以下代码：
-
-**my_plugin.js**
 
 ```javascript
 kraken.addKrakenModuleListener(function(moduleName, event, data) {
@@ -73,8 +57,6 @@ kraken.addKrakenModuleListener: (fn: (moduleName: string, event: Event, extra: s
 
 上面的 JavaScript 实现将调用转发到了 Dart 层，接下来就是要在 Dart 层实现闹钟的业务逻辑。
 
-**alarm_clock_module.dart**
-
 ```dart
 import 'package:kraken/module.dart';
 import 'package:kraken/dom.dart';
@@ -110,6 +92,10 @@ class AlarmClockModule extends BaseModule {
     return null;
   }
 }
+
+void main() {
+  ModuleManager.defineModule((moduleNamager) => AlarmClockModule(moduleNamager));
+}
 ```
 
 Kraken 提供了基础的 BaseModule 抽象类，实现 BaseModule 所定义的方法就可以实现一个 Kraken 的 Module。
@@ -120,39 +106,24 @@ Kraken 在设计上使用 Module 来处理来自 JavaScript API 的调用。因�
 
 第二种方式是在 Module 内的任何函数内调用 `moduleManager.emitModuleEvent(name, event: alarmEvent, data: 'Wake Up!');` 来触发一个 Module 事件。通过在 JavaScript 上调用 `kraken.addKrakenModuleListener` 就可以监听到这个事件。不过值得注意的是，任何一个 Module 所触发的事件都会执行 `kraken.addKrakenModuleListener` 所注册的回调，因此还需要判断回调执行时调用的 Module 名称。
 
-### 完成插件的注册
+## 完成 API 的安装
 
-现在我们已经完成了大部分功能的实现，接下来只需把代码注册到 Kraken 中，就大功告成了。
+API 注册最好的方式是将 JS 代码通过工具转成 bytecode，然后再应用初始化的时候进行注册。
 
-使用下面的命令调用 kraken-cli 所提供的 `qjsc` 命令将 JavaScript 代码转成带有 QuickJS bytecode 的 Dart 源代码：
+使用下面的命令调用 kraken-cli 所提供的 qjsc 命令将 JavaScript 代码转成包含 QuickJS bytecode 的 Dart 源代码：
 
-```bash
+```
 kraken qjsc ./lib/my_plugin.js ./lib/my_plugin_qjsc.dart --dart --pluginName my_plugin
 ```
 
-就会在 lib/ 目录下生成 `my_plugin_qjsc.dart` 文件。
-
-**在插件初始化阶段初始化 JS**
+就会在 lib/ 目录下生成 my_plugin_qjsc.dart 文件。
 
 ```dart
-import 'alarm_clock_module.dart';
-import 'package:kraken/module.dart';
 import 'my_plugin_qjsc.dart';
 
-class MyKrakenPlugin {
-  static void initialize() {
-    registerMyPluginByteData();
-    ModuleManager.defineModule(
-        (moduleNamager) => AlarmClockModule(moduleNamager));
-  }
-}
-```
-
-之后只需要在应用中的 main 函数内进行插件的初始化，就可以直接使用 AlarmClock 这个 API 了。
-
-```dart
 void main() {
-  MyKrakenPlugin.initialize();
-  runApp(MyApp());
+  registerMyPluginByteData();
+  ModuleManager.defineModule((moduleNamager) => AlarmClockModule(moduleNamager));
 }
+
 ```
