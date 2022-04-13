@@ -317,6 +317,10 @@ export default defineConfig({
             path: '/guide/advanced/widget-custom-element',
           },
           {
+            title: '给 JS 运行环境中添加自定义 API',
+            path: '/guide/advanced/custom-js-api',
+          },
+          {
             title: '实现一个高性能长列表',
             path: '/guide/advanced/high-performance-list',
           },
@@ -985,7 +989,7 @@ export default defineConfig({
             path: '/en-US/plugins/plugin/introduction',
           },
           {
-            title: 'Development plugin',
+            title: 'Develop a plugin',
             path: '/en-US/plugins/plugin/development',
           },
         ],
