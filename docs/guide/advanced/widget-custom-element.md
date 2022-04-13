@@ -193,6 +193,36 @@ class TextWidgetElement extends WidgetElement {
 }
 ```
 
+## 触发 Element 自定义事件
+
+Dart 实现的 Flutter Widget 可以向 JS 抛出自定义的事件，用于让前端处理一些由客户端功能所响应的事件。
+
+```javascript
+const flutterButton = document.createElement('flutter-button');
+flutterButton.addEventListener('buttonpress', e => {
+  console.log(e.detail); // helloworld
+  document.body.appendChild(document.createTextNode(e.detail));
+});
+document.body.appendChild(flutterButton);
+```
+
+```dart
+class FlutterButtonElement extends WidgetElement {
+  FlutterButtonElement(context) : super(context);
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties,
+      List<Widget> children) {
+    return ElevatedButton(
+        onPressed: () {
+          dispatchEvent(CustomEvent(
+              'buttonpress', CustomEventInit(detail: 'helloworld')));
+        },
+        child: Text('Click This'));
+  }
+}
+```
+
 ## 高阶用法
 
 ### 控制渲染逻辑
