@@ -6,7 +6,7 @@ export default defineConfig({
     ['zh-CN', '中文'],
     ['en-US', 'English'],
   ],
-  title: ' ',
+  title: 'Kraken',
   favicon:
     'https://img.alicdn.com/imgextra/i1/O1CN01u0y8XT25HxxAVpBQL_!!6000000007502-2-tps-109-103.png',
   styles: [
@@ -48,13 +48,14 @@ export default defineConfig({
     '.footer-container a { color: #FFFFFF !important }',
     '.__dumi-default-layout[data-route="/"] .__dumi-default-layout-footer { display: none }',
     '.__dumi-default-layout[data-route="/en-US"] .__dumi-default-layout-footer { display: none }',
-    '.__dumi-default-navbar-logo{ width: 30px }',
     '.__dumi-default-layout-features > dl dt { margin-bottom: 8px !important }',
     '.sponsors img { filter: grayscale(100%); opacity: 0.66; }',
     '.sponsors img:hover { filter: grayscale(0%); opacity: 1; }',
     'video:focus {outline: -webkit-focus-ring-color auto 0px;}',
     'video::-webkit-media-controls {overflow: hidden !important;};video::-webkit-media-controls-enclosure {width: calc(100% + 32px);margin-left: auto;}',
     'a:hover { text-decoration:none !important;}',
+    '.__dumi-default-navbar-logo {color: transparent!important }',
+    '.__dumi-default-navbar-logo:hover {color: transparent!important }',
     '@media only screen and (min-width: 767px) {\
       .say-kraken{ cursor: pointer;margin-left: .2em;width: 20px; }\
       .english-title{ font-size:42px;margin-left: .5em }\
@@ -98,7 +99,7 @@ export default defineConfig({
       .footer-container div ul li { width: 100% !important }\
       .footer-block-content{ margin: 0 auto; flex-grow: 1; text-align: center; margin-bottom: 50px; }\
       .footer-wrapper{ max-width: 1180px;margin: 0 auto;padding: 100px 0 0px;display: flex;flex-wrap: wrap; flex-direction: column; }\
-      .__dumi-default-navbar-logo{ width: 50px }\
+      .__dumi-default-navbar-logo{ width: 50px; }\
       .sponsors-container{ padding-bottom: 30px;box-shadow: 0 0 8px rgba(0,0,0,.101562);background-color:#f8fafc; }\
       .sponsors-list{ padding: 0 30px;width:100%;margin:0 auto;position:relative; }\
       .sponsors{ vertical-align: middle;margin-top: 20px;margin:0 20px;display: inline-block;width: 100px; }\
@@ -137,9 +138,33 @@ export default defineConfig({
         path: '/plugins',
       },
       {
-        title: 'GITHUB',
-        path: 'https://github.com/openkraken/kraken',
+        title: '贡献',
+        children: [
+          {
+            title: '如何参与贡献',
+            path:
+              'https://github.com/openkraken/kraken/blob/main/.github/CONTRIBUTING.md',
+          },
+          { title: 'GITHUB', path: 'https://github.com/openkraken/kraken' },
+          {
+            title: '技术指导委员会',
+            path: 'https://github.com/openkraken/TSC',
+          },
+          {
+            title: '路线图',
+            path: 'https://github.com/openkraken/kraken/wiki/Roadmap.zh_CN',
+          },
+          {
+            title: '迭代计划',
+            path: 'https://github.com/openkraken/kraken/wiki/Iteration-Plans',
+          },
+        ],
       },
+      // When ready to enable.
+      // {
+      //   title: 'BLOG',
+      //   path: '/blog',
+      // },
     ],
     'en-US': [
       {
@@ -155,9 +180,33 @@ export default defineConfig({
         path: '/en-US/plugins',
       },
       {
-        title: 'GITHUB',
-        path: 'https://github.com/openkraken/kraken',
+        title: 'CONTRIBUTE',
+        children: [
+          {
+            title: 'Contributing Guide',
+            path:
+              'https://github.com/openkraken/kraken/blob/main/.github/CONTRIBUTING.md',
+          },
+          { title: 'Github', path: 'https://github.com/openkraken/kraken' },
+          {
+            title: 'Technical Steering Committee',
+            path: 'https://github.com/openkraken/TSC',
+          },
+          {
+            title: 'Roadmap',
+            path: 'https://github.com/openkraken/kraken/wiki/Roadmap',
+          },
+          {
+            title: 'Iteration Plans',
+            path: 'https://github.com/openkraken/kraken/wiki/Iteration-Plans',
+          },
+        ],
       },
+      // When ready to enable.
+      // {
+      //   title: 'BLOG',
+      //   path: '/en-US/blog',
+      // },
     ],
   },
   menus: {
@@ -233,7 +282,15 @@ export default defineConfig({
         path: '/guide/advanced',
         children: [
           {
-            title: '使用 Fluter Widget 自定义元素',
+            title: '使用 QuickJS Bytecode 提升加载性能',
+            path: '/guide/advanced/use-quickjs-bytecode',
+          },
+          {
+            title: '使用 HTML 格式渲染（SSR）',
+            path: '/guide/advanced/html',
+          },
+          {
+            title: '使用 Flutter Widget 自定义元素',
             path: '/guide/advanced/widget-custom-element',
           },
           {
@@ -255,6 +312,10 @@ export default defineConfig({
           {
             title: 'Kraken 网络请求拦截器',
             path: '/guide/advanced/network-intercept',
+          },
+          {
+            title: '监测 Kraken 是否在屏',
+            path: '/guide/advanced/check-widget-visibility',
           },
           {
             title: 'Native 与 Kraken 进行交互传递',
@@ -411,6 +472,10 @@ export default defineConfig({
           {
             title: '单位',
             path: '/api/styles/unit',
+          },
+          {
+            title: 'CSS 变量',
+            path: '/api/styles/variables',
           },
           {
             title: '其它样式',
@@ -611,7 +676,15 @@ export default defineConfig({
         path: '/en-US/guide/advanced',
         children: [
           {
-            title: 'Use Fluter Widget to customize elements',
+            title: 'Use QuickJS Bytecode',
+            path: '/en-US/guide/advanced/use-quickjs-bytecode',
+          },
+          {
+            title: 'Render using HTML format',
+            path: '/en-US/guide/advanced/html',
+          },
+          {
+            title: 'Use Flutter Widget to customize elements',
             path: '/en-US/guide/advanced/widget-custom-element',
           },
           {
@@ -633,6 +706,10 @@ export default defineConfig({
           {
             title: 'Kraken Network Interceptor',
             path: '/en-US/guide/advanced/network-intercept',
+          },
+          {
+            title: 'Check Kraken is visible',
+            path: '/en-US/guide/advanced/check-widget-visibility',
           },
           {
             title: 'Native and Kraken for gesture transfer',
@@ -781,6 +858,10 @@ export default defineConfig({
           {
             title: 'Unit',
             path: '/en-US/api/styles/unit',
+          },
+          {
+            title: 'CSS Variables',
+            path: '/api/styles/variables',
           },
           {
             title: 'Other styles',

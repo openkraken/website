@@ -1,8 +1,8 @@
 # Kraken widget
 
-When we access Kraken in the Flutter application, we can change the default properties of Kraken Widget through the following configurations.
+When we access Kraken in the Flutter application, we can change the default properties of the Kraken Widget through the following configurations.
 
-## Container configuration
+## container configuration
 
 ### background
 
@@ -42,41 +42,53 @@ Kraken kraken = Kraken(
 );
 ```
 
-## Load resources
+## Load Bundle
 
-### bundleURL
+### Remote Bundle
 
-The URL of the JavaScript script to be loaded and executed.
+The URL of the JavaScript/Bytecode script to load and execute.
 
 **Example:**
 
 ```dart
 Kraken kraken = Kraken(
-  bundleURL:'https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js',
+  bundle: KrakenBundle.fromUrl('http://example.com/path/to/js),
 );
 ```
 
-### bundlePath
+### Local Bundle
 
-The local path of the JavaScript script to be loaded and executed.
+The local path of JavaScript/Bytecode to be loaded and executed.
 
 **Example:**
 
 ```dart
 Kraken kraken = Kraken(
-  bundlePath:'assets/bundle.js',
+  bundle: KrakenBundle.fromUrl('assets://assets/bundle.js')
 );
 ```
 
-### bundleContent
+### JavaScript String content
 
-The content of the JavaScript script to be loaded and executed.
+The String content of the JavaScript script to be loaded and executed.
 
 **Example:**
 
 ```dart
 Kraken kraken = Kraken(
-  bundleContent:'console.log(1)',
+  bundle: KrakenBundle.fromContent('console.log(1)'),
+);
+```
+
+### JavaScript Bytecode Content
+
+The Bytecode content of the JavaScript script to be loaded and executed.
+
+**Example:**
+
+```dart
+Kraken kraken = Kraken(
+  bundle: KrakenBundle.fromBytecode(bytecode),
 );
 ```
 
@@ -84,7 +96,7 @@ Kraken kraken = Kraken(
 
 ### onLoad
 
-The onLoad event will be triggered after the document is loaded.
+The onLoad event is fired when the document is loaded.
 
 **Example:**
 
@@ -98,7 +110,7 @@ Kraken kraken = Kraken(
 
 ### onLoadError
 
-Load the abnormal callback function in the document.
+Callback function for file loading exceptions.
 
 **Example:**
 
@@ -112,7 +124,7 @@ Kraken kraken = Kraken(
 
 ### onJSError
 
-When JavaScript executes abnormally, an exception is thrown through this callback.
+This callback throws an exception when JavaScript executes abnormally.
 
 **Example:**
 
@@ -124,11 +136,11 @@ Kraken kraken = Kraken(
 );
 ```
 
-## Turn on debugging
+## enable debugging
 
 ### debugEnableInspector
 
-Force the debug mode to be turned on, the default is true.
+Force the debug mode to be enabled, the default is true.
 
 **Example:**
 
@@ -138,7 +150,7 @@ Kraken kraken = Kraken(
 );
 ```
 
-## Gesture
+## gestures
 
 ### gestureListener
 
@@ -147,11 +159,11 @@ Listen for interactive behavior events thrown by Kraken.
 method
 
 - `dragStartCallback`
-  Triggered when the gesture starts
+  Fired when gesture starts
 - `dragUpdateCallback`
-  Triggered when the gesture moves
+  Fired when the gesture moves
 - `dragEndCallback`
-  Triggered when the gesture ends
+  Fired when the gesture ends
 
 **Example:**
 
@@ -180,11 +192,11 @@ GestureListener: gestureListener(
 )
 ```
 
-## Animation control
+## animation control
 
 ### animationController
 
-Widget animation controller. In order to avoid the lag caused by the first execution of JavaScript, use this parameter to allow JavaScript to start execution after the execution of the external animation ends.
+Widget animation controller. In order to avoid the stutter caused by the first execution of JavaScript, use this parameter to allow JavaScript to start executing after the execution of the external animation.
 
 **Example:**
 
@@ -209,7 +221,8 @@ class FirstRoute extends StatelessWidget {
             Navigator.push(
               context,
               route,
-            );},
+            );
+          },
         ),
       ),
     );
@@ -230,7 +243,7 @@ class SecondRoute extends StatelessWidget {
         body: Wrap(
           children: <Widget>[
             Kraken(
-              bundlePath:'assets/bundle.js',
+              bundlePath: 'assets/bundle.js',
               animationController: controller,
             )
           ],
@@ -239,11 +252,11 @@ class SecondRoute extends StatelessWidget {
 }
 ```
 
-## Page Jump
+## page jump
 
 ### navigationDelegate
 
-Implement custom behaviors triggered during the loading of the Kraken view and the completion of the navigation request.
+Implement custom behaviors that are triggered during the loading of Kraken views and the completion of navigation requests.
 
 **Example:**
 

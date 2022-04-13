@@ -2,39 +2,25 @@
 
 ## A simple alarm clock API
 
-View the project source code: https://github.com/openkraken/kraken_plugin_examples/tree/main/plugins/my_kraken_plugin
+View the project source code: https://github.com/openkraken/samples/tree/main/plugins/my_kraken_plugin
 
 Next, a simple example is used to demonstrate how to add a custom API to Kraken's JS environment.
 
-Our goal is to create a plug-in, and then add a global object of `alarmClock`, and support to register a callback in the JS layer to handle the alarm sound, and then implement the timer function in the Dart layer.
+Our goal is to create a plugin, then add a global object of `alarmClock`, and support registering a callback in the JS layer to handle the alarm clock, and then implement the timer function in the Dart layer.
 
 ### Ready to work
 
-**Initial project engineering**
+**Initialize project engineering**
 
-Use the `flutter create` command to create a flutter plugin scaffolding. Then add our code to the plugin scaffolding. Now we need to add some configuration so that when building, all dependencies are packaged into the App.
+Create a flutter plugin scaffold with the `flutter create` command. Then add our code to this plugin scaffolding. Now we need to add some configuration so that when building, all dependencies are packaged into the App.
 
 ```shell
-flutter create --template=plugin --ios-language objc --android-language java --platforms ios,android,macos ./my_kraken_plugin
-```
-
-**Install [kraken-npbt](https://github.com/openkraken/native-plugin-build-tool)**
-
-Whether it is a plug-in written in JavaScript or C/C++, you need to use the `kraken-npbt` tool to build
-
-```bash
-npm install kraken-npbt -g
-```
-
-After the installation is complete, use the following command to initialize the project in the plugin directory. It will generate the necessary compilation project files in the `bridge` directory.
-
-```bash
-kraken-npbt configure
+flutter create --template=plugin ./my_kraken_plugin
 ```
 
 ### Add implementation of JavaScript layer
 
-Create a file named my_plugin.js in the bridge directory, and then put the following code:
+Create a file called my_plugin.js in the lib/ directory and put the following code:
 
 **my_plugin.js**
 
@@ -71,9 +57,9 @@ Object.defineProperty(globalThis, 'alarmClock', {
 });
 ```
 
-Through the above code, an AlarmClock object is realized, and the communication with the Dart layer is realized by calling the `kraken.invokeModule` and `kraken.addKrakenModuleListener` methods in the JS plug-in.
+The above code implements an AlarmClock object, which communicates with the Dart layer by calling the `kraken.invokeModule` and `kraken.addKrakenModuleListener` methods in the JS plugin.
 
-Kraken injects a global variable named `kraken` into the JS global environment to provide the necessary functions for the plug-in:
+Kraken injects a global variable named `kraken` in the JS global environment, providing the necessary functions for plugin implementation:
 
 ```typescript
 // call Dart function
@@ -83,22 +69,22 @@ kraken.invokeModule: (module: string, method: string, params?: Object | null, fn
 kraken.addKrakenModuleListener: (fn: (moduleName: string, event: Event, extra: string) => void) => void;
 ```
 
-### Dart layer logic implementation
+### Implementation of Dart layer logic
 
 The above JavaScript implementation forwards the call to the Dart layer, and the next step is to implement the business logic of the alarm clock in the Dart layer.
 
 **alarm_clock_module.dart**
 
 ```dart
-import'package:kraken/module.dart';
-import'package:kraken/dom.dart';
-import'dart:async';
+import 'package:kraken/module.dart';
+import 'package:kraken/dom.dart';
+import 'dart:async';
 
 class AlarmClockModule extends BaseModule {
-  AlarmClockModule(ModuleManager moduleManager): super(moduleManager);
+  AlarmClockModule(ModuleManager moduleManager) : super(moduleManager);
 
   @override
-  String get name =>'AlarmClock';
+  String get name => 'AlarmClock';
 
   @override
   void dispose() {}
@@ -106,18 +92,18 @@ class AlarmClockModule extends BaseModule {
   @override
   String invoke(String method, dynamic params, InvokeModuleCallback callback) {
     try {
-      if (method =='setTime') {
+      if (method == 'setTime') {
         dynamic time = params;
         Timer(Duration(seconds: time.toInt()), () {
           Event alarmEvent = Event('alarm');
           moduleManager.emitModuleEvent(name,
-              event: alarmEvent, data:'Wake Up!');
-          callback(data:'success');
+              event: alarmEvent, data: 'Wake Up!');
+          callback(data: 'success');
         });
       }
       return null;
     } catch (e, stack) {
-      String errmsg ='$e\n$stack';
+      String errmsg = '$e\n$stack';
       callback(errmsg: errmsg);
     }
 
@@ -126,109 +112,43 @@ class AlarmClockModule extends BaseModule {
 }
 ```
 
-Kraken provides the basic BaseModule abstract class to implement BaseModuThe method defined by le can implement a Kraken Module.
+Kraken provides the basic BaseModule abstract class, and implementing the methods defined by BaseModule can implement a Kraken Module.
 
-Kraken uses Module in its design to handle calls from the JavaScript API. Therefore, for the JS API of AlarmClock, the Module name is AlarmClockModule.
+Kraken is designed to use Modules to handle calls from JavaScript APIs. So for the AlarmClock JS API, the Module name is AlarmClockModule .
 
-There are two ways to return data to JavaScript in the Module. The first is to return through the `InvokeModuleCallback callback`. As long as the JavaScript code is called, and a function is passed in as a callback at the last parameter, you can call the InvokeModuleCallback callback on the Dart layer to directly perform the callback. The callback parameter can be passed `errmsg` or `data` to handle both abnormal and normal situations.
+There are 2 ways to return data to JavaScript in Module, the first is through `InvokeModuleCallback callback`. As long as the JavaScript code is called, and a function is passed as a callback in the last parameter, you can call `InvokeModuleCallback callback` in the Dart layer to directly call back. The callback parameter can be passed `errmsg` or `data` for both exception and normal cases.
 
-The second way is to call `moduleManager.emitModuleEvent(name, event: alarmEvent, data:'Wake Up!');` in any function in Module to trigger a Module event. This event can be monitored by calling `kraken.addKrakenModuleListener` on JavaScript. However, it is worth noting that any event triggered by a Module will execute the callback registered by `kraken.addKrakenModuleListener`, so it is also necessary to determine the name of the Module called when the callback is executed.
+The second way is to call `moduleManager.emitModuleEvent(name, event: alarmEvent, data: 'Wake Up!');` from any function inside the Module to trigger a Module event. This event can be listened to by calling `kraken.addKrakenModuleListener` on JavaScript. However, it is worth noting that any event triggered by a Module will execute the callback registered by `kraken.addKrakenModuleListener`, so it is also necessary to determine the name of the Module called when the callback is executed.
 
-### Complete the registration of the plug-in
+### Complete plugin registration
 
-Now that we have completed most of the functions, we only need to register the code in Kraken, and you are done.
+Now that we have implemented most of the functions, we just need to register the code in Kraken and we are done.
 
-**Build bridge**
-
-The `kraken-npbt` tool can build both the C++ and JavaScript files in the bridge directory into a dynamic link library product. Just use the following commands to build macOS / iOS / Android platform products with one click.
+Use the following command to call the `qjsc` command provided by kraken-cli to convert the JavaScript code to Dart source code with QuickJS bytecode:
 
 ```bash
-kraken-npbt build
+kraken qjsc ./lib/my_plugin.js ./lib/my_plugin_qjsc.dart --dart --pluginName my_plugin
 ```
 
-The built products will also be automatically placed in different directories in the plug-in project according to different platforms:
+The `my_plugin_qjsc.dart` file will be generated in the lib/ directory.
 
-- **macOS:** `your_kraken_plugin/macos/libmy_kraken_plugin.dylib`
-- **iOS:** `your_kraken_plugin/ios/libmy_kraken_plugin.dylib`
-- **android:**
-  - `your_kraken_plugin/android/jniLibs/arm64_v8a/libmy_kraken_plugin.so`
-  - `your_kraken_plugin/android/jniLibs/armeabi_v7a/libmy_kraken_plugin.so`
-
-**Register the bridge build product to the plugin**
-
-**macOS: [my_kraken_plugin/macos/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/macos/my_kraken_plugin.podspec#L18)**
-
-```
-s.vendored_libraries ='libmy_kraken_plugin.dylib'
-```
-
-**iOS:** **[my_kraken_plugin/ios/my_kraken_plugin.pubspec](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/ios/my_kraken_plugin.podspec#L20)**
-
-```
-s.vendored_libraries ='libmy_kraken_plugin.dylib'
-```
-
-**Android:** **[my_kraken_plugin/android/build.gradle](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/android/build.gradle#L33)**
-
-```
-android {
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['jniLibs']
-        }
-    }
-}
-```
-
-**Initialize the bridge during the plugin initialization phase**
-
-**[platform.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/platform.dart)**
+**Initialize JS during plugin initialization phase**
 
 ```dart
-// ignore_for_file: unused_import, undefined_function
-
-import 'dart:ffi';
-import 'dart:io' show Platform;
-import 'dart:typed_data';
-
-/// Search dynamic lib from env.KRAKEN_LIBRARY_PATH or /usr/lib
-const String KRAKEN_JS_ENGINE = 'KRAKEN_JS_ENGINE';
-final String libName = 'my_kraken_plugin';
-final String nativeDynamicLibraryName = (Platform.isMacOS)
-    ? 'lib$libName.dylib'
-    : Platform.isIOS
-        ? '$libName.framwork/$libName'
-        : Platform.isWindows
-            ? 'lib$libName.dll'
-            : 'lib$libName.so';
-```
-
-**[my_kraken_plugin.dart](https://github.com/openkraken/plugin_examples/blob/main/plugins/my_kraken_plugin/lib/my_kraken_plugin.dart)**
-
-```dart
-import'platform.dart';
-import'dart:ffi';
-
-typedef Native_InitBridge = Void Function();
-typedef Dart_InitBridge = void Function();
-
-final Dart_InitBridge _initBridge =
-nativeDynamicLibrary.lookup<NativeFunction<Native_InitBridge>>('initBridge').asFunction();
-
-void initBridge() {
-  _initBridge();
-}
+import 'alarm_clock_module.dart';
+import 'package:kraken/module.dart';
+import 'my_plugin_qjsc.dart';
 
 class MyKrakenPlugin {
   static void initialize() {
-    initBridge();
-    ModuleManager.defineModule((moduleNamager) => AlarmClockModule(moduleNamager));
+    registerMyPluginByteData();
+    ModuleManager.defineModule(
+        (moduleNamager) => AlarmClockModule(moduleNamager));
   }
 }
-
 ```
 
-After that, you only need to initialize the plug-in in the main function of the application, and you can directly use the AlarmClock API.
+After that, you only need to initialize the plugin in the main function of the application, and you can use the AlarmClock API directly.
 
 ```dart
 void main() {

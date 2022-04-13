@@ -36,7 +36,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i3/O1CN01llXZG21IbHUBpiDnt_!!6000000000911-2-tps-200-200.png" />
     </div>
@@ -78,7 +78,7 @@ Video is not natively supported by Kraken. You need to install this [kraken_vide
     </div>
     <div className="preview-row">
       <div>
-        2. First download the <a href="/en-US/guide#kraken-playground" >Kraken Playground App</a> on your Android phone, then open the App and scan the QR code below to preview:
+        2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
       <img className="preview-qrcode" src="https://img.alicdn.com/imgextra/i1/O1CN01I0hsO41NlsjX2YLK8_!!6000000001611-2-tps-200-200.png" />
     </div>

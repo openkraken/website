@@ -42,41 +42,53 @@ Kraken kraken = Kraken(
 );
 ```
 
-## 加载资源
+## 加载 Bundle
 
-### bundleURL
+### 远程 Bundle
 
-需加载执行的 JavaScript 脚本的 URL。
+需加载执行的 JavaScript/Bytecode 脚本的 URL。
 
 **示例：**
 
 ```dart
 Kraken kraken = Kraken(
-  bundleURL: 'https://raw.githubusercontent.com/openkraken/kraken/master/kraken/example/assets/bundle.js',
+  bundle: KrakenBundle.fromUrl('http://example.com/path/to/js),
 );
 ```
 
-### bundlePath
+### 本地 Bundle
 
-需加载执行的 JavaScript 脚本本地路径。
+需加载执行的 JavaScript/Bytecode 本地路径。
 
 **示例：**
 
 ```dart
 Kraken kraken = Kraken(
-  bundlePath: 'assets/bundle.js',
+  bundle: KrakenBundle.fromUrl('assets://assets/bundle.js')
 );
 ```
 
-### bundleContent
+### JavaScript String 内容
 
-需加载执行的 JavaScript 脚本的内容。
+需加载执行的 JavaScript 脚本的 String 内容。
 
 **示例：**
 
 ```dart
 Kraken kraken = Kraken(
-  bundleContent: 'console.log(1)',
+  bundle: KrakenBundle.fromContent('console.log(1)'),
+);
+```
+
+### JavaScript Bytecode 内容
+
+需加载执行的 JavaScript 脚本的 Bytecode 内容。
+
+**示例：**
+
+```dart
+Kraken kraken = Kraken(
+  bundle: KrakenBundle.fromBytecode(bytecode),
 );
 ```
 

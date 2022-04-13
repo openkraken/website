@@ -1,23 +1,23 @@
 # Documentation
 
-Kraken provides most of the W3C (whatwg) standard document-related API implementations.
-The following lists the currently supported APIs and their attributes and methods. For detailed documentation, please refer to the standard documentation.
+Kraken provides documentation-related API implementations for most of the W3C (whatwg) standards.
+The following lists the currently supported APIs and their properties and methods. For detailed documentation, please refer to the standard documentation.
 
 ---
 
-## Document
+## Documents
 
 ### Interface Description
 
-The `Document` interface describes the general properties and methods of DOM tree operations.
+The `Document` interface describes common properties and methods for DOM tree manipulation.
 
-Inheritance: `Document` → `Node` → `EventTarget`
+Inheritance relationship: `Document` → `Node` → `EventTarget`
 
 ### Constructor
 
 #### Document()
 
-Create a new instance of the `Document` object.
+Creates a new `Document` object instance.
 
 ```js
 const myDocument = new Document();
@@ -27,24 +27,29 @@ const myDocument = new Document();
 
 without
 
-### method
+### Methods
 
 - `createElement`
-  Create an HTML element specified by the tag name tagName. If the user agent cannot recognize the tagName, an unknown HTML element HTMLUnknownElement will be generated.
+  Creates an HTML element specified by the tag name tagName. If the user agent does not recognize the tagName, an unknown HTML element HTMLUnknownElement is generated.
 
 - `createTextNode`
   Create a new Text node. This method can be used to escape HTML characters.
 
 - `getElementById`
-  Returns an element that matches a specific ID.
+  Returns an element matching a specific ID.
 
 - `getElementsByTagName`
-  Returns a dynamic HTML collection that includes all elements of the given tag name.
+  Returns a dynamic HTML collection that includes all elements with the given tag name.
 
-### refer to
+- `getElementsByClassName`
+  Returns an array-like object containing all the child elements of the specified class name. When called on the document object, the entire DOM document is searched, including the root node. You can also call the getElementsByClassName() method on any element, and it will return all child elements with the specified class name with the current element as the root node.
 
-- [Link](https://developer.mozilla.org/zh-CN/docs/Web/API/document)
+- `querySelector`
+  Returns the first Element object in the document that matches the specified selector or selector group. Returns null if no match is found.
 
-### illustrate
+- `querySelectorAll`
+  Returns a list of elements in the document that match the specified selector group (traversing the document's nodes using depth-first preorder). The returned object is a NodeList.
 
-`querySelector`, `querySelectorAll`, `getElementsByClassName` APIs are not currently supported.
+### Refer to
+
+- [Link](https://developer.mozilla.org/en-US/docs/Web/API/document)
