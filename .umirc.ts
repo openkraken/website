@@ -575,10 +575,6 @@ export default defineConfig({
             title: '开发 JS API 插件',
             path: '/plugins/plugin/api-development',
           },
-          {
-            title: '开发 Rendering 插件',
-            path: '/plugins/plugin/rendering-development',
-          },
         ],
       },
       {
@@ -960,10 +956,6 @@ export default defineConfig({
           {
             title: 'Develop a JS API plugin',
             path: '/en-US/plugins/plugin/api-development',
-          },
-          {
-            title: 'Develop a Rendering plugin',
-            path: '/en-US/plugins/plugin/rendering-development',
           },
         ],
       },
