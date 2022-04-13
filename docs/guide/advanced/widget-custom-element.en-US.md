@@ -43,7 +43,132 @@ Developers need to inherit `WidgetElement` to implement a `TextWidgetElement` an
 
 Note: In order to distinguish the built-in elements, the custom element name `name` must contain the `-` character. At the same time, whenever the attribute of an element changes, the `builder` is triggered to re-execute, which is similar to the Stateful Widget mechanism.
 
+## Add custom methods to Element
+
+Elements created by JS can implement arbitrary properties and functions directly by Dart.
+
+### Add property
+
+In the JS environment, if an Element has a property accessed by JS, the `getBindingProperty` callback will be triggered and pass the name of the property accessed by JS. By returning directly in Dart, you can pass the value back to JS and use it as the return value of JS access.
+
+The returned types supported by properties are the same as those supported by JSON serialization:
+
+- int
+- double
+- String
+- List
+- Map
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  console.log(text.value); // Hello
+  console.log(text.hello); // World!
+  console.log(text.data); // ['A', 'B']
+});
+```
+
+```dart
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(context) : super(context);
+
+  String _textValue = '';
+  List<String> _textData = ['A', 'B'];
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties,
+      List<Widget> children) {
+    _textValue = properties['value'] ?? '';
+    return Text(_textValue,
+        textDirection: TextDirection.ltr,
+        style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+
+  @override
+  getBindingProperty(String key) {
+    if (key == 'value') {
+      return _textValue;
+    } else if (key == 'hello') {
+      return 'World!';
+    } else if (key == 'data') {
+      return _textData;
+    }
+
+    return super.getBindingProperty(key);
+  }
+}
+```
+
+### Add sync function
+
+The method of adding a custom function to an Element is similar to adding a property. You only need to return a Dart function, and you can also return a function in the JS environment. When the function returned by JS is called, the Dart function will also be called.
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  text.sayHi('Kraken'); // flutter: Kraken: Hi!
+});
+```
+
+### Add async function
+
+Adding an asynchronous call is similar to adding a function, the only difference is that the returned function is a function with a return type of Future. At this time, the return value of the JS function is also a Promise object.
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  text.waitAndGetData(1000, 'Kraken').then(data => {
+    console.log(data); // Kraken: Hello World!
+  });
+});
+```
+
+```dart
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(context) : super(context);
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties,
+      List<Widget> children) {
+    return Text(properties['value'] ?? '',
+        textDirection: TextDirection.ltr,
+        style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+
+  Future<dynamic> waitAndGetData(List<dynamic> argv) async {
+    Completer<dynamic> completer = Completer();
+    Timer(Duration(milliseconds: argv[0]), () {
+      completer.complete('${argv[1]}: Hello World!');
+    });
+    return completer.future;
+  }
+
+  @override
+  getBindingProperty(String key) {
+    if (key == 'waitAndGetData') {
+      return waitAndGetData;
+    }
+
+    return super.getBindingProperty(key);
+  }
+}
+```
+
 ## Advanced usage
+
+### Control Rendering in Dart
 
 In addition to enriching the basic rendering capabilities, connecting existing Flutter Widget materials as rendering capabilities to Kraken, you can also optimize the overall experience of Kraken rendering pages on the end through the optimization capabilities of Flutter Widget itself, such as front-end development An Element container that provides dynamic Render Object recycling capabilities without perceptually.
 
