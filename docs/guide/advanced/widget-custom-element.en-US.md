@@ -166,6 +166,35 @@ class TextWidgetElement extends WidgetElement {
 }
 ```
 
+## Trigger Element custom event
+
+The Flutter Widget implemented by Dart can throw custom events to JS to let the front end handle some events that are responded to by client-side functions.
+
+```javascript
+const flutterButton = document.createElement('flutter-button');
+flutterButton.addEventListener('buttonpress', e => {
+  console.log(e.detail); // helloworld
+});
+document.body.appendChild(flutterButton);
+```
+
+```dart
+class FlutterButtonElement extends WidgetElement {
+   FlutterButtonElement(context) : super(context);
+
+   @override
+   Widget build(BuildContext context, Map<String, dynamic> properties,
+       List<Widget> children) {
+     return ElevatedButton(
+         onPressed: () {
+           dispatchEvent(CustomEvent(
+               'buttonpress', CustomEventInit(detail: 'helloworld')));
+         },
+         child: Text('Click This'));
+   }
+}
+```
+
 ## Advanced usage
 
 ### Control Rendering in Dart
