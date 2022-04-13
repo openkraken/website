@@ -43,64 +43,11 @@ text.addEventListener('click', function() {
 
 注：为了区别内置元素，自定义元素名称 `name` 必须包含 `-` 字符。同时，每当元素的 attribute 改变时都是触发 `builder` 重新执行，这与 Stateful Widget 机制类似。
 
-## 高阶用法
-
-### 控制渲染逻辑
-
-除了可以丰富基础的渲染能力，将已有的 Flutter Widget 物料作为渲染能力接入到 Kraken 中，还可以通过 Flutter Widget 本身的优化能力来优化端内 Kraken 渲染页面的整体体验，比如可以做到前端开发者无感知地提供动态 Render Object 回收的能力的 Element 容器。
-
-以业务中常见的一种形态——瀑布流场景为例，通过接入社区的瀑布流 Widget 组件——[waterfall_flow](https://pub.dev/packages/waterfall_flow) 以及一个下拉触底刷新的 Widget 组件—— [flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh)，我们期望把它提供一个容器 Element 到 Kraken 的渲染流程中。同时，也期望它内部提供的一些动态 Render Object 的回收能力，保证在长列表下有一个滚动流畅以稳定的及内存的表现。
-
-```dart
-void main() {
-  Kraken.defineCustomElement('flutter-container', (context) {
-    return EasyRefreshWidgetElement(context);
-  });
-}
-
-class EasyRefreshWidgetElement extends WidgetElement {
-  EasyRefreshWidgetElement(EventTargetContext? context) :
-        super(context, defaultStyle: { 'height': '100vh', 'display': 'block' });
-
-  @override
-  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
-    return EasyRefresh(
-      child: WaterfallFlow.builder(
-        // 所有 Web 标准的节点可以传入到 Widget 中。
-        itemCount: children.length,
-        itemBuilder: (BuildContext context, int index) => children[index],
-        padding: EdgeInsets.all(5.0),
-        gridDelegate: SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 5.0,
-          mainAxisSpacing: 5.0,
-        ),
-      ),
-      // 通过 dispatchEvent 可以像 element 节点抛出符合 Web 标准的事件，前端通过 addEventListener 监听。
-      onRefresh: () async => dispatchEvent(Event('refresh')),
-      onLoad: () async => dispatchEvent(Event('load')),
-    );
-  }
-}
-```
-
-此时，由于该 Custom Element 已经被注册到 Kraken 中去，在前端只需要通过 web 标准的 createElement 即可创建该节点。
-
-```js
-const flutterContainer = document.createElement('flutter-container');
-```
-
-以及该节点可以通过 `addEventListener` 来监听 Widget 组件抛出的 Custom Event。
-
-```js
-flutterContainer.addEventListener('refresh', () => {});
-```
-
-### 给 Element 添加自定义方法
+## 给 Element 添加自定义方法
 
 由 JS 所创建的 Element，可以直接由 Dart 来实现任意属性和函数。
 
-**添加属性**
+### 添加属性
 
 在 JS 环境中，如果一个 Element 被 JS 所访问属性，`getBindingProperty` 这个回调就会被触发，并传入 JS 所访问的属性名。在 Dart 中直接进行返回，就可以将值传回 JS，并作为 JS 访问的返回值。
 
@@ -244,4 +191,57 @@ class TextWidgetElement extends WidgetElement {
     return super.getBindingProperty(key);
   }
 }
+```
+
+## 高阶用法
+
+### 控制渲染逻辑
+
+除了可以丰富基础的渲染能力，将已有的 Flutter Widget 物料作为渲染能力接入到 Kraken 中，还可以通过 Flutter Widget 本身的优化能力来优化端内 Kraken 渲染页面的整体体验，比如可以做到前端开发者无感知地提供动态 Render Object 回收的能力的 Element 容器。
+
+以业务中常见的一种形态——瀑布流场景为例，通过接入社区的瀑布流 Widget 组件——[waterfall_flow](https://pub.dev/packages/waterfall_flow) 以及一个下拉触底刷新的 Widget 组件—— [flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh)，我们期望把它提供一个容器 Element 到 Kraken 的渲染流程中。同时，也期望它内部提供的一些动态 Render Object 的回收能力，保证在长列表下有一个滚动流畅以稳定的及内存的表现。
+
+```dart
+void main() {
+  Kraken.defineCustomElement('flutter-container', (context) {
+    return EasyRefreshWidgetElement(context);
+  });
+}
+
+class EasyRefreshWidgetElement extends WidgetElement {
+  EasyRefreshWidgetElement(EventTargetContext? context) :
+        super(context, defaultStyle: { 'height': '100vh', 'display': 'block' });
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
+    return EasyRefresh(
+      child: WaterfallFlow.builder(
+        // 所有 Web 标准的节点可以传入到 Widget 中。
+        itemCount: children.length,
+        itemBuilder: (BuildContext context, int index) => children[index],
+        padding: EdgeInsets.all(5.0),
+        gridDelegate: SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 5.0,
+          mainAxisSpacing: 5.0,
+        ),
+      ),
+      // 通过 dispatchEvent 可以像 element 节点抛出符合 Web 标准的事件，前端通过 addEventListener 监听。
+      onRefresh: () async => dispatchEvent(Event('refresh')),
+      onLoad: () async => dispatchEvent(Event('load')),
+    );
+  }
+}
+```
+
+此时，由于该 Custom Element 已经被注册到 Kraken 中去，在前端只需要通过 web 标准的 createElement 即可创建该节点。
+
+```js
+const flutterContainer = document.createElement('flutter-container');
+```
+
+以及该节点可以通过 `addEventListener` 来监听 Widget 组件抛出的 Custom Event。
+
+```js
+flutterContainer.addEventListener('refresh', () => {});
 ```

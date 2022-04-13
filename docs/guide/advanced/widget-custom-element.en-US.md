@@ -43,63 +43,11 @@ Developers need to inherit `WidgetElement` to implement a `TextWidgetElement` an
 
 Note: In order to distinguish the built-in elements, the custom element name `name` must contain the `-` character. At the same time, whenever the attribute of an element changes, the `builder` is triggered to re-execute, which is similar to the Stateful Widget mechanism.
 
-## Advanced usage
-
-### Control Rendering in Dart
-
-In addition to enriching the basic rendering capabilities, connecting existing Flutter Widget materials as rendering capabilities to Kraken, you can also optimize the overall experience of Kraken rendering pages on the end through the optimization capabilities of Flutter Widget itself, such as front-end development An Element container that provides dynamic Render Object recycling capabilities without perceptually.
-
-Take a common form in business-waterfall flow scene as an example, through the waterfall flow Widget component connected to the community-[waterfall_flow](https://pub.dev/packages/waterfall_flow) and a drop-down bottoming refresh Widget component-[flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh), we expect to provide a container Element to Kraken's rendering process. At the same time, it is expected that some dynamic Render Object recovery capabilities provided by it internally can ensure smooth scrolling and stable memory performance under long lists.
-
-```dart
-void main() {
-  Kraken.defineCustomElement('flutter-container', (context) {
-    return EasyRefreshWidgetElement(context);
-  });
-}
-
-class EasyRefreshWidgetElement extends WidgetElement {
-  EasyRefreshWidgetElement(EventTargetContext? context):
-        super(context, defaultStyle: {'height': '100vh','display':'block' });
-
-  @override
-  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
-    return EasyRefresh(
-      child: WaterfallFlow.builder(
-        // All Web standard nodes can be passed into Widget.
-        itemCount: children.length,
-        itemBuilder: (BuildContext context, int index) => children[index],
-        padding: EdgeInsets.all(5.0),
-        gridDelegate: SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 5.0,
-          mainAxisSpacing: 5.0,
-        ),
-      ),
-      // Through dispatchEvent, you can throw events that conform to Web standards like element nodes, and the front-end monitors them through addEventListener.
-      onRefresh: () async => dispatchEvent(Event('refresh')),
-      onLoad: () async => dispatchEvent(Event('load')),
-    );}
-}
-```
-
-At this point, since the Custom Element has been registered in Kraken, the front-end only needs to use the web standard createElement to create the node.
-
-```js
-const flutterContainer = document.createElement('flutter-container');
-```
-
-And the node can monitor the Custom Event thrown by the Widget component through `addEventListener`.
-
-```js
-flutterContainer.addEventListener('refresh', () => {});
-```
-
-### Add custom methods to Element
+## Add custom methods to Element
 
 Elements created by JS can implement arbitrary properties and functions directly by Dart.
 
-**Add property**
+### Add property
 
 In the JS environment, if an Element has a property accessed by JS, the `getBindingProperty` callback will be triggered and pass the name of the property accessed by JS. By returning directly in Dart, you can pass the value back to JS and use it as the return value of JS access.
 
@@ -168,4 +116,104 @@ text.addEventListener('click', function() {
   // handle click
   text.sayHi('Kraken'); // flutter: Kraken: Hi!
 });
+```
+
+### Add async function
+
+Adding an asynchronous call is similar to adding a function, the only difference is that the returned function is a function with a return type of Future. At this time, the return value of the JS function is also a Promise object.
+
+```javascript
+const text = document.createElement('flutter-text');
+text.setAttribute('value', 'Hello');
+document.body.appendChild(text);
+
+text.addEventListener('click', function() {
+  // handle click
+  text.waitAndGetData(1000, 'Kraken').then(data => {
+    console.log(data); // Kraken: Hello World!
+  });
+});
+```
+
+```dart
+class TextWidgetElement extends WidgetElement {
+  TextWidgetElement(context) : super(context);
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties,
+      List<Widget> children) {
+    return Text(properties['value'] ?? '',
+        textDirection: TextDirection.ltr,
+        style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  }
+
+  Future<dynamic> waitAndGetData(List<dynamic> argv) async {
+    Completer<dynamic> completer = Completer();
+    Timer(Duration(milliseconds: argv[0]), () {
+      completer.complete('${argv[1]}: Hello World!');
+    });
+    return completer.future;
+  }
+
+  @override
+  getBindingProperty(String key) {
+    if (key == 'waitAndGetData') {
+      return waitAndGetData;
+    }
+
+    return super.getBindingProperty(key);
+  }
+}
+```
+
+## Advanced usage
+
+### Control Rendering in Dart
+
+In addition to enriching the basic rendering capabilities, connecting existing Flutter Widget materials as rendering capabilities to Kraken, you can also optimize the overall experience of Kraken rendering pages on the end through the optimization capabilities of Flutter Widget itself, such as front-end development An Element container that provides dynamic Render Object recycling capabilities without perceptually.
+
+Take a common form in business-waterfall flow scene as an example, through the waterfall flow Widget component connected to the community-[waterfall_flow](https://pub.dev/packages/waterfall_flow) and a drop-down bottoming refresh Widget component-[flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh), we expect to provide a container Element to Kraken's rendering process. At the same time, it is expected that some dynamic Render Object recovery capabilities provided by it internally can ensure smooth scrolling and stable memory performance under long lists.
+
+```dart
+void main() {
+  Kraken.defineCustomElement('flutter-container', (context) {
+    return EasyRefreshWidgetElement(context);
+  });
+}
+
+class EasyRefreshWidgetElement extends WidgetElement {
+  EasyRefreshWidgetElement(EventTargetContext? context):
+        super(context, defaultStyle: {'height': '100vh','display':'block' });
+
+  @override
+  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
+    return EasyRefresh(
+      child: WaterfallFlow.builder(
+        // All Web standard nodes can be passed into Widget.
+        itemCount: children.length,
+        itemBuilder: (BuildContext context, int index) => children[index],
+        padding: EdgeInsets.all(5.0),
+        gridDelegate: SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 5.0,
+          mainAxisSpacing: 5.0,
+        ),
+      ),
+      // Through dispatchEvent, you can throw events that conform to Web standards like element nodes, and the front-end monitors them through addEventListener.
+      onRefresh: () async => dispatchEvent(Event('refresh')),
+      onLoad: () async => dispatchEvent(Event('load')),
+    );}
+}
+```
+
+At this point, since the Custom Element has been registered in Kraken, the front-end only needs to use the web standard createElement to create the node.
+
+```js
+const flutterContainer = document.createElement('flutter-container');
+```
+
+And the node can monitor the Custom Event thrown by the Widget component through `addEventListener`.
+
+```js
+flutterContainer.addEventListener('refresh', () => {});
 ```
