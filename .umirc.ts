@@ -54,6 +54,8 @@ export default defineConfig({
     'video:focus {outline: -webkit-focus-ring-color auto 0px;}',
     'video::-webkit-media-controls {overflow: hidden !important;};video::-webkit-media-controls-enclosure {width: calc(100% + 32px);margin-left: auto;}',
     'a:hover { text-decoration:none !important;}',
+    '.performance:hover { color: rgb(246, 175, 31) !important;}',
+    '.performance { color: #000 !important;}',
     '.__dumi-default-navbar-logo {color: transparent!important }',
     '.__dumi-default-navbar-logo:hover {color: transparent!important }',
     '@media only screen and (min-width: 767px) {\
@@ -121,6 +123,19 @@ export default defineConfig({
           }\
         },false)",
       charset: 'utf-8',
+    },
+    {
+      content:
+        'window.krakenPerformanceData = {};\
+      function performanceCallback (type, data) { window.krakenPerformanceData[type] = data; }',
+    },
+    {
+      src:
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/web-loadtimeList.js',
+    },
+    {
+      src:
+        'https://kraken.oss-cn-hangzhou.aliyuncs.com/kraken-performance/kraken-loadtimeList.js',
     },
   ],
   navs: {
@@ -344,6 +359,10 @@ export default defineConfig({
             path: '/guide/development/react',
           },
         ],
+      },
+      {
+        title: '性能对比',
+        path: '/guide/performance',
       },
       {
         title: 'Kraken Gallery',
@@ -734,6 +753,10 @@ export default defineConfig({
             path: '/en-US/guide/development/react',
           },
         ],
+      },
+      {
+        title: 'Performance comparison',
+        path: '/guide/performance',
       },
       {
         title: 'Client integration',
