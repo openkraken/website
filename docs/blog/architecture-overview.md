@@ -18,7 +18,7 @@ Kraken 的 JavaScript Engine 为 QuickJS，支持 ECMA 2020 标准的绝大部�
 
 通过 QuickJS Binding，Kraken 使用 C/C++ 实现了 DOM 标准内的绝大部分功能，包括 Node，EventTarget，Element，选择器等。
 
-所有基于 DOM 标准而实现的前端框架，都可以在不更改一行代码的情况下运行，比如流行的 React.js，Vue.js 和 Rax.js。
+一些基于 DOM 标准而实现的前端框架，都可以在不更改一行代码的情况下运行，比如流行的 React.js，Vue.js 和 Rax.js。
 
 具体的实现细节和性能优化后续会单独开一篇文章进行介绍。
 
@@ -36,7 +36,7 @@ Kraken 的 JavaScript Engine 为 QuickJS，支持 ECMA 2020 标准的绝大部�
 
 除了 Kraken 所提供的功能之外，还向用户提供了插件功能。可以让用户自行通过 JavaScript 扩展出新的 Element，并通过 Flutter Widget 来实现原生的渲染能力。
 
-Kraken 团队官方维护了一些插件，可以作为示范代码进行参考：https://github.com/openkraken/plugins。
+Kraken 团队官方维护了一些插件，可以作为示范代码进行参考：https://github.com/openkraken/plugins
 
 Bridge 层对于插件能力的支持，是通过截取用户的属性调用和方法调用，并通过 BindingObject 通道，将调用发送到 Framework 侧，并调用 Framework 层 Element 的一些生命周期。从而让用户使用 Flutter Widget 编写的渲染代码，感知到 JavaScript 环境中的变化。
 
