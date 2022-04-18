@@ -18,7 +18,7 @@ Kraken's JavaScript Engine is QuickJS, which supports most of the functions of t
 
 Through QuickJS Binding, Kraken uses C/C++ to implement most of the functions in the DOM standard, including Node, EventTarget, Element, selectors, etc.
 
-All front-end frameworks based on DOM standards can run without changing a single line of code, such as the popular React.js, Vue.js and Rax.js.
+Some front-end frameworks based on DOM standards can run without changing a single line of code, such as the popular React.js, Vue.js and Rax.js.
 
 The specific implementation details and performance optimization will be introduced in a separate article later.
 
