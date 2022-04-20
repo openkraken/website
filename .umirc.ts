@@ -892,7 +892,7 @@ export default defineConfig({
           },
           {
             title: 'CSS Variables',
-            path: '/api/styles/variables',
+            path: '/en-US/api/styles/variables',
           },
           {
             title: 'Other styles',
