@@ -15,8 +15,8 @@ class TextWidgetElement extends WidgetElement {
         super(context);
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
-    return Text(properties['value'] ?? '', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
+  Widget build(BuildContext context, Map<String, String> attributes, List<Widget> children) {
+    return Text(attributes['value'] ?? '', textDirection: TextDirection.ltr, style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
   }
 }
 
@@ -80,9 +80,9 @@ class TextWidgetElement extends WidgetElement {
   List<String> _textData = ['A', 'B'];
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties,
+  Widget build(BuildContext context, Map<String, String> attributes,
       List<Widget> children) {
-    _textValue = properties['value'] ?? '';
+    _textValue = attributes['value'] ?? '';
     return Text(_textValue,
         textDirection: TextDirection.ltr,
         style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
@@ -123,9 +123,9 @@ class TextWidgetElement extends WidgetElement {
   TextWidgetElement(context) : super(context);
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties,
+  Widget build(BuildContext context, Map<String, String> attributes,
       List<Widget> children) {
-    return Text(properties['value'] ?? '',
+    return Text(attributes['value'] ?? '',
         textDirection: TextDirection.ltr,
         style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
   }
@@ -167,9 +167,9 @@ class TextWidgetElement extends WidgetElement {
   TextWidgetElement(context) : super(context);
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties,
+  Widget build(BuildContext context, Map<String, String> attributes,
       List<Widget> children) {
-    return Text(properties['value'] ?? '',
+    return Text(attributes['value'] ?? '',
         textDirection: TextDirection.ltr,
         style: TextStyle(color: Color.fromARGB(255, 100, 100, 100)));
   }
@@ -211,7 +211,7 @@ class FlutterButtonElement extends WidgetElement {
   FlutterButtonElement(context) : super(context);
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties,
+  Widget build(BuildContext context, Map<String, String> attributes,
       List<Widget> children) {
     return ElevatedButton(
         onPressed: () {
@@ -243,7 +243,7 @@ class EasyRefreshWidgetElement extends WidgetElement {
         super(context, defaultStyle: { 'height': '100vh', 'display': 'block' });
 
   @override
-  Widget build(BuildContext context, Map<String, dynamic> properties, List<Widget> children) {
+  Widget build(BuildContext context, Map<String, String> attributes, List<Widget> children) {
     return EasyRefresh(
       child: WaterfallFlow.builder(
         // 所有 Web 标准的节点可以传入到 Widget 中。
