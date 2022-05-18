@@ -389,10 +389,6 @@ export default defineConfig({
             path: '/guide/native/interpolation-flutter',
           },
           {
-            title: '在原生 App 中集成 Kraken',
-            path: '/guide/native/interpolation-app',
-          },
-          {
             title: 'Kraken Widget',
             path: '/guide/native/widget',
           },
@@ -777,10 +773,6 @@ export default defineConfig({
           {
             title: 'Integrate Kraken in the Flutter application',
             path: '/en-US/guide/native/interpolation-flutter',
-          },
-          {
-            title: 'Integrate Kraken in native apps',
-            path: '/en-US/guide/native/interpolation-app',
           },
           {
             title: 'Kraken Widget',
