@@ -30,7 +30,7 @@ For colors, it supports multiple formats such as color keywords, rgba, hexadecim
       width: '150px',
       height: '150px',
       backgroundImage:
-        'url(https://kraken.oss-cn-hangzhou.aliyuncs.com/images/60x60-green.png)',
+        'url(https://andycall.oss-cn-beijing.aliyuncs.com/images/60x60-green.png)',
     }}
   />
 </div>

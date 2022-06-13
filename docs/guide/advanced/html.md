@@ -51,7 +51,7 @@ Kraken 应用的入口是一个 JavaScript 文件，开发一个普通应用通�
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/html-demo.html
+        kraken https://andycall.oss-cn-beijing.aliyuncs.com/demo/html-demo.html
       </div>
     </div>
     <div className="preview-row">

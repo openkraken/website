@@ -6,7 +6,7 @@ Kraken is a self-drawn rendering engine based on Flutter. It uses W3C standard H
 
 Kraken has been deeply customized based on the implementation of the Flutter Rendering layer. While retaining the compatibility with the RenderObject API, it has expanded the layout capabilities compatible with the W3C standard, and added DOM and CSS parsing processing on this basis, and docked with the JavaScript engine. , which implements a browser-like technical architecture:
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="500" />
+<img src="https://andycall.oss-cn-beijing.aliyuncs.com/images/20220406122844.jpg" width="500" />
 
 ## Bridge layer introduction
 

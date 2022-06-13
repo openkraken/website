@@ -47,7 +47,7 @@ Building Kraken requires the installation of specific tools, and the installatio
 
    Open Android Studio, open Files> Settings> Appearance & Behavior> System Settings> Android SDK. Select NDK, and install version 20.1.5948944.
 
-   ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
+   ![img](https://andycall.oss-cn-beijing.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
 
 7. Install Flutter
 

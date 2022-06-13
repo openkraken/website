@@ -51,7 +51,7 @@ The entrance of the Kraken application is a JavaScript file. When developing an 
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/html-demo.html
+        kraken https://andycall.oss-cn-beijing.aliyuncs.com/demo/html-demo.html
       </div>
     </div>
     <div className="preview-row">

@@ -56,7 +56,7 @@ The most convenient and quick way to debug Bridge code is to use Clion, which ca
 1. Use Clion to open the `kraken/bridge` directory.
 2. Open Preference -> Build, Execution, Depolyment -> CMake, and configure it as shown in the figure below.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20211026200425.jpg)
+![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20211026200425.jpg)
 
 You can use the grammar hints and jump functions provided by Clion.
 
@@ -64,13 +64,13 @@ You can use the grammar hints and jump functions provided by Clion.
 
 Open Run -> Edit Configurations and click on the `+` in the upper left corner to create a `Shell Script` configuration for building the kraken example application.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
+![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151305.jpg)
 
 4. Add npm scripts build command in Clion
 
 Continue to follow the above method and add an NPM build command to build the bridge.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
+![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151516.jpg)
 
 5. Connect startup scripts and bind startup applications
 
@@ -78,8 +78,8 @@ Select kraken in CMake Application, then select Executable as `kraken/kraken/exa
 
 And delete the build provided by default in Before Launch, add the flutter build command and npm scripts build command created above, pay attention to the npm build command to be at the top.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
+![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151903.jpg)
 
 6. Click the debug button in the upper right corner to set breakpoints in any C/C++ code and debug.
 
-![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
+![image](https://andycall.oss-cn-beijing.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)

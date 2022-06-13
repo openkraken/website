@@ -8,11 +8,11 @@ Note: Currently DevTools currently only supports Element debugging, JS debugging
 
 After Kraken is started, the access address of the debugging service will be displayed in the console.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323142503.jpg" style="max-width:800px"></img>
+<img src="https://andycall.oss-cn-beijing.aliyuncs.com/images/20210323142503.jpg" style="max-width:800px"></img>
 
 Copy and paste the `devtools://` prefix to the address into the Chrome browser to debug.
 
-<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210323143003.jpeg" style="max-width:800px"></img>
+<img src="https://andycall.oss-cn-beijing.aliyuncs.com/images/20210323143003.jpeg" style="max-width:800px"></img>
 
 ## Open the debugging tool on Android / iOS devices
 

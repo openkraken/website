@@ -47,7 +47,7 @@
 
    打开 Android Studio，打开 Files > Settings > Appearance & Behavior > System Settings > Android SDK。选中 NDK，然后安装 20.1.5948944 版本。
 
-   ![img](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
+   ![img](https://andycall.oss-cn-beijing.aliyuncs.com/images/%7BDEC91E5D-E622-4E1F-B8D3-AD39A3C7D1A0%7D.png.jpg)
 
 7. 安装 Flutter
 
