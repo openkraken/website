@@ -28,14 +28,14 @@ The following example demonstrates how to create a rolling container:
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-scrollable.js
+        kraken https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-scrollable.js
       </div>
     </div>
     <div className="preview-row">
       <div>
         2. First download the <a href="/en-US/guide#kraken-playground" >Play Kraken App</a> on your Android phone, then open the App and scan the QR code below to preview:
       </div>
-      <img className="preview-qrcode" src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/68_687_2b6eb14913b45ac7522637d23acc214c_2d74fdc99be8a021a3f025eb5069a731.png" />
+      <img className="preview-qrcode" src="https://andycall.oss-cn-beijing.aliyuncs.com/images/68_687_2b6eb14913b45ac7522637d23acc214c_2d74fdc99be8a021a3f025eb5069a731.png" />
     </div>
   </div>
 </div>

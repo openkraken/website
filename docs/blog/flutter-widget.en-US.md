@@ -115,7 +115,7 @@ Finally, let's take a look at how a common DOM element is integrated into the re
 
 Similarly, the Flutter Element KrakenElementToFlutterElementAdaptor will trigger methods such as createRenderer in the mount and umount life cycles, and use Flutter's life cycle hooks to ensure the invocation of some Kraken DOM processes or the release of resources.
 
-Based on the above principles, Kraken implements Flutter Widget as a Custom Element embedded anywhere in Kraken. Take the JS code of [Demo](https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/flutterwidget.js) as an example to render the [Flutter Widget](https://kraken. oss-cn-hangzhou.aliyuncs.com/demo/flutterwidget.dart), Flutter Widget, whether as a container or a child node, can be presented in Kraken and dynamically modified with JS.
+Based on the above principles, Kraken implements Flutter Widget as a Custom Element embedded anywhere in Kraken. Take the JS code of [Demo](https://andycall.oss-cn-beijing.aliyuncs.com/demo/flutterwidget.js) as an example to render the [Flutter Widget](https://kraken. oss-cn-hangzhou.aliyuncs.com/demo/flutterwidget.dart), Flutter Widget, whether as a container or a child node, can be presented in Kraken and dynamically modified with JS.
 
 ## Advanced version: more complex scenes
 
@@ -170,7 +170,7 @@ flutterContainer.addEventListener('refresh', () => {});
 
 The final rendered content is as follows. You can see that the Web nodes of the internal child nodes can directly use the layout capabilities of the waterfall widget. At the same time, due to the dynamic Render Object recycling capability that comes with the Widget, the child nodes can be dynamically recycled when scrolling, ensuring smooth scrolling and no significant increase in memory. **And all of this does not have any additional access and understanding costs for front-end developers. Flutter Widget access to the web system will be presented to the front-end in full accordance with web standards. Similarly, for Flutter developers, you can still control the familiar three trees - Widget, Flutter Element, and Render Object to provide some end-to-end enhancements. **
 
-<video autoplay src="https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/flutterwidget.mp4"></video>
+<video autoplay src="https://andycall.oss-cn-beijing.aliyuncs.com/videos/flutterwidget.mp4"></video>
 
 ## At last
 

@@ -20,7 +20,7 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
       Kraken 
-      <img class="say-kraken" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
+      <img class="say-kraken" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" /><audio src="https://andycall.oss-cn-beijing.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
       High-performance web rendering engine, built on <img class="flutter-icon" style="vertical-align: top;width: 30px;margin-left: -10px;" src="https://img.alicdn.com/imgextra/i1/O1CN01OWUwTg1eqmRBC63cj_!!6000000003923-2-tps-411-415.png" />Flutter

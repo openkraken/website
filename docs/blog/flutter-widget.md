@@ -115,7 +115,7 @@ Kraken 本身是一个 Widget ，它是可以被嵌套在其他 Flutter Widget �
 
 同样，KrakenElementToFlutterElementAdaptor 这个 Flutter Element，会在 mount 以及 umount 生命周期中触发 createRenderer 等方法，用 Flutter 的生命周期钩子去保证 Kraken DOM 的一些流程的调用或者资源的释放。
 
-基于以上原理，Kraken 实现了 Flutter Widget 作为一个 Custom Element 嵌入到 Kraken 中的任何地方。以 [Demo](https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/flutterwidget.js) 的 JS 代码为例渲染 已注册到 Kraken 内部的 [Flutter Widget](https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/flutterwidget.dart)，Flutter Widget 无论作为容器还是一个子节点，都可以呈现在 Kraken 中，用 JS 来动态修改。
+基于以上原理，Kraken 实现了 Flutter Widget 作为一个 Custom Element 嵌入到 Kraken 中的任何地方。以 [Demo](https://andycall.oss-cn-beijing.aliyuncs.com/demo/flutterwidget.js) 的 JS 代码为例渲染 已注册到 Kraken 内部的 [Flutter Widget](https://andycall.oss-cn-beijing.aliyuncs.com/demo/flutterwidget.dart)，Flutter Widget 无论作为容器还是一个子节点，都可以呈现在 Kraken 中，用 JS 来动态修改。
 
 ## 进阶版：更多复杂的场景
 
@@ -170,7 +170,7 @@ flutterContainer.addEventListener('refresh', () => {});
 
 最终渲染出来的内容如下，可以看到内部子节点的 Web 节点可以直接使用瀑布流 Widget 的布局能力。同时，由于该 Widget 自带的动态 Render Object 回收能力，可以使得子节点在滚动时候动态回收，保证流畅地滚动，并且内存不会有明显的增量。**而这一切对于前端开发者是没有任何额外的接入以及理解成本的，Flutter Widget 接入 Web 体系中会完全按照 Web 标准呈现给前端。同样，对于 Flutter 开发者，依旧可以控制熟悉的三棵树——Widget、Flutter Element 以及 Render Object，以提供一些端上的增强能力。**
 
-<video autoplay src="https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/flutterwidget.mp4"></video>
+<video autoplay src="https://andycall.oss-cn-beijing.aliyuncs.com/videos/flutterwidget.mp4"></video>
 
 ## 最后
 
