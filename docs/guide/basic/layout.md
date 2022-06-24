@@ -87,7 +87,7 @@ Kraken 支持了前三种目前 Web 开发中主流使用的布局方式，以�
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flow-layout.js
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-flow-layout.js
       </div>
     </div>
     <div className="preview-row">
@@ -212,7 +212,7 @@ Kraken 支持的与弹性盒布局相关的所有属性请参考[开发文档](/
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flex-layout.js 
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-flex-layout.js 
       </div>
     </div>
     <div className="preview-row">
@@ -333,7 +333,7 @@ Kraken 支持的与定位相关的所有属性请参考[开发文档](/api/style
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-position.js 
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-position.js 
       </div>
     </div>
     <div className="preview-row">

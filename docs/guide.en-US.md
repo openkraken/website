@@ -48,7 +48,7 @@ Kraken does not limit the framework used by upper-level developers. Whether you 
 You can use the Rax bundle we built to run a Kraken application to experience the performance of the Rax application under Kraken.
 
 ```shell
-kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-rax.js
+kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/demo-rax.js
 ```
 
 Of course, if you want to learn more about how to use Rax to develop a Kraken application, you can quickly create a Rax for Kraken application based on the `npm init rax` command. For more detailed steps, please visit [Develop Kraken Application with Rax](/en-US/guide/development/rax).
@@ -58,7 +58,7 @@ Of course, if you want to learn more about how to use Rax to develop a Kraken ap
 You can use the Vue bundle we built to run a Kraken application to experience the performance of the Vue application under Kraken.
 
 ```shell
-kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-vue.js
+kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/demo-vue.js
 ```
 
 Of course, if you want to learn more about how to use Vue to develop a Kraken application, or how to transform an old project of Vue so that it can run on Kraken, you can visit [Develop Kraken Application with Vue](/en-US/guide/development/ vue).
@@ -68,7 +68,7 @@ Of course, if you want to learn more about how to use Vue to develop a Kraken ap
 You can use the React bundle we built to run a Kraken application to experience the performance of the React application under Kraken.
 
 ```shell
-kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/demo-react.js
+kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/demo-react.js
 ```
 
 Of course, if you want to learn more about how to use React to develop a Kraken application, or how to transform an old React project so that it can run on Kraken, you can visit [Develop Kraken Application with React](/en-US/guide/development/ react).

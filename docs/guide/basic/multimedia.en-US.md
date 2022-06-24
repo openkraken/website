@@ -31,7 +31,7 @@ Kraken supports all image formats supported by Flutter, including `JPEG, PNG, GI
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-image.js
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-image.js
       </div>
     </div>
     <div className="preview-row">
@@ -73,7 +73,7 @@ Video is not natively supported by Kraken. You need to install this [kraken_vide
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-video.js
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-video.js
       </div>
     </div>
     <div className="preview-row">
