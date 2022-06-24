@@ -71,7 +71,7 @@ Kraken supports most of the commonly used CSS styles (for all supported styles, 
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-styles.js
       </div>
     </div>
     <div className="preview-row">

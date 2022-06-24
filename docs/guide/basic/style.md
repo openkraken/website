@@ -65,7 +65,7 @@ Kraken 支持大部分常用的 CSS 样式（所有支持的样式请参考[开�
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-styles.js
+        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-styles.js
       </div>
     </div>
     <div className="preview-row">
