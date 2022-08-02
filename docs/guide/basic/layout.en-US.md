@@ -87,7 +87,7 @@ The typesetting rule for block-level labels is to start a new line under the pre
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-flow-layout.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flow-layout.js
       </div>
     </div>
     <div className="preview-row">
@@ -212,7 +212,7 @@ The following uses examples to introduce simple usage:
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-flex-layout.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-flex-layout.js
       </div>
     </div>
     <div className="preview-row">
@@ -333,7 +333,7 @@ Please refer to [Development Document](/en-US/api/styles/position) for all the p
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-position.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-position.js
       </div>
     </div>
     <div className="preview-row">

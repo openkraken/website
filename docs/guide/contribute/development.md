@@ -56,7 +56,7 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 1. 使用 Clion 打开 `kraken/bridge` 目录。
 2. 打开 Preference -> Build，Execution，Depolyment -> CMake，按照下图的方式进行配置。
 
-![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20211026200425.jpg)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20211026200425.jpg)
 
 就可以使用 Clion 所提供的语法提示和跳转功能。
 
@@ -64,13 +64,13 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 
 打开 Run -> Edit Configurations，点击左上角的 `+`，创建一个 `Shell Script` 配置，用于构建 kraken example 应用。
 
-![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151305.jpg)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151305.jpg)
 
 4. 在 Clion 中添加 npm scripts 构建命令
 
 继续按照上面的方式，添加一个 NPM 构建命令，用于构建 bridge。
 
-![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151516.jpg)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151516.jpg)
 
 5. 串联启动脚本，并绑定启动应用
 
@@ -78,8 +78,8 @@ Bridge 代码的调试目前仅支持 macOS 平台，Windows 平台的调试方�
 
 并且在 Before Launch 中删掉默认提供的 Build，添加上面创建的 flutter 构建命令和 npm scripts 构建命令，注意 npm 构建命令要在最前面。
 
-![image](https://andycall.oss-cn-beijing.aliyuncs.com/images/20210722151903.jpg)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20210722151903.jpg)
 
 6. 点击右上角的调试按钮，就可以在任何 C/C++ 代码中设置断点并进行调试。
 
-![image](https://andycall.oss-cn-beijing.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)
+![image](https://kraken.oss-cn-hangzhou.aliyuncs.com/videos/117529034-d9301a00-b007-11eb-9300-d46d1c25005f.png)

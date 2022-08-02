@@ -30,7 +30,7 @@
       width: '150px',
       height: '150px',
       backgroundImage:
-        'url(https://andycall.oss-cn-beijing.aliyuncs.com/images/60x60-green.png)',
+        'url(https://kraken.oss-cn-hangzhou.aliyuncs.com/images/60x60-green.png)',
     }}
   />
 </div>
@@ -50,7 +50,7 @@
         1. 安装 <a href="/guide#快速体验-kraken">Kraken CLI</a>，然后复制以下命令到命令行中运行：
       </div>
       <div className="preview-code">
-        kraken http://https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-color.js
+        kraken http://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-color.js
       </div>
     </div>
     <div className="preview-row">

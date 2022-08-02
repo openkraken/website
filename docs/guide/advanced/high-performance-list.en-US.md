@@ -49,7 +49,7 @@ document.body.appendChild(container);
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, and then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-high-performance-list.js
+        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-high-performance-list.js
       </div>
     </div>
     <div className="preview-row">

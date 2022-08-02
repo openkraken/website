@@ -36,7 +36,7 @@ After running with Kraken, enter any text in the input box, and the entered cont
         1. Install <a href="/en-US/guide#快 Experience-kraken">Kraken CLI</a>, then copy the following command to the command line to run:
       </div>
       <div className="preview-code">
-        kraken https://andycall.oss-cn-beijing.aliyuncs.com/demo/guide-input.js
+        kraken https://kraken.oss-cn-hangzhou.aliyuncs.com/demo/guide-input.js
       </div>
     </div>
     <div className="preview-row">
