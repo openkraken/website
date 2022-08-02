@@ -14,14 +14,14 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />
 <div class="homepage-root">
   <div>
     <video class="homepage-img" muted autoplay loop="loop" align="center"  >
-      <source src="//https://andycall.oss-cn-beijing.aliyuncs.com/videos/header_animation.mp4" type="video/mp4">
+      <source src="//kraken.oss-cn-hangzhou.aliyuncs.com/videos/header_animation.mp4" type="video/mp4">
     </video>
   </div>
   <div style="max-width: 1180px;position: relative;z-index: 2">
     <div class="homepage-title">
       北海 
       <span class="english-title">Kraken</span>
-      <img class="say-kraken" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" /><audio src="https://andycall.oss-cn-beijing.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
+      <img class="say-kraken" id="sayKraken-img" src="https://gw.alicdn.com/imgextra/i2/O1CN01zo63hr20qhv3lUoOq_!!6000000006901-55-tps-200-200.svg" /><audio src="https://kraken.oss-cn-hangzhou.aliyuncs.com/data/kraken.mp3" style="display:none" id="sayKraken"></audio>
     </div>
     <div class="homepage-subtitle" >
       <a href="/guide/performance"><span class="performance" style="cursor: pointer; margin-right: 3px;">高性能<svg t="1649675554506" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1255" width="200" height="200" style="width: 15px;height: 15px;color: inherit;fill: currentColor;position: relative;top: -4px;left: 2px;"><path d="M618.24 439.381333a152.746667 152.746667 0 0 1 0 216l-135.893333 135.893334a163.370667 163.370667 0 1 1-231.04-231.04l66.922666-66.944 45.269334 45.269333-66.944 66.944a99.370667 99.370667 0 1 0 140.522666 140.522667l135.893334-135.893334a88.746667 88.746667 0 0 0 0-125.482666z m182.528-197.589333a163.370667 163.370667 0 0 1 0 231.04L733.866667 539.776l-45.269334-45.248 66.944-66.944a99.370667 99.370667 0 1 0-140.522666-140.522667l-135.893334 135.893334a88.746667 88.746667 0 0 0 0 125.482666l-45.269333 45.269334a152.746667 152.746667 0 0 1 0-216l135.893333-135.893334a163.370667 163.370667 0 0 1 231.04 0z" p-id="1256"></path></svg> </span></a> Web 渲染引擎，基于 <img class="flutter-icon" style="vertical-align: top;width: 30px;margin-left: -10px;" src="https://img.alicdn.com/imgextra/i1/O1CN01OWUwTg1eqmRBC63cj_!!6000000003923-2-tps-411-415.png" />Flutter 构建

@@ -19,7 +19,7 @@ void main() {
 ## 示例
 
 ```javascript
-const ASSET = 'https://andycall.oss-cn-beijing.aliyuncs.com/data/Teddy.flr';
+const ASSET = 'https://kraken.oss-cn-hangzhou.aliyuncs.com/data/Teddy.flr';
 const animationPlayer = document.createElement('animation-player');
 animationPlayer.setAttribute('type', 'flare');
 animationPlayer.setAttribute('src', ASSET);

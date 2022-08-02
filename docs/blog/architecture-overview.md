@@ -6,7 +6,7 @@ Kraken 是一款采用基于 Flutter 而实现的自绘渲染引擎。它使用 
 
 Kraken 基于 Flutter Rendering 层的实现进行了深度定制，在保留兼容 RenderObject API 的情况下，扩展出了兼容 W3C 标准的布局能力，并在此基础之上添加了 DOM，CSS 的解析处理，并对接 JavaScript 引擎，实现了一个类浏览器的技术架构：
 
-<img src="https://andycall.oss-cn-beijing.aliyuncs.com/images/20220406122844.jpg" width="500" />
+<img src="https://kraken.oss-cn-hangzhou.aliyuncs.com/images/20220406122844.jpg" width="500" />
 
 ## Bridge 层介绍
 
